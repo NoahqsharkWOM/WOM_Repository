@@ -5320,7 +5320,7 @@ building masons_lodge
 				construction_time_bonus_defensive bonus 35
 				construction_time_bonus_religious bonus 35
 				population_loyalty_bonus bonus 7
-				recruit_pool "Journeymen"  072   0.1  2  0  requires factions { normans, }  and region_religion wildmen 25 and event_counter bree_journeymen_unlocked 1
+				recruit_pool "Journeymen"  1   0.1  2  0  requires factions { normans, }  and region_religion wildmen 25 and event_counter bree_journeymen_unlocked 1
 			}
 			material wooden
 			construction  4

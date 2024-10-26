@@ -2397,7 +2397,7 @@ stat_mental				12, low, untrained
 stat_charge_dist		5
 stat_fire_delay			0
 stat_food				60, 300
-stat_cost				1, 360, 180, 75, 75, 360, 5, 36
+stat_cost				1, 340, 160, 75, 75, 360, 5, 36
 armour_ug_levels		1, 2, 3, 4
 armour_ug_models		breeland_militia, breeland_militia, breeland_militia_upg, breeland_militia_upg2
 ownership				normans, slave, turks
@@ -2433,7 +2433,7 @@ stat_mental				12, low, untrained
 stat_charge_dist		5
 stat_fire_delay			0
 stat_food				60, 300
-stat_cost				1, 315, 170, 75, 75, 315, 5, 31
+stat_cost				1, 360, 180, 75, 75, 315, 5, 31
 armour_ug_levels		1, 2, 3, 4
 armour_ug_models		bree_archers, bree_archers, bree_archers_upg, bree_archers_upg2
 ownership				normans, slave, russia, turks
@@ -2893,7 +2893,7 @@ stat_mental      17, normal, highly_trained
 stat_charge_dist 8
 stat_fire_delay  0
 stat_food        60, 300
-stat_cost        2, 790, 320, 125, 125, 790, 4, 58
+stat_cost        4, 400, 200, 125, 125, 790, 4, 58
 armour_ug_levels 2, 3, 4
 armour_ug_models watchmen_sword_upg, watchmen_sword_upg, watchmen_sword_upg2
 ownership        normans, turks, slave, russia
@@ -2929,7 +2929,7 @@ stat_mental      16, normal, trained
 stat_charge_dist 5
 stat_fire_delay  0
 stat_food        60, 300
-stat_cost        2, 750, 330, 125, 125, 750, 4, 54
+stat_cost        4, 400, 200, 125, 125, 750, 4, 54
 armour_ug_levels 2, 3, 4
 armour_ug_models watchmen_longbow_upg, watchmen_longbow_upg, watchmen_longbow_upg2
 ownership        normans, turks, slave, russia
@@ -2965,7 +2965,7 @@ stat_mental      17, normal, trained
 stat_charge_dist 10
 stat_fire_delay  0
 stat_food        60, 300
-stat_cost        2, 810, 340, 125, 125, 810, 4, 63
+stat_cost        4, 400, 200, 125, 125, 810, 4, 63
 armour_ug_levels 2, 3, 4
 armour_ug_models watchmen_axeguard_upg, watchmen_axeguard_upg, watchmen_axeguard_upg2
 ownership        normans, slave, turks, russia

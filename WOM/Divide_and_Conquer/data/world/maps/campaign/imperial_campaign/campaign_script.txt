@@ -623,6 +623,7 @@ script
         end_if
         if I_CompareCounter faction_ID_normans == 1
             historic_event faction_info_bree
+	    historic_event bree_unlock_script_info
         end_if
         if I_CompareCounter faction_ID_turks == 1
             historic_event faction_info_nd
@@ -40067,9 +40068,10 @@ monitor_event FactionTurnStart FactionType normans
 		set_event_counter expedition_finale_active 0
 		inc_counter expedition_finale_retaliation 1
 	end_if
-;######################### Bree Finale Start & Morality Check #######################
+;######################### Bree Merc Finale Start & Morality Check #######################
 	if I_NumberOfSettlements normans >= 10 ;24
 	and I_CompareCounter finale_stage = 0
+	and I_EventCounter bree_mercenary = 1
 		historic_event bree_finale_start true factions { normans, }
 		inc_counter finale_stage 1
 	end_if
@@ -43981,7 +43983,7 @@ end_monitor
 				end
 		terminate_monitor
         end_monitor
-;######################### Bree Early Game Military Unlock Script ##########################
+;######################### Bree Early Game Military/Militarization Unlock Script ##########################
 ; Watchmen
 	monitor_event BuildingCompleted SettlementName Bree
 	and SettlementBuildingFinished = city_hall
