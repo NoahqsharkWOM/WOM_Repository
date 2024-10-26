@@ -1,0 +1,223 @@
+scripts
+hold_regions
+take_regions 180
+short_campaign hold_regions
+take_regions 180
+
+sicily
+hold_regions Anorien_Province Umbar_Province Gobel_Ancalimon_Province Gorgoroth_Province
+take_regions 50
+outlive england russia spain
+short_campaign hold_regions Anorien_Province
+take_regions 30
+outlive england
+
+denmark
+hold_regions Belfalas_Province Umbar_Province Gobel_Ancalimon_Province
+take_regions 30
+outlive russia spain
+short_campaign hold_regions Belfalas_Province 
+take_regions 20
+outlive russia
+
+milan
+hold_regions Kings_Land_Province Gorgoroth_Province Dunland_Hills_Province Nan_Curunir_Province
+take_regions 30
+outlive aztecs england france
+short_campaign hold_regions Kings_Land_Province 
+take_regions 20
+outlive aztecs france
+
+normans
+hold_regions Bree_Province
+take_regions 60
+outlive england
+short_campaign hold_regions Bree_Province 
+take_regions 30
+
+turks
+hold_regions Angle_Province Carn_Dum_Province Nan_Curunir_Province Gorgoroth_Province
+take_regions 50
+outlive england france portugal
+short_campaign hold_regions Angle_Province 
+take_regions 30
+outlive portugal
+
+scotland
+hold_regions Dale_Province Deep_Mirkwood_Province Mistrand_Province
+take_regions 30
+outlive poland venice
+short_campaign hold_regions Dale_Province 
+take_regions 20
+outlive venice
+
+timurids
+hold_regions Lower_Anduin_Vale_Province Deep_Mirkwood_Province Mt_Gundabad_Province
+take_regions 30
+outlive gundabad poland
+short_campaign hold_regions Lower_Anduin_Vale_Province 
+take_regions 20
+outlive gundabad
+
+byzantium
+hold_regions Dorwinion_Province Mistrand_Province Gorgoroth_Province
+take_regions 30
+outlive england venice
+short_campaign hold_regions Dorwinion_Province 
+take_regions 20
+outlive venice
+
+moors
+hold_regions Erebor_Province West_Moria_Province Carn_Dum_Province Mistrand_Province Mt_Gundabad_Province
+take_regions 30
+outlive hre gundabad portugal venice
+short_campaign hold_regions Erebor_Province 
+take_regions 20
+outlive hre gundabad
+
+hungary
+hold_regions Nan_i_Naugrim_Province Carn_Dum_Province West_Moria_Province Mt_Gundabad_Province
+take_regions 30
+outlive hre gundabad portugal
+short_campaign hold_regions Nan_i_Naugrim_Province 
+take_regions 20
+outlive portugal
+
+norway
+hold_regions East_Moria_Province West_Moria_Province Dunland_Hills_Province Mt_Gundabad_Province
+take_regions 30
+outlive hre gundabad aztecs
+short_campaign hold_regions East_Moria_Province West_Moria_Province 
+take_regions 20
+outlive hre gundabad
+
+saxons
+hold_regions Mithlond_Province Gorgoroth_Province Imladris_Province 
+take_regions 10
+outlive england france
+short_campaign hold_regions Mithlond_Province Imladris_Province
+take_regions 10
+outlive france
+
+ireland
+hold_regions Celebrant_Province Gorgoroth_Province Deep_Mirkwood_Province 
+take_regions 20
+outlive england poland
+short_campaign hold_regions Celebrant_Province 
+take_regions 15
+outlive poland
+
+mongols
+hold_regions Elven_Mirkwood_Province Gorgoroth_Province Deep_Mirkwood_Province
+take_regions 20
+outlive england poland
+short_campaign hold_regions Elven_Mirkwood_Province 
+take_regions 15
+outlive poland
+
+teutonic_order
+hold_regions Talsir_Province  
+take_regions 40
+short_campaign hold_regions Talsir_Province 
+take_regions 25
+
+venice
+hold_regions Mistrand_Province Dorwinion_Province Erebor_Province Dale_Province
+take_regions 40
+outlive byzantium moors scotland
+short_campaign hold_regions Mistrand_Province 
+take_regions 25
+outlive byzantium
+
+england
+hold_regions Gorgoroth_Province 
+take_regions 80
+short_campaign hold_regions Gorgoroth_Province 
+take_regions 50
+
+poland
+hold_regions Deep_Mirkwood_Province Celebrant_Province Elven_Mirkwood_Province Lower_Anduin_Vale_Province
+take_regions 40
+outlive ireland mongols timurids
+short_campaign hold_regions Deep_Mirkwood_Province 
+take_regions 25
+outlive mongols
+
+france
+hold_regions Nan_Curunir_Province Kings_Land_Province Celebrant_Province
+take_regions 50
+outlive ireland milan
+short_campaign hold_regions Nan_Curunir_Province 
+take_regions 30
+outlive milan
+
+aztecs
+hold_regions Dunland_Hills_Province Kings_Land_Province Bree_Province
+take_regions 30
+outlive milan normans
+short_campaign hold_regions Dunland_Hills_Province 
+take_regions 20
+outlive milan
+
+hre
+hold_regions West_Moria_Province 
+take_regions 40
+short_campaign hold_regions West_Moria_Province 
+take_regions 25
+
+gundabad
+hold_regions Mt_Gundabad_Province 
+take_regions 40
+outlive moors norway hungary
+short_campaign hold_regions Mt_Gundabad_Province 
+take_regions 25
+outlive moors
+
+portugal
+hold_regions Carn_Dum_Province Bree_Province Angle_Province
+take_regions 40
+outlive normans turks saxons
+short_campaign hold_regions Carn_Dum_Province 
+take_regions 25
+outlive turks
+
+spain
+hold_regions Gobel_Ancalimon_Province Anorien_Province Belfalas_Province
+take_regions 40
+outlive denmark sicily
+short_campaign hold_regions Gobel_Ancalimon_Province 
+take_regions 25
+outlive sicily
+
+russia
+hold_regions
+take_regions 60
+short_campaign hold_regions 
+take_regions 45
+
+khand
+hold_regions 
+take_regions 40
+short_campaign hold_regions 
+take_regions 25
+
+papal_states
+hold_regions
+take_regions 180
+short_campaign hold_regions
+take_regions 180
+
+united
+hold_regions Anorien_Province 
+take_regions 100
+outlive aztecs england france poland portugal
+short_campaign hold_regions Anorien_Province 
+take_regions 100
+outlive aztecs england france poland portugal
+
+slave
+hold_regions
+take_regions 180
+short_campaign hold_regions
+take_regions 180
+

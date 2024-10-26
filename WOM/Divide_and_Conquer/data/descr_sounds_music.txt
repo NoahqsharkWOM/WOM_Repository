@@ -1,0 +1,3728 @@
+; SOUNDS - MUSIC SETTINGS
+; SOUNDS - MUSIC HISTORICAL BATTLES
+; SOUNDS - MUSIC GENERIC
+; Orcs
+; Gondor
+; Elves
+; Anduin
+; Southmen
+; Northmen
+; Dwarves
+; Rohan
+; Umbar
+; Khand
+; Breeland
+; Dorwinion
+; Dale
+; Angmar
+; Wildmen
+;#####################################
+;##### SOUNDS - MUSIC SETTINGS #####
+;#####################################
+
+DEFAULT: priority 9999 randomdelay 0 pan .5 volume -10 dry_level 1.0 wet_level 0.0 fadeout 1 pref MUSIC STREAMED
+
+required_samples_cutoff 3
+music_timeout 60
+music_retrigger 5
+music_fade_in 0
+music_fade_out 3
+music_fade_out_timeout 10
+
+
+
+;###############################################
+;##### SOUNDS - MUSIC HISTORICAL BATTLES #####
+;###############################################
+
+event Arabic_Tension
+	folder data/sounds/Music
+	southmen_tension_01.mp3
+	southmen_tension_02.mp3
+end
+
+
+
+;####################################
+;##### SOUNDS - MUSIC GENERIC #####
+;####################################
+
+DEFAULT: streamed
+
+BANK: music_bank
+
+	; Orcs
+
+	music_type eastern_european
+		state MUSIC_BATTLE_BATTLE
+			event
+				folder data/sounds/Music
+				dwarves_battle_05.mp3
+				dwarves_battle_06.mp3
+				orcs_battle_01.mp3
+				orcs_battle_02.mp3
+				orcs_battle_03.mp3	
+				orcs_battle_04.mp3
+				orcs_battle_05.mp3
+				orcs_battle_06.mp3
+				orcs_battle_08.mp3
+				orcs_battle_09.mp3
+				orcs_battle_10.mp3
+				orcs_battle_11.mp3
+				neutral_battle_01.mp3
+				neutral_battle_02.mp3
+				neutral_battle_03.mp3
+				neutral_battle_04.mp3
+				neutral_battle_05.mp3
+				neutral_battle_06.mp3
+				neutral_battle_09.mp3
+				neutral_battle_10.mp3
+				neutral_battle_11.mp3
+				neutral_battle_12.mp3
+				neutral_battle_13.mp3
+				neutral_battle_14.mp3
+				neutral_battle_15.mp3
+			end
+		state MUSIC_BATTLE_MOBILIZE
+			event
+				folder data/sounds/Music
+				orcs_mobilize_01.mp3
+				orcs_mobilize_02.mp3
+				orcs_mobilize_03.mp3
+				orcs_mobilize_04.mp3
+				orcs_mobilize_05.mp3
+				orcs_mobilize_06.mp3
+				orcs_mobilize_07.mp3
+				orcs_mobilize_08.mp3
+				neutral_mobilize_01.mp3
+				neutral_mobilize_02.mp3
+				neutral_mobilize_03.mp3
+				neutral_mobilize_04.mp3
+				neutral_mobilize_05.mp3
+				neutral_mobilize_06.mp3
+				neutral_mobilize_07.mp3
+				neutral_combat_01.mp3
+			end
+		state MUSIC_BATTLE_TENSION
+			event
+				folder data/sounds/Music
+				orcs_tension_01.mp3
+				orcs_tension_02.mp3
+				orcs_tension_04.mp3
+				orcs_tension_05.mp3
+				orcs_tension_06.mp3
+				orcs_tension_08.mp3
+				neutral_tension_01.mp3
+				neutral_tension_02.mp3
+			end
+		state MUSIC_CAMPAIGN_LOADING
+			event
+				folder data/sounds/Music
+				campaign_loading.mp3
+			end
+		state MUSIC_CAMPAIGN_VICTORY
+			event looped
+				folder data/sounds/Music
+				orcs_win.mp3
+			end
+		state MUSIC_CAMPAIGN_DEFEAT
+			event looped
+				folder data/sounds/Music
+				orcs_lose.mp3
+			end
+		state MUSIC_CREDITS1 delay 3
+			event
+				folder data/sounds/Music
+				credits.mp3
+			end
+		state MUSIC_CREDITS2
+			event
+				folder data/sounds/Music
+				credits.mp3
+			end
+		state MUSIC_FRONTEND
+			event
+				folder data/sounds/Music
+				frontend_01.mp3
+				frontend_02.mp3
+			end
+		state MUSIC_PREBATTLE_SCROLL
+			event
+				folder data/sounds/Music
+				orcs_prebattle.mp3
+			end
+		state MUSIC_RESULT_DRAW
+			event
+				folder data/sounds/Music
+				defeat_orcs.mp3
+			end
+		state MUSIC_RESULT_LOSE_AVERAGE
+			event
+				folder data/sounds/Music
+				defeat_orcs.mp3
+			end
+		state MUSIC_RESULT_LOSE_CLOSE
+			event
+				folder data/sounds/Music
+				defeat_orcs.mp3
+			end
+		state MUSIC_RESULT_LOSE_CRUSHING
+			event
+				folder data/sounds/Music
+				defeat_orcs.mp3
+			end
+		state MUSIC_RESULT_WIN_AVERAGE
+			event
+				folder data/sounds/Music
+				victory_orcs.mp3
+			end
+		state MUSIC_RESULT_WIN_CLOSE
+			event
+				folder data/sounds/Music
+				victory_orcs.mp3
+			end
+		state MUSIC_RESULT_WIN_CRUSHING
+			event
+				folder data/sounds/Music
+				victory_orcs_heroic.mp3
+			end
+		state MUSIC_RESULT_STRAT_DRAW
+			event
+				folder data/sounds/Music
+				defeat_orcs.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_AVERAGE
+			event
+				folder data/sounds/Music
+				defeat_orcs.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CLOSE
+			event
+				folder data/sounds/Music
+				defeat_orcs.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CRUSHING
+			event
+				folder data/sounds/Music
+				defeat_orcs.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_AVERAGE
+			event
+				folder data/sounds/Music
+				victory_orcs.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_CLOSE
+			event
+				folder data/sounds/Music
+				victory_orcs.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_CRUSHING
+			event
+				folder data/sounds/Music
+				victory_orcs_heroic.mp3
+			end
+		state MUSIC_STRATMAP_SUMMER
+			event delay 5
+				folder data/sounds/Music
+				orcs_stratmap_01.mp3
+				orcs_stratmap_02.mp3
+				orcs_stratmap_03.mp3
+				orcs_stratmap_04.mp3
+				orcs_stratmap_05.mp3
+				orcs_stratmap_06.mp3
+				orcs_stratmap_08.mp3
+				orcs_stratmap_09.mp3
+				orcs_stratmap_10.mp3
+				orcs_stratmap_11.mp3
+				orcs_stratmap_12.mp3
+				orcs_stratmap_13.mp3
+				orcs_stratmap_14.mp3
+				orcs_stratmap_15.mp3
+				orcs_stratmap_16.mp3
+				orcs_stratmap_17.mp3
+				orcs_stratmap_18.mp3
+				orcs_stratmap_19.mp3
+				orcs_stratmap_20.mp3
+				orcs_stratmap_21.mp3
+				orcs_stratmap_22.mp3
+				orcs_stratmap_23.mp3
+				orcs_stratmap_24.mp3
+				orcs_stratmap_26.mp3
+				orcs_stratmap_27.mp3
+				evil_stratmap_01.mp3
+				evil_stratmap_02.mp3
+				evil_stratmap_03.mp3
+				evil_stratmap_04.mp3
+				evil_stratmap_05.mp3
+				evil_stratmap_06.mp3
+				evil_stratmap_07.mp3
+				evil_stratmap_08.mp3
+				evil_stratmap_09.mp3
+				evil_stratmap_10.mp3
+				evil_stratmap_11.mp3
+				evil_stratmap_12.mp3
+				evil_stratmap_13.mp3
+				frontend_02.mp3				
+			end
+		state MUSIC_STRATMAP_WINTER
+			event delay 5
+				folder data/sounds/Music
+				orcs_stratmap_01.mp3
+				orcs_stratmap_02.mp3
+				orcs_stratmap_03.mp3
+				orcs_stratmap_04.mp3
+				orcs_stratmap_05.mp3
+				orcs_stratmap_06.mp3
+				orcs_stratmap_08.mp3
+				orcs_stratmap_09.mp3
+				orcs_stratmap_10.mp3
+				orcs_stratmap_11.mp3
+				orcs_stratmap_12.mp3
+				orcs_stratmap_13.mp3
+				orcs_stratmap_14.mp3
+				orcs_stratmap_15.mp3
+				orcs_stratmap_16.mp3
+				orcs_stratmap_17.mp3
+				orcs_stratmap_18.mp3
+				orcs_stratmap_19.mp3
+				orcs_stratmap_20.mp3
+				orcs_stratmap_21.mp3
+				orcs_stratmap_22.mp3
+				orcs_stratmap_23.mp3
+				orcs_stratmap_24.mp3
+				orcs_stratmap_26.mp3
+				orcs_stratmap_27.mp3
+				evil_stratmap_01.mp3
+				evil_stratmap_02.mp3
+				evil_stratmap_03.mp3
+				evil_stratmap_04.mp3
+				evil_stratmap_05.mp3
+				evil_stratmap_06.mp3
+				evil_stratmap_07.mp3
+				evil_stratmap_08.mp3
+				evil_stratmap_09.mp3
+				evil_stratmap_10.mp3
+				evil_stratmap_11.mp3
+				evil_stratmap_12.mp3
+				evil_stratmap_13.mp3
+				frontend_02.mp3				
+			end
+
+
+	; Gondor
+
+	music_type gondor
+		state MUSIC_BATTLE_BATTLE
+			event
+				folder data/sounds/Music
+				gondor_battle_01.mp3				
+				good_battle_01.mp3
+				good_battle_02.mp3
+				good_battle_03.mp3
+				good_battle_04.mp3
+				good_battle_05.mp3
+				good_battle_06.mp3
+				good_battle_07.mp3
+				good_battle_08.mp3
+				neutral_battle_01.mp3
+				neutral_battle_02.mp3
+				neutral_battle_03.mp3
+				neutral_battle_04.mp3
+				neutral_battle_05.mp3
+				neutral_battle_06.mp3
+				neutral_battle_09.mp3
+				neutral_battle_10.mp3
+				neutral_battle_11.mp3
+				neutral_battle_12.mp3
+				neutral_battle_13.mp3
+				neutral_battle_14.mp3
+				neutral_battle_15.mp3
+			end
+		state MUSIC_BATTLE_MOBILIZE
+			event
+				folder data/sounds/Music
+				good_mobilize_01.mp3
+				good_mobilize_02.mp3
+				good_mobilize_03.mp3
+				good_mobilize_04.mp3
+				good_mobilize_05.mp3
+				good_mobilize_06.mp3
+				good_mobilize_08.mp3
+				neutral_mobilize_01.mp3
+				neutral_mobilize_02.mp3
+				neutral_mobilize_03.mp3
+				neutral_mobilize_04.mp3
+				neutral_mobilize_05.mp3
+				neutral_mobilize_06.mp3
+				neutral_combat_01.mp3
+			end
+		state MUSIC_BATTLE_TENSION
+			event
+				folder data/sounds/Music
+				gondor_tension_01.mp3
+				good_tension_01.mp3
+				good_tension_02.mp3
+				good_tension_03.mp3
+				good_tension_04.mp3
+				good_tension_05.mp3
+				good_tension_07.mp3
+				neutral_tension_01.mp3
+				neutral_tension_02.mp3
+			end
+		state MUSIC_CAMPAIGN_LOADING
+			event
+				folder data/sounds/Music
+				campaign_loading1.mp3
+				campaign_loading2.mp3
+			end
+		state MUSIC_CAMPAIGN_DEFEAT
+			event looped
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_CAMPAIGN_VICTORY
+			event looped
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_CREDITS1 delay 3
+			event
+				folder data/sounds/Music
+				credits.mp3
+			end
+		state MUSIC_CREDITS2
+			event
+				folder data/sounds/Music
+				credits.mp3
+			end
+		state MUSIC_FRONTEND
+			event
+				folder data/sounds/Music
+				frontend_01.mp3
+				frontend_02.mp3
+			end
+		state MUSIC_PREBATTLE_SCROLL
+			event
+				folder data/sounds/Music
+				neutral_combat_06.mp3
+			end
+		state MUSIC_RESULT_DRAW
+			event
+				folder data/sounds/Music
+				draw.mp3
+			end
+		state MUSIC_RESULT_WIN_AVERAGE
+			event
+				folder data/sounds/Music
+				victory_dunedain.mp3
+			end
+		state MUSIC_RESULT_WIN_CLOSE
+			event
+				folder data/sounds/Music
+				victory_dunedain.mp3
+			end
+		state MUSIC_RESULT_WIN_CRUSHING
+			event
+				folder data/sounds/Music
+				victory_dunedain_heroic.mp3
+			end
+		state MUSIC_RESULT_LOSE_AVERAGE
+			event
+				folder data/sounds/Music
+				defeat_dunedain.mp3
+			end
+		state MUSIC_RESULT_LOSE_CLOSE
+			event
+				folder data/sounds/Music
+				defeat_dunedain.mp3
+			end
+		state MUSIC_RESULT_LOSE_CRUSHING
+			event
+				folder data/sounds/Music
+				defeat_dunedain.mp3
+			end
+		state MUSIC_RESULT_STRAT_DRAW
+			event
+				folder data/sounds/Music
+				defeat_dunedain.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_AVERAGE
+			event
+				folder data/sounds/Music
+				victory_dunedain.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_CLOSE
+			event
+				folder data/sounds/Music
+				victory_dunedain.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_CRUSHING
+			event
+				folder data/sounds/Music
+				victory_dunedain_heroic.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_AVERAGE
+			event
+				folder data/sounds/Music
+				defeat_dunedain.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CLOSE
+			event
+				folder data/sounds/Music
+				defeat_dunedain.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CRUSHING
+			event
+				folder data/sounds/Music
+				defeat_dunedain.mp3
+			end
+		state MUSIC_STRATMAP_SUMMER
+			event delay 5
+				folder data/sounds/Music
+				gondor_stratmap_01.mp3
+				gondor_stratmap_02.mp3
+				gondor_stratmap_03.mp3
+				gondor_stratmap_04.mp3
+				gondor_stratmap_05.mp3
+				gondor_stratmap_07.mp3
+				gondor_stratmap_08.mp3
+				gondor_stratmap_09.mp3
+				gondor_stratmap_10.mp3
+				gondor_stratmap_11.mp3
+				gondor_stratmap_12.mp3
+				gondor_stratmap_13.mp3
+				gondor_stratmap_14.mp3
+				gondor_stratmap_15.mp3
+				good_stratmap_01.mp3
+				good_stratmap_02.mp3
+				good_stratmap_03.mp3
+				good_stratmap_04.mp3
+				good_stratmap_05.mp3
+				good_stratmap_06.mp3
+				good_stratmap_07.mp3
+				good_stratmap_08.mp3
+				good_stratmap_09.mp3
+				good_stratmap_10.mp3
+				good_stratmap_11.mp3
+				good_stratmap_12.mp3
+				good_stratmap_13.mp3
+				good_stratmap_14.mp3
+				good_stratmap_15.mp3
+				good_stratmap_16.mp3
+				good_stratmap_17.mp3
+				good_stratmap_18.mp3
+				good_stratmap_19.mp3
+				good_stratmap_20.mp3
+				good_stratmap_22.mp3
+				good_stratmap_23.mp3
+				good_stratmap_24.mp3
+				good_stratmap_25.mp3
+				good_stratmap_26.mp3
+				good_stratmap_27.mp3
+				good_stratmap_28.mp3
+				good_stratmap_29.mp3
+				good_stratmap_30.mp3
+				good_stratmap_31.mp3
+				good_stratmap_32.mp3
+				good_stratmap_33.mp3
+				neutral_stratmap_01.mp3
+				neutral_stratmap_02.mp3
+				neutral_stratmap_03.mp3
+				neutral_stratmap_04.mp3
+				neutral_stratmap_05.mp3
+				neutral_stratmap_06.mp3
+				neutral_stratmap_07.mp3
+				neutral_stratmap_08.mp3
+				neutral_stratmap_09.mp3
+				neutral_stratmap_10.mp3
+				neutral_stratmap_11.mp3
+				neutral_stratmap_12.mp3
+				neutral_stratmap_13.mp3
+				neutral_stratmap_14.mp3
+				neutral_stratmap_15.mp3
+				frontend_02.mp3				
+			end
+		state MUSIC_STRATMAP_WINTER
+			event delay 5
+				folder data/sounds/Music
+				gondor_stratmap_01.mp3
+				gondor_stratmap_02.mp3
+				gondor_stratmap_03.mp3
+				gondor_stratmap_04.mp3
+				gondor_stratmap_05.mp3
+				gondor_stratmap_07.mp3
+				gondor_stratmap_08.mp3
+				gondor_stratmap_09.mp3
+				gondor_stratmap_10.mp3
+				gondor_stratmap_11.mp3
+				gondor_stratmap_12.mp3
+				gondor_stratmap_13.mp3
+				gondor_stratmap_14.mp3
+				gondor_stratmap_15.mp3
+				good_stratmap_01.mp3
+				good_stratmap_02.mp3
+				good_stratmap_03.mp3
+				good_stratmap_04.mp3
+				good_stratmap_05.mp3
+				good_stratmap_06.mp3
+				good_stratmap_07.mp3
+				good_stratmap_08.mp3
+				good_stratmap_09.mp3
+				good_stratmap_10.mp3
+				good_stratmap_11.mp3
+				good_stratmap_12.mp3
+				good_stratmap_13.mp3
+				good_stratmap_14.mp3
+				good_stratmap_15.mp3
+				good_stratmap_16.mp3
+				good_stratmap_17.mp3
+				good_stratmap_18.mp3
+				good_stratmap_19.mp3
+				good_stratmap_20.mp3
+				good_stratmap_22.mp3
+				good_stratmap_23.mp3
+				good_stratmap_24.mp3
+				good_stratmap_25.mp3
+				good_stratmap_26.mp3
+				good_stratmap_27.mp3
+				good_stratmap_28.mp3
+				good_stratmap_29.mp3
+				good_stratmap_30.mp3
+				good_stratmap_31.mp3
+				good_stratmap_32.mp3
+				good_stratmap_33.mp3
+				neutral_stratmap_01.mp3
+				neutral_stratmap_02.mp3
+				neutral_stratmap_03.mp3
+				neutral_stratmap_04.mp3
+				neutral_stratmap_05.mp3
+				neutral_stratmap_06.mp3
+				neutral_stratmap_07.mp3
+				neutral_stratmap_08.mp3
+				neutral_stratmap_09.mp3
+				neutral_stratmap_10.mp3
+				neutral_stratmap_11.mp3
+				neutral_stratmap_12.mp3
+				neutral_stratmap_13.mp3
+				neutral_stratmap_14.mp3
+				neutral_stratmap_15.mp3
+				frontend_02.mp3				
+			end
+
+	; Elves
+
+	music_type greek
+		state MUSIC_BATTLE_BATTLE
+			event
+				folder data/sounds/Music
+				elves_battle_01.mp3
+				good_battle_01.mp3
+				good_battle_02.mp3
+				good_battle_03.mp3
+				good_battle_04.mp3
+				good_battle_05.mp3
+				good_battle_06.mp3
+				good_battle_07.mp3
+				good_battle_08.mp3
+				neutral_battle_01.mp3
+				neutral_battle_02.mp3
+				neutral_battle_03.mp3
+				neutral_battle_04.mp3
+				neutral_battle_05.mp3
+				neutral_battle_06.mp3
+				neutral_battle_09.mp3
+				neutral_battle_10.mp3
+				neutral_battle_11.mp3
+				neutral_battle_12.mp3
+				neutral_battle_13.mp3
+				neutral_battle_14.mp3
+				neutral_battle_15.mp3
+			end
+		state MUSIC_BATTLE_MOBILIZE
+			event
+				folder data/sounds/Music
+				elves_mobilize_01.mp3
+				elves_mobilize_02.mp3
+				elves_mobilize_03.mp3
+				elves_mobilize_04.mp3
+				good_mobilize_01.mp3
+				good_mobilize_02.mp3
+				good_mobilize_03.mp3
+				good_mobilize_04.mp3
+				good_mobilize_05.mp3
+				good_mobilize_06.mp3
+				good_mobilize_08.mp3
+				neutral_combat_01.mp3
+				neutral_combat_02.mp3
+				neutral_combat_03.mp3
+				neutral_combat_04.mp3
+			end
+		state MUSIC_BATTLE_TENSION
+			event
+				folder data/sounds/Music
+				elves_tension_01.mp3
+				elves_tension_02.mp3
+				elves_tension_03.mp3
+				good_tension_01.mp3
+				good_tension_02.mp3
+				good_tension_03.mp3
+				good_tension_04.mp3
+				good_tension_05.mp3
+				good_tension_07.mp3
+				neutral_combat_07.mp3
+				neutral_tension_01.mp3
+				neutral_tension_02.mp3
+			end
+		state MUSIC_CAMPAIGN_LOADING
+			event
+				folder data/sounds/Music
+				campaign_loading.mp3
+			end
+		state MUSIC_CAMPAIGN_DEFEAT
+			event looped
+				folder data/sounds/Music
+				elves_lose.mp3
+			end
+		state MUSIC_CAMPAIGN_VICTORY
+			event looped
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_CREDITS1 delay 3
+			event
+				folder data/sounds/Music
+				credits.mp3
+			end
+		state MUSIC_CREDITS2
+			event
+				folder data/sounds/Music
+				credits.mp3
+			end
+		state MUSIC_FRONTEND
+			event
+				folder data/sounds/Music
+				frontend_01.mp3
+				frontend_02.mp3
+			end
+		state MUSIC_PREBATTLE_SCROLL
+			event
+				folder data/sounds/Music
+				elves_prebattle.mp3
+			end
+
+		state MUSIC_RESULT_DRAW
+			event 
+				folder data/sounds/Music
+				elves_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_AVERAGE
+			event 
+				folder data/sounds/Music
+				elves_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_CLOSE
+			event 
+				folder data/sounds/Music
+				elves_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_CRUSHING
+			event 
+				folder data/sounds/Music
+				elves_lose.mp3
+			end	
+		state MUSIC_RESULT_WIN_AVERAGE
+			event 
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_WIN_CLOSE
+			event 
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_WIN_CRUSHING
+			event 
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_STRAT_DRAW
+			event
+				folder data/sounds/Music
+				elves_draw.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_AVERAGE
+			event
+				folder data/sounds/Music
+				elves_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CLOSE
+			event
+				folder data/sounds/Music
+				elves_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CRUSHING
+			event
+				folder data/sounds/Music
+				elves_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_AVERAGE
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_CLOSE
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_CRUSHING
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_STRATMAP_SUMMER
+			event delay 5
+				folder data/sounds/Music
+				elves_stratmap_01.mp3
+				elves_stratmap_02.mp3
+				elves_stratmap_03.mp3
+				elves_stratmap_04.mp3
+				elves_stratmap_05.mp3
+				elves_stratmap_06.mp3
+				elves_stratmap_07.mp3
+				elves_stratmap_08.mp3
+				elves_stratmap_09.mp3
+				elves_stratmap_10.mp3
+				elves_stratmap_11.mp3
+				elves_stratmap_12.mp3
+				elves_stratmap_13.mp3
+				elves_stratmap_16.mp3
+				elves_stratmap_17.mp3
+				elves_stratmap_18.mp3
+				elves_stratmap_19.mp3
+				elves_stratmap_20.mp3
+				elves_stratmap_21.mp3
+				good_stratmap_01.mp3
+				good_stratmap_02.mp3
+				good_stratmap_03.mp3
+				good_stratmap_04.mp3
+				good_stratmap_05.mp3
+				good_stratmap_06.mp3
+				good_stratmap_07.mp3
+				good_stratmap_08.mp3
+				good_stratmap_09.mp3
+				good_stratmap_10.mp3
+				good_stratmap_11.mp3
+				good_stratmap_12.mp3
+				good_stratmap_13.mp3
+				good_stratmap_14.mp3
+				good_stratmap_15.mp3
+				good_stratmap_16.mp3
+				good_stratmap_17.mp3
+				good_stratmap_18.mp3
+				good_stratmap_19.mp3
+				good_stratmap_20.mp3
+				good_stratmap_22.mp3
+				good_stratmap_23.mp3
+				good_stratmap_24.mp3
+				good_stratmap_25.mp3
+				good_stratmap_26.mp3
+				good_stratmap_27.mp3
+				good_stratmap_28.mp3
+				good_stratmap_29.mp3
+				good_stratmap_30.mp3
+				good_stratmap_31.mp3
+				good_stratmap_32.mp3
+				good_stratmap_33.mp3
+				neutral_stratmap_01.mp3
+				neutral_stratmap_02.mp3
+				neutral_stratmap_03.mp3
+				neutral_stratmap_04.mp3
+				neutral_stratmap_05.mp3
+				neutral_stratmap_06.mp3
+				neutral_stratmap_07.mp3
+				neutral_stratmap_08.mp3
+				neutral_stratmap_09.mp3
+				neutral_stratmap_10.mp3
+				neutral_stratmap_11.mp3
+				neutral_stratmap_12.mp3
+				neutral_stratmap_13.mp3
+				neutral_stratmap_14.mp3
+				neutral_stratmap_15.mp3
+				frontend_02.mp3				
+			end
+		state MUSIC_STRATMAP_WINTER
+			event delay 5
+				folder data/sounds/Music
+				elves_stratmap_01.mp3
+				elves_stratmap_02.mp3
+				elves_stratmap_03.mp3
+				elves_stratmap_04.mp3
+				elves_stratmap_05.mp3
+				elves_stratmap_06.mp3
+				elves_stratmap_07.mp3
+				elves_stratmap_08.mp3
+				elves_stratmap_09.mp3
+				elves_stratmap_10.mp3
+				elves_stratmap_11.mp3
+				elves_stratmap_12.mp3
+				elves_stratmap_13.mp3
+				elves_stratmap_16.mp3
+				elves_stratmap_17.mp3
+				elves_stratmap_18.mp3
+				elves_stratmap_19.mp3
+				elves_stratmap_20.mp3
+				elves_stratmap_21.mp3
+				good_stratmap_01.mp3
+				good_stratmap_02.mp3
+				good_stratmap_03.mp3
+				good_stratmap_04.mp3
+				good_stratmap_05.mp3
+				good_stratmap_06.mp3
+				good_stratmap_07.mp3
+				good_stratmap_08.mp3
+				good_stratmap_09.mp3
+				good_stratmap_10.mp3
+				good_stratmap_11.mp3
+				good_stratmap_12.mp3
+				good_stratmap_13.mp3
+				good_stratmap_14.mp3
+				good_stratmap_15.mp3
+				good_stratmap_16.mp3
+				good_stratmap_17.mp3
+				good_stratmap_18.mp3
+				good_stratmap_19.mp3
+				good_stratmap_20.mp3
+				good_stratmap_22.mp3
+				good_stratmap_23.mp3
+				good_stratmap_24.mp3
+				good_stratmap_25.mp3
+				good_stratmap_26.mp3
+				good_stratmap_27.mp3
+				good_stratmap_28.mp3
+				good_stratmap_29.mp3
+				good_stratmap_30.mp3
+				good_stratmap_31.mp3
+				good_stratmap_32.mp3
+				good_stratmap_33.mp3
+				neutral_stratmap_01.mp3
+				neutral_stratmap_02.mp3
+				neutral_stratmap_03.mp3
+				neutral_stratmap_04.mp3
+				neutral_stratmap_05.mp3
+				neutral_stratmap_06.mp3
+				neutral_stratmap_07.mp3
+				neutral_stratmap_08.mp3
+				neutral_stratmap_09.mp3
+				neutral_stratmap_10.mp3
+				neutral_stratmap_11.mp3
+				neutral_stratmap_12.mp3
+				neutral_stratmap_13.mp3
+				neutral_stratmap_14.mp3
+				neutral_stratmap_15.mp3
+				frontend_02.mp3				
+			end
+
+	; Anduin
+
+	music_type anduin
+		state MUSIC_BATTLE_BATTLE
+			event
+				folder data/sounds/Music
+				good_battle_02.mp3
+				good_battle_03.mp3
+				good_battle_04.mp3
+				good_battle_05.mp3
+				good_battle_06.mp3
+				good_battle_08.mp3
+				neutral_battle_01.mp3
+				neutral_battle_02.mp3
+				neutral_battle_03.mp3
+				neutral_battle_04.mp3
+				neutral_battle_05.mp3
+				neutral_battle_06.mp3
+				neutral_battle_09.mp3
+				neutral_battle_10.mp3
+				neutral_battle_11.mp3
+				neutral_battle_12.mp3
+				neutral_battle_13.mp3
+				neutral_battle_14.mp3
+				neutral_battle_15.mp3
+			end
+		state MUSIC_BATTLE_MOBILIZE
+			event
+				folder data/sounds/Music
+				neutral_combat_01.mp3
+				neutral_combat_02.mp3
+				neutral_combat_03.mp3
+				neutral_combat_04.mp3
+			end
+		state MUSIC_BATTLE_TENSION
+			event
+				folder data/sounds/Music
+				neutral_combat_05.mp3
+				neutral_combat_06.mp3
+				neutral_tension_01.mp3
+				neutral_tension_02.mp3
+			end
+		state MUSIC_CAMPAIGN_LOADING
+			event
+				folder data/sounds/Music
+				campaign_loading.mp3
+			end
+		state MUSIC_CAMPAIGN_DEFEAT
+			event looped
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_CAMPAIGN_VICTORY
+			event looped
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_CREDITS1 delay 3
+			event
+				folder data/sounds/Music
+				credits.mp3
+			end
+		state MUSIC_CREDITS2
+			event
+				folder data/sounds/Music
+				credits.mp3
+			end
+		state MUSIC_FRONTEND
+			event
+				folder data/sounds/Music
+				frontend_01.mp3
+				frontend_02.mp3
+			end
+		state MUSIC_PREBATTLE_SCROLL
+			event
+				folder data/sounds/Music
+				neutral_combat_06.mp3
+			end
+		state MUSIC_RESULT_DRAW
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_AVERAGE
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_CLOSE
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_CRUSHING
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_WIN_AVERAGE
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_WIN_CLOSE
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_WIN_CRUSHING
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_STRAT_DRAW
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_AVERAGE
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CLOSE
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CRUSHING
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_AVERAGE
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_CLOSE
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_CRUSHING
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_STRATMAP_SUMMER
+			event delay 5
+				folder data/sounds/Music
+				middlemen_stratmap_01.mp3
+				middlemen_stratmap_02.mp3
+				middlemen_stratmap_03.mp3
+				middlemen_stratmap_04.mp3
+				middlemen_stratmap_05.mp3
+				middlemen_stratmap_06.mp3
+				middlemen_stratmap_07.mp3
+				middlemen_stratmap_08.mp3
+				middlemen_stratmap_09.mp3
+				middlemen_stratmap_10.mp3
+				middlemen_stratmap_11.mp3
+				middlemen_stratmap_12.mp3
+				middlemen_stratmap_13.mp3
+				neutral_stratmap_01.mp3
+				neutral_stratmap_02.mp3
+				neutral_stratmap_03.mp3
+				neutral_stratmap_04.mp3
+				neutral_stratmap_05.mp3
+				neutral_stratmap_06.mp3
+				neutral_stratmap_07.mp3
+				neutral_stratmap_08.mp3
+				neutral_stratmap_09.mp3
+				neutral_stratmap_10.mp3
+				neutral_stratmap_11.mp3
+				neutral_stratmap_12.mp3
+				neutral_stratmap_13.mp3
+				neutral_stratmap_14.mp3
+				neutral_stratmap_15.mp3
+				neutral_stratmap_16.mp3
+				frontend_02.mp3				
+			end
+		state MUSIC_STRATMAP_WINTER
+			event delay 5
+				folder data/sounds/Music
+				middlemen_stratmap_01.mp3
+				middlemen_stratmap_02.mp3
+				middlemen_stratmap_03.mp3
+				middlemen_stratmap_04.mp3
+				middlemen_stratmap_05.mp3
+				middlemen_stratmap_06.mp3
+				middlemen_stratmap_07.mp3
+				middlemen_stratmap_08.mp3
+				middlemen_stratmap_09.mp3
+				middlemen_stratmap_10.mp3
+				middlemen_stratmap_11.mp3
+				middlemen_stratmap_12.mp3
+				middlemen_stratmap_13.mp3
+				neutral_stratmap_01.mp3
+				neutral_stratmap_02.mp3
+				neutral_stratmap_03.mp3
+				neutral_stratmap_04.mp3
+				neutral_stratmap_05.mp3
+				neutral_stratmap_06.mp3
+				neutral_stratmap_07.mp3
+				neutral_stratmap_08.mp3
+				neutral_stratmap_09.mp3
+				neutral_stratmap_10.mp3
+				neutral_stratmap_11.mp3
+				neutral_stratmap_12.mp3
+				neutral_stratmap_13.mp3
+				neutral_stratmap_14.mp3
+				neutral_stratmap_15.mp3
+				neutral_stratmap_16.mp3
+				frontend_02.mp3				
+			end
+
+	; Southmen
+
+	music_type middle_eastern
+		state MUSIC_BATTLE_BATTLE
+			event
+				folder data/sounds/Music
+				southmen_battle_01.mp3
+				southmen_battle_02.mp3
+				southmen_battle_03.mp3
+				southmen_battle_04.mp3
+				southmen_battle_05.mp3
+				southmen_battle_06.mp3
+				neutral_battle_01.mp3
+				neutral_battle_02.mp3
+				neutral_battle_03.mp3
+				neutral_battle_04.mp3
+				neutral_battle_05.mp3
+				neutral_battle_06.mp3
+				neutral_battle_09.mp3
+				neutral_battle_10.mp3
+				neutral_battle_11.mp3
+				neutral_battle_12.mp3
+				neutral_battle_13.mp3
+				neutral_battle_14.mp3
+				neutral_battle_15.mp3
+			end
+		state MUSIC_BATTLE_MOBILIZE
+			event
+				folder data/sounds/Music
+				southmen_mobilize_02.mp3
+				southmen_mobilize_03.mp3
+				southmen_mobilize_04.mp3
+				southmen_mobilize_05.mp3
+				southmen_mobilize_06.mp3
+			end
+		state MUSIC_BATTLE_TENSION
+			event
+				folder data/sounds/Music
+				southmen_tension_01.mp3
+				southmen_tension_02.mp3
+				southmen_tension_03.mp3
+				neutral_tension_03.mp3
+			end
+		state MUSIC_CAMPAIGN_LOADING
+			event
+				folder data/sounds/Music
+				campaign_loading_southmen.mp3
+			end
+		state MUSIC_CAMPAIGN_DEFEAT
+			event looped
+				folder data/sounds/Music
+				southmen_lose_02.mp3
+			end
+		state MUSIC_CAMPAIGN_VICTORY
+			event looped
+				folder data/sounds/Music
+				southmen_win.mp3
+			end
+		state MUSIC_CREDITS1 delay 3
+			event
+				folder data/sounds/Music
+				credits.mp3
+			end
+		state MUSIC_CREDITS2
+			event
+				folder data/sounds/Music
+				credits.mp3
+			end
+		state MUSIC_FRONTEND
+			event
+				folder data/sounds/Music
+				frontend_01.mp3
+				frontend_02.mp3
+			end
+		state MUSIC_PREBATTLE_SCROLL
+			event
+				folder data/sounds/Music
+				neutral_combat_06.mp3
+			end
+		state MUSIC_RESULT_DRAW
+			event
+				folder data/sounds/Music
+				southmen_lose_01.mp3
+			end
+		state MUSIC_RESULT_LOSE_AVERAGE
+			event
+				folder data/sounds/Music
+				southmen_lose_01.mp3
+			end
+		state MUSIC_RESULT_LOSE_CLOSE
+			event
+				folder data/sounds/Music
+				southmen_lose_01.mp3
+			end
+		state MUSIC_RESULT_LOSE_CRUSHING
+			event
+				folder data/sounds/Music
+				southmen_lose_02.mp3
+			end
+		state MUSIC_RESULT_WIN_AVERAGE
+			event
+				folder data/sounds/Music
+				southmen_win.mp3
+			end
+		state MUSIC_RESULT_WIN_CLOSE
+			event
+				folder data/sounds/Music
+				southmen_win.mp3
+			end
+		state MUSIC_RESULT_WIN_CRUSHING
+			event
+				folder data/sounds/Music
+				southmen_win.mp3
+			end
+		state MUSIC_RESULT_STRAT_DRAW
+			event
+				folder data/sounds/Music
+				southmen_lose_01.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_AVERAGE
+			event
+				folder data/sounds/Music
+				southmen_lose_01.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CLOSE
+			event
+				folder data/sounds/Music
+				southmen_lose_01.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CRUSHING
+			event
+				folder data/sounds/Music
+				southmen_lose_02.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_AVERAGE
+			event
+				folder data/sounds/Music
+				southmen_win.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_CLOSE
+			event
+				folder data/sounds/Music
+				southmen_win.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_CRUSHING
+			event
+				folder data/sounds/Music
+				southmen_win.mp3
+			end
+		state MUSIC_STRATMAP_SUMMER
+			event delay 5
+				folder data/sounds/Music
+				southmen_stratmap_01.mp3
+				southmen_stratmap_02.mp3
+				southmen_stratmap_03.mp3
+				southmen_stratmap_04.mp3
+				southmen_stratmap_05.mp3
+				southmen_stratmap_06.mp3
+				southmen_stratmap_07.mp3
+				southmen_stratmap_08.mp3
+				southmen_stratmap_09.mp3
+				southmen_stratmap_10.mp3
+				southmen_stratmap_11.mp3
+				southmen_stratmap_12.mp3
+				southmen_stratmap_13.mp3
+				southmen_stratmap_14.mp3
+				southmen_stratmap_15.mp3
+				southmen_stratmap_16.mp3
+				southmen_stratmap_17.mp3
+				southmen_stratmap_18.mp3
+				southmen_stratmap_19.mp3
+				frontend_02.mp3				
+			end
+		state MUSIC_STRATMAP_WINTER
+			event delay 5
+				folder data/sounds/Music
+				southmen_stratmap_01.mp3
+				southmen_stratmap_02.mp3
+				southmen_stratmap_03.mp3
+				southmen_stratmap_04.mp3
+				southmen_stratmap_05.mp3
+				southmen_stratmap_06.mp3
+				southmen_stratmap_07.mp3
+				southmen_stratmap_08.mp3
+				southmen_stratmap_09.mp3
+				southmen_stratmap_10.mp3
+				southmen_stratmap_11.mp3
+				southmen_stratmap_12.mp3
+				southmen_stratmap_13.mp3
+				southmen_stratmap_14.mp3
+				southmen_stratmap_15.mp3
+				southmen_stratmap_16.mp3
+				southmen_stratmap_17.mp3
+				southmen_stratmap_18.mp3
+				southmen_stratmap_19.mp3
+				frontend_02.mp3				
+			end
+
+	; Northmen
+
+	music_type northern_european
+		state MUSIC_BATTLE_BATTLE
+			event
+				folder data/sounds/Music
+				good_battle_01.mp3
+				good_battle_02.mp3
+				good_battle_03.mp3
+				good_battle_04.mp3
+				good_battle_05.mp3
+				good_battle_06.mp3
+				good_battle_07.mp3
+				good_battle_08.mp3
+				neutral_battle_01.mp3
+				neutral_battle_02.mp3
+				neutral_battle_03.mp3
+				neutral_battle_04.mp3
+				neutral_battle_05.mp3
+				neutral_battle_06.mp3
+				neutral_battle_09.mp3
+				neutral_battle_10.mp3
+				neutral_battle_11.mp3
+				neutral_battle_12.mp3
+				neutral_battle_13.mp3
+				neutral_battle_14.mp3
+				neutral_battle_15.mp3
+				
+			end
+		state MUSIC_BATTLE_TENSION
+			event
+				folder data/sounds/Music
+				good_tension_01.mp3
+				good_tension_02.mp3
+				good_tension_03.mp3
+				good_tension_04.mp3
+				good_tension_05.mp3
+				good_tension_07.mp3
+				neutral_tension_01.mp3
+				neutral_tension_02.mp3
+				neutral_combat_06.mp3
+			end
+		state MUSIC_BATTLE_MOBILIZE
+			event
+				folder data/sounds/Music
+				good_mobilize_01.mp3
+				good_mobilize_02.mp3
+				good_mobilize_03.mp3
+				good_mobilize_04.mp3
+				good_mobilize_05.mp3
+				good_mobilize_06.mp3
+				good_mobilize_08.mp3
+				neutral_combat_01.mp3
+				neutral_combat_02.mp3
+				neutral_combat_03.mp3
+				neutral_combat_04.mp3
+			end
+		state MUSIC_CAMPAIGN_LOADING
+			event
+				folder data/sounds/Music
+				campaign_loading.mp3
+			end
+		state MUSIC_CAMPAIGN_DEFEAT
+			event looped
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_CAMPAIGN_VICTORY
+			event looped
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_CREDITS1 delay 3
+			event
+				folder data/sounds/Music
+				credits.mp3
+			end
+		state MUSIC_CREDITS2
+			event
+				folder data/sounds/Music
+				credits.mp3
+			end
+		state MUSIC_FRONTEND
+			event
+				folder data/sounds/Music
+				frontend_01.mp3
+				frontend_02.mp3
+			end
+		state MUSIC_PREBATTLE_SCROLL
+			event
+				folder data/sounds/Music
+				neutral_combat_06.mp3
+			end
+		state MUSIC_RESULT_DRAW
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_AVERAGE
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_CLOSE
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_CRUSHING
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_WIN_AVERAGE
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_WIN_CLOSE
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_WIN_CRUSHING
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_STRAT_DRAW
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_AVERAGE
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CLOSE
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CRUSHING
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_AVERAGE
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_CLOSE
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_CRUSHING
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_STRATMAP_SUMMER
+			event delay 5
+				folder data/sounds/Music
+				gondor_stratmap_01.mp3
+				gondor_stratmap_02.mp3
+				gondor_stratmap_03.mp3
+				gondor_stratmap_04.mp3
+				gondor_stratmap_05.mp3
+				gondor_stratmap_07.mp3
+				gondor_stratmap_08.mp3
+				gondor_stratmap_09.mp3
+				gondor_stratmap_10.mp3
+				gondor_stratmap_11.mp3
+				gondor_stratmap_12.mp3
+				gondor_stratmap_13.mp3
+				gondor_stratmap_14.mp3
+				gondor_stratmap_15.mp3
+				rohan_stratmap_05.mp3
+				rohan_stratmap_06.mp3
+				rohan_stratmap_07.mp3
+				rohan_stratmap_08.mp3
+				rohan_stratmap_09.mp3
+				breeland_stratmap_03.mp3
+				breeland_stratmap_06.mp3
+				breeland_stratmap_07.mp3
+				dale_stratmap_01.mp3
+				dale_stratmap_02.mp3
+				dorwinion_stratmap_03.mp3
+				dorwinion_stratmap_06.mp3
+				dorwinion_stratmap_11.mp3
+				dorwinion_stratmap_14.mp3
+				dwarves_stratmap_03.mp3
+				dwarves_stratmap_04.mp3
+				dwarves_stratmap_09.mp3
+				dwarves_stratmap_12.mp3
+				elves_stratmap_01.mp3
+				elves_stratmap_02.mp3
+				elves_stratmap_04.mp3
+				elves_stratmap_06.mp3
+				elves_stratmap_10.mp3
+				elves_stratmap_18.mp3
+				elves_stratmap_20.mp3
+				elves_stratmap_21.mp3
+				good_stratmap_01.mp3
+				good_stratmap_02.mp3
+				good_stratmap_03.mp3
+				good_stratmap_04.mp3
+				good_stratmap_05.mp3
+				good_stratmap_06.mp3
+				good_stratmap_07.mp3
+				good_stratmap_08.mp3
+				good_stratmap_09.mp3
+				good_stratmap_10.mp3
+				good_stratmap_11.mp3
+				good_stratmap_12.mp3
+				good_stratmap_13.mp3
+				good_stratmap_14.mp3
+				good_stratmap_15.mp3
+				good_stratmap_16.mp3
+				good_stratmap_17.mp3
+				good_stratmap_18.mp3
+				good_stratmap_19.mp3
+				good_stratmap_20.mp3
+				good_stratmap_22.mp3
+				good_stratmap_23.mp3
+				good_stratmap_24.mp3
+				good_stratmap_25.mp3
+				good_stratmap_26.mp3
+				good_stratmap_27.mp3
+				good_stratmap_28.mp3
+				good_stratmap_29.mp3
+				good_stratmap_30.mp3
+				good_stratmap_31.mp3
+				good_stratmap_32.mp3
+				good_stratmap_33.mp3
+				neutral_stratmap_01.mp3
+				neutral_stratmap_02.mp3
+				neutral_stratmap_03.mp3
+				neutral_stratmap_04.mp3
+				neutral_stratmap_05.mp3
+				neutral_stratmap_06.mp3
+				neutral_stratmap_07.mp3
+				neutral_stratmap_08.mp3
+				neutral_stratmap_09.mp3
+				neutral_stratmap_10.mp3
+				neutral_stratmap_11.mp3
+				neutral_stratmap_12.mp3
+				neutral_stratmap_13.mp3
+				neutral_stratmap_14.mp3
+				neutral_stratmap_16.mp3
+				frontend_02.mp3				
+			end
+		state MUSIC_STRATMAP_WINTER
+			event delay 5
+				folder data/sounds/Music
+				gondor_stratmap_01.mp3
+				gondor_stratmap_02.mp3
+				gondor_stratmap_03.mp3
+				gondor_stratmap_04.mp3
+				gondor_stratmap_05.mp3
+				gondor_stratmap_07.mp3
+				gondor_stratmap_08.mp3
+				gondor_stratmap_09.mp3
+				gondor_stratmap_10.mp3
+				gondor_stratmap_11.mp3
+				gondor_stratmap_12.mp3
+				gondor_stratmap_13.mp3
+				gondor_stratmap_14.mp3
+				gondor_stratmap_15.mp3
+				rohan_stratmap_05.mp3
+				rohan_stratmap_06.mp3
+				rohan_stratmap_07.mp3
+				rohan_stratmap_08.mp3
+				rohan_stratmap_09.mp3
+				breeland_stratmap_03.mp3
+				breeland_stratmap_06.mp3
+				breeland_stratmap_07.mp3
+				dale_stratmap_01.mp3
+				dale_stratmap_02.mp3
+				dorwinion_stratmap_03.mp3
+				dorwinion_stratmap_06.mp3
+				dorwinion_stratmap_11.mp3
+				dorwinion_stratmap_14.mp3
+				dwarves_stratmap_03.mp3
+				dwarves_stratmap_04.mp3
+				dwarves_stratmap_09.mp3
+				dwarves_stratmap_12.mp3
+				elves_stratmap_01.mp3
+				elves_stratmap_02.mp3
+				elves_stratmap_04.mp3
+				elves_stratmap_06.mp3
+				elves_stratmap_10.mp3
+				elves_stratmap_18.mp3
+				elves_stratmap_20.mp3
+				elves_stratmap_21.mp3
+				good_stratmap_01.mp3
+				good_stratmap_02.mp3
+				good_stratmap_03.mp3
+				good_stratmap_04.mp3
+				good_stratmap_05.mp3
+				good_stratmap_06.mp3
+				good_stratmap_07.mp3
+				good_stratmap_08.mp3
+				good_stratmap_09.mp3
+				good_stratmap_10.mp3
+				good_stratmap_11.mp3
+				good_stratmap_12.mp3
+				good_stratmap_13.mp3
+				good_stratmap_14.mp3
+				good_stratmap_15.mp3
+				good_stratmap_16.mp3
+				good_stratmap_17.mp3
+				good_stratmap_18.mp3
+				good_stratmap_19.mp3
+				good_stratmap_20.mp3
+				good_stratmap_22.mp3
+				good_stratmap_23.mp3
+				good_stratmap_24.mp3
+				good_stratmap_25.mp3
+				good_stratmap_26.mp3
+				good_stratmap_27.mp3
+				good_stratmap_28.mp3
+				good_stratmap_29.mp3
+				good_stratmap_30.mp3
+				good_stratmap_31.mp3
+				good_stratmap_32.mp3
+				good_stratmap_33.mp3
+				neutral_stratmap_01.mp3
+				neutral_stratmap_02.mp3
+				neutral_stratmap_03.mp3
+				neutral_stratmap_04.mp3
+				neutral_stratmap_05.mp3
+				neutral_stratmap_06.mp3
+				neutral_stratmap_07.mp3
+				neutral_stratmap_08.mp3
+				neutral_stratmap_09.mp3
+				neutral_stratmap_10.mp3
+				neutral_stratmap_11.mp3
+				neutral_stratmap_12.mp3
+				neutral_stratmap_13.mp3
+				neutral_stratmap_14.mp3
+				neutral_stratmap_16.mp3
+				frontend_02.mp3				
+			end
+
+	; Dwarves
+
+	music_type southern_european
+		state MUSIC_BATTLE_BATTLE
+			event
+				folder data/sounds/Music
+				dwarves_battle_01.mp3
+				dwarves_battle_02.mp3
+				dwarves_battle_03.mp3	
+				dwarves_battle_04.mp3
+				dwarves_battle_05.mp3
+				dwarves_battle_06.mp3
+				neutral_battle_01.mp3
+				neutral_battle_02.mp3
+				neutral_battle_03.mp3
+				neutral_battle_04.mp3
+				neutral_battle_05.mp3
+				neutral_battle_06.mp3
+				neutral_battle_09.mp3
+				neutral_battle_10.mp3
+				neutral_battle_11.mp3
+				neutral_battle_12.mp3
+				neutral_battle_13.mp3
+				neutral_battle_14.mp3
+				neutral_battle_15.mp3
+			end
+		state MUSIC_BATTLE_MOBILIZE
+			event
+				folder data/sounds/Music
+				dwarves_mobilize_01.mp3
+				dwarves_mobilize_02.mp3
+				dwarves_mobilize_03.mp3
+				dwarves_mobilize_04.mp3
+				dwarves_mobilize_05.mp3
+				neutral_mobilize_07.mp3
+				neutral_combat_01.mp3
+				neutral_combat_02.mp3
+			end
+		state MUSIC_BATTLE_TENSION
+			event
+				folder data/sounds/Music
+				dwarves_tension_01.mp3
+				dwarves_tension_02.mp3
+				neutral_combat_05.mp3
+				neutral_tension_01.mp3
+				neutral_tension_02.mp3
+			end
+		state MUSIC_CAMPAIGN_LOADING
+			event
+				folder data/sounds/Music
+				campaign_loading.mp3
+			end
+		state MUSIC_CAMPAIGN_DEFEAT
+			event looped
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_CAMPAIGN_VICTORY
+			event looped
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_CREDITS1 delay 3
+			event
+				folder data/sounds/Music
+				credits.mp3
+			end
+		state MUSIC_CREDITS2
+			event
+				folder data/sounds/Music
+				credits.mp3
+			end
+		state MUSIC_FRONTEND
+			event
+				folder data/sounds/Music
+				frontend_01.mp3
+				frontend_02.mp3
+			end
+		state MUSIC_PREBATTLE_SCROLL
+			event
+				folder data/sounds/Music
+				neutral_combat_06.mp3
+			end
+		state MUSIC_RESULT_DRAW
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_AVERAGE
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_CLOSE
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_CRUSHING
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_WIN_CLOSE
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_WIN_AVERAGE
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_WIN_CRUSHING
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_STRAT_DRAW
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_AVERAGE
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CLOSE
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CRUSHING
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_AVERAGE
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_CLOSE
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_CRUSHING
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_STRATMAP_SUMMER
+			event delay 5
+				folder data/sounds/Music
+				dwarves_stratmap_01.mp3
+				dwarves_stratmap_02.mp3
+				dwarves_stratmap_03.mp3
+				dwarves_stratmap_04.mp3
+				dwarves_stratmap_05.mp3
+				dwarves_stratmap_07.mp3
+				dwarves_stratmap_08.mp3
+				dwarves_stratmap_09.mp3
+				dwarves_stratmap_10.mp3
+				dwarves_stratmap_11.mp3
+				dwarves_stratmap_12.mp3
+				dwarves_stratmap_13.mp3
+				dwarves_stratmap_14.mp3
+				dwarves_stratmap_15.mp3
+				dwarves_stratmap_16.mp3
+				dwarves_stratmap_17.mp3
+				dwarves_stratmap_18.mp3
+				dwarves_stratmap_19.mp3
+				dwarves_stratmap_20.mp3
+				dwarves_stratmap_21.mp3
+				neutral_stratmap_01.mp3
+				neutral_stratmap_02.mp3
+				neutral_stratmap_03.mp3
+				neutral_stratmap_04.mp3
+				neutral_stratmap_05.mp3
+				neutral_stratmap_06.mp3
+				neutral_stratmap_07.mp3
+				neutral_stratmap_08.mp3
+				neutral_stratmap_09.mp3
+				neutral_stratmap_10.mp3
+				neutral_stratmap_11.mp3
+				neutral_stratmap_12.mp3
+				neutral_stratmap_13.mp3
+				neutral_stratmap_16.mp3
+				good_stratmap_07.mp3
+				good_stratmap_13.mp3
+				good_stratmap_32.mp3
+				frontend_02.mp3				
+			end
+		state MUSIC_STRATMAP_WINTER
+			event delay 5
+				folder data/sounds/Music
+				dwarves_stratmap_01.mp3
+				dwarves_stratmap_02.mp3
+				dwarves_stratmap_03.mp3
+				dwarves_stratmap_04.mp3
+				dwarves_stratmap_05.mp3
+				dwarves_stratmap_07.mp3
+				dwarves_stratmap_08.mp3
+				dwarves_stratmap_09.mp3
+				dwarves_stratmap_10.mp3
+				dwarves_stratmap_11.mp3
+				dwarves_stratmap_12.mp3
+				dwarves_stratmap_13.mp3
+				dwarves_stratmap_14.mp3
+				dwarves_stratmap_15.mp3
+				dwarves_stratmap_16.mp3
+				dwarves_stratmap_17.mp3
+				dwarves_stratmap_18.mp3
+				dwarves_stratmap_19.mp3
+				dwarves_stratmap_20.mp3
+				dwarves_stratmap_21.mp3
+				neutral_stratmap_01.mp3
+				neutral_stratmap_02.mp3
+				neutral_stratmap_03.mp3
+				neutral_stratmap_04.mp3
+				neutral_stratmap_05.mp3
+				neutral_stratmap_06.mp3
+				neutral_stratmap_07.mp3
+				neutral_stratmap_08.mp3
+				neutral_stratmap_09.mp3
+				neutral_stratmap_10.mp3
+				neutral_stratmap_11.mp3
+				neutral_stratmap_12.mp3
+				neutral_stratmap_13.mp3
+				neutral_stratmap_16.mp3
+				good_stratmap_07.mp3
+				good_stratmap_13.mp3
+				good_stratmap_32.mp3
+				frontend_02.mp3				
+			end
+
+	; Rohan
+
+	music_type milan
+		state MUSIC_BATTLE_BATTLE
+			event
+				folder data/sounds/Music
+				good_battle_01.mp3
+				good_battle_02.mp3
+				good_battle_03.mp3
+				good_battle_04.mp3
+				good_battle_05.mp3
+				good_battle_06.mp3
+				neutral_battle_01.mp3
+				neutral_battle_02.mp3
+				neutral_battle_03.mp3
+				neutral_battle_04.mp3
+				neutral_battle_05.mp3
+				neutral_battle_06.mp3
+				neutral_battle_09.mp3
+				neutral_battle_10.mp3
+				neutral_battle_11.mp3
+				neutral_battle_12.mp3
+				neutral_battle_13.mp3
+				neutral_battle_14.mp3
+				neutral_battle_15.mp3
+			end
+		state MUSIC_BATTLE_TENSION
+			event
+				folder data/sounds/Music
+				good_tension_01.mp3
+				good_tension_02.mp3
+				good_tension_03.mp3
+				good_tension_04.mp3
+				good_tension_05.mp3
+				good_tension_07.mp3
+
+				neutral_combat_06.mp3
+				neutral_tension_01.mp3
+				neutral_tension_02.mp3
+			end
+		state MUSIC_BATTLE_MOBILIZE
+			event
+				folder data/sounds/Music
+				rohan_mobilize_01.mp3
+				good_mobilize_01.mp3
+				good_mobilize_02.mp3
+				good_mobilize_03.mp3
+				good_mobilize_04.mp3
+				good_mobilize_05.mp3
+				good_mobilize_06.mp3
+				good_mobilize_08.mp3
+				neutral_combat_01.mp3
+				neutral_combat_02.mp3
+				neutral_combat_03.mp3
+				neutral_combat_04.mp3
+			end
+		state MUSIC_CAMPAIGN_LOADING
+			event
+				folder data/sounds/Music
+				campaign_loading.mp3
+			end
+		state MUSIC_CAMPAIGN_DEFEAT
+			event looped
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_CAMPAIGN_VICTORY
+			event looped
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_CREDITS1 delay 3
+			event
+				folder data/sounds/Music
+				credits.mp3
+			end
+		state MUSIC_CREDITS2
+			event
+				folder data/sounds/Music
+				credits.mp3
+			end
+		state MUSIC_FRONTEND
+			event
+				folder data/sounds/Music
+				frontend_01.mp3
+				frontend_02.mp3
+			end
+		state MUSIC_PREBATTLE_SCROLL
+			event
+				folder data/sounds/Music
+				rohan_prebattle.mp3
+			end
+		state MUSIC_RESULT_DRAW
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_AVERAGE
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_CLOSE
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_CRUSHING
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_WIN_AVERAGE
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_WIN_CLOSE
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_WIN_CRUSHING
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_STRAT_DRAW
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_AVERAGE
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CLOSE
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CRUSHING
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_AVERAGE
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_CLOSE
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_CRUSHING
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_STRATMAP_SUMMER
+			event delay 5
+				folder data/sounds/Music
+				rohan_stratmap_01.mp3
+				rohan_stratmap_02.mp3
+				rohan_stratmap_03.mp3
+				rohan_stratmap_04.mp3
+				rohan_stratmap_05.mp3
+				rohan_stratmap_06.mp3
+				rohan_stratmap_07.mp3
+				rohan_stratmap_08.mp3
+				rohan_stratmap_09.mp3
+				good_stratmap_01.mp3
+				good_stratmap_02.mp3
+				good_stratmap_03.mp3
+				good_stratmap_04.mp3
+				good_stratmap_05.mp3
+				good_stratmap_06.mp3
+				good_stratmap_07.mp3
+				good_stratmap_08.mp3
+				good_stratmap_09.mp3
+				good_stratmap_10.mp3
+				good_stratmap_11.mp3
+				good_stratmap_12.mp3
+				good_stratmap_13.mp3
+				good_stratmap_14.mp3
+				good_stratmap_15.mp3
+				good_stratmap_16.mp3
+				good_stratmap_17.mp3
+				good_stratmap_18.mp3
+				good_stratmap_19.mp3
+				good_stratmap_20.mp3
+				good_stratmap_22.mp3
+				good_stratmap_23.mp3
+				good_stratmap_24.mp3
+				good_stratmap_25.mp3
+				good_stratmap_26.mp3
+				good_stratmap_27.mp3
+				good_stratmap_28.mp3
+				good_stratmap_29.mp3
+				good_stratmap_30.mp3
+				good_stratmap_31.mp3
+				good_stratmap_32.mp3
+				good_stratmap_33.mp3
+				neutral_stratmap_01.mp3
+				neutral_stratmap_02.mp3
+				neutral_stratmap_03.mp3
+				neutral_stratmap_04.mp3
+				neutral_stratmap_05.mp3
+				neutral_stratmap_06.mp3
+				neutral_stratmap_07.mp3
+				neutral_stratmap_08.mp3
+				neutral_stratmap_09.mp3
+				neutral_stratmap_10.mp3
+				neutral_stratmap_11.mp3
+				neutral_stratmap_12.mp3
+				neutral_stratmap_13.mp3
+				frontend_02.mp3				
+			end
+		state MUSIC_STRATMAP_WINTER
+			event delay 5
+				folder data/sounds/Music
+				rohan_stratmap_01.mp3
+				rohan_stratmap_02.mp3
+				rohan_stratmap_03.mp3
+				rohan_stratmap_04.mp3
+				rohan_stratmap_05.mp3
+				rohan_stratmap_06.mp3
+				rohan_stratmap_07.mp3
+				rohan_stratmap_08.mp3
+				rohan_stratmap_09.mp3
+				good_stratmap_01.mp3
+				good_stratmap_02.mp3
+				good_stratmap_03.mp3
+				good_stratmap_04.mp3
+				good_stratmap_05.mp3
+				good_stratmap_06.mp3
+				good_stratmap_07.mp3
+				good_stratmap_08.mp3
+				good_stratmap_09.mp3
+				good_stratmap_10.mp3
+				good_stratmap_11.mp3
+				good_stratmap_12.mp3
+				good_stratmap_13.mp3
+				good_stratmap_14.mp3
+				good_stratmap_15.mp3
+				good_stratmap_16.mp3
+				good_stratmap_17.mp3
+				good_stratmap_18.mp3
+				good_stratmap_19.mp3
+				good_stratmap_20.mp3
+				good_stratmap_22.mp3
+				good_stratmap_23.mp3
+				good_stratmap_24.mp3
+				good_stratmap_25.mp3
+				good_stratmap_26.mp3
+				good_stratmap_27.mp3
+				good_stratmap_28.mp3
+				good_stratmap_29.mp3
+				good_stratmap_30.mp3
+				good_stratmap_31.mp3
+				good_stratmap_32.mp3
+				good_stratmap_33.mp3
+				neutral_stratmap_01.mp3
+				neutral_stratmap_02.mp3
+				neutral_stratmap_03.mp3
+				neutral_stratmap_04.mp3
+				neutral_stratmap_05.mp3
+				neutral_stratmap_06.mp3
+				neutral_stratmap_07.mp3
+				neutral_stratmap_08.mp3
+				neutral_stratmap_09.mp3
+				neutral_stratmap_10.mp3
+				neutral_stratmap_11.mp3
+				neutral_stratmap_12.mp3
+				neutral_stratmap_13.mp3
+				frontend_02.mp3				
+			end
+
+	; Umbar
+
+	music_type russia
+		state MUSIC_BATTLE_BATTLE
+			event
+				folder data/sounds/Music
+				umbar_battle_01.mp3
+				neutral_battle_01.mp3
+				neutral_battle_02.mp3
+				neutral_battle_03.mp3
+				neutral_battle_04.mp3
+				neutral_battle_05.mp3
+				neutral_battle_06.mp3
+				neutral_battle_09.mp3
+				neutral_battle_10.mp3
+				neutral_battle_11.mp3
+				neutral_battle_12.mp3
+				neutral_battle_13.mp3
+				neutral_battle_14.mp3
+				neutral_battle_15.mp3
+			end
+		state MUSIC_BATTLE_MOBILIZE
+			event
+				folder data/sounds/Music
+				umbar_mobilize_01.mp3
+				neutral_mobilize_01.mp3
+				neutral_mobilize_02.mp3
+				neutral_mobilize_03.mp3
+				neutral_mobilize_04.mp3
+				neutral_mobilize_05.mp3
+				neutral_mobilize_06.mp3
+				neutral_mobilize_07.mp3
+				neutral_combat_01.mp3
+			end
+		state MUSIC_BATTLE_TENSION
+			event
+				folder data/sounds/Music
+				umbar_tension.mp3
+				neutral_tension_03.mp3
+			end
+		state MUSIC_CAMPAIGN_LOADING
+			event
+				folder data/sounds/Music
+				campaign_loading.mp3
+			end
+		state MUSIC_CAMPAIGN_DEFEAT
+			event looped
+				folder data/sounds/Music
+				orcs_lose.mp3
+			end
+		state MUSIC_CAMPAIGN_VICTORY
+			event looped
+				folder data/sounds/Music
+				orcs_win.mp3
+			end
+		state MUSIC_CREDITS1 delay 3
+			event
+				folder data/sounds/Music
+				credits.mp3
+			end
+		state MUSIC_CREDITS2
+			event
+				folder data/sounds/Music
+				credits.mp3
+			end
+		state MUSIC_FRONTEND
+			event
+				folder data/sounds/Music
+				frontend_01.mp3
+				frontend_02.mp3
+			end
+		state MUSIC_PREBATTLE_SCROLL
+			event
+				folder data/sounds/Music
+				orcs_prebattle.mp3
+			end
+		state MUSIC_RESULT_DRAW
+			event
+				folder data/sounds/Music
+				orcs_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_AVERAGE
+			event
+				folder data/sounds/Music
+				orcs_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_CLOSE
+			event
+				folder data/sounds/Music
+				orcs_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_CRUSHING
+			event
+				folder data/sounds/Music
+				orcs_lose.mp3
+			end
+		state MUSIC_RESULT_WIN_AVERAGE
+			event
+				folder data/sounds/Music
+				orcs_win.mp3
+			end
+		state MUSIC_RESULT_WIN_CLOSE
+			event
+				folder data/sounds/Music
+				orcs_win.mp3
+			end
+		state MUSIC_RESULT_WIN_CRUSHING
+			event
+				folder data/sounds/Music
+				orcs_win.mp3
+			end
+		state MUSIC_RESULT_STRAT_DRAW
+			event
+				folder data/sounds/Music
+				orcs_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_AVERAGE
+			event
+				folder data/sounds/Music
+				orcs_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CLOSE
+			event
+				folder data/sounds/Music
+				orcs_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CRUSHING
+			event
+				folder data/sounds/Music
+				orcs_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_AVERAGE
+			event
+				folder data/sounds/Music
+				orcs_win.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_CLOSE
+			event
+				folder data/sounds/Music
+				orcs_win.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_CRUSHING
+			event
+				folder data/sounds/Music
+				orcs_win.mp3
+			end
+		state MUSIC_STRATMAP_SUMMER
+			event delay 5
+				folder data/sounds/Music
+				umbar_stratmap_01.mp3
+				umbar_stratmap_02.mp3
+				umbar_stratmap_03.mp3
+				umbar_stratmap_04.mp3
+				umbar_stratmap_05.mp3
+				umbar_stratmap_06.mp3
+				umbar_stratmap_07.mp3
+				umbar_stratmap_08.mp3
+				umbar_stratmap_09.mp3
+				umbar_stratmap_10.mp3
+				umbar_stratmap_11.mp3
+				umbar_stratmap_12.mp3
+				umbar_stratmap_13.mp3
+				umbar_stratmap_14.mp3
+				umbar_stratmap_15.mp3
+				umbar_stratmap_16.mp3
+				evil_stratmap_01.mp3
+				evil_stratmap_02.mp3
+				evil_stratmap_03.mp3
+				evil_stratmap_04.mp3
+				evil_stratmap_05.mp3
+				evil_stratmap_06.mp3
+				evil_stratmap_07.mp3
+				evil_stratmap_08.mp3
+				evil_stratmap_09.mp3
+				evil_stratmap_10.mp3
+				evil_stratmap_11.mp3
+				evil_stratmap_13.mp3
+				frontend_02.mp3				
+			end
+		state MUSIC_STRATMAP_WINTER
+			event delay 5
+				folder data/sounds/Music
+				umbar_stratmap_01.mp3
+				umbar_stratmap_02.mp3
+				umbar_stratmap_03.mp3
+				umbar_stratmap_04.mp3
+				umbar_stratmap_05.mp3
+				umbar_stratmap_06.mp3
+				umbar_stratmap_07.mp3
+				umbar_stratmap_08.mp3
+				umbar_stratmap_09.mp3
+				umbar_stratmap_10.mp3
+				umbar_stratmap_11.mp3
+				umbar_stratmap_12.mp3
+				umbar_stratmap_13.mp3
+				umbar_stratmap_14.mp3
+				umbar_stratmap_15.mp3
+				umbar_stratmap_16.mp3
+				evil_stratmap_01.mp3
+				evil_stratmap_02.mp3
+				evil_stratmap_03.mp3
+				evil_stratmap_04.mp3
+				evil_stratmap_05.mp3
+				evil_stratmap_06.mp3
+				evil_stratmap_07.mp3
+				evil_stratmap_08.mp3
+				evil_stratmap_09.mp3
+				evil_stratmap_10.mp3
+				evil_stratmap_11.mp3
+				evil_stratmap_13.mp3
+				frontend_02.mp3				
+			end
+
+				; Khand
+
+	music_type khand
+		state MUSIC_BATTLE_BATTLE
+			event
+				folder data/sounds/Music
+				khand_battle_01.mp3
+				khand_battle_02.mp3
+				khand_battle_03.mp3
+				khand_battle_04.mp3
+				khand_battle_05.mp3
+				khand_battle_06.mp3
+				neutral_battle_01.mp3
+				neutral_battle_02.mp3
+				neutral_battle_03.mp3
+				neutral_battle_04.mp3
+				neutral_battle_05.mp3
+				neutral_battle_06.mp3
+				neutral_battle_09.mp3
+				neutral_battle_10.mp3
+				neutral_battle_11.mp3
+				neutral_battle_12.mp3
+				neutral_battle_13.mp3
+				neutral_battle_14.mp3
+				neutral_battle_15.mp3
+			end
+		state MUSIC_BATTLE_MOBILIZE
+			event
+				folder data/sounds/Music
+				khand_mobilize_01.mp3
+				khand_mobilize_02.mp3
+				khand_mobilize_03.mp3
+			end
+		state MUSIC_BATTLE_TENSION
+			event
+				folder data/sounds/Music
+				khand_tension_01.mp3
+				khand_tension_02.mp3
+				khand_tension_03.mp3
+			end
+		state MUSIC_CAMPAIGN_LOADING
+			event
+				folder data/sounds/Music
+				campaign_loading_southmen.mp3
+			end
+		state MUSIC_CAMPAIGN_DEFEAT
+			event looped
+				folder data/sounds/Music
+				southmen_lose_02.mp3
+			end
+		state MUSIC_CAMPAIGN_VICTORY
+			event looped
+				folder data/sounds/Music
+				southmen_win.mp3
+			end
+		state MUSIC_CREDITS1 delay 3
+			event
+				folder data/sounds/Music
+				credits.mp3
+			end
+		state MUSIC_CREDITS2
+			event
+				folder data/sounds/Music
+				credits.mp3
+			end
+		state MUSIC_FRONTEND
+			event
+				folder data/sounds/Music
+				frontend_01.mp3
+				frontend_02.mp3
+			end
+		state MUSIC_PREBATTLE_SCROLL
+			event
+				folder data/sounds/Music
+				southmen_prebattle.mp3
+			end
+		state MUSIC_RESULT_DRAW
+			event
+				folder data/sounds/Music
+				southmen_lose_01.mp3
+			end
+		state MUSIC_RESULT_LOSE_AVERAGE
+			event
+				folder data/sounds/Music
+				southmen_lose_01.mp3
+			end
+		state MUSIC_RESULT_LOSE_CLOSE
+			event
+				folder data/sounds/Music
+				southmen_lose_01.mp3
+			end
+		state MUSIC_RESULT_LOSE_CRUSHING
+			event
+				folder data/sounds/Music
+				southmen_lose_01.mp3
+			end
+		state MUSIC_RESULT_WIN_AVERAGE
+			event
+				folder data/sounds/Music
+				southmen_win.mp3
+			end
+		state MUSIC_RESULT_WIN_CLOSE
+			event
+				folder data/sounds/Music
+				southmen_win.mp3
+			end
+		state MUSIC_RESULT_WIN_CRUSHING
+			event
+				folder data/sounds/Music
+				southmen_win.mp3
+			end
+		state MUSIC_RESULT_STRAT_DRAW
+			event
+				folder data/sounds/Music
+				southmen_lose_01.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_AVERAGE
+			event
+				folder data/sounds/Music
+				southmen_lose_01.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CLOSE
+			event
+				folder data/sounds/Music
+				southmen_lose_02.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CRUSHING
+			event
+				folder data/sounds/Music
+				southmen_lose_02.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_AVERAGE
+			event
+				folder data/sounds/Music
+				southmen_win.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_CLOSE
+			event
+				folder data/sounds/Music
+				southmen_win.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_CRUSHING
+			event
+				folder data/sounds/Music
+				southmen_win.mp3
+			end
+		state MUSIC_STRATMAP_SUMMER
+			event delay 5
+				folder data/sounds/Music
+				khand_stratmap_01.mp3
+				khand_stratmap_02.mp3
+				khand_stratmap_03.mp3
+				khand_stratmap_04.mp3
+				khand_stratmap_05.mp3
+				khand_stratmap_06.mp3
+				khand_stratmap_07.mp3
+				khand_stratmap_08.mp3
+				khand_stratmap_09.mp3
+				khand_stratmap_10.mp3
+				khand_stratmap_11.mp3
+				khand_stratmap_12.mp3
+				southmen_stratmap_03.mp3
+				southmen_stratmap_04.mp3
+				southmen_stratmap_05.mp3
+				southmen_stratmap_15.mp3
+				frontend_02.mp3				
+			end
+		state MUSIC_STRATMAP_WINTER
+			event delay 5
+				folder data/sounds/Music
+				khand_stratmap_01.mp3
+				khand_stratmap_02.mp3
+				khand_stratmap_03.mp3
+				khand_stratmap_04.mp3
+				khand_stratmap_05.mp3
+				khand_stratmap_06.mp3
+				khand_stratmap_07.mp3
+				khand_stratmap_08.mp3
+				khand_stratmap_09.mp3
+				khand_stratmap_10.mp3
+				khand_stratmap_11.mp3
+				khand_stratmap_12.mp3
+				southmen_stratmap_03.mp3
+				southmen_stratmap_04.mp3
+				southmen_stratmap_05.mp3
+				southmen_stratmap_15.mp3
+				frontend_02.mp3				
+			end
+	
+	; Breeland
+
+	music_type normans
+		state MUSIC_BATTLE_BATTLE
+			event
+				folder data/sounds/Music
+				good_battle_01.mp3
+				good_battle_02.mp3
+				good_battle_03.mp3
+				good_battle_04.mp3
+				good_battle_05.mp3
+				good_battle_06.mp3
+				good_battle_07.mp3
+				neutral_battle_01.mp3
+				neutral_battle_02.mp3
+				neutral_battle_03.mp3
+				neutral_battle_04.mp3
+				neutral_battle_05.mp3
+				neutral_battle_06.mp3
+				neutral_battle_09.mp3
+				neutral_battle_10.mp3
+				neutral_battle_11.mp3
+				neutral_battle_12.mp3
+				neutral_battle_13.mp3
+				neutral_battle_14.mp3
+				neutral_battle_15.mp3
+			end
+		state MUSIC_BATTLE_TENSION
+			event
+				folder data/sounds/Music
+				good_tension_01.mp3
+				good_tension_02.mp3
+				good_tension_03.mp3
+				good_tension_04.mp3
+				good_tension_05.mp3
+				good_tension_07.mp3
+				neutral_tension_01.mp3
+				neutral_tension_02.mp3
+				neutral_combat_06.mp3
+			end
+		state MUSIC_BATTLE_MOBILIZE
+			event
+				folder data/sounds/Music
+				good_mobilize_01.mp3
+				good_mobilize_02.mp3
+				good_mobilize_03.mp3
+				good_mobilize_04.mp3
+				good_mobilize_05.mp3
+				good_mobilize_06.mp3
+				good_mobilize_08.mp3
+			end
+		state MUSIC_CAMPAIGN_LOADING
+			event
+				folder data/sounds/Music
+				campaign_loading.mp3
+			end
+		state MUSIC_CAMPAIGN_DEFEAT
+			event looped
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_CAMPAIGN_VICTORY
+			event looped
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_CREDITS1 delay 3
+			event
+				folder data/sounds/Music
+				credits.mp3
+			end
+		state MUSIC_CREDITS2
+			event
+				folder data/sounds/Music
+				credits.mp3
+			end
+		state MUSIC_FRONTEND
+			event
+				folder data/sounds/Music
+				frontend_01.mp3
+				frontend_02.mp3
+			end
+		state MUSIC_PREBATTLE_SCROLL
+			event
+				folder data/sounds/Music
+				neutral_combat_06.mp3
+			end
+		state MUSIC_RESULT_DRAW
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_AVERAGE
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_CLOSE
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_CRUSHING
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_WIN_AVERAGE
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_WIN_CLOSE
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_WIN_CRUSHING
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_STRAT_DRAW
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_AVERAGE
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CLOSE
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CRUSHING
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_AVERAGE
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_CLOSE
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_CRUSHING
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_STRATMAP_SUMMER
+			event delay 5
+				folder data/sounds/Music
+				breeland_stratmap_01.mp3
+				breeland_stratmap_02.mp3
+				breeland_stratmap_03.mp3
+				breeland_stratmap_04.mp3
+				breeland_stratmap_05.mp3
+				breeland_stratmap_06.mp3
+				breeland_stratmap_07.mp3
+				breeland_stratmap_08.mp3
+				breeland_stratmap_09.mp3
+				good_stratmap_01.mp3
+				good_stratmap_02.mp3
+				good_stratmap_03.mp3
+				good_stratmap_04.mp3
+				good_stratmap_05.mp3
+				good_stratmap_06.mp3
+				good_stratmap_07.mp3
+				good_stratmap_08.mp3
+				good_stratmap_09.mp3
+				good_stratmap_10.mp3
+				good_stratmap_11.mp3
+				good_stratmap_12.mp3
+				good_stratmap_13.mp3
+				good_stratmap_14.mp3
+				good_stratmap_15.mp3
+				good_stratmap_16.mp3
+				good_stratmap_17.mp3
+				good_stratmap_18.mp3
+				good_stratmap_19.mp3
+				good_stratmap_20.mp3
+				good_stratmap_22.mp3
+				good_stratmap_23.mp3
+				good_stratmap_24.mp3
+				good_stratmap_25.mp3
+				good_stratmap_26.mp3
+				good_stratmap_27.mp3
+				good_stratmap_28.mp3
+				good_stratmap_29.mp3
+				good_stratmap_30.mp3
+				good_stratmap_31.mp3
+				good_stratmap_32.mp3
+				good_stratmap_33.mp3
+				neutral_stratmap_01.mp3
+				neutral_stratmap_02.mp3
+				neutral_stratmap_03.mp3
+				neutral_stratmap_04.mp3
+				neutral_stratmap_05.mp3
+				neutral_stratmap_06.mp3
+				neutral_stratmap_07.mp3
+				neutral_stratmap_08.mp3
+				neutral_stratmap_09.mp3
+				neutral_stratmap_10.mp3
+				neutral_stratmap_11.mp3
+				neutral_stratmap_12.mp3
+				neutral_stratmap_13.mp3
+				frontend_02.mp3				
+			end
+		state MUSIC_STRATMAP_WINTER
+			event delay 5
+				folder data/sounds/Music
+				breeland_stratmap_01.mp3
+				breeland_stratmap_02.mp3
+				breeland_stratmap_03.mp3
+				breeland_stratmap_04.mp3
+				breeland_stratmap_05.mp3
+				breeland_stratmap_06.mp3
+				breeland_stratmap_07.mp3
+				breeland_stratmap_08.mp3
+				breeland_stratmap_09.mp3
+				good_stratmap_01.mp3
+				good_stratmap_02.mp3
+				good_stratmap_03.mp3
+				good_stratmap_04.mp3
+				good_stratmap_05.mp3
+				good_stratmap_06.mp3
+				good_stratmap_07.mp3
+				good_stratmap_08.mp3
+				good_stratmap_09.mp3
+				good_stratmap_10.mp3
+				good_stratmap_11.mp3
+				good_stratmap_12.mp3
+				good_stratmap_13.mp3
+				good_stratmap_14.mp3
+				good_stratmap_15.mp3
+				good_stratmap_16.mp3
+				good_stratmap_17.mp3
+				good_stratmap_18.mp3
+				good_stratmap_19.mp3
+				good_stratmap_20.mp3
+				good_stratmap_22.mp3
+				good_stratmap_23.mp3
+				good_stratmap_24.mp3
+				good_stratmap_25.mp3
+				good_stratmap_26.mp3
+				good_stratmap_27.mp3
+				good_stratmap_28.mp3
+				good_stratmap_29.mp3
+				good_stratmap_30.mp3
+				good_stratmap_31.mp3
+				good_stratmap_32.mp3
+				good_stratmap_33.mp3
+				neutral_stratmap_01.mp3
+				neutral_stratmap_02.mp3
+				neutral_stratmap_03.mp3
+				neutral_stratmap_04.mp3
+				neutral_stratmap_05.mp3
+				neutral_stratmap_06.mp3
+				neutral_stratmap_07.mp3
+				neutral_stratmap_08.mp3
+				neutral_stratmap_09.mp3
+				neutral_stratmap_10.mp3
+				neutral_stratmap_11.mp3
+				neutral_stratmap_12.mp3
+				neutral_stratmap_13.mp3
+				frontend_02.mp3				
+			end
+
+	; Dorwinion
+
+	music_type byzantium
+		state MUSIC_BATTLE_BATTLE
+			event
+				folder data/sounds/Music
+				good_battle_01.mp3
+				good_battle_02.mp3
+				good_battle_03.mp3
+				good_battle_04.mp3
+				good_battle_05.mp3
+				good_battle_06.mp3
+				good_battle_07.mp3
+				neutral_battle_01.mp3
+				neutral_battle_02.mp3
+				neutral_battle_03.mp3
+				neutral_battle_04.mp3
+				neutral_battle_05.mp3
+				neutral_battle_06.mp3
+				neutral_battle_09.mp3
+				neutral_battle_10.mp3
+				neutral_battle_11.mp3
+				neutral_battle_12.mp3
+				neutral_battle_13.mp3
+				neutral_battle_14.mp3
+				neutral_battle_15.mp3
+			end
+		state MUSIC_BATTLE_TENSION
+			event
+				folder data/sounds/Music
+				good_tension_01.mp3
+				good_tension_02.mp3
+				good_tension_03.mp3
+				good_tension_04.mp3
+				good_tension_05.mp3
+				good_tension_07.mp3
+				neutral_tension_01.mp3
+				neutral_tension_02.mp3
+			end
+		state MUSIC_BATTLE_MOBILIZE
+			event
+				folder data/sounds/Music
+				good_mobilize_01.mp3
+				good_mobilize_02.mp3
+				good_mobilize_03.mp3
+				good_mobilize_04.mp3
+				good_mobilize_05.mp3
+				good_mobilize_06.mp3
+				good_mobilize_08.mp3
+			end
+		state MUSIC_CAMPAIGN_LOADING
+			event
+				folder data/sounds/Music
+				campaign_loading.mp3
+			end
+		state MUSIC_CAMPAIGN_DEFEAT
+			event looped
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_CAMPAIGN_VICTORY
+			event looped
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_CREDITS1 delay 3
+			event
+				folder data/sounds/Music
+				credits.mp3
+			end
+		state MUSIC_CREDITS2
+			event
+				folder data/sounds/Music
+				credits.mp3
+			end
+		state MUSIC_FRONTEND
+			event
+				folder data/sounds/Music
+				frontend_01.mp3
+				frontend_02.mp3
+			end
+		state MUSIC_PREBATTLE_SCROLL
+			event
+				folder data/sounds/Music
+				neutral_combat_06.mp3
+			end
+		state MUSIC_RESULT_DRAW
+			event
+				folder data/sounds/Music
+				dorwinion_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_AVERAGE
+			event
+				folder data/sounds/Music
+				dorwinion_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_CLOSE
+			event
+				folder data/sounds/Music
+				dorwinion_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_CRUSHING
+			event
+				folder data/sounds/Music
+				dorwinion_lose.mp3
+			end
+		state MUSIC_RESULT_WIN_AVERAGE
+			event
+				folder data/sounds/Music
+				dorwinion_win.mp3
+			end
+		state MUSIC_RESULT_WIN_CLOSE
+			event
+				folder data/sounds/Music
+				dorwinion_win.mp3
+			end
+		state MUSIC_RESULT_WIN_CRUSHING
+			event
+				folder data/sounds/Music
+				dorwinion_win.mp3
+			end
+		state MUSIC_RESULT_STRAT_DRAW
+			event
+				folder data/sounds/Music
+				dorwinion_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_AVERAGE
+			event
+				folder data/sounds/Music
+				dorwinion_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CLOSE
+			event
+				folder data/sounds/Music
+				dorwinion_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CRUSHING
+			event
+				folder data/sounds/Music
+				dorwinion_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_AVERAGE
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_CLOSE
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_CRUSHING
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_STRATMAP_SUMMER
+			event delay 5
+				folder data/sounds/Music
+				dorwinion_stratmap_01.mp3
+				dorwinion_stratmap_02.mp3
+				dorwinion_stratmap_03.mp3
+				dorwinion_stratmap_04.mp3
+				dorwinion_stratmap_05.mp3
+				dorwinion_stratmap_06.mp3
+				dorwinion_stratmap_07.mp3
+				dorwinion_stratmap_08.mp3
+				dorwinion_stratmap_09.mp3
+				dorwinion_stratmap_10.mp3
+				dorwinion_stratmap_11.mp3
+				dorwinion_stratmap_12.mp3
+				dorwinion_stratmap_13.mp3
+				dorwinion_stratmap_14.mp3
+				dorwinion_stratmap_15.mp3
+				dorwinion_stratmap_16.mp3
+				good_stratmap_07.mp3
+				good_stratmap_13.mp3
+				good_stratmap_32.mp3
+				good_stratmap_33.mp3
+				neutral_stratmap_05.mp3
+				neutral_stratmap_11.mp3
+				frontend_02.mp3				
+			end
+		state MUSIC_STRATMAP_WINTER
+			event delay 5
+				folder data/sounds/Music
+				dorwinion_stratmap_01.mp3
+				dorwinion_stratmap_02.mp3
+				dorwinion_stratmap_03.mp3
+				dorwinion_stratmap_04.mp3
+				dorwinion_stratmap_05.mp3
+				dorwinion_stratmap_06.mp3
+				dorwinion_stratmap_07.mp3
+				dorwinion_stratmap_08.mp3
+				dorwinion_stratmap_09.mp3
+				dorwinion_stratmap_10.mp3
+				dorwinion_stratmap_11.mp3
+				dorwinion_stratmap_12.mp3
+				dorwinion_stratmap_13.mp3
+				dorwinion_stratmap_14.mp3
+				dorwinion_stratmap_15.mp3
+				dorwinion_stratmap_16.mp3
+				good_stratmap_07.mp3
+				good_stratmap_13.mp3
+				good_stratmap_32.mp3
+				good_stratmap_33.mp3
+				neutral_stratmap_05.mp3
+				neutral_stratmap_11.mp3
+				frontend_02.mp3				
+			end
+
+	; Dale
+
+	music_type scotland
+		state MUSIC_BATTLE_BATTLE
+			event
+				folder data/sounds/Music
+				good_battle_01.mp3
+				good_battle_02.mp3
+				good_battle_03.mp3
+				good_battle_04.mp3
+				good_battle_05.mp3
+				good_battle_06.mp3
+				good_battle_07.mp3
+				neutral_battle_01.mp3
+				neutral_battle_02.mp3
+				neutral_battle_03.mp3
+				neutral_battle_04.mp3
+				neutral_battle_05.mp3
+				neutral_battle_06.mp3
+				neutral_battle_09.mp3
+				neutral_battle_10.mp3
+				neutral_battle_11.mp3
+				neutral_battle_12.mp3
+				neutral_battle_13.mp3
+				neutral_battle_14.mp3
+				neutral_battle_15.mp3
+			end
+		state MUSIC_BATTLE_TENSION
+			event
+				folder data/sounds/Music
+				good_tension_01.mp3
+				good_tension_02.mp3
+				good_tension_03.mp3
+				good_tension_04.mp3
+				good_tension_05.mp3
+				good_tension_07.mp3
+				neutral_tension_01.mp3
+				neutral_tension_02.mp3
+			end
+		state MUSIC_BATTLE_MOBILIZE
+			event
+				folder data/sounds/Music
+				good_mobilize_01.mp3
+				good_mobilize_02.mp3
+				good_mobilize_03.mp3
+				good_mobilize_04.mp3
+				good_mobilize_05.mp3
+				good_mobilize_06.mp3
+				good_mobilize_08.mp3
+			end
+		state MUSIC_CAMPAIGN_LOADING
+			event
+				folder data/sounds/Music
+				campaign_loading.mp3
+			end
+		state MUSIC_CAMPAIGN_DEFEAT
+			event looped
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_CAMPAIGN_VICTORY
+			event looped
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_CREDITS1 delay 3
+			event
+				folder data/sounds/Music
+				credits.mp3
+			end
+		state MUSIC_CREDITS2
+			event
+				folder data/sounds/Music
+				credits.mp3
+			end
+		state MUSIC_FRONTEND
+			event
+				folder data/sounds/Music
+				frontend_01.mp3
+				frontend_02.mp3
+			end
+		state MUSIC_PREBATTLE_SCROLL
+			event
+				folder data/sounds/Music
+				neutral_combat_06.mp3
+			end
+		state MUSIC_RESULT_DRAW
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_AVERAGE
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_CLOSE
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_CRUSHING
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_WIN_AVERAGE
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_WIN_CLOSE
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_WIN_CRUSHING
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_STRAT_DRAW
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_AVERAGE
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CLOSE
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CRUSHING
+			event
+				folder data/sounds/Music
+				good_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_AVERAGE
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_CLOSE
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_CRUSHING
+			event
+				folder data/sounds/Music
+				good_win_02.mp3
+			end
+		state MUSIC_STRATMAP_SUMMER
+			event delay 5
+				folder data/sounds/Music
+				dale_stratmap_01.mp3
+				dale_stratmap_02.mp3
+				dale_stratmap_03.mp3
+				dale_stratmap_04.mp3
+				dale_stratmap_05.mp3
+				dale_stratmap_06.mp3
+				dale_stratmap_07.mp3
+				dale_stratmap_08.mp3
+				dale_stratmap_09.mp3
+				dale_stratmap_10.mp3
+				dale_stratmap_11.mp3
+				dale_stratmap_12.mp3
+				dale_stratmap_13.mp3
+				dale_stratmap_14.mp3
+				dale_stratmap_15.mp3
+				dale_stratmap_16.mp3
+				dale_stratmap_17.mp3
+				dale_stratmap_18.mp3
+				dale_stratmap_19.mp3
+				dale_stratmap_20.mp3
+				dale_stratmap_22.mp3
+				good_stratmap_23.mp3
+				good_stratmap_24.mp3
+				good_stratmap_25.mp3
+				good_stratmap_26.mp3
+				good_stratmap_27.mp3
+				good_stratmap_28.mp3
+				good_stratmap_29.mp3
+				good_stratmap_30.mp3
+				good_stratmap_31.mp3
+				good_stratmap_32.mp3
+				good_stratmap_33.mp3
+				frontend_02.mp3				
+			end
+		state MUSIC_STRATMAP_WINTER
+			event delay 5
+				folder data/sounds/Music
+				dale_stratmap_01.mp3
+				dale_stratmap_02.mp3
+				dale_stratmap_03.mp3
+				dale_stratmap_04.mp3
+				dale_stratmap_05.mp3
+				dale_stratmap_06.mp3
+				dale_stratmap_07.mp3
+				dale_stratmap_08.mp3
+				dale_stratmap_09.mp3
+				dale_stratmap_10.mp3
+				dale_stratmap_11.mp3
+				dale_stratmap_12.mp3
+				dale_stratmap_13.mp3
+				dale_stratmap_14.mp3
+				dale_stratmap_15.mp3
+				dale_stratmap_16.mp3
+				dale_stratmap_17.mp3
+				dale_stratmap_18.mp3
+				dale_stratmap_19.mp3
+				dale_stratmap_20.mp3
+				dale_stratmap_22.mp3
+				good_stratmap_23.mp3
+				good_stratmap_24.mp3
+				good_stratmap_25.mp3
+				good_stratmap_26.mp3
+				good_stratmap_27.mp3
+				good_stratmap_28.mp3
+				good_stratmap_29.mp3
+				good_stratmap_30.mp3
+				good_stratmap_31.mp3
+				good_stratmap_32.mp3
+				good_stratmap_33.mp3
+				frontend_02.mp3				
+			end
+
+	; Angmar
+
+	music_type angmar
+		state MUSIC_BATTLE_BATTLE
+			event
+				folder data/sounds/Music
+				angmar_battle_01.mp3
+				angmar_battle_02.mp3
+				angmar_battle_03.mp3
+				angmar_battle_04.mp3
+				angmar_battle_05.mp3
+				angmar_battle_06.mp3
+			end
+		state MUSIC_BATTLE_MOBILIZE
+			event
+				folder data/sounds/Music
+				angmar_mobilize_01.mp3
+				angmar_mobilize_02.mp3
+				angmar_mobilize_03.mp3
+				neutral_mobilize_01.mp3
+				neutral_mobilize_02.mp3
+				neutral_mobilize_03.mp3
+				neutral_mobilize_04.mp3
+				neutral_mobilize_05.mp3
+				neutral_mobilize_06.mp3
+				neutral_combat_01.mp3
+			end
+		state MUSIC_BATTLE_TENSION
+			event
+				folder data/sounds/Music
+				angmar_tension_01.mp3
+				neutral_tension_01.mp3
+				neutral_tension_02.mp3
+				neutral_tension_03.mp3
+			end
+		state MUSIC_CAMPAIGN_LOADING
+			event
+				folder data/sounds/Music
+				campaign_loading.mp3
+			end
+		state MUSIC_CAMPAIGN_VICTORY
+			event looped
+				folder data/sounds/Music
+				orcs_win.mp3
+			end
+		state MUSIC_CAMPAIGN_DEFEAT
+			event looped
+				folder data/sounds/Music
+				orcs_lose.mp3
+			end
+		state MUSIC_CREDITS1 delay 3
+			event
+				folder data/sounds/Music
+				credits.mp3
+			end
+		state MUSIC_CREDITS2
+			event
+				folder data/sounds/Music
+				credits.mp3
+			end
+		state MUSIC_FRONTEND
+			event
+				folder data/sounds/Music
+				frontend_01.mp3
+				frontend_02.mp3
+			end
+		state MUSIC_PREBATTLE_SCROLL
+			event
+				folder data/sounds/Music
+				orcs_prebattle.mp3
+			end
+		state MUSIC_RESULT_DRAW
+			event
+				folder data/sounds/Music
+				orcs_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_AVERAGE
+			event
+				folder data/sounds/Music
+				orcs_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_CLOSE
+			event
+				folder data/sounds/Music
+				orcs_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_CRUSHING
+			event
+				folder data/sounds/Music
+				orcs_lose.mp3
+			end
+		state MUSIC_RESULT_WIN_AVERAGE
+			event
+				folder data/sounds/Music
+				orcs_win.mp3
+			end
+		state MUSIC_RESULT_WIN_CLOSE
+			event
+				folder data/sounds/Music
+				orcs_win.mp3
+			end
+		state MUSIC_RESULT_WIN_CRUSHING
+			event
+				folder data/sounds/Music
+				orcs_win.mp3
+			end
+		state MUSIC_RESULT_STRAT_DRAW
+			event
+				folder data/sounds/Music
+				orcs_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_AVERAGE
+			event
+				folder data/sounds/Music
+				orcs_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CLOSE
+			event
+				folder data/sounds/Music
+				orcs_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CRUSHING
+			event
+				folder data/sounds/Music
+				orcs_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_AVERAGE
+			event
+				folder data/sounds/Music
+				orcs_win.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_CLOSE
+			event
+				folder data/sounds/Music
+				orcs_win.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_CRUSHING
+			event
+				folder data/sounds/Music
+				orcs_win.mp3
+			end
+		state MUSIC_STRATMAP_SUMMER
+			event delay 5
+				folder data/sounds/Music
+				angmar_stratmap_01.mp3
+				angmar_stratmap_02.mp3
+				angmar_stratmap_03.mp3
+				angmar_stratmap_04.mp3
+				angmar_stratmap_05.mp3
+				angmar_stratmap_06.mp3
+				angmar_stratmap_07.mp3
+				angmar_stratmap_08.mp3
+				angmar_stratmap_09.mp3
+				angmar_stratmap_10.mp3
+				angmar_stratmap_11.mp3
+				orcs_stratmap_01.mp3
+				orcs_stratmap_02.mp3
+				orcs_stratmap_03.mp3
+				orcs_stratmap_04.mp3
+				orcs_stratmap_05.mp3
+				orcs_stratmap_06.mp3
+				orcs_stratmap_12.mp3
+				orcs_stratmap_13.mp3
+				orcs_stratmap_14.mp3
+				orcs_stratmap_17.mp3
+				orcs_stratmap_18.mp3
+				orcs_stratmap_19.mp3
+				orcs_stratmap_23.mp3
+				orcs_stratmap_24.mp3
+				orcs_stratmap_26.mp3
+				orcs_stratmap_27.mp3
+				evil_stratmap_02.mp3
+				evil_stratmap_03.mp3
+				evil_stratmap_04.mp3
+				evil_stratmap_05.mp3
+				evil_stratmap_06.mp3
+				evil_stratmap_07.mp3
+				evil_stratmap_08.mp3
+				evil_stratmap_09.mp3
+				evil_stratmap_10.mp3
+				evil_stratmap_11.mp3
+				evil_stratmap_12.mp3
+				evil_stratmap_13.mp3
+				frontend_02.mp3				
+			end
+		state MUSIC_STRATMAP_WINTER
+			event delay 5
+				folder data/sounds/Music
+				angmar_stratmap_01.mp3
+				angmar_stratmap_02.mp3
+				angmar_stratmap_03.mp3
+				angmar_stratmap_04.mp3
+				angmar_stratmap_05.mp3
+				angmar_stratmap_06.mp3
+				angmar_stratmap_07.mp3
+				angmar_stratmap_08.mp3
+				angmar_stratmap_09.mp3
+				angmar_stratmap_10.mp3
+				angmar_stratmap_11.mp3
+				orcs_stratmap_01.mp3
+				orcs_stratmap_02.mp3
+				orcs_stratmap_03.mp3
+				orcs_stratmap_04.mp3
+				orcs_stratmap_05.mp3
+				orcs_stratmap_06.mp3
+				orcs_stratmap_12.mp3
+				orcs_stratmap_13.mp3
+				orcs_stratmap_14.mp3
+				orcs_stratmap_17.mp3
+				orcs_stratmap_18.mp3
+				orcs_stratmap_19.mp3
+				orcs_stratmap_23.mp3
+				orcs_stratmap_24.mp3
+				orcs_stratmap_26.mp3
+				orcs_stratmap_27.mp3
+				evil_stratmap_02.mp3
+				evil_stratmap_03.mp3
+				evil_stratmap_04.mp3
+				evil_stratmap_05.mp3
+				evil_stratmap_06.mp3
+				evil_stratmap_07.mp3
+				evil_stratmap_08.mp3
+				evil_stratmap_09.mp3
+				evil_stratmap_10.mp3
+				evil_stratmap_11.mp3
+				evil_stratmap_12.mp3
+				evil_stratmap_13.mp3
+				frontend_02.mp3				
+			end
+
+	;Wildmen
+	
+	music_type mesoamerican
+		state MUSIC_BATTLE_BATTLE
+			event
+				folder data/sounds/Music
+				wildmen_battle_01.mp3
+				wildmen_battle_02.mp3
+				wildmen_battle_03.mp3
+				wildmen_battle_04.mp3
+				wildmen_battle_05.mp3
+			end
+		state MUSIC_BATTLE_MOBILIZE
+			event
+				folder data/sounds/Music
+				wildmen_mobilize_01.mp3
+				wildmen_mobilize_02.mp3
+			end
+		state MUSIC_BATTLE_TENSION
+			event
+				folder data/sounds/Music
+				wildmen_tension.mp3
+			end
+		state MUSIC_CAMPAIGN_LOADING
+			event
+				folder data/sounds/Music
+				campaign_loading_wildmen.mp3
+			end
+		state MUSIC_CAMPAIGN_DEFEAT
+			event looped
+				folder data/sounds/Music
+				wildmen_lose.mp3
+			end
+		state MUSIC_CAMPAIGN_VICTORY
+			event looped
+				folder data/sounds/Music
+				wildmen_win.mp3
+			end
+		state MUSIC_CREDITS1 delay 3
+			event
+				folder data/sounds/Music
+				credits.mp3
+			end
+		state MUSIC_CREDITS2
+			event
+				folder data/sounds/Music
+				credits.mp3
+			end
+		state MUSIC_FRONTEND
+			event
+				folder data/sounds/Music
+				frontend_01.mp3
+				frontend_02.mp3
+			end
+		state MUSIC_PREBATTLE_SCROLL
+			event
+				folder data/sounds/Music
+				wildmen_prebattle.mp3
+			end
+		state MUSIC_RESULT_DRAW
+			event
+				folder data/sounds/Music
+				wildmen_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_AVERAGE
+			event
+				folder data/sounds/Music
+				wildmen_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_CLOSE
+			event
+				folder data/sounds/Music
+				wildmen_lose.mp3
+			end
+		state MUSIC_RESULT_LOSE_CRUSHING
+			event
+				folder data/sounds/Music
+				wildmen_lose.mp3
+			end
+		state MUSIC_RESULT_WIN_AVERAGE
+			event
+				folder data/sounds/Music
+				wildmen_win.mp3
+			end
+		state MUSIC_RESULT_WIN_CLOSE
+			event
+				folder data/sounds/Music
+				wildmen_win.mp3
+			end
+		state MUSIC_RESULT_WIN_CRUSHING
+			event
+				folder data/sounds/Music
+				wildmen_win.mp3
+			end
+		state MUSIC_RESULT_STRAT_DRAW
+			event
+				folder data/sounds/Music
+				wildmen_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_AVERAGE
+			event
+				folder data/sounds/Music
+				wildmen_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CLOSE
+			event
+				folder data/sounds/Music
+				wildmen_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CRUSHING
+			event
+				folder data/sounds/Music
+				wildmen_lose.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_AVERAGE
+			event
+				folder data/sounds/Music
+				wildmen_win.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_CLOSE
+			event
+				folder data/sounds/Music
+				wildmen_win.mp3
+			end
+		state MUSIC_RESULT_STRAT_WIN_CRUSHING
+			event
+				folder data/sounds/Music
+				wildmen_win.mp3
+			end
+		state MUSIC_STRATMAP_SUMMER
+			event delay 5
+				folder data/sounds/Music
+				wildmen_stratmap_01.mp3
+				wildmen_stratmap_02.mp3
+				wildmen_stratmap_03.mp3
+				wildmen_stratmap_04.mp3
+				wildmen_stratmap_05.mp3
+				wildmen_stratmap_06.mp3
+				wildmen_stratmap_07.mp3
+				wildmen_stratmap_08.mp3
+				wildmen_stratmap_09.mp3
+				wildmen_stratmap_10.mp3
+				wildmen_stratmap_11.mp3
+				wildmen_stratmap_12.mp3
+				wildmen_stratmap_13.mp3
+				wildmen_stratmap_14.mp3
+				wildmen_stratmap_15.mp3
+				wildmen_stratmap_16.mp3
+				frontend_02.mp3				
+			end
+		state MUSIC_STRATMAP_WINTER
+			event delay 5
+				folder data/sounds/Music
+				wildmen_stratmap_01.mp3
+				wildmen_stratmap_02.mp3
+				wildmen_stratmap_03.mp3
+				wildmen_stratmap_04.mp3
+				wildmen_stratmap_05.mp3
+				wildmen_stratmap_06.mp3
+				wildmen_stratmap_07.mp3
+				wildmen_stratmap_08.mp3
+				wildmen_stratmap_09.mp3
+				wildmen_stratmap_10.mp3
+				wildmen_stratmap_11.mp3
+				wildmen_stratmap_12.mp3
+				wildmen_stratmap_13.mp3
+				wildmen_stratmap_14.mp3
+				wildmen_stratmap_15.mp3
+				wildmen_stratmap_16.mp3
+				frontend_02.mp3				
+			end
