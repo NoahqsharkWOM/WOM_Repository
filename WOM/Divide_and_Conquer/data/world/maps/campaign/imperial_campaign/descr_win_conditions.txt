@@ -31,7 +31,7 @@ outlive aztecs france
 normans
 hold_regions Bree_Province
 take_regions 60
-outlive england
+outlive russia
 short_campaign hold_regions Bree_Province 
 take_regions 30
 
