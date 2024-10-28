@@ -10227,9 +10227,9 @@ end_monitor
 	
 	
 	monitor_event FactionTurnStart FactionType normans
-        and I_TurnNumber >= 34 ;34
+        and I_TurnNumber >= 34 ;34 - test number = 3
 		if not I_IsFactionAIControlled normans
-			and I_TurnNumber = 34 ;34
+			and I_TurnNumber = 34 ;34 - test number = 3
 			historic_event bree_choice_warning factions { normans, }
         end_if
 		terminate_monitor
@@ -10245,10 +10245,10 @@ end_monitor
     end_monitor
 		
     monitor_event FactionTurnStart FactionType normans
-        and I_TurnNumber >= 35 ;35
+        and I_TurnNumber >= 35 ;35 - test number = 4
 		
         if not I_IsFactionAIControlled normans
-            if I_TurnNumber = 37 ;37
+            if I_TurnNumber = 37 ;37 - test number = 6
 				and I_CompareCounter bree_war = 0
 				and I_NumberOfSettlements turks > 0
                 set_counter bree_influence_awaiting_answer 1
@@ -10256,7 +10256,7 @@ end_monitor
 				terminate_monitor
             end_if
 			
-			if I_TurnNumber = 37 ;37
+			if I_TurnNumber = 37 ;37 - test number = 6
 				and I_CompareCounter bree_war = 1
 				
 				set_event_counter bree_mercenary 1
@@ -10282,7 +10282,7 @@ end_monitor
 				terminate_monitor
 			end_if
 			
-			if I_TurnNumber = 37 ;37
+			if I_TurnNumber = 37 ;37 - test number = 6
 				and I_CompareCounter bree_war = 0
 				and I_NumberOfSettlements turks = 0
 				set_counter bree_refugees_awaiting_answer 1
@@ -10398,7 +10398,7 @@ end_monitor
         terminate_monitor
     end_monitor
 	
-	monitor_event FactionTurnStart I_TurnNumber = 39 ;39
+	monitor_event FactionTurnStart I_TurnNumber = 39 ;39 - test number = 8
         if I_EventCounter bree_mercenary = 1
 		spawn_army
                 faction normans
@@ -37254,6 +37254,7 @@ end_monitor
 	declare_counter timer
 	declare_counter plague_date_needed
 	declare_counter expedition_finale_retaliation
+	declare_counter chicken_pens_built
 
 	set_counter trolls_accepted 0
 	set_counter troll_stage 0
@@ -37290,6 +37291,7 @@ end_monitor
 	set_counter timer 0
 	set_counter plague_date_needed 2
 	set_counter expedition_finale_retaliation 0
+	set_counter chicken_pens_built 0
 
 monitor_event FactionTurnEnd FactionType normans
 
@@ -42323,7 +42325,7 @@ traits		HobbitRace 1, Brave 1, GoodCommander 3, GoodDefender 2, InspiringSpeaker
 				historic_event reginard_quest_taken_elves factions { normans, }
 				spawn_army
                 			faction normans
-                			character	Reginard, named character, age 27, x 104, y 380, direction N, portrait Reginard, battle_model court_paladins, label 	reginard_company
+                			character	Reginard, named character, age 27, x 104, y 380, direction N, portrait Reginard, battle_model court_paladins, label reginard_company
                 			traits		Reginard 1, CustomBG 1, GoodManRace 1, Dorwinrim 1, GoodCommander 1, GoodDefender 3, SiegeDefender 1, Loyal 1, 	LoyaltyStarter 1, PietyStarter 1
                 			unit		Privateer Cavalry		exp 9 armour 1 weapon_lvl 1
         			end
@@ -43445,8 +43447,6 @@ traits		HobbitRace 1, Brave 1, GoodCommander 3, GoodDefender 2, InspiringSpeaker
 					unit		Merchant Militia		exp 2 armour 0 weapon_lvl 0				
                 			unit		Merchant Militia		exp 2 armour 0 weapon_lvl 0
                 			unit		Merchant Militia		exp 2 armour 0 weapon_lvl 0
-					unit		Merchant Militia		exp 2 armour 0 weapon_lvl 0
-                			unit		Merchant Militia		exp 2 armour 0 weapon_lvl 0
 					unit		Archer Militia			exp 0 armour 0 weapon_lvl 0
 					unit		Archer Militia			exp 0 armour 0 weapon_lvl 0
 					unit		Archer Militia			exp 0 armour 0 weapon_lvl 0
@@ -43478,11 +43478,38 @@ traits		HobbitRace 1, Brave 1, GoodCommander 3, GoodDefender 2, InspiringSpeaker
 		if I_CompareCounter lond_daer_timer = 7							;Mercenary warning - 35 turns
 		and I_EventCounter lond_daer_mercenary_2_accepted == 1
 			historic_event lond_daer_mercenary_warning factions { normans, }
+			add_events
+				event	fire
+				date	0
+				position	148, 294
+			end_add_events
 		end_if
 
 		if I_CompareCounter lond_daer_timer = 8							;Mercenary results 3 - 36 turns
 		and I_EventCounter lond_daer_mercenary_2_accepted == 1
-			spawn_army
+			if I_SettlementOwner Druwaith_Iaur = slave
+				spawn_army
+				faction slave
+				character	Overseer, named character, age 30, x 148, y 294, portrait Overseer, label lond_daer_occupier,
+                		traits		MiddleManRace 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1,
+					unit		Merchant Guard			exp 9 armour 1 weapon_lvl 1
+					unit		Merchant Guard			exp 4 armour 1 weapon_lvl 1
+					unit		Merchant Guard			exp 4 armour 1 weapon_lvl 1
+                			unit		Merchant Infantry		exp 8 armour 1 weapon_lvl 1
+					unit		Merchant Infantry		exp 8 armour 1 weapon_lvl 1
+					unit		Merchant Infantry		exp 8 armour 1 weapon_lvl 1
+					unit		Merchant Infantry		exp 8 armour 1 weapon_lvl 1
+					unit		Merchant Militia		exp 2 armour 0 weapon_lvl 0
+                			unit		Merchant Militia		exp 2 armour 0 weapon_lvl 0
+					unit		Merchant Militia		exp 2 armour 0 weapon_lvl 0
+					unit		Archer Militia			exp 0 armour 0 weapon_lvl 0
+					unit		Archer Militia			exp 0 armour 0 weapon_lvl 0
+					unit		Dwarven Catapult		exp 2 armour 0 weapon_lvl 0
+					unit		Dwarven Catapult		exp 2 armour 0 weapon_lvl 0				
+				end
+			end_if
+			if I_SettlementOwner Druwaith_Iaur = normans
+				spawn_army
 				faction slave
 				character	Overseer, named character, age 30, x 148, y 292, direction N, portrait Overseer, label lond_daer_attacker,
                 		traits		MiddleManRace 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1,
@@ -43498,19 +43525,16 @@ traits		HobbitRace 1, Brave 1, GoodCommander 3, GoodDefender 2, InspiringSpeaker
 					unit		Merchant Militia		exp 2 armour 0 weapon_lvl 0				
                 			unit		Merchant Militia		exp 2 armour 0 weapon_lvl 0
                 			unit		Merchant Militia		exp 2 armour 0 weapon_lvl 0
-					unit		Merchant Militia		exp 2 armour 0 weapon_lvl 0
-                			unit		Merchant Militia		exp 2 armour 0 weapon_lvl 0
 					unit		Archer Militia			exp 0 armour 0 weapon_lvl 0
 					unit		Archer Militia			exp 0 armour 0 weapon_lvl 0
 					unit		Archer Militia			exp 0 armour 0 weapon_lvl 0
 					unit		Archer Militia			exp 0 armour 0 weapon_lvl 0
-                			unit		Merchant Cavalry		exp 3 armour 1 weapon_lvl 1
-					unit		Merchant Cavalry		exp 3 armour 1 weapon_lvl 1
 					unit		Dwarven Catapult		exp 2 armour 0 weapon_lvl 0
 					unit		Dwarven Catapult		exp 2 armour 0 weapon_lvl 0				
 				end
-			console_command auto_win attacker
-			siege_settlement lond_daer_attacker, Druwaith_Iaur, attack
+			siege_settlement lond_daer_attacker, Druwaith_Iaur, maintain
+			end_if
+			campaign_wait 1
 			spawn_army
 				faction slave
 				character	random_name, named character, age 21, x 150, y 298, direction N,
@@ -43567,11 +43591,19 @@ traits		HobbitRace 1, Brave 1, GoodCommander 3, GoodDefender 2, InspiringSpeaker
             			end
 			historic_event lond_daer_mercenary_3 factions { normans, }
 			inc_counter bree_morality_counter 1
-			set_event_counter lond_daer_retaken 1
+		end_if
+
+		if I_CompareCounter lond_daer_timer > 8
+		and I_CompareCounter lond_daer_timer < 50
+		and I_SettlementOwner Druwaith_Iaur = normans
+		and not I_CharacterExists lond_daer_attacker
+			if I_EventCounter lond_daer_retaken == 0
+				set_event_counter lond_daer_retaken 1
+			end_if
 		end_if
 
 		if I_EventCounter lond_daer_retaken == 1
-		and I_CompareCounter lond_daer_timer > 8
+		and I_CompareCounter lond_daer_timer < 50
 			if I_CharacterExists hunaer_1
 				historic_event lond_daer_mercenary_victory factions { normans, }
 				set_event_counter lond_daer_retaken 0
@@ -43583,8 +43615,15 @@ traits		HobbitRace 1, Brave 1, GoodCommander 3, GoodDefender 2, InspiringSpeaker
 			if not I_CharacterExists hunaer_1
 				historic_event lond_daer_mercenary_victory_bitter factions { normans, }
 				inc_counter bree_morality_counter 1
-				set_event_counter lond_daer_retaken 0
 			end_if
+			set_event_counter lond_daer_retaken 0
+			inc_counter lond_daer_timer 50
+		end_if
+
+		if I_CompareCounter lond_daer_timer = 11
+		and I_SettlementOwner Druwaith_Iaur = normans
+		and I_CharacterExists lond_daer_attacker
+			siege_settlement lond_daer_attacker, Druwaith_Iaur, attack
 		end_if
 
 		if I_CompareCounter lond_daer_timer = 7							;Mercenary results 3 - S
@@ -43593,6 +43632,7 @@ traits		HobbitRace 1, Brave 1, GoodCommander 3, GoodDefender 2, InspiringSpeaker
 			set_event_counter lond_daer_merchant_militia 1
 			increment_kings_purse normans 200
 			console_command add_money 300
+			inc_counter lond_daer_timer 50
 		end_if
 	end_if
 ;######################### HoW - BD Player Army Spawns ##########################
@@ -43620,8 +43660,258 @@ traits		HobbitRace 1, Brave 1, GoodCommander 3, GoodDefender 2, InspiringSpeaker
 				end
 		set_event_counter bd_kd_spawned 1
 	end_if
+;######################### ANGRY FARMHAND EASTER EGG ##########################
+	if I_CompareCounter chicken_pens_built = 9
+		historic_event bree_farmers_exploit_warning factions { normans, }
+		inc_counter chicken_pens_built 1
+	end_if
+
+	if I_CompareCounter chicken_pens_built >= 11
+	and I_CompareCounter chicken_pens_built <= 15
+		inc_counter chicken_pens_built 10
+			spawn_army
+				faction slave
+				character	random_name, named character, age 16, x 134, y 388, direction W, label angry_farmhand_army
+				traits		MiddleManRace 1, Breelander 1, AIBoost 1, GoodCommander 1, GoodDefender 3, SiegeDefender 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+			end
+			spawn_army
+				faction slave
+				character	random_name, named character, age 16, x 134, y 389, direction W, label angry_farmhand_army2
+				traits		MiddleManRace 1, Breelander 1, AIBoost 1, GoodCommander 1, GoodDefender 3, SiegeDefender 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+			end
+			spawn_army
+				faction slave
+				character	random_name, named character, age 16, x 134, y 390, direction W, label angry_farmhand_army3
+				traits		MiddleManRace 1, Breelander 1, AIBoost 1, GoodCommander 1, GoodDefender 3, SiegeDefender 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+			end
+			spawn_army
+				faction slave
+				character	random_name, named character, age 16, x 134, y 391, direction W, label angry_farmhand_army4
+				traits		MiddleManRace 1, Breelander 1, AIBoost 1, GoodCommander 1, GoodDefender 3, SiegeDefender 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+			end
+			spawn_army
+				faction slave
+				character	random_name, named character, age 16, x 135, y 387, direction W, label angry_farmhand_army5
+				traits		MiddleManRace 1, Breelander 1, AIBoost 1, GoodCommander 1, GoodDefender 3, SiegeDefender 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+			end
+			spawn_army
+				faction slave
+				character	random_name, named character, age 16, x 135, y 388, direction W, label angry_farmhand_army6
+				traits		MiddleManRace 1, Breelander 1, AIBoost 1, GoodCommander 1, GoodDefender 3, SiegeDefender 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+			end
+			spawn_army
+				faction slave
+				character	random_name, named character, age 16, x 135, y 389, direction W, label angry_farmhand_army7
+				traits		MiddleManRace 1, Breelander 1, AIBoost 1, GoodCommander 1, GoodDefender 3, SiegeDefender 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+			end
+			spawn_army
+				faction slave
+				character	random_name, named character, age 16, x 135, y 390, direction W, label angry_farmhand_army8
+				traits		MiddleManRace 1, Breelander 1, AIBoost 1, GoodCommander 1, GoodDefender 3, SiegeDefender 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+				unit		Farmhand Pikemen			exp 9 armour 3 weapon_lvl 1
+			end
+			campaign_wait 1
+			siege_settlement angry_farmhand_army, Shire_North, maintain
+			campaign_wait 1
+			siege_settlement angry_farmhand_army2, Shire_North, maintain
+			campaign_wait 1
+			siege_settlement angry_farmhand_army3, Shire_North, maintain
+			campaign_wait 1
+			siege_settlement angry_farmhand_army4, Shire_North, maintain
+			campaign_wait 1
+			siege_settlement angry_farmhand_army5, Shire_North, maintain
+			campaign_wait 1
+			siege_settlement angry_farmhand_army6, Shire_North, maintain
+			campaign_wait 1
+			siege_settlement angry_farmhand_army7, Shire_North, maintain
+			campaign_wait 1
+			siege_settlement angry_farmhand_army8, Shire_North, maintain
+			campaign_wait 1
+			siege_settlement angry_farmhand_army, Shire_North, attack
+	end_if
 end_monitor
 ;######################### HoW - Non Turn Start/End Script Monitors ##########################
+;######################### ANGRY FARMHAND EASTER EGG #########################################
+	monitor_event BuildingCompleted SettlementName Shire_North
+        and SettlementBuildingFinished = breed
+        	inc_counter chicken_pens_built 1
+		if I_CompareCounter chicken_pens_built >= 15
+			terminate_monitor
+		end_if
+    	end_monitor
+	monitor_event BuildingCompleted SettlementName Shire_South
+        and SettlementBuildingFinished = breed
+        	inc_counter chicken_pens_built 1
+		if I_CompareCounter chicken_pens_built >= 15
+			terminate_monitor
+		end_if
+    	end_monitor
+	monitor_event BuildingCompleted SettlementName Shire_West
+        and SettlementBuildingFinished = breed
+        	inc_counter chicken_pens_built 1
+		if I_CompareCounter chicken_pens_built >= 15
+			terminate_monitor
+		end_if
+    	end_monitor
 ;######################### SHTF Emergency Rally Troop Choice ##########################
 	monitor_event EventCounter EventCounterType shtf_emergency_rally_event_accepted
 	and EventCounter = 1
@@ -44071,8 +44361,7 @@ end_monitor
 ;######################### Reginard Quest Start ##########################
 	monitor_event BuildingCompleted SettlementName Bree
 	and SettlementBuildingFinished = cathedral_o
-		if not I_IsFactionAIControlled normans
-		and I_CharacterExists reginard_company
+		if I_CharacterExists reginard_company
 			historic_event reginard_quest_start true factions { normans, }
 			campaign_wait 0.5
 			send_character_off_map reginard_company
@@ -44080,16 +44369,16 @@ end_monitor
 		campaign_wait 0.5
 		terminate_monitor
 	end_monitor
-;######################### Reginard Quest Accepted ##########################reginard_quest_taken_elves_fight
+;######################### Reginard Quest Accepted ##########################
 	monitor_event EventCounter EventCounterType reginard_quest_start_accepted
-	and EventCounter = 1
+        and EventCounter = 1
 		historic_event reginard_quest_taken factions { normans, }
 		inc_counter reginard_timer 1
 		terminate_monitor
         end_monitor
 ;######################### Reginard Quest Declined ##########################
 	monitor_event EventCounter EventCounterType reginard_quest_start_declined
-	and EventCounter = 1
+        and EventCounter = 1
 		spawn_army
                 	faction normans
                 	character	Reginard, named character, age 27, x 165, y 378, direction S, portrait Reginard, battle_model court_paladins, label reginard_company
@@ -44117,7 +44406,7 @@ end_monitor
         end_monitor
 ;######################### Reginard Quest Ruffians Enlisted ##########################
 	monitor_event EventCounter EventCounterType reginard_quest_taken_elves_fight_accepted
-	and EventCounter = 1
+        and EventCounter = 1
 		create_unit reginard_company, Sellswords, num 1, exp 0, arm 0, wep 0
 		create_unit reginard_company, Bandits, num 2, exp 0, arm 0, wep 0
 				spawn_army
@@ -44146,7 +44435,7 @@ end_monitor
         end_monitor
 ;######################### Reginard Quest Hobbits Recruited ##########################
 	monitor_event EventCounter EventCounterType reginard_quest_taken_elves_fight_declined
-	and EventCounter = 1
+        and EventCounter = 1
 		create_unit reginard_company, Westron Catapult, num 1, exp 0, arm 0, wep 0
 		create_unit reginard_company, Watch Shirriffs, num 1, exp 0, arm 0, wep 0
 				spawn_army

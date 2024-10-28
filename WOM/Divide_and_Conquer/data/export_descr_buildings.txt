@@ -14508,13 +14508,13 @@ building hinterland_unique4
 				income_bonus bonus 64 requires factions { normans, } and event_counter bree_military 1
 				trade_base_income_bonus bonus 2
                 law_bonus bonus 5  requires event_counter is_the_ai 1
-				recruit_pool "Dragonslayers"  1   0.018   1  5  requires factions { normans, } and event_counter shtf 2
-				recruit_pool "Sons of the Fallen"  1   0.018   1  5  requires factions { normans, } and event_counter shtf 2
-				recruit_pool "Longbeard Crossbows"  1   0.024   1  0  requires factions { normans, } and event_counter bree_mercenary 1
-				recruit_pool "Longbeard Phalanx"  1   0.024   1  0  requires factions { normans, } and event_counter bree_mercenary 1
-				recruit_pool "Kings Warriors"  1   0.024   1  0  requires factions { normans, } and event_counter bree_mercenary 1
-				recruit_pool "Legion Shieldguard"  1   0.024   1  0  requires factions { normans, } and event_counter bree_mercenary 1
-				recruit_pool "Legion Hammerguard"  1   0.024   1  0  requires factions { normans, } and event_counter bd_kd_expedition_success 1
+				recruit_pool "Dragonslayers"  1   0.024   1  5  requires factions { normans, } and event_counter shtf 2
+				recruit_pool "Sons of the Fallen"  1   0.024   1  5  requires factions { normans, } and event_counter shtf 2
+				recruit_pool "Longbeard Crossbows"  1   0.03   1  0  requires factions { normans, } and event_counter bree_mercenary 1
+				recruit_pool "Longbeard Phalanx"  1   0.03   1  0  requires factions { normans, } and event_counter bree_mercenary 1
+				recruit_pool "Kings Warriors"  1   0.03   1  0  requires factions { normans, } and event_counter bree_mercenary 1
+				recruit_pool "Legion Shieldguard"  1   0.03   1  0  requires factions { normans, } and event_counter bree_mercenary 1
+				recruit_pool "Legion Hammerguard"  1   0.03   1  0  requires factions { normans, } and event_counter bd_kd_expedition_success 1
 				recruit_pool "Greenwood Foresters"  1   0.032   1  0  requires factions { normans, } and event_counter bree_mercenary 1 and event_counter greenwood_enclave 1
 			}
 			faction_capability
@@ -14591,13 +14591,13 @@ building hinterland_unique4
 				agent spy 0
 				agent_limit spy 1
 				recruit_pool "Greenwood Foresters"  1   0.032   1  0  requires factions { normans, }  and event_counter bree_mercenary 1 and event_counter greenwood_enclave_expanded 1
-				recruit_pool "Dragonslayers"  1   0.018   1  5  requires factions { normans, } and event_counter bd_erebor_mercenary 1 and event_counter bd_erebor_bilbo_alive 1
-				recruit_pool "Longbeard Crossbows"  1   0.024   1  0  requires factions { normans, } and event_counter bd_erebor_mercenary 1 and event_counter bd_erebor_bilbo_alive 1
-				recruit_pool "Longbeard Phalanx"  1   0.024   1  0  requires factions { normans, } and event_counter bd_erebor_mercenary 1 and event_counter bd_erebor_bilbo_alive 1
-				recruit_pool "Kings Warriors"  1   0.024   1  0  requires factions { normans, } and event_counter bd_erebor_mercenary 1 and event_counter bd_erebor_bilbo_alive 1
-				recruit_pool "Legion Shieldguard"  1   0.024   1  0  requires factions { normans, } and event_counter bd_erebor_mercenary 1 and event_counter bd_erebor_bilbo_alive 1
-				recruit_pool "Legion Hammerguard"  1   0.024   1  0  requires factions { normans, } and event_counter bd_erebor_bilbo_alive 1 and event_counter bd_kd_expedition_success 1
-				recruit_pool "Sons of the Fallen"  1   0.018   1  4  requires factions { normans, } and event_counter bd_erebor_mercenary 1 and event_counter bd_erebor_bilbo_dead 1
+				recruit_pool "Dragonslayers"  1   0.024   1  5  requires factions { normans, } and event_counter bd_erebor_mercenary 1 and event_counter bd_erebor_bilbo_alive 1
+				recruit_pool "Longbeard Crossbows"  1   0.03   1  0  requires factions { normans, } and event_counter bd_erebor_mercenary 1 and event_counter bd_erebor_bilbo_alive 1
+				recruit_pool "Longbeard Phalanx"  1   0.03   1  0  requires factions { normans, } and event_counter bd_erebor_mercenary 1 and event_counter bd_erebor_bilbo_alive 1
+				recruit_pool "Kings Warriors"  1   0.03   1  0  requires factions { normans, } and event_counter bd_erebor_mercenary 1 and event_counter bd_erebor_bilbo_alive 1
+				recruit_pool "Legion Shieldguard"  1   0.03   1  0  requires factions { normans, } and event_counter bd_erebor_mercenary 1 and event_counter bd_erebor_bilbo_alive 1
+				recruit_pool "Legion Hammerguard"  1   0.03   1  0  requires factions { normans, } and event_counter bd_erebor_bilbo_alive 1 and event_counter bd_kd_expedition_success 1
+				recruit_pool "Sons of the Fallen"  1   0.024   1  4  requires factions { normans, } and event_counter bd_erebor_mercenary 1 and event_counter bd_erebor_bilbo_dead 1
 				income_bonus bonus 125
 				income_bonus bonus 200  requires factions { normans, } and event_counter bd_erebor_mercenary 1 and event_counter bd_erebor_bilbo_alive 1
 				trade_base_income_bonus bonus 2

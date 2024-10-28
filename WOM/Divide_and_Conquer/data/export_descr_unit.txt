@@ -2992,7 +2992,7 @@ stat_health      1, 2
 stat_pri		 8, 6, elite_crossbow_bolt, 140, 26, missile, missile_mechanical, piercing, none, 0, 1
 stat_pri_attr	 area, ap
 stat_sec		 6, 4, no, 0, 0, melee, melee_blade, piercing, axe, 60, 1
-stat_sec_attr	 spear_bonus_4, spear, ap
+stat_sec_attr	 ap
 stat_pri_armour  10, 6, 0, metal
 stat_sec_armour  0, 0, flesh
 stat_heat        3

@@ -214,10 +214,10 @@ function onEventCounter(eventData)
         playSound(234, ourNewSound, true)
     end
 
-    if eventData.eventCounter == "reginard_quest_start" then
-        local ourNewSound=M2TWEOPSounds.createEOPSound(M2TWEOP.getModPath().."/eopData/music/CarmenHabanera.wav")
-        playSound(234, ourNewSound, true)
-    end
+    --if eventData.eventCounter == "reginard_quest_start" then
+    --    local ourNewSound=M2TWEOPSounds.createEOPSound(M2TWEOP.getModPath().."/eopData/music/CarmenHabanera.wav")
+    --    playSound(234, ourNewSound, true)
+    --end
 
     if eventData.eventCounter == "lond_daer_mercenary_3" then
         local ourNewSound=M2TWEOPSounds.createEOPSound(M2TWEOP.getModPath().."/eopData/music/StormtheCastle.wav")
