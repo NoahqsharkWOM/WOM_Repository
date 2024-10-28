@@ -37121,6 +37121,7 @@ end_monitor
 	set_event_counter bd_expedition_abandoned 0
 	set_event_counter bd_kd_expedition_success 0
 	set_event_counter bd_kd_elites 0
+	set_event_counter bd_sold 0
 	set_event_counter bd_kd_expedition_beleriand 0
 	set_event_counter direct_conquest_completed 0
 	set_event_counter th_conquest 0
@@ -38132,7 +38133,7 @@ monitor_event FactionTurnEnd FactionType normans
 				historic_event bd_el_good_purchase_decision true factions { normans, }
 			end_if
 
-			if I_CompareCounter bd_timer = 4				; - 13
+			if I_EventCounter bd_sold = 1				; - 13
 				if I_SettlementOwner South_Ered_Luin = normans					
 					historic_event bd_el_good_conclusion_betrayal factions { normans, }
 				end_if
@@ -38144,6 +38145,7 @@ monitor_event FactionTurnEnd FactionType normans
 					set_event_counter bd_el_mercenary 1
 					inc_counter bd_timer 1
 				end_if
+				set_event_counter bd_sold 0
 			end_if 
 		end_if
 
@@ -44759,9 +44761,11 @@ end_monitor
 				unit		Longbeard Phalanx		exp 3 armour 0 weapon_lvl 0
                 		unit		Longbeard Phalanx		exp 3 armour 0 weapon_lvl 0					
             		end
+			set_event_counter bd_sold 1
 			campaign_wait 0.2
 			console_command auto_win attacker
             		siege_settlement frarin_el, South_Ered_Luin, attack
+			campaign_wait 10
             		console_command diplomatic_stance normans hungary neutral
         end_monitor 
 ;######################### BD Purchase Decision Declined ##########################
@@ -44769,7 +44773,7 @@ end_monitor
 	and EventCounter = 1
 			historic_event bd_el_good_conclusion_friendship factions { normans, }
 			inc_counter bree_morality_counter 1
-			inc_counter bd_timer 2
+			inc_counter bd_timer 3
 			spawn_army
                 		faction normans
                 		character	Frarin, named character, age 45, x 92, y 349, direction S, label frarin_normans, portrait Frarin
