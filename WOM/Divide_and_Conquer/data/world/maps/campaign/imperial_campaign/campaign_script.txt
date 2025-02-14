@@ -37140,6 +37140,19 @@ end_monitor
 	set_event_counter reginard_avari_mercs 0
 	set_event_counter hobbit_ent_success 0
 	set_event_counter expedition_finale_active 0
+	set_event_counter expedition_finale_character_triggers_redhand_normal 0
+	set_event_counter expedition_finale_character_triggers_redhand_trolls 0
+	set_event_counter expedition_finale_character_triggers_frarin_normal 0
+	set_event_counter expedition_finale_character_triggers_frarin_king 0
+	set_event_counter expedition_finale_character_triggers_hunaer 0
+	set_event_counter expedition_finale_character_triggers_laneig 0
+	set_event_counter expedition_finale_character_triggers_reginard 0
+	set_event_counter expedition_finale_character_triggers_lorin 0
+	set_event_counter expedition_finale_character_triggers_borug 0
+	set_event_counter expedition_finale_character_triggers_overseer 0
+	set_event_counter expedition_finale_character_triggers_illanor 0
+	set_event_counter expedition_finale_character_triggers_theodand 0
+	set_event_counter expedition_finale_character_triggers_bilbo 0
 	set_event_counter expedition_finale_retaliation_harad 0
 	set_event_counter expedition_finale_tirithoros_conquered 0
 	set_event_counter expedition_finale_baradharn_conquered 0
@@ -37175,6 +37188,7 @@ end_monitor
 	set_event_counter shtf_carn_dum_taken 0
 	set_event_counter shtf_dunedain_dead 0
 	set_event_counter shtf_survived 0
+	set_event_counter mengalen_wights_warning 0
 
 	;Choice Counters
 	declare_counter ettenmoors_discovery
@@ -38136,6 +38150,7 @@ monitor_event FactionTurnEnd FactionType normans
 			if I_EventCounter bd_sold = 1				; - 13
 				if I_SettlementOwner South_Ered_Luin = normans					
 					historic_event bd_el_good_conclusion_betrayal factions { normans, }
+            				console_command diplomatic_stance hungary normans war
 				end_if
 
 				if I_SettlementOwner South_Ered_Luin = hungary
@@ -39054,9 +39069,31 @@ monitor_event FactionTurnStart FactionType normans
 			end
 		end_if		
 	end_if
-
-;######################### Militarization Of Bree Instructions ##########################
+;######################### Wight-Attacks! ##########################
 	if I_CompareCounter timer = 1
+			spawn_army
+				faction slave
+				character	random_name, named character, age 80, x 166, y 373, direction N, portrait wight, battle_model barrow_wight_king, label mengalen_bree_1
+				traits		WraithRace 1,  ColdWarrior 1, LoyaltyStarter 1 , GoodCommander 2 , FearGeneral 1, BattleFear 1, GoodAttacker 1 , GoodAmbusher 2, NightBattleCapable 1
+				unit		Rebel Barrow Wights		exp 9 armour 0 weapon_lvl 1
+				unit		Rebel Barrow Wights		exp 9 armour 0 weapon_lvl 1
+			end
+			siege_settlement mengalen_bree_1, Bree, maintain
+			historic_event bree_wight_warning_1 factions { normans, }
+	end_if
+
+	if I_CompareCounter timer = 2
+			siege_settlement mengalen_bree_1, Bree, attack
+	end_if
+
+	if not I_CharacterExists mengalen_bree_1
+	and I_CompareCounter timer >= 2
+	and I_EventCounter mengalen_wights_warning = 0
+		set_event_counter mengalen_wights_warning 1
+		historic_event bree_wight_warning_2 factions { normans, }
+	end_if
+;######################### Militarization Of Bree Instructions ##########################
+	if I_CompareCounter timer = 3
 		historic_event bree_unlock_script_info factions { normans, }
 	end_if
 ;######################### Bree Expedition Finale Conquest Path Cause & Effect ##########################
@@ -40073,7 +40110,7 @@ monitor_event FactionTurnStart FactionType normans
 		inc_counter expedition_finale_retaliation 1
 	end_if
 ;######################### Bree Merc Finale Start & Morality Check #######################
-	if I_NumberOfSettlements normans >= 10 ;24
+	if I_NumberOfSettlements normans >= 5 ;24
 	and I_CompareCounter finale_stage = 0
 	and I_EventCounter bree_mercenary = 1
 		historic_event bree_finale_start true factions { normans, }
@@ -40189,6 +40226,54 @@ monitor_event FactionTurnStart FactionType normans
 			;	siege_settlement expedition_prep, Anduin_Straits, attack
 			;end_if
 			;campaign_wait 1
+
+			; Unique Character Expedition Assistance
+			;Redhand
+			if I_EventCounter expedition_finale_character_triggers_redhand_normal = 1
+            		spawn_army
+                		faction normans
+				character	Redhand, named character, battle_model Rhudaur_Huscarles, age 22, x 298, y 173, direction S, portrait Redhand, hero_ability Harad, label redhand_company_expedition
+                		traits		MiddleManRace 1, Hillman 1, BattleScarred 1, GoodCommander 1, GoodAttacker 2, GoodSiegeAttacker 2, Loyal 1, LoyaltyStarter 1, PietyStarter 1, Swears 1, Energetic 3, NaturalMilitarySkill 2, HaleAndHearty 2, Stoic 1, Gregarious 2, Berserker 1, Hero 1, HeroAbilityHarad 1
+				unit		Rhudaur Warriors		exp 7 armour 0 weapon_lvl 1
+				unit		Rhudaur Huscarles		exp 3 armour 0 weapon_lvl 0
+				unit		Rhudaur Warriors		exp 3 armour 0 weapon_lvl 0
+				unit		Rhudaur Warriors		exp 3 armour 0 weapon_lvl 0
+				unit		Rhudaur Warriors		exp 3 armour 0 weapon_lvl 0
+				unit		Rhudaur Pikemen			exp 3 armour 0 weapon_lvl 0
+				unit		Rhudaur Pikemen			exp 3 armour 0 weapon_lvl 0
+				unit		Rhudaur Pikemen			exp 3 armour 0 weapon_lvl 0
+				unit		Rhudaur Savages			exp 3 armour 0 weapon_lvl 0
+				unit		Rhudaur Savages			exp 3 armour 0 weapon_lvl 0
+				unit		Rhudaur Savages			exp 3 armour 0 weapon_lvl 0
+            		end
+			end_if
+
+			;Bloodthirsty Redhand
+			if I_EventCounter expedition_finale_character_triggers_redhand_trolls = 1
+            		spawn_army
+			faction normans
+			character	Redhand, named character, battle_model Rhudaur_Huscarles, age 22, x 298, y 173, direction S, portrait Redhand,  hero_ability Harad, label redhand_company_trolls_expedition
+                	traits		MiddleManRace 1, Hillman 1, FearGeneral 1, BattleFear 2, GoodCommander 3, GoodAttacker 2, NightBattleCapable 1, BattleScarred 2, Swears 2, Energetic 2, NaturalMilitarySkill 2 Berserker 3, HeroAbilityHarad 1
+                		unit		Trolls				exp 9 armour 1 weapon_lvl 1
+				unit		Warg Pack			exp 6 armour 0 weapon_lvl 0
+				unit		Warg Pack			exp 6 armour 0 weapon_lvl 0
+				unit		Warg Pack			exp 6 armour 0 weapon_lvl 0
+				unit		Warg Pack			exp 6 armour 0 weapon_lvl 0
+				unit		Rhudaur Savages			exp 0 armour 0 weapon_lvl 0
+				unit		Rhudaur Savages			exp 0 armour 0 weapon_lvl 0
+				unit		Rhudaur Savages			exp 0 armour 0 weapon_lvl 0
+				unit		Rhudaur Savages			exp 0 armour 0 weapon_lvl 0
+				unit		Rhudaur Savages			exp 0 armour 0 weapon_lvl 0
+				unit		Rhudaur Savages			exp 0 armour 0 weapon_lvl 0
+				unit		Rhudaur Savages			exp 0 armour 0 weapon_lvl 0
+				unit		Rhudaur Savages			exp 0 armour 0 weapon_lvl 0
+				unit		Rhudaur Savages			exp 0 armour 0 weapon_lvl 0
+				unit		Rhudaur Savages			exp 0 armour 0 weapon_lvl 0
+			end
+			end_if
+
+			; Default Expedition Force
+			campaign_wait 0.5
             		spawn_army
                 		faction normans
                 		character	random_name, named character, age 27, x 305, y 174, family, direction S, label expedition_army
@@ -42944,7 +43029,7 @@ traits		HobbitRace 1, Brave 1, GoodCommander 3, GoodDefender 2, InspiringSpeaker
 			set_event_counter greenwood_enclave 1
 			spawn_army
 				faction normans
-				character	Illanor, named character, age 30, x 288, y 397, direction S, portrait Illanor, label illanor_normans_1
+				character	Illanor, named character, age 30, x 288, y 397, direction S, portrait Illanor, label illanor_company
                 		traits		MiddleManRace 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1,
 					unit		Greenwood Foresters		exp 5 armour 1 weapon_lvl 1
 					unit		Greenwood Foresters		exp 4 armour 0 weapon_lvl 0
@@ -43435,7 +43520,7 @@ traits		HobbitRace 1, Brave 1, GoodCommander 3, GoodDefender 2, InspiringSpeaker
 			inc_counter bree_morality_counter -2
 			spawn_army
 				faction normans
-				character	Overseer, named character, age 30, x 150, y 290, direction S, portrait Overseer, label overseer_loyal,
+				character	Overseer, named character, age 30, x 150, y 290, direction S, portrait Overseer, label overseer_company,
                 		traits		MiddleManRace 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1,
 					unit		Merchant Guard			exp 9 armour 1 weapon_lvl 1
 					unit		Merchant Guard			exp 4 armour 1 weapon_lvl 1
@@ -43568,7 +43653,7 @@ traits		HobbitRace 1, Brave 1, GoodCommander 3, GoodDefender 2, InspiringSpeaker
 				end
 			spawn_army
                 	faction normans
-					character	Hunaer, named character, age 30, x 152, y 301, direction S, portrait Hunaer, label hunaer_1
+					character	Hunaer, named character, age 30, x 152, y 301, direction S, portrait Hunaer, label hunaer_company
                 	traits		BadManRace 1, GoodCommander 1, LoyaltyStarter 1, MathematicsSkill 1, PietyStarter 1
 					unit		Farrhun Mercanaries			exp 7 armour 1 weapon_lvl 1
 					unit		Farrhun Mercanaries			exp 5 armour 0 weapon_lvl 0
@@ -43606,7 +43691,7 @@ traits		HobbitRace 1, Brave 1, GoodCommander 3, GoodDefender 2, InspiringSpeaker
 
 		if I_EventCounter lond_daer_retaken == 1
 		and I_CompareCounter lond_daer_timer < 50
-			if I_CharacterExists hunaer_1
+			if I_CharacterExists hunaer_company
 				historic_event lond_daer_mercenary_victory factions { normans, }
 				set_event_counter lond_daer_retaken 0
 				console_command add_population Druwaith_Iaur 4000
@@ -43614,7 +43699,7 @@ traits		HobbitRace 1, Brave 1, GoodCommander 3, GoodDefender 2, InspiringSpeaker
 				inc_counter bree_morality_counter 2				
 			end_if
 			
-			if not I_CharacterExists hunaer_1
+			if not I_CharacterExists hunaer_company
 				historic_event lond_daer_mercenary_victory_bitter factions { normans, }
 				inc_counter bree_morality_counter 1
 			end_if
@@ -43891,7 +43976,7 @@ traits		HobbitRace 1, Brave 1, GoodCommander 3, GoodDefender 2, InspiringSpeaker
 			siege_settlement angry_farmhand_army, Shire_North, attack
 	end_if
 end_monitor
-;######################### HoW - Non Turn Start/End Script Monitors ##########################
+;######################### WOM - Non Turn Start/End Script Monitors ##########################
 ;######################### ANGRY FARMHAND EASTER EGG #########################################
 	monitor_event BuildingCompleted SettlementName Shire_North
         and SettlementBuildingFinished = breed
@@ -44148,6 +44233,72 @@ end_monitor
 	monitor_event EventCounter EventCounterType bree_finale_start_accepted
 	and EventCounter = 1
 		historic_event bree_finale_start_hounds factions { normans, }
+		campaign_wait 0.5
+		if I_CharacterExists redhand_company
+			set_event_counter expedition_finale_character_triggers_redhand_normal 1
+			send_character_off_map redhand_company
+		end_if
+		campaign_wait 0.5
+		if I_CharacterExists redhand_company_trolls
+			set_event_counter expedition_finale_character_triggers_redhand_trolls 1
+			send_character_off_map redhand_company_trolls
+		end_if
+		campaign_wait 0.5
+		if I_CharacterExists frarin_normal
+			set_event_counter expedition_finale_character_triggers_frarin_normal 1
+			send_character_off_map frarin_normal
+		end_if
+		campaign_wait 0.5
+		if I_CharacterExists frarin_king
+			set_event_counter expedition_finale_character_triggers_frarin_king 1
+			send_character_off_map frarin_king
+		end_if
+		campaign_wait 0.5
+		if I_CharacterExists hunaer_company
+			set_event_counter expedition_finale_character_triggers_hunaer 1
+			send_character_off_map hunaer_company
+		end_if
+		campaign_wait 0.5
+		if I_CharacterExists laneig_company
+			set_event_counter expedition_finale_character_triggers_laneig 1
+			send_character_off_map laneig_company
+		end_if
+		campaign_wait 0.5
+		if I_CharacterExists reginard_company
+			set_event_counter expedition_finale_character_triggers_reginard 1
+			send_character_off_map reginard_company
+		end_if
+		campaign_wait 0.5
+		if I_CharacterExists lorin_company
+			set_event_counter expedition_finale_character_triggers_lorin 1
+			send_character_off_map lorin_company
+		end_if
+		campaign_wait 0.5
+		if I_CharacterExists borug_company ;########################################### Needs a double check once quest done
+			set_event_counter expedition_finale_character_triggers_borug 1
+			send_character_off_map borug_company
+		end_if
+		campaign_wait 0.5
+		if I_CharacterExists overseer_company
+			set_event_counter expedition_finale_character_triggers_overseer 1
+			send_character_off_map overseer_company
+		end_if
+		campaign_wait 0.5
+		if I_CharacterExists illanor_company
+			set_event_counter expedition_finale_character_triggers_illanor 1
+			send_character_off_map illanor_company
+		end_if
+		campaign_wait 0.5
+		if I_CharacterExists theodand_company
+			set_event_counter expedition_finale_character_triggers_theodand 1
+			send_character_off_map theodand_company
+		end_if
+		campaign_wait 0.5
+		if I_CharacterExists bilbo_company
+			set_event_counter expedition_finale_character_triggers_bilbo 1
+			send_character_off_map bilbo_company
+		end_if
+		campaign_wait 0.5
 		inc_counter finale_expedition_timer 1
 		terminate_monitor
         end_monitor
@@ -44776,7 +44927,7 @@ end_monitor
 			inc_counter bd_timer 3
 			spawn_army
                 		faction normans
-                		character	Frarin, named character, age 45, x 92, y 349, direction S, label frarin_normans, portrait Frarin
+                		character	Frarin, named character, age 45, x 92, y 349, direction S, label frarin_normal, portrait Frarin
                 		traits		DwarvenRace 1, Energetic 1, GoodAdministrator 2 GoodCommander 2, GoodDefender 2, SiegeDefender 1, HaleAndHearty 2, LoyaltyStarter 1, PietyStarter 1
                 		unit		Tumunzahar Nobles		exp 5 armour 1 weapon_lvl 1			
                 		unit		Longbeard Phalanx		exp 3 armour 0 weapon_lvl 0
@@ -45772,7 +45923,7 @@ end_monitor
 			inc_counter bree_morality_counter -2
 			spawn_army
                 	faction normans
-					character	Redhand, named character, battle_model Rhudaur_Huscarles, age 22, x 252, y 411, direction W, portrait Redhand, label redhand_company
+					character	Redhand, named character, battle_model Rhudaur_Huscarles, age 22, x 252, y 411, direction W, portrait Redhand, label redhand_company_trolls
                 	traits		MiddleManRace 1, FearGeneral 1, BattleFear 2, GoodCommander 3, GoodAttacker 2, NightBattleCapable 1
                 		unit		Trolls			exp 6 armour 1 weapon_lvl 1
 				unit		Trolls			exp 4 armour 0 weapon_lvl 0

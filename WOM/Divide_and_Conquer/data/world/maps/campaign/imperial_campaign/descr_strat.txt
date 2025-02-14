@@ -2710,7 +2710,7 @@ army
 unit		Watchmen Swordguard					exp 4 armour 1 weapon_lvl 1
 unit		Greenway Shieldmen			exp 0 armour 0 weapon_lvl 0
 
-character	Alf, named character, male, age 20, x 144, y 374, portrait Alf, battle_model bandrobas_archers_upg, label alf_1
+character	Alf, named character, male, age 20, x 143, y 379, portrait Alf, direction SW, battle_model bandrobas_archers_upg, label alf_1
 traits		HobbitRace 1, BadCommander 1, Coward 1, Just 1, KindRuler 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1
 ancillaries	hobbit_farmer, bard
 army
