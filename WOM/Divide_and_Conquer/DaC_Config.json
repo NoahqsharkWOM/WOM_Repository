@@ -1,7 +1,7 @@
 {
   "StartInstantly": false,
-  "PermanentArrows": false,
-  "AgoTextures": false,
+  "PermanentArrows": true,
+  "AgoTextures": true,
   "KhazadJourneySkip": false,
-  "JavelinRunAnims": false
+  "JavelinRunAnims": true
 }

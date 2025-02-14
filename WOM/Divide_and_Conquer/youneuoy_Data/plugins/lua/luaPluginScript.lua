@@ -43,7 +43,7 @@ function onPluginLoad()
     M2TWEOP.unlockGameConsoleCommands();
     -- UNCOMMENT TO ENABLE BELOW SETTINGS
     --M2TWEOP.setAncillariesLimit(8);
-    --M2TWEOP.setMaxBgSize(31);
+    M2TWEOP.setMaxBgSize(100);
     --M2TWEOP.setReligionsLimit(10);
     --M2TWEOP.setBuildingChainLimit(9);
     --M2TWEOP.setGuildCooldown(3);
