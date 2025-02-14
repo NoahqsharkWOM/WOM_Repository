@@ -1,0 +1,280 @@
+;
+;
+;
+;	cultivated_low
+;	cultivated_medium
+;	cultivated_high
+;	fertility_low
+;	fertility_medium
+;	fertility_high
+;	forest_dense
+;	forest_sparse
+;	hills
+;	mountains_high
+;	mountains_low
+;	swamp				
+;	beach
+;	scorched
+;
+;
+;
+
+climate default
+{
+	cultivated_low		a_deciduous_fertility_low.tga		a_forodwaith_impassable.tga
+	cultivated_medium	a_deciduous_fertility_high.tga		a_forodwaith_impassable.tga
+	cultivated_high		a_default_farm1.tga			a_default_farm1_winter.tga
+	fertility_low		a_deciduous_fertility_low.tga		a_forodwaith_impassable.tga
+	fertility_medium	a_deciduous_fertility_high.tga		a_forodwaith_impassable.tga
+	fertility_high		a_deciduous_fertility_high.tga		a_forodwaith_impassable.tga
+	forest_dense		a_deciduous_forest_dense.tga		a_coniferous_forest_dense_winter.tga
+	forest_sparse		a_deciduous_forest_sparse.tga		a_coniferous_forest_sparse_winter.tga
+	hills			a_deciduous_hills.tga			a_mediterranean_hills_winter.tga
+	mountains_high		a_alpine_mountains_winter.tga		a_alpine_mountains_winter.tga
+	mountains_low		a_deciduous_mountains.tga		a_deciduous_mountains_winter.tga
+	swamp			a_default_swamp.tga			a_default_winter_swamp_winter.tga
+	beach			a_default_beach.tga
+	scorched		scorched.tga
+	impassable_land		a_deciduous_fertility_low.tga		a_alpine_forest_sparse_winter.tga
+	impassable_sea		impassable_sea.tga
+}
+
+climate temperate_deciduous_forest
+{
+	cultivated_low		a_deciduous_fertility_low.tga		a_deciduous_forest_sparse_winter.tga
+	cultivated_medium	a_deciduous_fertility_high.tga		a_forodwaith_impassable.tga
+	cultivated_high		a_default_farm1.tga			a_default_farm1_winter.tga
+	fertility_low		a_deciduous_fertility_low.tga		a_deciduous_forest_sparse_winter.tga
+	fertility_medium	a_deciduous_fertility_high.tga		a_forodwaith_impassable.tga
+	fertility_high		a_deciduous_fertility_high.tga		a_forodwaith_impassable.tga
+	forest_dense		a_deciduous_forest_dense.tga		a_forodwaith_impassable.tga
+	forest_sparse		a_deciduous_forest_sparse.tga		a_forodwaith_impassable.tga
+	hills			a_deciduous_hills.tga			a_deciduous_hills_winter.tga
+	mountains_high		a_alpine_mountains_winter.tga		a_alpine_mountains_winter.tga
+	mountains_low		a_deciduous_mountains.tga		a_deciduous_mountains_winter.tga
+	swamp			a_default_swamp.tga			a_default_swamp_winter_warm.tga
+	beach			a_default_beach.tga
+	scorched		scorched.tga
+	impassable_land		a_deciduous_fertility_low.tga		a_forodwaith_impassable.tga
+	impassable_sea		impassable_sea.tga
+}
+
+climate temperate_coniferous_forest
+{
+	cultivated_low		a_coniferous_fertility_low.tga		a_coniferous_warm_fertility_low_winter.tga
+	cultivated_medium	a_coniferous_fertility_high.tga		a_coniferous_fertility_high_winter.tga
+	cultivated_high		a_default_farm1.tga			a_forodwaith_impassable.tga
+	fertility_low		a_coniferous_fertility_low.tga		a_coniferous_warm_fertility_low_winter.tga
+	fertility_medium	a_coniferous_fertility_high.tga		a_coniferous_fertility_high_winter.tga
+	fertility_high		a_coniferous_fertility_high.tga		a_coniferous_fertility_high_winter.tga
+	forest_dense		a_coniferous_forest_dense.tga		a_coniferous_forest_dense_winter.tga
+	forest_sparse		a_coniferous_forest_sparse.tga		a_coniferous_warm_forest_sparse_winter.tga
+	hills			a_coniferous_hills.tga			a_coniferous_hills_winter.tga
+	mountains_high		a_alpine_mountains_winter.tga		a_alpine_mountains_winter.tga
+	mountains_low		a_highland_mountains_winter2.tga		a_winter_mountains.tga
+	swamp			a_default_swamp.tga			a_default_winter_swamp_winter.tga
+	beach			a_default_beach.tga
+	scorched		scorched.tga
+	impassable_land		a_coniferous_hills.tga			a_coniferous_hills_winter.tga
+	impassable_sea		impassable_sea.tga
+}
+
+climate unused1
+{
+	cultivated_low		a_mediterranean_fertility_low_warm.tga		a_mediterranean_fertility_low.tga
+	cultivated_medium	a_mediterranean_fertility_high_warm.tga		a_mediterranean_fertility_high.tga
+	cultivated_high		a_default_farm1_warm.tga					a_default_farm1.tga
+	fertility_low		a_mediterranean_fertility_low_warm.tga		a_mediterranean_fertility_low.tga
+	fertility_medium	a_mediterranean_fertility_high_warm.tga		a_mediterranean_fertility_high.tga
+	fertility_high		a_mediterranean_fertility_high_warm.tga		a_mediterranean_fertility_high.tga
+	forest_dense		a_mediterranean_forest_dense.tga
+	forest_sparse		a_mediterranean_forest_sparse.tga
+	hills				a_mediterranean_hills_warm.tga			a_mediterranean_hills.tga
+	mountains_high		a_semi_arid_mountains_warm.tga			a_semi_arid_mountains_cold.tga
+	mountains_low		a_semi_arid_mountains_warm.tga			a_semi_arid_mountains_cold.tga
+	swamp				a_deciduous_warm_swamp.tga			a_default_swamp.tga
+	beach				a_default_beach.tga
+	scorched			scorched.tga
+	impassable_land		a_mediterranean_fertility_low_warm.tga		a_mediterranean_fertility_low.tga
+	impassable_sea		impassable_sea.tga
+}
+
+climate highland
+{
+	cultivated_low		a_highland_fertility_low.tga		a_highland_fertility_low_winter.tga
+	cultivated_medium	a_highland_fertility_high.tga		a_highland_fertility_high_winter.tga
+	cultivated_high		a_default_farm1.tga			a_coniferous_fertility_high_winter.tga
+	fertility_low		a_highland_fertility_low.tga		a_highland_fertility_low_winter.tga
+	fertility_medium	a_highland_fertility_high.tga		a_highland_fertility_high_winter.tga
+	fertility_high		a_highland_fertility_high.tga		a_highland_fertility_high_winter.tga	
+	forest_dense		a_highland_forest_dense.tga		a_highland_forest_dense_winter.tga
+	forest_sparse		a_highland_forest_sparse.tga		a_highland_forest_sparse_winter.tga
+	hills			a_highland_hills.tga			a_highland_hills_winter.tga
+	mountains_high		a_alpine_mountains_winter.tga		a_alpine_mountains_winter.tga
+	mountains_low		a_highland_mountains.tga		a_highland_mountains_winter.tga
+	swamp			a_default_swamp.tga			a_default_winter_swamp_winter.tga
+	beach			a_default_beach.tga			a_highland_fertility_high_winter.tga
+	scorched		scorched.tga
+	impassable_land		a_forodwaith_impassable.tga			a_coniferous_warm_forest_sparse_winter.tga
+	impassable_sea		impassable_sea.tga
+}
+
+climate alpine
+{
+	cultivated_low		a_alpine_forest_dense_winter.tga
+	cultivated_medium	a_forodwaith_low.tga
+	cultivated_high		a_coniferous_fertility_high_winter.tga
+	fertility_low		a_alpine_forest_dense_winter.tga
+	fertility_medium	a_forodwaith_low.tga
+	fertility_high		a_alpine_forest_sparse_winter.tga
+	forest_dense		a_alpine_forest_sparse_winter.tga	a_alpine_forest_dense_winter.tga
+	forest_sparse		a_alpine_forest_sparse_winter.tga	a_alpine_forest_dense_winter.tga
+	hills			a_highland_mountains.tga		a_highland_mountains_winter.tga
+	mountains_high		a_alpine_mountains_winter.tga
+	mountains_low		a_forodwaith_mountains.tga		white_mountain.tga
+	swamp			a_default_winter_swamp_winter.tga
+	beach			a_alpine_forest_sparse_winter.tga	a_alpine_forest_dense_winter.tga
+	scorched		scorched.tga
+	impassable_land		a_highland_mountains_winter.tga		a_forodwaith_mountains.tga
+	impassable_sea		impassable_sea.tga
+}
+
+climate steppe
+{
+	cultivated_low		a_steppe_fertility_low.tga
+	cultivated_medium	a_steppe_fertility_high.tga
+	cultivated_high		mordor_farm.tga
+	fertility_low		a_steppe_fertility_low.tga
+	fertility_medium	a_steppe_fertility_high.tga
+	fertility_high		mordor_fertility_max.tga
+	forest_dense		a_steppe_forest_dense.tga
+	forest_sparse		a_steppe_forest_sparse.tga
+	hills			a_steppe_hills.tga
+	mountains_high		a_steppe_mountains.tga
+	mountains_low		a_steppe_mountains.tga
+	swamp			alpine2.tga
+	beach			a_default_beach.tga						
+	scorched		scorched.tga				
+	impassable_land		a_steppe_fertility_low.tga
+	impassable_sea		impassable_sea.tga			
+}
+
+climate tropical
+{
+	cultivated_low		a_coniferous_fertility_low.tga		a_coniferous_warm_fertility_low_winter.tga
+	cultivated_medium	a_coniferous_fertility_high.tga		a_coniferous_fertility_high_winter.tga
+	cultivated_high		a_default_farm1.tga					a_forodwaith_impassable.tga
+	fertility_low		a_coniferous_fertility_low.tga		a_coniferous_warm_fertility_low_winter.tga
+	fertility_medium	a_coniferous_fertility_high.tga		a_coniferous_fertility_high_winter.tga
+	fertility_high		a_coniferous_fertility_high.tga		a_coniferous_fertility_high_winter.tga
+	forest_dense		a_coniferous_forest_dense.tga		a_coniferous_forest_dense_winter.tga
+	forest_sparse		a_coniferous_forest_sparse.tga		a_coniferous_warm_forest_sparse_winter.tga
+	hills				a_coniferous_hills.tga				a_coniferous_hills_winter.tga	
+	mountains_high		mordor_mountain.tga
+	mountains_low		mordor_mountain.tga
+	swamp				mordor_mountain.tga
+	beach				mordor_mountain.tga
+	scorched			mordor_mountain.tga
+	impassable_land		mordor_mountain.tga
+	impassable_sea		impassable_sea.tga
+}
+
+climate semi_arid
+{
+	cultivated_low		a_deciduous_warm_fertility_low.tga		a_coniferous_warm_fertility_low_winter.tga
+	cultivated_medium	a_deciduous_warm_fertility_high.tga		a_coniferous_warm_forest_sparse_winter.tga
+	cultivated_high		a_deciduous_warm_fertility_max.tga		a_coniferous_warm_forest_sparse_winter.tga
+	fertility_low		a_deciduous_warm_fertility_low.tga		a_coniferous_warm_fertility_low_winter.tga
+	fertility_medium	a_deciduous_warm_fertility_high.tga		a_coniferous_warm_forest_sparse_winter.tga
+	fertility_high		a_deciduous_warm_fertility_max.tga		a_coniferous_warm_forest_sparse_winter.tga
+	forest_dense		mordor_twisted.tga					mordor_twisted_winter.tga
+	forest_sparse		mordor_twisted.tga					mordor_twisted_winter.tga
+	hills				a_deciduous_warm_hills.tga				a_coniferous_hills_winter.tga
+	mountains_high		a_deciduous_warm_mountains.tga		a_deciduous_mountains_winter.tga
+	mountains_low		a_deciduous_warm_mountains.tga		a_deciduous_mountains_winter.tga
+	swamp				mordor_swamp.tga						mordor_swamp_winter.tga
+	beach				a_default_beach.tga
+	scorched			scorched.tga
+	impassable_land		mordor_mountain_cliff.tga		mordor_mountain_cliff_winter.tga
+	impassable_sea		impassable_sea.tga
+}
+
+climate mediterranean
+{
+	cultivated_low		a_mediterranean_fertility_low.tga	a_mediterranean_fertility_low_winter.tga
+	cultivated_medium	a_mediterranean_fertility_high.tga	a_mediterranean_fertility_high_winter.tga
+	cultivated_high		a_default_farm1.tga		a_default_farm1_winter.tga
+	fertility_low		a_mediterranean_fertility_low.tga	a_mediterranean_fertility_low_winter.tga
+	fertility_medium	a_mediterranean_fertility_high.tga	a_mediterranean_fertility_high_winter.tga
+	fertility_high		a_mediterranean_fertility_high.tga	a_mediterranean_fertility_high_winter.tga
+	forest_dense		a_mediterranean_forest_dense.tga	a_mediterranean_fertility_high_winter.tga
+	forest_sparse		a_mediterranean_forest_sparse.tga	a_mediterranean_fertility_high_winter.tga
+	hills			a_mediterranean_hills.tga		a_mediterranean_hills_winter.tga
+	mountains_high		a_alpine_mountains_winter.tga		a_alpine_mountains_winter.tga
+	mountains_low		a_highland_mountains.tga		a_highland_mountains_winter.tga
+	swamp			a_default_swamp.tga			a_default_swamp_winter_warm.tga
+	beach			a_default_beach.tga
+	scorched		scorched.tga
+	impassable_land		a_mediterranean_fertility_low.tga	a_mediterranean_fertility_high_winter.tga
+	impassable_sea		impassable_sea.tga
+}
+
+climate rocky_desert
+{
+	cultivated_low		a_semi_arid_fertility_low.tga
+	cultivated_medium	a_semi_arid_fertility_normal.tga	
+	cultivated_high		a_semi_arid_farm.tga
+	fertility_low		a_semi_arid_fertility_low.tga
+	fertility_medium	a_semi_arid_fertility_normal.tga
+	fertility_high		a_semi_arid_fertility_high.tga	
+	forest_dense		a_semi_arid_forest_sparse.tga
+	forest_sparse		a_semi_arid_forest_sparse.tga
+	hills			a_semi_arid_hills.tga
+	mountains_high		a_semi_arid_mountains.tga
+	mountains_low		a_semi_arid_mountains.tga
+	swamp			a_arid_swamp.tga
+	beach			a_default_beach.tga
+	scorched		scorched.tga
+	impassable_land		a_semi_arid_fertility_low.tga
+	impassable_sea		impassable_sea.tga
+}
+
+climate sandy_desert
+{
+	cultivated_low		mordor_fertility.tga
+	cultivated_medium	mordor_medium.tga
+	cultivated_high		mordor2.tga
+	fertility_low		mordor_fertility.tga
+	fertility_medium	mordor_medium.tga
+	fertility_high		mordor2.tga
+	forest_dense		mordor_twisted.tga
+	forest_sparse		mordor_twisted.tga
+	hills			mordor.tga
+	mountains_high		mordor_mountain.tga
+	mountains_low		mordor_mountain.tga
+	swamp			mordor_fertility_max.tga
+	beach			a_default_beach.tga
+	scorched		scorched.tga
+	impassable_land		mordor_mountain_south.tga
+	impassable_sea		impassable_sea.tga
+}
+
+climate unused2
+{
+	cultivated_low		a_coniferous_fertility_low.tga		a_lorien_fertility_low.tga
+	cultivated_medium	a_coniferous_fertility_high.tga		a_lorien_fertility_high.tga
+	cultivated_high		a_default_farm1.tga			a_default_farm1.tga
+	fertility_low		a_coniferous_fertility_low.tga		a_lorien_fertility_low.tga
+	fertility_medium	a_coniferous_fertility_high.tga		a_lorien_fertility_high.tga
+	fertility_high		a_coniferous_fertility_high.tga		a_lorien_fertility_high.tga
+	forest_dense		a_coniferous_forest_dense.tga		a_lorien_forest_dense.tga
+	forest_sparse		a_coniferous_forest_sparse.tga		a_lorien_forest_sparse.tga
+	hills			a_coniferous_hills.tga			a_lorien_hills.tga
+	mountains_high		a_highland_mountains.tga		a_highland_mountains_winter.tga
+	mountains_low		a_deciduous_mountains.tga		a_deciduous_mountains_winter.tga
+	swamp			a_default_swamp.tga			a_default_swamp.tga
+	beach			a_default_beach.tga
+	scorched		scorched.tga
+	impassable_land		a_coniferous_hills.tga			a_lorien_hills.tga
+	impassable_sea		impassable_sea.tga
+}

@@ -1,0 +1,280 @@
+;
+;
+;
+;	cultivated_low
+;	cultivated_medium
+;	cultivated_high
+;	fertility_low
+;	fertility_medium
+;	fertility_high
+;	forest_dense
+;	forest_sparse
+;	hills
+;	mountains_high
+;	mountains_low
+;	swamp				
+;	beach
+;	scorched
+;
+;
+;
+
+climate default
+{
+	cultivated_low		a_deciduous_fertility_low.tga		a_forodwaith_impassable.tga
+	cultivated_medium	a_deciduous_fertility_high.tga		a_forodwaith_impassable.tga
+	cultivated_high		a_default_farm1.tga			a_default_farm1_winter.tga
+	fertility_low		a_deciduous_fertility_low.tga		a_forodwaith_impassable.tga
+	fertility_medium	a_deciduous_fertility_high.tga		a_forodwaith_impassable.tga
+	fertility_high		a_deciduous_fertility_high.tga		a_forodwaith_impassable.tga
+	forest_dense		a_deciduous_forest_dense.tga		a_coniferous_forest_dense_winter.tga
+	forest_sparse		a_deciduous_forest_sparse.tga		a_coniferous_forest_sparse_winter.tga
+	hills				a_deciduous_hills.tga				a_mediterranean_hills_winter.tga
+	mountains_high		a_alpine_mountains_winter.tga		a_alpine_mountains_winter.tga
+	mountains_low		a_deciduous_mountains.tga			a_deciduous_mountains_winter.tga
+	swamp				a_default_swamp.tga					a_default_winter_swamp_winter.tga
+	beach				a_default_beach.tga
+	scorched			scorched.tga
+	impassable_land		a_deciduous_fertility_low.tga		a_alpine_forest_sparse_winter.tga
+	impassable_sea		impassable_sea.tga
+}
+
+climate temperate_deciduous_forest ;Eriador (Dark Orange)
+{
+	cultivated_low		eriador_cultivated_low.tga			eriador_cultivated_low_winter.tga		
+	cultivated_medium	eriador_cultivated.tga				eriador_cultivated_winter.tga			
+	cultivated_high		eriador_cultivated_high.tga			eriador_cultivated_high_winter.tga		
+	fertility_low		eriador_low.tga						eriador_low_winter.tga					
+	fertility_medium	eriador_medium.tga					eriador_medium_winter.tga				
+	fertility_high		eriador_high.tga					eriador_high_winter.tga				
+	forest_dense		eriador_medium.tga					eriador_medium_winter.tga				
+	forest_sparse		eriador_low.tga						eriador_low_winter.tga					
+	hills				eriador_hills.tga					eriador_hills_winter.tga				
+	mountains_high		a_alpine_mountains_winter.tga		a_alpine_mountains_winter.tga	
+	mountains_low		eriador_mountains.tga				eriador_mountains_winter.tga			
+	swamp				rhovanion_swamp.tga					rhovanion_swamp_winter.tga				
+	beach				a_default_beach.tga                 a_default_beach.tga
+	scorched			scorched.tga                        scorched.tga
+	impassable_land		eriador_low.tga						eriador_low_winter.tga					
+	impassable_sea		impassable_sea.tga                  impassable_sea.tga
+}
+
+climate temperate_coniferous_forest ;Rhudaur/Rhovanion/Mirkwood (Light Orange)
+{
+	cultivated_low		rhovanion_cultivated_low.tga		rhovanion_cultivated_low_winter.tga	
+	cultivated_medium	rhovanion_cultivated.tga			rhovanion_cultivated_winter.tga		
+	cultivated_high		rhovanion_cultivated_high.tga		rhovanion_cultivated_high_winter.tga	
+	fertility_low		rhovanion_low.tga					rhovanion_low_winter.tga				
+	fertility_medium	rhovanion_medium.tga				rhovanion_medium_winter.tga			
+	fertility_high		rhovanion_high.tga					rhovanion_high_winter.tga				
+	forest_dense		rhovanion_high.tga					rhovanion_high_winter.tga				
+	forest_sparse		rhovanion_high.tga					rhovanion_high_winter.tga				
+	hills				rhovanion_hills.tga					rhovanion_hills_winter.tga				
+	mountains_high		a_alpine_mountains_winter.tga		a_alpine_mountains_winter.tga	
+	mountains_low		rhovanion_mountains.tga				rhovanion_mountains_winter.tga				
+	swamp				rhovanion_swamp.tga					rhovanion_swamp_winter.tga				
+	beach				a_default_beach.tga                 a_default_beach.tga
+	scorched			scorched.tga                        scorched.tga
+	impassable_land		rhovanion_low.tga					rhovanion_low_winter.tga				
+	impassable_sea		impassable_sea.tga	                impassable_sea.tga	
+}
+
+climate unused1 ;South Gondor and Harad (Dark Pink)
+{
+	cultivated_low		harad_low.tga						harad_low_winter.tga					
+	cultivated_medium	harad_cultivated_medium.tga			harad_cultivated_medium_winter.tga		
+	cultivated_high		harad_cultivated_high.tga			harad_cultivated_high_winter.tga		
+	fertility_low		harad_low.tga						harad_low_winter.tga					
+	fertility_medium	harad_medium.tga					harad_medium_winter.tga				
+	fertility_high		harad_high.tga						harad_high_winter.tga					
+	forest_dense		harad_medium.tga                	harad_medium_winter.tga
+	forest_sparse		harad_medium.tga                	harad_medium_winter.tga
+	hills				harad_hills.tga						harad_hills_winter.tga					
+	mountains_high		a_semi_arid_mountains_warm.tga		a_semi_arid_mountains_warm.tga
+	mountains_low		khand_mountains.tga					khand_mountains_winter.tga				
+	swamp				rhovanion_swamp.tga					rhovanion_swamp_winter.tga				
+	beach				a_default_beach.tga             	a_default_beach.tga
+	scorched			scorched.tga                    	scorched.tga
+	impassable_land		harad_low.tga						harad_low_winter.tga					
+	impassable_sea		impassable_sea.tga              	impassable_sea.tga
+}
+
+climate highland ;Northern Middle Earth adn Mountains (Light Green)
+{
+	cultivated_low		north_low.tga						north_snow.tga					
+	cultivated_medium	north_cultivated.tga				north_snow.tga			
+	cultivated_high		north_cultivated_high.tga			north_snow.tga
+	fertility_low		north_low.tga						north_snow.tga					
+	fertility_medium	north_medium.tga					north_snow.tga				
+	fertility_high		north_high.tga						north_snow.tga					
+	forest_dense		north_high.tga						north_snow.tga					
+	forest_sparse		north_high.tga						north_snow.tga					
+	hills				north_hills.tga						gondor_hills_winter.tga					
+	mountains_high		a_alpine_mountains_winter.tga		a_alpine_mountains_winter.tga
+	mountains_low		rhovanion_mountains_winter.tga		north_mountains.tga			
+	swamp				rhovanion_swamp.tga					rhovanion_swamp.tga				
+	beach				a_default_beach.tga					a_default_beach.tga				
+	scorched			scorched.tga                    	scorched.tga
+	impassable_land		north_low.tga						north_snow.tga					
+	impassable_sea		impassable_sea.tga              	impassable_sea.tga
+}
+
+climate alpine ;ForodWaith/snow (Dark Green)
+{
+	cultivated_low		snow_low.tga                        snow_low.tga
+	cultivated_medium	snow_med.tga                        snow_med.tga
+	cultivated_high		snow_high.tga                       snow_high.tga
+	fertility_low		snow_low.tga                        snow_low.tga
+	fertility_medium	snow_med.tga                        snow_med.tga
+	fertility_high		snow_high.tga                       snow_high.tga
+	forest_dense		snow_low.tga				        snow_low.tga				
+	forest_sparse		snow_low.tga				        snow_low.tga				
+	hills				snow_hills.tga				        snow_hills.tga				
+	mountains_high		a_alpine_mountains_winter.tga       a_alpine_mountains_winter.tga
+	mountains_low		snow_mountains.tga			        snow_mountains.tga			
+	swamp				snow_high.tga                       snow_high.tga
+	beach				a_alpine_forest_sparse_winter.tga a_alpine_forest_sparse_winter.tga	
+	scorched			scorched.tga                        scorched.tga
+	impassable_land		snow_low.tga				        snow_low.tga				
+	impassable_sea		impassable_sea.tga                  impassable_sea.tga
+}
+ 
+climate steppe ;Khandish Desert (Red)	
+{
+	cultivated_low		khand_low.tga                		khand_low_winter.tga
+	cultivated_medium	khand_cultivated.tga         		khand_cultivated_winter.tga
+	cultivated_high		khand_cultivated_high.tga    		khand_cultivated_high_winter.tga
+	fertility_low		khand_low.tga                		khand_low_winter.tga
+	fertility_medium	khand_medium.tga             		khand_medium_winter.tga
+	fertility_high		khand_high.tga               		khand_high_winter.tga
+	forest_dense		khand_medium.tga             		khand_medium_winter.tga
+	forest_sparse		khand_medium.tga             		khand_medium_winter.tga
+	hills				khand_hills.tga              		khand_hills_winter.tga
+	mountains_high		a_steppe_mountains.tga       		a_steppe_mountains.tga
+	mountains_low		khand_mountains.tga          		khand_mountains_winter.tga
+	swamp				khand_swamp.tga              		khand_swamp.tga
+	beach				a_default_beach.tga			 		a_default_beach.tga						
+	scorched			scorched.tga				 		scorched.tga				
+	impassable_land		khand_low.tga                		khand_low_winter.tga
+	impassable_sea		impassable_sea.tga			 		impassable_sea.tga			
+}
+
+climate tropical ;Moria	(Very dark green)	
+{
+	cultivated_low		rhovanion_mountains.tga	            rhovanion_mountains_winter.tga	
+	cultivated_medium	rhovanion_mountains.tga	            rhovanion_mountains_winter.tga	
+	cultivated_high		rhovanion_mountains.tga	            rhovanion_mountains_winter.tga	
+	fertility_low		rhovanion_mountains.tga	            rhovanion_mountains_winter.tga	
+	fertility_medium	rhovanion_mountains.tga	            rhovanion_mountains_winter.tga	
+	fertility_high		rhovanion_mountains.tga	            rhovanion_mountains_winter.tga	
+	forest_dense		rhovanion_mountains.tga	            rhovanion_mountains_winter.tga	
+	forest_sparse		rhovanion_mountains.tga	            rhovanion_mountains_winter.tga	
+	hills				rhovanion_mountains.tga	            rhovanion_mountains_winter.tga	
+	mountains_high		rhovanion_mountains.tga             rhovanion_mountains_winter.tga
+	mountains_low		rhovanion_mountains.tga             rhovanion_mountains_winter.tga
+	swamp				rhovanion_mountains.tga             rhovanion_mountains_winter.tga
+	beach				rhovanion_mountains.tga             rhovanion_mountains_winter.tga
+	scorched			scorched.tga                        scorched.tga
+	impassable_land		rhovanion_mountains.tga             rhovanion_mountains_winter.tga
+	impassable_sea		impassable_sea.tga                  impassable_sea.tga
+}
+
+climate semi_arid ;Dead Marshes/Dagorland (Blue)	
+{
+	cultivated_low		dagor_low.tga				     	dagor_low_winter.tga				
+	cultivated_medium	dagor_med.tga				     	dagor_med_winter.tga				
+	cultivated_high		dagor_high.tga				     	dagor_high_winter.tga				
+	fertility_low		dagor_low.tga				     	dagor_low_winter.tga				
+	fertility_medium	dagor_med.tga				     	dagor_med_winter.tga				
+	fertility_high		dagor_high.tga				     	dagor_high_winter.tga				
+	forest_dense		dagor_high.tga				     	dagor_high_winter.tga				
+	forest_sparse		dagor_high.tga				     	dagor_high_winter.tga				
+	hills				dagor_hills.tga				     	dagor_hills_winter.tga				
+	mountains_high		a_deciduous_warm_mountains.tga		a_deciduous_warm_mountains.tga	
+	mountains_low		dagor_low.tga			            dagor_low_winter.tga			
+	swamp				dagor_swamp.tga		            	dagor_swamp_winter.tga		
+	beach				a_default_beach.tga                 a_default_beach.tga
+	scorched			scorched.tga                        scorched.tga
+	impassable_land		dagor_low.tga				        dagor_low_winter.tga				
+	impassable_sea		impassable_sea.tga                  impassable_sea.tga
+}
+
+climate mediterranean  ;Gondor (pink)
+{                                                        	
+	cultivated_low		gondor_low.tga						gondor_low_winter.tga				
+	cultivated_medium	gondor_cultivated.tga				gondor_cultivated_winter.tga		
+	cultivated_high		gondor_cultivated_high.tga			gondor_cultivated_high_winter.tga	
+	fertility_low		gondor_low.tga						gondor_low_winter.tga				
+	fertility_medium	gondor_medium.tga					gondor_medium_winter.tga			
+	fertility_high		gondor_high.tga						gondor_high_winter.tga				
+	forest_dense		gondor_high.tga						gondor_high_winter.tga				
+	forest_sparse		gondor_high.tga						gondor_high_winter.tga				
+	hills				gondor_hills.tga					gondor_hills_winter.tga			
+	mountains_high		a_alpine_mountains_winter.tga		a_alpine_mountains_winter.tga
+	mountains_low		gondor_mountains.tga				gondor_mountains_winter.tga		
+	swamp				rhovanion_swamp.tga					rhovanion_swamp_winter.tga			
+	beach				a_default_beach.tga               	a_default_beach.tga
+	scorched			scorched.tga                     	scorched.tga
+	impassable_land		gondor_low.tga	                 	gondor_low_winter.tga	
+	impassable_sea		impassable_sea.tga                  impassable_sea.tga
+}
+
+climate rocky_desert ;Far Harad (Purple)	
+{
+	cultivated_low		south_low.tga						south_low_winter.tga
+	cultivated_medium	south_cultivated.tga	            south_cultivated_winter.tga	
+	cultivated_high		south_cultivated_high.tga           south_cultivated_high_winter.tga
+	fertility_low		south_low.tga                       south_low_winter.tga
+	fertility_medium	south_medium.tga                    south_medium_winter.tga
+	fertility_high		south_high.tga	                    south_high.tga	
+	forest_dense		south_high.tga                      south_high.tga
+	forest_sparse		south_high.tga                      south_high.tga
+	hills				khand_hills.tga                     khand_hills_winter.tga
+	mountains_high		a_semi_arid_mountains.tga           a_semi_arid_mountains.tga
+	mountains_low		khand_mountains.tga                 khand_mountains_winter.tga
+	swamp				khand_swamp.tga                     khand_swamp.tga
+	beach				a_default_beach.tga                 a_default_beach.tga
+	scorched			scorched.tga                        scorched.tga
+	impassable_land		south_low.tga                       south_low_winter.tga
+	impassable_sea		impassable_sea.tga                  impassable_sea.tga
+}
+
+climate sandy_desert ;Mordor	
+{
+	cultivated_low		mordor_low.tga						mordor_low.tga
+	cultivated_medium	mordor_medium.tga                   mordor_medium.tga
+	cultivated_high		mordor_high.tga                     mordor_high.tga
+	fertility_low		mordor_low.tga                      mordor_low.tga
+	fertility_medium	mordor_medium.tga                   mordor_medium.tga
+	fertility_high		mordor_high.tga                     mordor_high.tga
+	forest_dense		mordor_medium.tga                   mordor_medium.tga
+	forest_sparse		mordor_medium.tga                   mordor_medium.tga
+	hills				mordor_hills.tga                    mordor_hills.tga
+	mountains_high		mordor_mountains.tga                mordor_mountains.tga
+	mountains_low		mordor_mountains.tga                mordor_mountains.tga
+	swamp				dagor_swamp.tga                     dagor_swamp.tga
+	beach				mordor_low.tga                      mordor_low.tga
+	scorched			scorched.tga                        scorched.tga
+	impassable_land		mordor_low.tga                      mordor_low.tga
+	impassable_sea		impassable_sea.tga                  impassable_sea.tga
+}
+
+climate unused2  ;Lothlórien	(yellow) 2
+{
+	cultivated_low		lorien.tga							lorien.tga
+	cultivated_medium	lorien.tga							lorien.tga
+	cultivated_high		lorien.tga							lorien.tga
+	fertility_low		lorien.tga							lorien.tga
+	fertility_medium	lorien.tga							lorien.tga
+	fertility_high		lorien.tga							lorien.tga
+	forest_dense		lorien.tga							lorien.tga
+	forest_sparse		lorien.tga							lorien.tga
+	hills				lorien.tga							lorien.tga
+	mountains_high		lorien.tga							lorien.tga
+	mountains_low		lorien.tga							lorien.tga
+	swamp				lorien.tga							lorien.tga
+	beach				lorien.tga							lorien.tga
+	scorched			scorched.tga
+	impassable_land		lorien.tga							lorien.tga
+	impassable_sea		impassable_sea.tga
+}

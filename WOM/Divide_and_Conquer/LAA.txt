@@ -1,0 +1,8 @@
+IMPORTANT - PLEASE ACTION
+
+1) Click on the '...' box
+2) Navigate to your Medieval 2 install path and double click on the 'medieval2.exe' file:
+C:\Program Files (x86)\Steam\steamapps\common\Medieval II Total War\medieval2.exe         (It may just be called 'medieval2' but this is the same file.)
+3) Make sure the checkbox is ticked
+4) Click 'Save'
+5) Close the program

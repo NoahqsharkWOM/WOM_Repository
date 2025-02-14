@@ -1,0 +1,2272 @@
+﻿V5:
+
+13th April
+- (A) Updated the fire effects in Carn Dum
+- (A) Edited the terrain in Dol Guldur, units can now flee or enter the battlefield
+
+15th April
+- (A) Added Naras' new AA portraits
+
+21st April
+- Added the 4.5 hotfix to the DB build
+
+25th April
+- Updated the Aragorn RPG to have the correct region name. 
+
+27th April
+- (TED) Updated the Undertowers battlemap with new towers
+
+1st May
+- Some initial groundwork for the Barracks Event removal completed
+-- The Barracks Event requirement has been removed from all units and buildings
+-- Level 1 Barracks, Stables and Practice Range now require the Level 1 Town Hall or Castle Hall
+-- Level 2 Barracks, Stables and Practice Range now require the Level 3 Town Hall or Castle Hall
+-- Level 3 Barracks, Stables and Practice Range now require the Level 4 Town Hall or Castle Hall
+-- Anduin, Dunland and Enedwaith can now build the Level 3 Town Hall and Castle Hall (note that currently this is called the Arnorian Hall so will need changing)
+-- Level 1 and 2 Wildmen Barracks now require the Level 1 Town Hall or Castle Hall
+-- Level 3 Wildmen Barracks Barracks now require the Level 3 Town or Castle Hall
+-- Level 1 Dunedain Barracks now require the Level 1 Town Hall or Castle Hall
+-- Level 2 Dunedain Barracks now require the Level 3 Town Hall or Castle Hall
+-- Level 3 Dunedain Barracks now require the Level 4 Town Hall or Castle Hall
+-- Level 1 Hillmen Barracks and Angmar Warg Stables now require the Level 1 Town Hall or Castle Hall
+-- Level 2 Hillmen Barracks and Angmar Warg Stables now require the Level 3 Town Hall or Castle Hall
+-- Khand's unique Orocarni Warriors are now available from the Level 1 Orocarni Clan Hall
+-- Level 1 Orocarni Clan Hall now requires the Level 1 Town Hall or Castle Hall
+-- Level 2 Orocarni Clan Hall now requires the Level 4 Town Hall or Castle Hall
+-- Level 1 Siege Workshop now requires the Level 2 Town Hall or Castle Hall
+-- Level 2 Siege Workshop now requires the Level 3 Town Hall or Castle Hall
+-- Level 3 Siege Workshop now requires the Level 4 Town Hall or Castle Hall
+-- Troll Cages now only have two Levels instead of three
+-- Level 1 Troll Cages allow recruitment of Half-Trolls for Gundabad and Trolls for other Orc factions
+-- Level 1 Troll Cages now require the Level 3 Town Hall or Castle Hall
+-- Level 2 Troll Cages allows recruitment of Snow Trolls, Olog Hai and Great Beasts
+-- Level 2 Troll Cages now require the Level 4 Town Hall or Castle Hall
+-- Mordor's Dark Temple (Temple unit recruitment building) in Durthang now only has one level
+-- Mordor's Dark Temple in Durthang now requires the Level 4 Castle Hall plus the Level 3 Culture building
+-- High Elves' Level 1 Teleri Barracks now requires the Level 1 Town Hall or Castle Hall
+-- High Elves' Level 2 Teleri Barracks now requires the Level 3 Town Hall or Castle Hall
+-- High Elves Level 1 Noldor Barracks now requires the Level 2 Town Hall or Castle Hall
+-- High Elves Level 2 Noldor Barracks now requires the Level 4 Town Hall or Castle Hall
+-- Ar-Adunaim's Level 1 Conscription Camp now requires the Level 1 Town Hall or Castle Hall
+-- Ar-Adunaim's Level 2 Conscription Camp now requires the Level 3 Town Hall or Castle Hall
+
+2nd May
+- Fountain Guard are now recruited from the Level 3 Barracks instead of Minas Tirith's unique building. Still only available in Minas Tirith, though.
+- Blackshield Archers now require the Level 2 Archery Range
+- Bolg's Champions are now recruited from the Level 3 Barracks instead of Mount Gundabad's unique building. Still only available in Gundabad, though.
+- Added Germanicus' Battle AI back into the game. 
+- Barrow-wights now have 0 upkeep because they would
+- ND must now be allied to Rohan, Anduin, Bree, Dale and Dorwinon to get their mercenary units
+- ND must be at peace or allied with Da and Gondor to train their units from the barracks
+- Angmar must be defeated for ND to train Rhudaur units from the barracks
+- ND Must capture the heartland regions of the AA, Khand, Harad and Rhun to train their units from the barracks
+- Royal Guard and Meduseld Doorwards move to the merc system and Edoras has been given its own pool so they are only available in Edoras
+- All ND merc units replenish quicker have higher max pools and, often, higher initial pools. 
+- Bree ND merc pool expanded by two regions
+- Dunland ND merc pool expanded by one region
+- Enedwaith ND merc pool split into north south and expanded by 3 regions
+- Rohan ND Merc pool split into east/west/edoras and expanded by 2 regions
+- Isengard's Orthanc Guard are now recrited from the Level 3 Barracks instead of Isengard's unique building. Still only available in Isengard, though.
+- Angmar's Guardians of Carn Dum are now recruited from the Level 3 Barracks instead of Carn Dum's unique building. Still only available in Carn Dum though.
+- Mordor can no longer build the Level 3 Barracks
+- Sauron's Will and Morgul Chosen have been moved into the Level 2 Barracks, original AoR restrictions still apply
+- Rohan can no longer build the Level 3 Barracks or Level 2 Archery Range (they would do nothing for Rohan with recruitment changes)
+- Missile units now have the same recruitment time as other foot units of their tier (e.g. Dalian Longbowmen and Dalian Swordsmen both now take only 1 turn to recruit)
+- Level 3 and 4 Farms no longer provide an additional population growth bonus on top of that of their improved food production
+
+3rd May
+- Begun re-doing unit pools and replenishment rates across the game. Levels 1, 2 and 3 Barracks nearly complete.
+- Levels 1, 2, and 3 Practice Range recruitment set up
+- Erebor now requires the Level 3 Barracks to recruit the Axeguard of Erebor out of Erebor.
+- (TED) Updated the Undertowers settlement (Hobbit village) so that it uses the new Undertowers Elf towers model in the distance.
+- Levels 1, 2 and 3 Stables recruitment set up
+- Rohan Royal Guard now requires the Level 3 Stables to recruit, still only available in Edoras
+- Rohan Meduseld Doorwards now requires the Level 2 Barracks to recruit, still only availsble in Edoras
+- Dale's Aiwothiuda Horseguards are now available everywhere from the Level 2 Stables
+- Levels 1, 2 and 3 Wildmen Barracks set up
+- Bree now recruits the Watchmen Swordguard, Axeguard and Bowguard from the Level 2 Militia Armoury (T2 garrison building)
+- Bandobras Archers now Inspire nearby allies. Brave little Hobbitses.
+- Made Royal Guard and Mesueld Doorward BoH mercs more expensive to hire and not available initially
+
+4th May
+- Lowered replenish rate and max unit pools (now just 1) of Militia units accross the board. Experimental; want to see how this effects things.
+- Adjust unit pools and replenishment rates on Angmar's Warg and Hillmen Camps
+- All pre-built Level 2 or higher Town/Castle Halls and unit recruitment buildings have been down-graded to Level 1 (I think... keep an eye out for any in both standard and SA campaigns that I may have missed)
+
+5th May
+- Swapped the C_stables and stables so that the 'C_' version is now the castle version (always annoyed me. :P )
+- Did the same as above for the practice ranges
+- Dol Amroth can no longer build the T3 barracks or stables. 
+- Added the Knight's Lodgings building to Dol Amroth that now allows Talons and Silvers to train anywhere but the building requires a level 2 barracks and level 2 stables. 
+- TA Knights, TA Wardens, White Knights, Talons, Silvers, Wardens of the White Tower (DA only) and Osgiliath Guard (Dol Amroth only) now all come from the Knight's Lodgings. 
+- Renamed T2 stables for Gondor (Steward's Stable) for DA (Prince's Stables) for evil men (Grand Stables). 
+- Renamed T3 stables for Rohan (Mearas Stables) for Harad (Serpent's Stables)
+- The Fiefdom Waystation is no longer available in Minas Tirith or Dol Amroth
+- Three tiers of Barracks renamed for uniformity and progression - Barracks, Guard Barracks, Army Barracks (and to avoid confusion with the in-game building known as "Garrison Quarters")
+- Moria can no longer build the T3 barracks 
+- Moria's Mountain Uruk's and Azog's Defilers now train from their own Uruk Barracks requiring: Mountainous region, T1 Stables and T3 Blacksmith. 
+- Mountain Uruks and Azog's Defilers now available in all mountain regions instead of just the Misty Mountains. 
+- Dol Guldur no longer have access to the T3 barracks
+- Dol Guldur now has a unique T3 barracks called "Shadow's Calling" that allows the training of: Shadow Rangers (Mirkwood only) Shadowguard, Shadowknights (Dol Guldur only) and Castellans (Dol Guldur only)
+- Shadow's Calling requires a T2 archery range to be built. 
+- Reworded an event message in the Luin ring script. 
+- Mordor's units from Khand, Harad and Rhun now come from a Tribute Camp. The first tier requires nothing the 2nd tier requires a large_town and a T3 blacksmith. 3 units come from T1 and 3 more from T2. 
+- Gondor's Amrothian Barracks has been removed and the troops are now just available form the standard fiefdom barracks (in practice all this does is more recrutiment of Amrothian units for Gondor from Tarnost to Minas Tirith)
+- Second tier of Fiefdom Barracks added: the Fiefdom Headquarters. Requires a T4 blacksmith. 
+- Fiefdom Barracks can now also be built in Umbar and Lond Daer. 
+- Lorien and Woodland now get their own T2 stables that can only be built in Caras Galadhon, Dol Guldur & Thranduil's Halls. 
+- Dale's elven and dwarven units from the alliance now come form the town hall (starting at T2) with two elites coming at T4.
+- Dale's dwarven units from the alliance are now available in the northeast
+- Dale's elven units are now available throughout all of Mirkwood inc. Dale & Esgaroth.
+- Baragund has moved back to being the archer general and Mistven is now the Seaward Spearmen guy on Tolfalas. 
+- Dorwinion no longer has acces to the traditional stables, archery range and barrack
+- Dorwinion now has its own barracks. At T1 & T2 you get normal Dorwin units. Once you make your choice, you then get T3 & T4 containing the two tiers of the choice units.
+- Dorwinion Armsmen are now available for both sides
+- Sant Annui starts with a Thorn Armoury, Strondost starts with a Thorn Barracks. Caras Sant has no barracks at game start. 
+- Bree, Dale and Dorwinion now get their triple boost bonus in a new tier of blacksmith for them. You must have chosen the Dúnedain, allied with the Dwarves or chosen the Avari respectively to obtain these buildings. 
+- Perfect Spy is now enabled for testing purposes - when you click on your faction leader, you will then be able to see inside every town on the map - use this to chewck what they are building as the campaign progresses. 
+- Adjusted Isengard replenishment rates and unit pools
+- Fixed a minor error in the Dorwinion Barracks (the castle version required the City version of the Castle Halls and gave Strondost the Castle version of the Barracks)
+- Gondor now starts with one unit of Fountain Guard in Minas Tirith (compensation for them not being available right from the start anymore)
+- Dale's Level 2 Stables are now named "Earl's Stables" and Rohan's Level 2 Stables are now named "Marshal's Stables"
+- (TED) Added 4x new Lorien battlemap trees - freatures improved textures, better alignment with sloped ground, and the main tree is designed after a Mallorn
+
+6th May
+- Changed the AI's sally out preference. Previously they would sally out if they thought they were 3 times stronger than the attacker. Now they will sally out if they think they are 1:1 or better. 
+- Added the siege bug fix by Travus. 
+- Mordor tribute camp now restricted to Minas Morgul, Black Gate and Barad-dur
+- All T1 recruitment buildings no longer require any other building to build
+- Rejigged the building requirements and town level tiers for all recrutiment buildings. 
+- Editied the siege workshops so that each tier only gives new equipment not faster replenishment of old equipment. 
+- fixed starting AA diplomat Trait
+- Wildmen civs now have proper UI and name for their T3 town hall. The T4 town hall is now Dunedain only. 
+- Removed the extra Blue Wizard message that tells you the Blue Wizards are coming AFTER they have already arrived and attacked. 
+- Suriut chariots now able to get free upkeep in towns
+- War Wagons are now AP in melee
+- Eldarinwe Tirno and Roquen are no longer available out of Imladris straight away. You now must rebuild the Gwaith-i-Mirdain to get them anywhere at all.
+- Moria, Dol Guldur and Isengard can no longer build the Level 2 Troll Cages.
+- Removed Arthedain Knights from Amon Sul
+- Varfest (Rhun) now has a pre-built Level 1 Barracks
+- Dol Guldur and Isengard's unique buildings now provide 4 Recruitment Slots (making up for losing their pre-built high level Castle Halls)
+- (TED) Updated the battlemap Mallorn tree from my previous update - the new model has improved branches stemming out from the top of the tree
+
+7th May
+- Fixed Wildmen text bug for their castle city hall
+- Our old campaign AI put back in (that was a mistake by me! - AG)
+- Sally out chance reset back to 3 instead of 1 as it seems to be causing them to sally out on the battle map
+- Fiefdom barracks and dominion camp no longer showing up in the building browser outside of the 4 locations it can be built
+- Fiefdom waystation no longer available in Gondor and now a castle only building.
+- Garrison trrops now despawn properly if you withdraw at the campaign map battle screen
+- KD Unity Hall has its script requirements back (You have to spread the word in order to get the building and the troops within)
+- Troll cages tier 1 now require the T2 barracks before they can be built. 
+- High Elves can now get a diplomat out of both Mithlond and Imladris
+- Wildmen T3 mason's lodge now has proper UI
+- Bree unit recruitment updated. Units from lower tier economy buildings now train just as quickly as those from higher tier economy buildings
+- Tradng Posts now require Paved Roads to build (so Merchant Infantry isn't so quick to get to)
+- Level 2 Noldor Barracks from castles now correctly requires the Level 4 Castle Hall
+- Reworded the Dorwinion choice messages to reflect the fact the choice is now about how to use the returning Avari rather than between humans or elves. 
+- Reworked the Dorwinion choice script to now fire once the player captures the updated and edited region of "Windan Forest" and the city of Mornedhel.
+- (TED) Changed the Eorlstone CSM to a Wildmen village 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ^^ DD29
+
+8th May
+- Avari Warriors now a sword and board unit
+- Dorwinion Armsmen are now a T2 unit; stats and cost lowered, unit size increased and added to the Thorn Armoury (T2 barracks)
+- Dorwinion Infantry and Dorwinion Armsmen are now only recruitable in Dorwinion Homelands (Caras Sant, Sant Annui, Strondost, Mornedhel and Neburkha)
+- Slightly slowed down the replenishment rate of Angmar's Rhudaur units
+- Fixed an error in Rozadan Halberdier and Footmen replenishment rate (I somehow entered 0.9 instead of 0.09...)
+- Dorwinion reward buildings under the choice now have new names and text
+- Dorwinion human choice now also gives privateer cavalry in Dorwinion and Woodland Hunters and Lumbermen from forest regions. 
+- Reworded some Avari traits and ancillaries to refernece the Remnant Council and the Triumvirate.
+- Buffed Greyflood Horsemen slightly
+- Dorwinion Armsmen now classified as "Medium Infantry" rather than Heavy
+- Rhudaur Landsmenn can now get free upkeep
+
+9th May
+- Fixed some errors in various init replenishment rates
+- Dunedain beacon units can now be trained if ND are allied or neutral with the good nations. 
+- Dunedain beacon units from Gondor and Dol Amroth no longer require they be allied. 
+- Dunedain T2 barracks now requires T2 town hall rather than T3
+- Dunedain now get a prebuilt T1 barracks in Ost Sul
+- Dunedain can once again train hobbit units from Smials
+- Renamed all the "X Leader is Dead" messages so that they fit on the scroll and they now simjply say the faction name: "Moria's Leader is Dead"
+- Removed the Barracks Event (actual script) from the files
+- Removed reference to the BE in the starting FAQ scroll
+- Added the Ent attack back on Isengard (It is 100% intended to succeed unless you really prep for it)
+- The Ents will attack in the end turn after you build the T3 logging guild (I will rename and reword the text on the lumber camps to make them fit better)
+- Added an Ent catapult (functionally identical to the Troll catapult except Ents operate it!)
+- If the Ents are succesful ("if" - Ha!) Isengard renames to "Treegarth of Orthanc"
+- Cut the script that dynamically moved the Ents in and out of Fangorn Forest and instead, simply cut those armies.
+- There will not be an ent-wife script or feature. 
+- Pop faction turned back on for testing
+- Ents now attack Isengard once you control 8 regions (or more). There are two warnings about this. 
+- (A) Fixed a deployment issue in Minas Morgul
+- Wildmen Level 2 Barracks now only requires the Level 1 Town Hall (For Wildmen it doesn't actually unlock higher tier units, but just gives access to ranged and cav)
+- (TED) Updated the CSM residences folder (and descr_cultures.txt) with a new naming convention for all CSM CAS files
+- Fixed the missing Windan Palace UI
+- Fixed the missing Windan Palace text in the building list
+- Removed the "Dol Amroth claims Edhellond" message because it happens at turn 1 in every game so it is a pointless message
+- Bree's three Watchmen units have been moved into the Level 3 Town Hall
+- Bree now recruits Breeland Militia and Archer Militia from the Farm line
+- Farms now give Bree one single recruitment slot
+- Bree now gets Longbeard Phalanx instead of Longbeard Swordsmen from the merc route
+- Rhovanion Riders and Rhovanion Hunters have been moved into the first available Mercenary Lodge building from the second
+- Bree can now recruit Dorwinion's Regent Bowguard from the second available Mercenary Lodge building
+- Removed the corsair invasion script for Gondor and Dol Amroth (A new age of DaC dawns!)
+- Erebor's King's Halberds have been removed. There have been multiple problems with this unit due to the lack of a proper halberd animation, and it was superfluous with other anti-cav and armour units available to Erebor.
+- Updated big unit UI for Avari Warriors (now that they use swords and shields)
+- Dwarven Labourers no longer get any XP or replenishment rate boosts from high level smiths
+
+10th May
+- Bree now trains Dwarven Ballista and Dwarven Catapult instead from the Siege Workshop line if they pick the Mercantile route. These also replenish faster than their default artillery.
+- All fixes from the dac_typo thread added.
+- Elves now use the more detailed (quendi) models for their artillery crews
+- Reworked the AA invasion on Mithlond
+- Anduin now begins the game with a single Longboat next to Beorn's Halls (however they can't train any others). The Northern Anduin River is now their private highway!
+- Added pre-built Level 1 Town Halls to Annuminas and Deadman's Dike. Removed Level 2 Barracks from Fennas Drunin.
+- Fixed replenishment rates for Avari Spearmen and Blackroot Vale Archers
+
+11th May
+- Edwodyn, no longer silver surfer (if you choose elves)
+- Hobbits units for ND now have UI
+- Byrig (Dunland) is now a Keep instead of a Village.
+- Added a pre-built Level 1 Town Hall and Level 1 Barracks to Isenrun (Isengard)
+- Added a pre-built Level 1 Castle Hall to Derwath (Isengard)
+
+13th May
+- Buzra-dûm reclamation uploaded. 
+- Elessar's updated faction icons added.
+
+- UI added for BD reclamation
+- Increased the income of Dunland's Tannery line, Anduin's Apiary line and Enedwaith's Fishery line of buildings
+- Added a fort to western Lothlorien
+- Added two Iron nodes to Mount Gundabad and two Iron nodes to Carn Dum.
+- Reduced Gundabad's starting Treasury
+- Reduced AI Angmar's KP bonus
+- Removed the pre-built Barracks from Litash
+- Reduced the size of the Turn 1 and auto-expansion armies of AI High Elves when player is Angmar
+- Reduced the size of the Turn 1 spawn army of AI Angmar when player is ND
+- Removed the largest of the Bandit armies in Bree
+
+14th May
+- Fixed missing counter crash for Mordor
+- The Adunaim raid script will now end if you succesfully defend Lond Daer. 
+- There is now an ending victory (or otherwise) message at the end of the Adunaim invasion
+- The adunaim invasion on Lindon is now set up for the AI as well (they have the same dice roll giving 1 of 4 outcomes)
+- The Tavern line of buildings now only has two levels. Level 1 now requires Towns and Level 2 Large Towns. Increased the income bonus for Level 2 and added a +5% Happiness bonus.
+- Extra UI added to the mithlond invasions
+- Reduced the rate at which AI Angmar recruits Snow Trolls and AI Isengard recruits Nazg-Hai (as previously they only got them after the BE, but now they're availabile right away)
+- Added Elessar's icons for the campaign map army banners too! 
+- The Army composition of the MIthlond attacks are now set up - that script is now complete. 
+- Fixed the ent script message popping every turn
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ^^ DD30
+
+15th May
+- Fixed as issue with the Dorwinion Military Academy and Windan Palace unit replenishment function
+- Isengard's Orthanc Guard and Orthanc Sentries now have an Orthanc Guard-looking banner carrier instead of an Uruk
+- Added an ND texture variant of the new Orthanc banner carrier's banner
+- Anduin's Faction Leader is now titled "Lord" instead of Huntmaster (Beorn was referred to briefly as such in a line in the book)
+- Increased the starting populations of Limhir and Byrig a little
+- Level 1 Dunland Tanneries, Anduin Apiaries and Enedwaith Fisheries are now more expensive but also give +0.5% population growth
+- Level 2 Dunland Tanneries, Anduin Apiaries and Enedwaith Fisheries now require the Town/Castle level
+
+16th May
+- Elegaer (Rhun) is now a Castle instead of a Town
+- Boromir now has Osgiliath Veterans as his bodyguard unit
+- Isengard Sawmill is now only available in Rochburg and is now a purely eco building. 
+- Tidied up a script monitor in the ent script.
+- Slightly sped up the replenishment rate of units from the Wildmen Barracks line in castles
+
+17th May
+- Completed the Buzra-dum reclamation event text
+- Added the Beleriand Honour Guard (Unit model courtesy of Isen from Heirs of Elendil)
+- Fixed some replenishment rate errors for Anduin
+- AI Dale now receives Burh Gram in the turn 1 expansion instead of Burh Mahlinge
+- Slightly increased the starting population of Burh Gram
+- Removed the "Moria Reclaimed" and "Fornost Reclaimed" messages at turn 1 as they pop every single game. 
+- Reduced Beleriand Honour Guard's unit size (same unit size as Eregion Smiths now)
+- All units now replenish slightly faster from castles than towns. With the exception of Moria, Dol Guldur and Mordor as they already had a very fast replenishment rate.
+
+18th May
+- Various typo fixes from the thread
+- Reworded Gan Altan's story so that it takes place after Sauron obtains the rings. 
+- Aragorn is now High-King Aragorn and Northern Dúnedain are now "Dúnedain of Arnor"
+- Mordor now get Temple Wards out of the Tower of Ecthelion at a rate of 1/40.
+- Garrison buildings now give 2 units at tier 1 and 3 units with 5XP, 1 armour and 1 melee at tier 2.
+- Renamed Armoury to "Militia Garrison" and Milita Armoury to "Military Garrison". They now tell you how many garrison troops you will get. 
+- Perma-frost added to the ice bay of Forochel. 
+- Snow added to the top of mountains so they aren't one giant grey blob anymore. 
+- (A) Fixed several unplayable battlemaps east of Cirith Ungol
+- (A) Fixed a broken river crossing east of Burh Marhlinge
+- Moved the Forts in the Anduin Vale closer to the river to take advantage of Anduin's new "ferry".
+- When playing as Dunland Enedwaith now take Suduri in the turn 1 expansion (Enedwaith spent about 10-15 turns suiciding their armies against it making the whole faction easy to take down!)
+
+19th May
+- (A) Fixed the Fords of Isen river crossing
+- Re-added the Fort in Lothlorien, because I was an idiot and somehow removed it when changing up the Anduin forts.
+
+20th May
+- Nazgul now Unlock at certain turns for AI Mordor too if player is Gondor. Taking Minas Morgul, Cirith Ungol or Morannon early, before Nazgul unlock, will unlock the Nazgul for Mordor.
+- Slightly sped up Enedwaith's replenishment rate; half way between that of Dunland and Northman
+- (A) Cerin Amroth has been added back to the game - sort of - and is now a unique fort in Lothlorien
+- Temporarily disabled (commented out) the Spy traits that were gained from the now removed Tavern, Coaching House and Pleasure Palace buildings (Rohur, you might wanna tinker with these traits -H)
+- New look for Amanyar Swordmasters, Riders and Rangers by Arthalion
+- New unique battle model for Elrond by Arthalion
+
+21st May
+- Polished Firebeard Warriors' battle models a little bit
+
+22nd May
+- Fixed a texture glitch with a lot of Dwarven axe texture
+- Northern Dunedain now train units out of castles slightly faster than out of towns (I'd overlooked them) and former post-barracks event units now train at the same rate as the former pre-BE units
+- Slightly slowed down Dunland's unit replenishment rate
+
+23rd May
+- (A) The river crossing south of Metraith no longer leads to an impassable forest
+- (A) Wildmen forts will now use the correct terrain textures
+
+24th May
+- New Dol Guldur unit: Mirkwood Bodyguard. Axe throwing Uruks that use dual-axes in melee.
+- All Dol Guldur armies spawned via script (e.g. auto expansions) are now led by Mirkwood Bodyguards instead of Uruk Bodyguards
+- Dol Guldur no longer have ownership of Uruk Bodyguards
+- Recruitment set up for Mirkwood Bodyguards
+- Alcfud and Dun Larach now each have a pre-built Garden of Tales. This means Enedwaith and Dunland can recruit Warchanters straight away.
+- removed the trait triggers for nagul locked trait that were left in before the script change. Nazgul should now properly unlock at given turns via script.
+
+25th May
+- slightly tweaked script monitor so Nazgul now really should unlock for AI and player Gondor at given turns
+- Unit UIs added for Mirkwood Bodyguards
+- Unit voices added for Mirkwood Bodyguards
+- New "armoured" battle model for Boromir
+
+27th May
+- Some visual tweaks to Carrock Guard
+- Polished Dorwinion Infantry's, including it's 3 visual upgrades, battle models a little bit
+
+28th May
+- A new unique saddle and harness-less horse mount has been added for Elven light cavalry units.
+- Lorien Scouts, Woodland Horse Archers, Amanyar Riders, Amanyar Rangers and Avari Naharim now use these mounts (note the Avari Naharim have a darker textured version for their horses but it's the same mount).
+
+29th May
+- Added Liam Taylor/Special Sundae's re-recorded Anduin, Dol Amroth and Dunland unit voices
+
+30th May
+- Updated Amanyar and new EL unit large unit UIs
+- Unit voices added to EL's Beleriand Honour Guard
+
+1st June
+- Lorien now gets Elvenking's Bowguard from the Silvan Alliance rather than the Gateguard
+- Elvenking's Gateguard now get an Attack bonus vs mounted units (note they still function as 2h Swordsmen not Spearmen so cav charges will still sting)
+- Elvenking's Axeguard Charge and Attack reduced but are now armour-piercing
+- Removed recruitable Sellsword bodyguards from Mercantile-route Bree. Experiment failed; it won't work without making them the default bodyguard of the faction
+
+10th June
+- Gondor General's Bodyguard re-named to 'Captain's Bodyguard'
+- Increased all Dwarven two-handed or dual-wield units Charge by +1 or +2
+- Reduced Amrothian Pikemen's Defense Skill by -1 and increased Armour by +1
+- Increased Sauron's bodyguard's Mass, Attack and Defense slightly and given them the "light_spear" trait so they're better at attacking and defending against cavalry.
+
+14th June
+- Visual upgrade added for Dorwinion Armsmen, unique to the Elven route
+
+16th June
+- Dorwinion's High Paladin bodyguards have a new look; they now have some elves mixed into their unit. They no longer have a visual upgrade however.
+- Dorwinion Armsmen have a new look; they now have some elves mixed into their unit. Including visual upgrade.
+
+18th June
+- Increased range of Warg Scouts and Thorn Patrolers mounted crossbowmen units by 15 meters
+
+19th June
+- Beleriand Honour Guard have been re-worked into an uber-elite pike unit. Also some minor visual tweaks.
+
+20th June
+- High Paladins and Dorwinion Armsmen now have 105% movement speed (reflecting the elves present in the units) and Dorwinion Armsmen the highest level of Stamina
+- Updated the big unit UIs of Beleriand Honour Guard, High Paladins and Dorwinion Armsmen
+
+22nd June
+- Beleriand Honour Guard small unit UI updated
+
+26th June
+- (A) Slightly increased the distance at which tree models are rendered on the battle map (a +33% increase to be exact)
+- Fixed the Mercenary file as found and fixed by "Hooded Horse" on Discord - (Each region can only be present in the file once, if a region is in two pools, the mercenary recuitment stops working)
+- Added all the Green Book faction overviews written by Sir Augimund
+- Edhellond now a starting DA region
+- All shire regions now have garrison troops working properly
+- Temporarily disabled the fix to the garriosn script to see if it has been the cause of the turn 1 crashes
+- Fixed typo in the three new green books which was causing them to show up in the building tab
+
+27th June
+- Ar-Adunaim now gain culture at a faster rate at "Coast" regions instead of "Barren" regions, making landing away from the South a less punishing option.
+- Level 2 culture buildings in castles now correctly give their terrain-based culture bonuses to ND, Gondor and DA
+- Generals on the battlefield (that's the General model himself) are no longer Relentless. They were just too prone to pushing through enemy ranks ahead of their bodyguard and dying isolated as a result.
+- Added the following fix back in as it did not make a difference (disabled the fix to the garriosn script to see if it has been the cause of the turn 1 crashes)
+
+29th June
+- All trolls (and "troll-like") units now have the Relentless note in their description text
+- All missile units that have an AP melee weapon now say so in their description text
+
+2nd July
+- (A) Reduced the construction time and cost of the following settlement tiers: Huge City, Fortress and Citadel
+- (A) You can now deploy units on the gatehouse in Onazanar
+- (A) The arrow towers in Zagh Kala are now working properly
+- (A) Fixed a broken river crossing north-east of Dant'alad
+
+4th July
+- Significantly slowed down the fire rate of settlement ballista towers
+- (A) AI Gondor now gets 3 garrison units in Pelargir and Carasast
+- (A) AI Rohan now gets 3 garrison units in Gineard and 1 in Foldburg
+
+5th July
+- Shieldmaidens Att and Charge increased by +1
+- Added Dol Amroth T1 and T2 units to the T3 Barracks (so Dol Amroth doesn't need to re-build the T2 Barracks to train their units if they capture a settlement with the T3 Barracks)
+- (A) When not playing as the ND, Halbarad is moved over near to Fornost at game start
+
+7th July
+- Added the charge calculations to the bottom of the EDU in preperation of applying them to all the units. 
+
+8th July
+- New Charge stats applied to Gondor, Dol Amroth and Rohan
+
+9th July
+- New Charge stats applied to Anduin, Dale, Bree, and Northern Dunedain
+
+10th July
+- Added missing dead UI portrait for the gondor portraits (I think this is why the UI messed up)
+- Removed one set of portraits from Gondor as it wasn't in the right format.
+- Added some pre-built buildings to Edhellond and added two units to the garrison alongside Baragund. 
+- Added children to Elladan, Elrohir and Gildor.
+- (A) New custom battlemap for Caras Galadhon
+- New Charge stats applied to Khazad-Dum, Erebor and Ered Luin
+- Fixed Boromir's new battle model
+
+11th July
+- New Charge stats applied to Lorien, High Elves and Woodland Realm 
+- (A) Increased the chance of fog in Lothlorien
+- New Charge stats applied to Dorwinion, Dunland and Enedwaith
+- Fixed the Corsair invasion crash that occured if the AA were killed before turn 67. 
+- Edwodyn and Avl'yn (the second spawning version of them) now spawn when Dorwinion captures 12 regions and holds Mornedhel. 
+- Balrog general now spawns with the right unit when he spawns. 
+
+12th July
+- New Charge stats applied to Mordor, Dol Guldur and Isengard
+- Sworn Horsemen now have swords as a secondary weapon; they just use their spears to charge with
+
+13th July
+- New Charge stats applied to Angmar, Gundabad and Moria
+- Gondor Archer Militia now actually have a Shield stat.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ^^ DD31
+
+14th July
+- Reset the proper timers in the CS for the AA invasion (Turn 64-87)
+
+17th July
+- New Charge stats applied to AA, Rhun and Harad
+- New Charge stats applied to Khand and mercenary units
+- Lowered the upkeep of T1 and T2 Dol Amroth units
+- Slightly raised the upkeep of T2 Gondor units
+
+18th July
+- Greenwood Foresters can now be trained in Duinburg (an oversight that they couldn't)
+- Pinnath Gelin Cavalry can now also be trained in Cirith Iaur
+- Visual tweaks and polish to Gurdhinen
+
+19th July
+- Tharbad can now build the Dunedain camp
+- The green book in the Shire is now red as an ode to the Red Book of Westmarch
+- Change to AA 
+                     - if the player is Dol Amroth or Gondor then AA will be allied to Harad & Mordor
+                     - if the player is anyone else then AA will be neutral to all
+					 - AA now dislike everyone around them a whole lot more. 
+- Ered Luin (AI) now goes to war with High Elves if they accept the rings
+- Expanded AA family tree as much as we can with three general start
+- Bree no longer attack in the Ered Luin ring script, it is now just High Elves or Dunedain. 
+- A spy can now be trained from The Last Homely House in Imladris.
+- Harad can now train the 1st tier AA ship from Umbar only
+- AA wil NOT be able to train Temple Units as those are the Dark Nums who are fanatically devoted to Sauron (as Hummingbird pointed out) - they would die before serving Sauron's enemy.
+- Each tier of the blacksmith now provides the armour tier from all before it so if you capture a tier 4 smith and you can only use a tier 3, you don't have to delete the superior blacksmith to get your own. 
+- Almost every unit is now avaialble as soon as you build its recruitment building (if you have the culture) - Bodyguards form inns are the exception
+- Iron Fist battle ability now has the effects listed in the battle
+- Iron Fist battle ability no longer has a negative effect (all negative effects will be removed from battle abilities moving forward)
+
+24th July
+- Further reduced the charge of all non-spear cavalry (now -1 for sword/mace/axe and -2 for bow/crossbow)
+
+26th July
+- All additional unit info is now at the top of the unit card, not the bottom
+- Added core_High_Pass at the declaration list of the garrison script (causing repeat crashes and may be the cause of the turn 1 crash?)
+
+30th July
+- Added the unit info to the top of unit cards for a few units that were missed
+
+31st July
+- Added remainder of unit info text updates
+
+2nd August
+- Implemented Liam Taylor/Special Sundae's re-recorded Enedwaith unit voices
+
+4th August
+- Thanks to Dzelten for advising on a better method of setting up the script at the start for the AA - this has been implemented. 
+
+6th August
+- Anduin roster overhaul
+-- Visual changes to Beorning Axemen (formerly Beorning Warriors)
+-- Visual changes to Beorning Spearmen (formerly Beorning Shieldbearers)
+-- Eotheod Footmen have been removed and replaced by a new unit 'Beorning Shieldbearers'. A T2 spear and shield unit.
+-- Vale Defenders have been removed and replaced by a new unit 'Beorning Defenders'. A T2 axe and shield unit.
+-- Visual changes to Bear Warriors (formerly Carrock Guard)
+- Jelven's text fixes (covering the typo thread and many misc fixes) uploaded. 
+
+7th August
+- Anduin roster overhaul
+-- Visual changes to Eotheod Cavalry
+-- Visual changes to Eotheod Horse Archers
+
+8th August
+-- Beorning Riders have been removed and replaced by a new unit 'Eotheod Horsemen'. A T1 hybrid spear and javelin cavalry unit.
+-- New unit added: Framsguard. A T3 axe and shield heavy melee cavalry.
+- Both Elrond and Cirdan are now faction leaders for the High Elves- the twins now both are heirs. The High Elves campaign description now reflects this (Links)
+
+9th August
+- Anduin Roster Overhaul
+-- Woodman Trackers have been re-named to 'Woodman Hunters'
+-- Eotheod Longbowmen have been removed and replaced with a new unit 'Woodman Trackers'. A T2 archer unit that can hide anywhere.
+-- Visual changes to Woodman Wardens
+-- Visual changes to Greenwood Foresters and they now use a spear and shield in melee
+
+10th August
+-- Visual changes to Woodman Warriors
+-- Visual changes to Woodman Hunters
+-- Stoor Hunters have been removed and replaced by a new unit 'Vale Archers'. A militia bow unit that will be available everywhere alongside the Valesmen.
+
+11th August
+-- Big unit UIs updated for all updated Anduin units (sans Vale Archers as they're still subject to change)
+
+12th August
+-- Small unit UIs updated for Beorning Spearmen, Defenders and Shieldbearers
+
+13th August
+-- Small unit UIs updated for Woodman Wardens and Trackers.
+-- Added some prettier axes to Framsguard
+-- Visual changes to Valesmen and Vale Archers
+-- Unit UIs updated for Valesmen and Vale Archers
+
+14th August
+-- Small unit UI added for Framsguard, Eotheod Horsemen and Eotheod Archers
+-- Set up unit voices for Anduin
+-- Set up unit stats and costs for Anduin
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ^^ DD32
+
+23rd August
+- Anduin's Bear Warriors' stakes have been moved onto the Greenwood Foresters instead (the unit needed some more spicing up).
+
+27 August 
+- Removed the Clan Moot script from the campaign script (War of the Ring) and archived it (And the warfare script) in the misc folder on Dropbox (Links)
+
+1st September
+- Anduin Barracks set up
+- Added pre-built Beorning Camp to Beorn's Hall, Eotheod Camp to Framsburg and Woodman Camp to Duinburg
+- Removed Anduin from old barracks and cut their units from the town hall
+- Added Stoor Shirriffs to the Vale Barracks in Fenholm only.
+- Fixed a small error in the EDB for Anduin (Valesmen were still in Castle base buildings causing double recruitment)
+- Slightly reduced the cost of Anduin's T1 Muster Ground (was a bit expensive for a militia trash building)
+- Adjusted Anduin's starting garrisons
+- Anduin's Gleowine now has Eotheod Archers as his bodyguard
+
+2nd September
+- Anduin's Silvan Marchwardens are now trained out of the unique building inside Dol Guldur, requiring 75% culture.
+
+4th September
+- Anduin Mountain Pass building chain and script implemented. UI and text are still needed for both (Links) 
+
+5th September
+- Re-added 'Light Elven Horse' files
+- Updated Anduin's 'Notable Units' text on faction select
+
+8th September
+- Reduced the cost of Anduin's Eotheod, Beorning and Woodman Camp
+
+12 September 
+- Added text for the Mountain Pass building chain (Links)
+
+18 September 
+- Added UIs for the Mountain Pass building chain (Links) 
+
+26 September 
+- Added basic framework for Enedwaith's Clan Seats and added them to their respective regions (Links)
+- New unit added for Dunland. An elite AP cavalry unit intended to be the reward for defeating Rohan. Not recruitable currently.
+
+28th September
+- Finished the coding for setting up the Anduin city, large city and stronghold. 
+- Allowed certain late game buildings to be built by Anduin
+- Renamed Heavy Goblin X to Black Pit X
+- Added the "Expanded" campaign name to the two dwarven generals for Ered Luin
+- Added fixes for the merchants wharf and the naval cost reduction bonus (latter capped at 2 (20%) former lost the trade fleet bonus but now gives much more fixed income)
+- Description text of all new and re-worked Anduin units completed
+
+29th September
+- Set up the battlemaps for Anduin 
+- Designed new mountain pass UI
+- Minor text edits
+- Dunlending Berserkers now use the spiked clubs the Dunhird Champions used to (the Champions will be getting axes after their rework)
+
+30th September
+- New look for Dunhird Champions (stat tweaks to come)
+- Visual upgrade added for Dunlending Raiders and Dunlending Pikemen (based off the Chieftain's Bodyguard model).
+- Chieftain's Bodyguard temporarily using a placeholder model (Yagthak's unique model) right now until a new one can be put together for them.
+
+1st October
+- Dunlending Warband now use the same look as the Dunlending Raiders and Pikemen, including visual upgrade
+- Beast Slayers re-named to 'Dunhird Slayers' reflecting them now being a partner unit to the Dunhird Champions
+- Dunhird Champions re-work: Hide Anywhere, Melee Attack and Defense increased, javelins are now AP, now use two handed axes in melee (the unit is now AP both at range and in melee), javelin ammo reduced from 4 to 3, Morale substantially increased, unit size reduced, cost increased.
+- Dunlending Berserkers Melee Attacked reduced slightly and cost reduced slightly
+
+3rd October
+- Some visual polish to Dunlending Horsemen, Clan Axemen and Clan Spearmen
+
+4th October
+- New look for Dunland's Clan Hunters
+- Clan Hunters now a little more expensive, but a little tougher in melee
+
+5th October
+- Visual upgrade added for Dunlending Horsemen, Clan Axemen and Clan Spearmen
+
+8th October
+- Visual upgrade added for Wulf's Swordsmen and Wulf's Pikes
+- Minor visual tweak to un-upgraded Wulf's Swordsmen and Wulf's Pikes (only chainmail, no scale armour, until upgraded now)
+
+9th October
+- New look for Dunland's Chieftain's Bodyguards.
+
+10th October
+- Fastred and Gleowine of Anduin Vale now have unique battle models
+- Removed a couple of Anduin's starting units
+- The Shadow Ranger rebels outside of Leodholt have been exchanged for, much more managable, Orc Fighters and Hunters instead
+
+16 October 
+- Text added to Enedwaith's Clanseat buildings featuring each clan's backstory (Links)
+
+17th October
+- Dunland Mounted Warband now use the new appearance of the Dunlending Warband
+
+20th October
+- New look for Warchanters (name to be changed with the Enedwaith Overhaul)
+- New look for Foresters of Haleth (name to be changed with the Enedwaith Overhaul)
+
+22nd October
+- New look for Minhiriath Warriors (name to be changed with the Enedwaith Overhaul)
+- New look for River Elders (name to be changed with the Enedwaith Overhaul)
+
+24th October
+- New look for River Swordsmen (name to be changed with the Enedwaith Overhaul)
+- New look for River Spearmen (name to be changed with the Enedwaith Oberhaul)
+- Updated unit names of Enedwaith units with the new models
+-- Elder Guildsmen now 'Clan Heralds'
+-- Eryn Vorn Woodsmen now 'Faolan Borderguard'
+-- Minhiriath Warriors now 'Faolan Warriors'
+-- Greyflood Raiders now 'Mordag Fishermen'
+-- Angren Raiders now 'Mordag Skirmishers'
+-- Foresters of Haleth now 'Dubhshíth Foresters'
+-- Warchanters now 'Dubhshíth Elders'
+-- River Swordsmen now 'Liadan Billmen'
+-- River Spearmen now 'Liadan Spearmen'
+-- Moot Keepers now 'Mocháini Ambaxtoi'
+-- Enedwaith Clansmen now 'Mocháini Touta'
+-- Enedwaith Huntsmen now 'Keefei Huntsmen'
+-- Greyflood Horsemen now 'Fylanni Herders'
+-- War Wagons now 'Fylanni War Wagons'
+-- River Scouts now 'Enedwaith Cavalry'
+-- River Elders now 'Enedwaith Guardsmen'
+-- River Archers now 'Enedwaith Marksmen'
+
+25th October
+- New appearance for Clan Heralds, and they now use two-handed swords in melee
+- Visual changes to Anduin's Beorning Defenders and Beorning Shieldbearers (some elements added from the soon to be removed Moot Keepers)
+
+27th October
+- New look for Mocháini Nobles. They now have two throwing axes.
+
+28th October
+- New look for Mocháini Touta. They are now a 2h-axe AP unit.
+- New look for not-upgraded Dunland Clan Axemen and Clan Spearmen (based on the soon to be removed Greyflood Axemen)
+
+30th October
+- (A) Fixed an invisible model in Caras Galadhon
+- (A) Angmarin Stronghold:
+  Fixed a bug that allowed the attacking army to capture the two side gates by simply placing units nearby 	
+  Added 6 arrow towers, 2 for each gatehouse
+  Added missing collisions 	
+- Clan Heralds made a little more colourful
+- Gave Liadan Spearmen and Liadan Billmen some red capes
+- Dunland's Clan Axemen, Clan Spearmen and Clan Hunters re-named to 'Dunnish Axemen/Spearmen/Hunters'
+
+31st October
+- Some more tweaks to not-upgraded Dunnish Axemen and Spearmen
+
+1st November
+- New look for Keefei Huntsmen
+
+3rd November
+- (A) New custom battlemap for Umbar, courtesy of Withwnar from the DCI: Last Alliance team
+
+4th November
+- New look for Mordag Fishermen
+
+6th November
+- (A) Added corsair ships in Umbar
+
+8th November
+- New look for Fylanni Herders and Fylanni War Wagons
+
+9th November
+- Dunland no longer gets Warchanters (now Dubhshíth Elders)
+- Instead Dunhird Champions and Dunhird Slayers now both have the 'inspire nearby units' trait.
+
+10th November
+- (A) New custom battlemap for Dol Amroth. Port courtesy of Withwnar from the DCI: Last Alliance team, Tirith Aear made by TED. 
+- New look for Faolan Clansmen
+- Made a special unit officer for the two Faolan units because reasons.
+
+11th November
+- (A) Fixed incorrect CSMs for Carn Dum, Bree, Fornost and Dol Amroth
+
+14th November
+- Dunland small unit UIs updated
+
+16th November
+- New look for Enedwaith Guardsmen, Marksmen and Cavalry (WIP; Mats is going to make symbols for the shields and tabards)
+
+17th November
+- Added most of the new Enedwaith big unit UIs
+
+19th November
+- Unit UIs added for Enedwaith T1 and T2 units.
+
+20th November
+- Dunlending Horsemen now slightly stronger, larger unit size, but more expensive
+- Updated unit descriptions for Enedwaith with Morale and Missile information
+- Set up the stats and costs for Enedwaith (subject to change):
+-- In the early game (T1 + T2) they're cheaper than Dunland and generally slightly weaker than them in melee, but much faster and have better ranged units. Sub-par morale so Dubhshith Elders use encouraged.
+-- Dubshith Foresters (formerly Foresters of Haleth) now have the same unit size as other Rangers and 6 missile attack, plus Poisoned Arrows. They are, however, very poor in melee compared to other Rangers.
+-- Units are More like Northmen at T3 and above; lose their speed and unit size bonus but much better stats in general.
+- Updated unit Mass stats for Dunland, Anduin and Enedwaith
+
+22nd November
+- Dunland unit UIs updated
+- Skin-changers now have unit officers, so the General should be a bit less exposed.
+- Set up the stats of the Enedwaith elite unit, though it still uses the Guardians model as a placeholder for now.
+
+26th November
+- (TED) Updated the Boromir campaign map model to the armored version (thanks to Callistonian for his guide).
+
+27 November
+- Added unit descriptions for all non-elite Enedwaith units and updated some to reflect Enedwaith's new lore (Links)
+- Updated Enedwaith Clanseat descriptions and locations (Links)
+- Added clan units to their respective clanseat for Enedwaith- this is main source of T2 units until the clans are united. 
+  Boat clan also provides economic bonuses and the Keefei Clanseat provides access to Druedain Hunters to make up for the fact there is only one Keefei unit. 
+  Recruitment times still need to be balanced (Links)
+- Visual armour upgrade added for Clan Heralds
+- (TED) Updated the General and Captain strat models for Anduin and Enedwaith.
+
+28 November
+- Added basic script for Enedwaith's campaign (Links) 
+- Added framework for the tharbad building required for Enedwaith's script (Links)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ^^ DD33
+
+- Emblems added to Enedwaith T3 units' tabards and shields, by Mats
+- Unit UIs added for Enedwaith Guardsmen, Marksmen and Cavalry
+
+29th November
+- Some more visual tweaks to Enedwaith Guardsmen/Marksmen/Cavalry, a little more variance in the soldiers' equipment.
+- Added a number of UI competition entries as loading screens and set up Enpremi's splash screen, loading bar and loading screen.
+- Orcish Grain Exchange renamed and given new descriptions - all four tiers. 
+- Add the Dwarven Travellers alongside the Guard fo the Caves for Rohan from the Glittering Caves
+- Rohan Royal Guard now available in all of Rohan, not just Edoras. (Does not apply to Meduseld Doorwards)
+- Dwalin in the Ered Luin script no longer spawns with Calaquendi Lords as his BG
+- Made Byrig the capital of Dunland
+- (A) Fixed a broken river crossing east of Gobel Mirlond
+- (A) Fixed a broken river crossing southwest of Dorthalu
+- (A) Fixed a broken river crossing south of Sant Annui
+- (A) Moved the port in Dol Amroth to the southern shore on the campaign map
+- Unit UIs updated for Enedwaith Guardsmen, Marksmen and Cavalry following their visual changes
+- Extended the Fiefdom Waystation to every faction and added all AOR units to it (UI and names not yet done). Units restricted by terrain feature are not included (mountains, grassland, forest and barren)
+
+30th November
+- Set up unit officers for Enedwaith T1+T2 units. Banner carriers still to come.
+
+1st December
+- Made the Enedwaith's banner carriers for their T3+ units
+- New General battle model for Enedwaith
+
+2 December 
+- Moved the Mordag to Bahille (Links)
+- Updated Enedwaith's script to remove the requirements for Dunland, and added the namechange for Tharbad (Links)
+- The Tír Croícoill (The Tharbad Clan Building) now requires Enedwaith to be united to be constructed (Links)
+- Fixed the incorrect use of local faction in the campaign script to I_LocalFaction (Links)
+- Updated Enedwaith's faction leader title from Mootlord to Moot-Speaker to better reflect the fact that the faction leader represents the Clan Moot rather than lording over them (Links)
+- Added script to detect whether the Liadan have been conquered (Links)
+- Enedwaith now only starts with Alfcud (Rebel generals for their previously held regions and auto expansion are TBD- removed generals were moved to the archive text file on dropbox for posterity) (Links)
+- Added Enedwaith banner carriers for their T1+T2 units
+
+3 December 
+-Updated Enedwaith's script so units are gradually added to the barracks as each clanseat is reclaimed with associated events, rather than the barracks being unlocked with all of them at the end (Links)
+-Updated uber-elite's name to Tír Croícoill Cosantóirí
+- Added some blue paint to the Mochaini Touta
+
+5 December 
+-Set up Enedwaith's recruitment in the EDB (Guilds were also updated) (Links)
+
+6 December 
+-Set up Enedwaith's unique barracks- its second tier requires the Tír Croícoill to be rebuilt  (Which has replaced the Clan Union Hall- which means Dunland no longer has access to it) (Links)
+-Enedwaith's diplomat building has been merged into the palantir building chain and is now a landmark building titled the Clansmoot (UI and text are TBD); this frees up a building chain (Links)
+-Enedwaith's clanseats now have correct recruitment times (Links)
+-Set up rebels for the provinces Enedwaith previously started with and increased the garrison of Lond Daer (Links)
+-Enedawith's starting army has been increased (Links)
+-Tremac, the faction leader, now has a custom BG- the Mocháini Ambaxtoi as he is a memeber of the Mocháini Clan (Links)
+-Livestock buildings can now be built in castles (Links)
+- (TED) Added a new faction leader strat model for Enedwaith using H's battlemap model
+
+8th December
+- Added a pre-built Fishery to Alcfud so EW get their signature javs right out of the gate and a little bit of extra income
+- Slowed down the extra units recruitment in the Clan Seats (it stacks directly with the barracks so units could be pumped out way too fast)
+- Added the Dubhshith Foresters to the barracks; they however can only be trained in Forest regions (they're actually EW's best archers, in terms of range and damage, so a minor restriction felt appropriate).
+- Sped up the recruitment of the elite unit a little
+- First barracks now needs the Level 2 Town or Castle Hall and the second barracks now needs the Level 3 Town or Castle Hall
+- Slightly reduced upkeep of Faolan Borderguards, Dubhshith Foresters and Dubhshith Elders
+- Enedwaith now only begins with one unit of Dubhshith Elders at game start
+- Tremac's BG now starts with maximum upgrades (+3 Armour, +1 Weapon) so he's less squishy.
+- Enedwaith can now recruit Dunlending Raiders and Wulf's Swordsmen out of Dunland's three starting regions. From the Blacksmith and T1 Barracks respectively.
+
+11th December
+- By popular request Faolan Warriors now use a "falx". Just a visual tweak no changes to the unit stats.
+
+12th December 
+- Fixed the Enedwaith's Diminshes script so it no longer triggers at turn 1 (Links)
+- Added AI Enedwaith's Auto-Expansion (Links)
+
+14th December 
+- Removed any mention of the Greyflood Axemen from the CS and DS (Replaced with the new Touta unit) (Links) 
+- Added Dunland's three core provinces as requirements from unlocking Enedwaith's Tharbad building (Links)
+- Fylanni War Wagons can now actually be trained from the Enedwaith Barracks. There's no Grassland restriction.
+- Dunland can now build the Level 1 and Level 2 Horse Breeder's Guild. They can train extra Mounted Warband from the Level 2.
+- Khand can now build the Level 3 Horse Breeder's Guild. They can train extra Warlord's Kataphract Archers from the Level 3.
+- Enedwaith now start with a second General named "Donnchaidh" with Dubhshith Foresters as his custom BG.
+- Exchanged the two starting Keefei Huntsmen for Mordag Fishermen instead, underlining the faction's javelin/throwing focus a little more.
+
+16th December
+- Fylani War Wagons can now get free upkeep
+
+17th December
+- Fixed Dunlending Raiders and Wulf's Swordsmen SS for Enedwaith.
+
+18th December
+- Fixed Dunland silver surfer officers for Isengard
+
+22nd December
+- Added Fish resource to Alcfud and Lond Daer regions
+- Removed pre-built Ballista Maker from Barad Vin
+- Removed pre-built Level 1 Port from Suduri
+- Added pre-built Level 1 Port to Lond Angren
+- Added pre-built Level 1 Town Hall, Level 3 Blacksmith and Ballista Maker to Lond Daer
+- Fixed Enedwaith's Level 2 barracks not unlocking (Links)
+
+24th December
+- Khamul's Shadow Rangers can now be trained everywhere (not just Mirkwood only) alongside the Shadowguard, from the new DG Shadow's Calling building.
+- Dunhird Champions can now only be trained in Mountainous regions (they are, however, signficantly stronger than before!).
+
+30th December 
+- Every event of the Enedwaith script now has event text- the existing messages such as their into have been edited to reflect their now more detailed lore (Links)
+- Custom generals have now been added to the script-as you reclaim almost every clanseat, a represenative from that clan will join you (You start with the Dubhshìth general) (Links)
+- The Keefei do not have a custom general however, due to only having a T1 unit. That being said, you will still get a custom general for reclaiming their clanseat (I will leave it to you to discover who they are however as their identity is intended to be a surprise!) (Links)
+- Additionally, a general will spawn once the script is completed with your uber-elite unit (Links)
+
+31st December
+- Updated AI Enedwaith's version of the script so they can't start recruiting their elites and uber elite till turn 35 (Links)
+- Orocarni Warriors are now an axe and shield unit with the Shield Wall ability. No longer AP.
+
+4th January 
+- The three elite Enedwaith X units now have descriptions. Their uber elite will get one once its visuals are finalized (Links)
+
+5th January
+- Updated the Waystation twofold:
+	- Set up the "failsafe" so that the waystation does not speed up recrutiment of the unit in its home province. Simply put a unit cannot be retrained in the entire geographical area from where it comes (see the hidden resource region breakdown, there are 13 I believe).
+	- Renamed the building to "Waystation" for every faction and gave it a description. The UI remains to be done. 
+- Enedwaith can now upgrade towns and cities once the Tir Croicoill is constructed in Tharbad. 
+- Made some minor grammatical changes to some event texts. 
+
+7th January 
+- Added proper building text for the Tir Croicoill, Enedwaith's unique barracks and the Clanmoot (Links)
+- Edited Enedwaith's final event to clarify that it lifts the restrictions on upgrading castles and cities (Links)
+- Enedwaith elite units can now benefit from the advanced blacksmith.
+- Fixed an error that gave Enedwaith double free upkeep in T3 Castle Halls.
+
+8th January 
+- Added an inital message explaining Anduin's script (Links) 
+- The mountain pass line can now also be constructed in Khazad-Dum East and West, and Gundabad (Links) 
+
+9th January 
+- Event UIs added for Anduin's two events (Links) 
+- Almost all Enedwaith event UIs added (bar the final one) 
+
+10th January 
+- Added Enedwaith's final event image- finding a suitable image took forever (Links)
+- Broke all of Enedwaith's single paragraph events into two paragraphs, and added a few sentences elaborating on the Druedain in the Druedain Aid event (Links)
+
+11th January 
+- Added Clanmoot UI (Links)
+
+12 January 
+- Added UIs for Dubhshith clanseat and the Tir Croicoill (Links)
+
+14th January 
+- The Tir Croicoill and the Clanmoot Barracks now provide the 4th level of armour upgrade for Enedwaith, and only the 4th level (Links) 
+- The Clan Heralds visual upgrade now requires the 4th level of armour upgrade (Links)
+- Enedwaith no longer has access to the advance blacksmith- its effects are now granted by the above buildings (Links)
+- Added UIs for Enedwaith's unique barracks and the remainder of the clanseats (Links)
+- Minor tweaks to Enedwaith's spawned generals' traits to make them more distinct (Links)
+
+16th January 
+- The Clanmoot Barracks has been changed so it only supplies level four armour in advanced blacksmith regions- for this bonus to be supplied, a blacksmith must also exist in the region. This only effects the armour level- the barracks can still be built anywhere and will provide its normal benfits except for that (Links)
+- Tharbad/Athamor is now an advanced blacksmith location (Links) 
+- The Tir Croicoill no longer supplies level four armour- it instead grants extra diplomats to reflect its nature as a diplomatic structure. Enedwaith can still get level four armour by building both a blacksmith and a Clanmoot Barracks in Tharbad/Athamor however (Links)
+- Perfect Spy removed
+
+17th January 
+- Minor edits to the opening script message of Enedwaith to make their relationship with Dunland clearer, and to explain why peaceful reconcillation is not an option (Links)
+- Started changing up the AA conscription units
+
+18th January
+- AA can no longer train Haradrim Spearmen and Archers out of Umbar's Town Hall. However, now they are able to build the Conscription Camp in Umbar for Harad units.
+- All AA Conscription units changed up except for Dunland and Enedwaith. As a general it is now 4 units per faction accross the board of 3 T1 and 1 T2, but the units replenish faster than before and the units more specialized to the faction's focus (Dale is very archer heavy for example). All except Angmar include a T1 mounted unit.
+
+22nd January
+- Fixed the Enedwaith script so that cities+ now unlock as expected
+- Expanded the unification requirements of Enedwaith to include Saralainn and Cairill (Suduri and Barad Vin)
+- Enedwaith's elite unit, the 'Tir Croicoill Cosantoiri', finally have a battle model. Stats tweaked slightly. Unit UIs updated.
+
+23rd January
+- Unification requirements for Enedwaith no longer include Tharbad as the unification complete event directs you to capture it then instead (Links) 
+- Cities and strongholds will unlock for Enedwaith as soon as the Tir Croicoill is built, rather than requiring the player to press end turn (Links) 
+- The 4th tier of the Mountain Defenses line for Anduin now correctly requires the completion of their script and correctly provides the population bonus (A typo prevented Anduin getting this bonus) (Links) 
+- Edited Anduin's Mountain Pass completion message so it explicitly states that the 4th tier of mountain defenses, cities, large cities and strongholds are all unlocked (Links) 
+- Enedwaith's script intro message edited to briefly explain why Saralainn and Cairill must be reclaimed as well (Links)
+- Tír Croícoille Cosantóirí description added (Links)
+- Updated all of Enedwaith's unit's file names so they match their in game name. 
+- Removed outdated UI's from the Enedwaith UI folder
+- Cut Greyflood Axemen
+- Corrected Mordag Skirmishers to use the 'elite' javelin projectile
+- Updated Enedwaith's selction screen map
+Storing Enedwaith clan breakdown here:
+New Clans (Links): 
+The Mocháini of Lugiu (Nobles- Axmen); Clanseat- Alcfud; Insignia: Two Crossed Axes
+The Líadan of Maolfinn (Farmers- Defensive Spearmen); Clanseat- Lond Daer; Insignia: An outstretched eagle below the moon (Enedwaith's old faction icon)
+The Keefei of Caladir (Hunters- Archers); Clanseat- Argond ; Insignia: A Deer 
+The Mordag of Cairill (Fishers- Javelins); Clanseat- Barad Vin; Insignia: Two Circling Fishes 
+The Fylani of Maolrunaidh (Herders- Cav); Clanseat- Carras; Insignia: Two Scarlet Horses 
+The Faolan of Heorotscir (Warriors- Swords); Clanseat- Heorot; Insignia: A sword upon a hill
+The Dubhshìth of Eryn Vorn (Forestsworn- Psuedo-Mystical support; Note: Mystical Order rather than Clan); Clanseat- Great Circle is located in Dol Vorn; perhaps these units can have poison damage like DG? 
+The Báirseach of Lond Angren (Traders- connections to Gondor and the Druedain; makers of the Dragon Boats); Clanseat- Lond Angren; Insignia: Sea Serpent 
+
+- Enedwaith can now rebuild the bridge of Tharbad
+- New UI for Enedwaith Barracks (both tiers)
+- New UI for all wildmen waystations.
+- Repacked Enedwaith unit voices
+
+24th January
+- (TED) Added new Wildmen CSMs: village, town, large town, city, keep, castle, and stronghold
+
+26th January
+- Added some clan symbols to some of Enedwaith's shields, including some special unit officers.
+
+27th February
+- Orthanc Sentries removed
+- New unit: Dunland Crossbowmen. T2 medium crossbow unit recruited from the Level 3 Barracks. Though actually the weakest of the T2 crossbow units in the game they'll give Dunland some late game ranged power after losing access to the, now Enedwaith only, Foresters.
+- Updated Enedwaith's 'Notable Units' on the faction select screen.
+
+1st February
+- Changed up some of the rebel armies around Enedwaith to be a bit more thematically appropriate; Dunnish troops in Heorot, Orcs in Carras, Lumbermen and Hunters in Dol Vorn.
+
+2nd February
+- Unit UIs added for Dunland Crossbowmen
+- Druedain Hunters unit size reduced, anti-mount bonus reduced, cost and upkeep increased.
+- Removed the standard Longboat from the Bairseach seat, as Enedwaith doesn't train those anyway (their unique Dragon Boats are better).
+
+7th February
+- Tumunzahar Nobles (EL bodyguard) have been re-made as a spear and crossbow unit.
+
+18th February
+- Changed Anduin's victory conditions
+- Added some text to the AA invasion messages so that the player doesn't build ships
+- Removed the AOR retraining building. It isn't worth our time trying to figure out how to amend it as it offers such small utility
+- Added the three generals as awards for the UI competition
+- Amended some pike records that were incorrect
+
+20th February
+- Edited the descr_missions in accordance with Jojo's findings. Thanks to him for that. 
+- Allowed Uruk Reavers to be trained from the Isengard Lumber Camp
+- Added all three tiers of growth building to castles (orcs and dwarves don't get this building)
+- Renamed Town Halls for the wildmen
+- Improved Nazg-hai bomb damage substantially but reduced the number of bombs down to 2 per company
+- Battle model added for Enedwaith's Druedain general
+
+21st February
+- Woodman Wardens, Goblin Stalkers, Azrazair Marines, Muhad Tribesmen's javelins are now AP. Ammo set to 3 for all, and Attack slightly reduced for some.
+
+2nd March
+- Updated Orocarni Warriors unit UIs
+
+13th March
+- HE, WR and Lorien artillery crews now have colour coded textures
+- fixed trait and ancillary trigger conditions that could cause a crash
+
+15th March 
+- Amended the Woodelves alliance script as follows:-
+    - Acceptance:-
+	    - Your nation merges with the other and you get their regions and generals (custom bodyguards from the merging nation are lost)
+		- You get acces to 4 units from the other faction and these are added to your usual barracks/stables/archery range at the proper tier and now also have culture requirements
+	- Rejection (can be done at the very beginning of the script but you will still be attacked by Mordor):-
+	    - You can train your elite unit everywhere at a 75% culture requirement
+		- You can build Yavanna's Garden, possibly the most useful building in game yet. It gives:-
+		LOCAL ONLY:
+		    - 10 Recruitment slots
+			- 3 free upkeep slots (4 in practice, see below)
+			- Upgrades roads to Highways in its location
+			- Recruits Ents
+		GLOBAL:
+		    - All archers train with +2 experience (subject to the annoying retraining bug)
+			- 0.5% elven culture spread in all cities as standard (0.75% in practice, see below)
+			- Amplifies ALL religion boosts worldwide by 50%
+			- 0.5% pop growth in all cities as standard
+			- 1 extra free upkeep slot in all cities
+			- 1 recrutiment slot in all cities as standard (this means that if you build this garden then every town or castle you claim can recruit straight away - you don't need a town hall)
+(Yavanna's Garden can be built in Caras Galadhon, Amon Lanc and Thranduil's Hall and all of its bonuses are stackable. If you build all three Gardens then all of the global bonuses are tripled (except recrutiment slots))
+- Note 1:- Yavanna's Garden has been purposefully made REALLY enticing because the merging option is so appealing that we really need a good reward for rejection. 
+- Note 2:- Ents can be trained from Isengard regardless of the choice you make above. 
+
+- Guilds now have MUCH higher requirements so they should be a lot rarer 
+- Changed Dol Guldur's 'Last Stand' army to spawn when Dol Guldur is lost rather than being reduced to two regions
+- Flame Wrangler now available at the same tier as the ballista and the AI will train it more now anyway (increased priority)
+- Changed the Khand Refuge building UIs to fit a Nomadic theme
+- Rotated the White Hand on the Isengard town centre flag
+- Harad's troll men general now has champions instead of warriors
+- One of Harad's 3 starting generals now has Serpent Bladesmen as his BG
+- Three units with Boromir at game start have gold armour now to show off the nice late game armour. 
+- Skin Changers now have a huge mass stat and can completley disrupt enemy formations and knock back the odd man or two 
+- Sauron's bodyguard has been hugely buffed to be in line with fighting a godly Maiar and to put him closer to where he was before the change to an infantry unit
+- Bilbo now has Dwarven Travellers instead of Bandobras archers as a bodyguard and accompanying unit. 
+- Dislikes Gondor trait no longer mentions Númenor 
+- Added the pacify dead factions script and checked it worked. It did (thank Aulë :P )
+- Set up the 4 units in the Woodelves alliance as follows:-
+    - From Lorien to the WR: Galadhrim Swordsmen, Galadhrim Guards, Lorien Scouts and Sentinels of Cerin Amroth
+    - From WR to Lorien: Elvenkings Axeguard, Elvenkings Gateguard, Woodland Horse Archers and Maethyr i Thewair
+	
+17th March
+- Westron Ballista and Catapult crews now have colour coded textures by faction (green for Bree, blue for Dale and so on)
+
+19th March
+- Woodelves nations now have ownership of each other's militia but they cannot train these units (or retrain them). 
+- Legolas has Hin e Daur as his bodyguard again because it is just too cool not to do that. :P 
+- Farmhand Pikemen can now only be trained by Bree and have a 25% Culture requirement
+- Farmhand Pikemen re-worked: Now they function as "real" pikemen with the 'long_pike' trait and their stats have been adjusted to be similar to that of other T1 pikemen (though they are the weakest T1 pikemen in the game)
+- Livestock Farming line now slightly less expensive and 1 turn quicker to build. Levels 2 and 3 now provide slightly more income
+
+20th March
+- Minor visual tweaks to Farmhand Pikemen. Longer pikes, clothing better fit Bree's colour scheme.
+
+21st March
+- Fix to the Enpremi and Orthordir spawn scripts
+- (TED) Added a new Vale of Anduin Hobbit village model
+
+22nd March
+- (TED) Added a new Hobbit farmstead resource model
+- (TED) Added a new Bree-land Hobbit village model
+- (TED) Added a new Bree-land Hobbiton model
+- (TED) Added a new Vale of Anduin Beorn's Halls model
+- (TED) Added a new Vale of Anduin Rhosgobel model
+
+24th March
+- Implemented "special_sundae"'s new unit select voices for Enedwaith and set up the voices for their custom generals
+
+25th March
+- Unique battle models implemented for Enedwaith's Ghan, Ered Luin's Grindfarn and High Elves' Dornonorston
+- Some old friends have returned as the new look for the not-upgraded Gondor Defenders garrison unit.
+
+27th March
+- (TED) Updated the Hobbit smial texture file to use a darker hill texture
+- (TED) Added new Bree-land settlement models: town, large town, city, large city, and castle
+- (TED) Added a new Bree-land City of Bree model
+- (TED) Moved the Bree-land City of Bree model into the Russia folder
+- (TED) Added a new Wildmen large city model
+
+29th March
+- (TED) Updated the Bree-land CSM textures
+- (TED) Added a new Bree-land Stronghold model and enabled the construction of it
+
+3rd April
+- (TED) Added new Angmar town, large town, and castle models
+- (TED) Added a new Angmar stronghold model
+- (TED) Added a new Angmar city model
+
+4th April
+- (TED) Updated the City of Bree battlemap file so that it points to the Russia folder and loads the proper map
+- (TED) Set the City of Bree and Mount Gram settlements to huge_city, moved Bree out of Russia and into Normans, and updated their battlemap's worldpkgdesc files
+- (TED) Added a new Angmar large city model
+
+5th April
+- Further tweaked the silvan general spawns so the message appears but only once.
+
+-----------------------------------------------------------------------------------------------------------------------^DD34
+
+8th April
+- Orthanc Guard now use the model of the Guardians of Dunland (who are due to be removed) instead. Isengard uses a unique textured version (shields, capes and white hands on the armour).
+- Changed up Anduin and Enedwaith's Last Stand armies to account for their new rosters.
+
+10th April
+- Slightly slowed down Enedwaith's recruitment from their Barracks and economy buildings. Substantially slowed down the extra recruitment from the Clan Seats.
+- The Tir Croicole no longer provides additional recruitment of Enedwaith Guardsmen, Marksmen and Cavalry
+
+12th April
+- Re-added the AOR retraining building without the Gundabad enslaving units (Fynn)
+- Lorien/WR Prospers, Lorien/WR Diminishes, Thranduil's halls/Caras Galadhon taken messages don't appear after Elven Union (Fynn)
+- AA Mithlond invasion warning doesn't appear for every faction any more (just HE) (Fynn)
+- Implemented new Barrow Wight battle models by R3AP3R (Fynn)
+
+14th April
+- Amended campaign_script to be hotseat compatible and implemented the custom settlement under fog fix script by Callistonian (Fynn)
+
+18th April
+- (TED) Updated the Angmar large city model - replaced the wooden wall in the corner with a stone wall.
+
+23rd April 
+- Updated Enedwaith, Anduin and Dunland to use the Northmen File Culture (WIP- still many things to fix ) (Links)
+- Updated the building names and descriptions of Enedwaith, Anduin and Dunland to show correctly now that they use the northmen file culture (Links) 
+- Fixed the Garrison Halls building name showing up as <garrison_hall> (Links)
+- Added missing northern_european building UIs for Enedwaith, Anduin and Dunland (Links)
+
+24th April 
+- Added missing barrack UIs for Dunland (Links)
+
+25th April
+- (TED) Added new Northmen settlement models: village, town, large town, city, large city, keep, castle, and stronghold
+- (TED) Updated the Northern Dunedain town and large town models to use the new Northmen models
+- (TED) Moved the Wildmen generic settlement models into their respective factions' faction_variants folder
+- (TED) Set the Deadman's Dike (Fornost Ruined) settlement's faction creator to Denmark, moved the CSM into the Denmark folder, and updated the battlemap to reference the new faction creator
+
+26th April 
+- Reorganized the dropbox so it accounts for files such as projectiles that have to be installed in the vanilla data directory (Links)
+- (TED) Updated the recent Northmen castle settlement model by moving the keep a bit back
+- (Uniform Kilo) improved coastline smoothing around the Harnen, Celduin, lake in Rhovanion, lake in Gundabad, lake in Harad
+- (Uniform Kilo) replaced 3 Harnen delta islands with 2 islands
+- (Uniform Kilo) fixed bugged javelin projectile textures
+- (Callistonian) fixed all broken sea crossings that would make the AI stall out, removed crossings at Gulf of Lune and mouth of Lefnui
+- (Callistonian) fixed a couple audio events that reference "Allah" and "Christendom"
+
+27th April
+- (Callistonian) fixed all character's in DS that used names that don't exist for their factions
+
+29th April
+- (TED) Fixed the battlemap worldpkgdesc file for the following settlements:
+	Barad-dur, Carn Dum, Cirith Ungol, Gundabad, West Moria, Black Gate, and Dol Amroth (DA's battlemap's water, port, and port buildings are broken and will be fixed in the near future)
+- (TED) Fixed the Wildmen factions' generic battlemap's worldpkgdesc files
+	Wildmen keep uses an edited vanilla NE battlemap
+	Wildmen castle uses the Wildmen town battlemap
+	Wildmen stronghold uses the Wildmen large town battlemap
+	Wildmen city and large city use the vanilla NE city and large city battlemaps respectively
+- (TED) Updated the Northmen generic battlemaps to use the vanilla NE battlemaps (this applies to Dale & Rohan)
+	The vanilla NE village battlemap was edited to remove the church building
+- (TED) Updated Dorwinion's generic battlemaps to use the vanilla SE battlemaps
+- (TED) Set the following settlements' faction_creator to Scotland (Dale):
+	Dorthalu, Logarth, Rhawburg, Burh Alge, Grasgard, and Burh Gram
+- (TED) Set the following settlements' faction_creator to Byzantium (Dorwinion):
+	Kondovan and Wintirion Iaur
+	
+30th April
+- (Castellan) added new Adunaim models and textures folder
+- (Castellan) updated the BMdb and EDU
+- (Fynn) Changed ND starting conditions: 
+		- Bree region's forts around the border moved outside the Bree borders
+		- Metraith is a ND starting region where Halbarad spawns and downgraded to a town
+		- Hirvegil spawns in the top fort that's now in the Ost Sul region
+		- Arthedain footmen and Cardolan Sentinels replaced with Rangers and Wardens
+- (Fynn) RK script base implemented
+		- ND annexes Gondor and DA
+		- Faction Logo and Banners change to RK
+		- All general's strat models upgrade and Aragorn gets his Elessar look (also Aragorn gets an upgraded battle model)
+		- Custom Bodyguard generals are respawned and retain their BG, Faramir and Boromir retain their strat models and some Amrothian generals get a Amrothian strat model
+		- Automatic wars with enemies of Gondor are started
+		- Eastern Osgiliath auto upgrades if Gondor holds it as ND can't upgrade it
+- (Fynn) Arnor script base implemented 
+		- ND annexes Bree
+		- Faction icon and banners change
+		- generals get an upgraded strat model
+- (Fynn) changed personality names in descr_strat and re-implemented historical battles button in menu
+
+- (TED) Added a new City of Dale unique settlement model
+
+1st May 
+- Updated the entries and triggers in the export_descr_ancillaries file to account for the fact that Anduin, Dunland and Enedwaith are now Northmen file culture (Links)
+- (Uniform Kilo) fix for Balchoth javelin projectile, improved Troll-men javelin projectile
+
+2nd May
+- (Fynn) Prevented some events from popping up when Gondor and DA die during RK, made sure all the ancillaries the custom Gondor/DA generals have can be applied to ND's culture, changed the launch batch to check for LAA
+- Updated the entries and triggers in the export_descr_character_traits file to account for the fact that Anduin, Dunland and Enedwaith are now Northmen file culture (Links)
+
+3rd May
+- (Castellan) updated the Aduniam Armsmen to use new model.
+	-updated EDU
+- (TED) Updated the City of Dale unique settlement model (lowered it and added stone buildings)
+- (TED) Updated the Northmen generic city, large city, and stronghold models (added stone buildings)
+- (Castellan) Added custom mount for naru Kights
+	- EDU, BMdb, descr_mounts
+4th May 
+- (Links) Azrazair Raiders' and Archers' names updated to Corsair Raiders and Archers (Descriptions, voice acting, EDB and EDU TBD)
+- (Callistonian) fixed deployment zones for battle maps around the river south of Lorien (map_heights.tga)
+
+9th May
+- (Callistonian) fixed silver surfers for AA's Loke Gamp Rim + missing info UI (bmdb, UI folder)
+
+10th May 
+- (Links) Added Medik's new AA faction icon, adapted from Castellan's AA banners
+
+11th May
+- (Callistonian) fixed bug with GameReloaded script to prevent region discovered messages from popping up (CS)
+
+14th May 
+- (Links) Corrected the size of the 'select' version of the AA's new icon
+- (Links) Added descriptions for the corsair units 
+- (Links) Updated Corsairs' voice acting to use BFME Corsair lines 
+- (Links) Corsairs are also now avaliable as a universal mercenary unit along the western coast of Middle-Earth (Any region bordering the ocean that provides boat merc units also now provide corsairs), acting in a similar role to the Far-Rhun unit for the western border of the map. As pirates, they are willing to work for anyone who provides them with coin, so any nation can recruit them as mercenaries.
+
+15th May
+- (Castellan) Added new unit cards and unit info cards for AA.
+- (Castellan) Edited Rôzadan Footmen shield value to 6 to reflect the larger shield; also slightly increasing the Nardubawib's shield value and adding a shield value of 1 to the Rôzadan Archers.
+
+16th May
+- (Fynn) Removed the goblin archers attack at the Mirrormere as the engage_armies can cause crashes there.
+- (Fynn) Fixed some non-functional guild triggers
+
+19th May -
+- (Links) Elven nations can no longer recruit corsairs as mercenaries
+- (Links) Added Corsair UIs for to the slave and merc folder 
+- (Links) Corrected the size of the 'roll' version of the AA faction icon
+
+7th June 
+- (Links) Enabled the Telari Barracks for Alfcud's region
+- (Links) Fixed the Corsair Archer's merc unit card (Hopefully for good this time)
+- (Links) Added the range of artillery units to their descriptions (Thanks to Sir Augimund for providing the updated descriptions)
+
+8th June 
+- (Links) Added inital framework for Dunland's script 
+
+10th June 
+- (Links) Completing Dunland's script now unlocks building restrictions 
+
+17th June 
+- (Links) Guardians of Dunland removed from the EDU 
+- (Links) Isenmach units now can be recruited anywhere but require either Helms Deep/Isengard (Depending on whether the player remains loyal to Saruman) to be taken to unlock 
+- (Links) Added further detail to Dunland's script. The loyalist path is now fully scripted, bar Isengard's AI turning on once Edoras is taken (Isengard AI now does turn off at game start if the player is Dunland)
+- (Links) Traitor path has also had work done on it- now triggers if either the player attacks Saruman or if they do not take and hold eight regions by turn 60 
+
+18th June 
+- (Links) Chief events for Dunland should now only fire once 
+- (Links) Saruman should now no longer abandon Dunland if you've taken eight regions by turn 60 
+
+30th June 
+- (Links) Added Trebuchet to Ar-Adunaim, and Northern Dunedain. (WIP- Need their own textures, as they currently use Gondorian textures for troops.)
+- (Links) Added shieldwall to half-orc spears (isengard)
+Thanks to Sir Augimund for providing the files for the above two changes
+- (Links) Added new river crossing between Byrig and Duneard 
+
+1st July 
+- (Links) The AA Trebuchet artillery crew now have their own custom textures 
+
+2nd July 
+- (Links) Lurtz and Ugluk are now spawned in via the campaign script when the player is not Dunland- Isengard will now only start with one army if the player is Dunland
+
+3rd July 
+- (Links) Implemented custom general spawns for Dunland's script and fixed numerous silver surfer issues 
+- (Links) Frecca now has Mounted Warband as his custom BG- one of the new spawned generals has Isenmach Axemen instead 
+- (Links) Added Isengard expansion for either when Dunland fails the script by failing to take eight regions by turn 60 or breaks their alliance with Isengard (This route is intentionally very very hard- Isengard has to be taken to unlock your elites and armor upgrades instead of Helm's Deep, but once done, you can complete the Edoras portion as normal)
+
+7th July 
+- (Links) Elite units have now been removed from AI Enedwaith's auto-expansion armies, so they should no longer start with them at turn one
+- (Links) Fixed the never-ending turn bug that resulted when Isengard attacked your regions in their scripted expansion if you betrayed them or failed your script as Dunland 
+- (Links) Moved Parth Iaur (Gynd) from its costal merc pool into a new merc pool composed of Parth Iaur, Nan-i-Fagueh (Cirith Iaur) and Adorn Vale (Derwath)- this new pool offers slightly faster merc recruitment of Druedain Hunters 
+- (Links) Northmen nations can now also recruit Druedain Hunters as mercs 
+- (Links) Removed Enedwaith Marksmen and Guardsmen from the Enedwaith merc pools 
+- (Links) The AA invasion of Mithlond should no longer occur for a player controlled AA- it should only happen if the AA are AI controlled (Its fixed! At last!)
+
+27th July 
+- (Links) The Lower Gladden Fields province is now correctly part of the Anduin merc pool, instead of the Harad merc pool 
+
+29th July 
+- (Links) Angmar no longer receives law or happiness penalties from the Barrow Downs building 
+- (Links) Renamed Dunland's units to their new names 
+- (Links) Set up inital framework for Dunland's unique barracks 
+
+-----------------------------------------------------------------------------------------------------------------------^DD35 (Except Dunland, I'll do a Dunland specific Dev diary when they are all completed.)
+
+2nd August
+- (Fynn) Added the ownerships for all RK units
+- (TED) Fixed Dol Amroth's port on the battlemap
+
+3rd August
+- (Fynn) Implemented the first version of RK and Arnor scripts
+- (Fynn) Improved stats of Cardolan units and Arthedain footmen as they come in later, added dunedain culture to metraith
+- (Fynn) Implemented new battle and campaign AI, Isengard set to passive if player is Dunland
+
+5th August
+- (Links) Incorporated the following changes by Hawk: 
+	-> Starting boat added for Dorwinion 
+	-> Updated High Paladins, Dorwinion Swordmasters (formerly Armsmen), and Mirkwood Bodyguards unit descriptions
+	-> Hithaeglir Beast Hunters bonus against camels and elephants
+	-> Arthedain hidden resource for Ost-Sul to train Arthedain units
+	-> Dragonslayers in Onazanar
+	-> Culture bonus for AA from ports (+1 at tier 1/2, +2 at tier 3)
+
+16th August 
+- (Links) Byrig is now a city, making Dunland's capital semi-unique (At least at the beginning of the game) 
+- (Links) Calenhad is now in its own merc pool to prevent players recruiting pirates there while still allowing them to recruit Druedain 
+
+20th August 
+- (Links) Updated the "Welcome to DaC" message to clarify that Anduin, Bree and Dunland unlock cities/large cities/strongholds through their scripts 
+- (Links) Added ownership of the Merchant Infantry unit to the turks (ND) in the EDU
+
+28th August
+- (TED) Fixed Dol Amroth's stronghold CSM - it no longer gets the Ruined Fornost model
+
+30th August
+- (TED) Removed the Dome of Stars as a resource model and placed the model into the Rebuilt East Osgiliath CSM
+
+3rd September 
+- (Links) Dunland and Enedwaith now no longer get access to the Orc Pit guild 
+- (Links) Bregnas has been moved to the Dunland merc pool 
+- (Links) Replenishment rate of corsair mercs has been reduced outside Harad and Harondor 
+- (Links) Outside of the Harad and Harondor merc pools, there are no inital corsair mercs available anymore. Eg- if you wish to recruit corsairs in Gondor, you have to wait for them to replenish instead of recruiting them at turn one 
+
+4th September
+- (Links) Vastly increased the time it takes for Enedwaith to recruit Dunland's Warband Blade
+
+8th September
+- (Fynn) Fixes to RK and Arnor scripts, revised battle scripts, fixed faction standings
+
+13th September
+- (Fynn) Implemented choice to start as a Horde for Khand
+
+15th September
+- (Fynn) Gundabad can train Azog's Defilers from Moria and gets faster replenishment of the enslavement units overall
+- (Fynn) Carasast can make a port
+- (Fynn) Woodland scouts for Dale switched with Woodland Wardens
+- (Fynn) Fixed the historical battles
+
+18th September
+- (Fynn) Removed Local Archers and Local Militia and put in riderless wargs and spiders
+
+20th September
+- (Links) Added event text for Khand's starting choice that lets them optionally begin with a horde start
+- (Links) Added event UI picture for the above event
+
+21st September
+- (TED) Fixed the Deadman's Dike (Ruined Fornost) battlemap - it now displays the proper map
+- (TED) Remade the faction selection images and updated the Dunedain of Arnor's borders to include the new region (evil factions have a dark border while the rest have a white border)
+
+25th September
+- (TED) Added a new Annon-en-Orod model (new buildings, more detail, scaled up a bit)
+- (TED) Removed the vanilla game's ground underlay textures that appear under ports and watchtowers
+
+26th September
+- (TED) Fixed the Orc fort battlemap so that it's associated with Orc fort CSMs. The palisade textures were also updated to use the Orc version
+- (TED) Fixed the Wildmen fort battlemap so that the game registers the walls as wooden instead of stone thus generating the proper siege ladders and towers
+- (TED) Updated the Dunharrow battlemap (fort CSM south of Edoras) to no longer require siege equipment when attacking it
+
+7th October
+-(Coma) Updated AA unit cards
+
+16th October
+- (TED) Updated Moria and Gundabad's ballista unit card image to be the orc version
+
+17th October
+- (TED) Fixed a visual glitch in the Elven siege ram and Orc siege tower UI images
+
+24th October 
+- (Links) Fixed Coastal Warden (Silver Armour Upgrade) silver surfer issues for the ND/RK 
+- (Links) Moved the Hearthguard to be the lowest entry in Dale's archery range list so it complies with convention of low tier -> elite 
+- (Coma) Implemented new Variag Noble unit and mount models
+
+30th October 
+- (Links) Updated the Khandish X units to be called Baruun X units instead
+
+13th November
+- (Coma) Updated unit card for Variag Nobles and their unit information card picture
+-(Coma) Updated the unit cards of the Gondor X units to reflect their unit model accurately and a couple of fiefdom units to match the style and gave Dol amroth alternate unit cards for the fiefdom units
+-(Coma) Updated Balchoth Spearmen unit card
+
+17th November
+-(Coma) Finished Gondor unit cards
+-(Coma)Added new unit cards for Haraondor Mercenaries, and for the Far Rhûn Mercenaries
+
+23rd November
+- (TED) Region and campaign map changes:
+	-> Withibord's western borders have been updated; the connection to the Elven Acres (Taur Phillin) region has been improved
+	-> Cirith Ungol's region was removed and its slot has been used for a new Mordor region in the east titled Lithlad with a city-tier settlement called Darz-Ghûrum
+	-> The Talathang region in the north east of the map was removed and its slot has been used for a new region titled Upper Fangorn (AI Isengard starts with this new region)
+	-> Byrig's region was expanded eastward up to the mountainside and the north west border was updated to remove the connection to Tharbad's region
+	-> A few other minor region corrections have been made
+	-> Wrakyaburg's settlement location was moved slightly south west
+	-> The Mordor settlement of Seregost has been changed into a castle, renamed to Khargukôr, and its region name was renamed to Seregost
+	-> The settlement of Brown Boat was renamed to Tusturë
+	-> The Erebor faction now has a single Dwarven fort and watchtowers along its borders
+	-> Fahamgathol's port was moved to its western coast
+	-> A river crossing bridge has been added between the regions of Thranduil's Halls and Dale to allow for trade
+	-> Some new trade resources have been added to the Ithilien region
+	-> Some forts around the map have been slightly repositioned
+	
+- (TED) CSM and battlemap changes:
+	-> A new generic encampment fort CSM has been added (uses a vanilla fort battlemap)
+	-> The Orc fort CSM was removed and replaced by the encampment fort however any fort located in Orc regions will use the Orc fort battlemap
+	-> The Cair Andros CSM was updated with improved textures and a matching bridge model on its left side
+		-> Henneth Annun no longer occupies a fort slot its model has been merged into Cair Andros (Henneth Annun will still appear on the campaign map but will have the new encampment fort below it)
+	-> The Minas Morgul CSM was recreated from scratch with Orc tents/structures, ruins, and a hill added to the back side of the model
+		-> The Cirith Ungol CSM was recreated from scratch with a new and improved look and its model has been merged into Minas Morgul (an encampment fort is below it)
+	-> A new Elven fort CSM has been added and it uses an Elven-themed version of the Rhosgobel battlemap (these forts can be found in almost all Elven regions)
+	-> The Wildmen fort CSM has been updated with an improved design
+	-> The Dwarven fort CSM has been updated with a slight improvement to its design
+	-> Some Northmen forts that used a specific vanilla fort battlemap no longer use that battlemap due to the limitations with the layout
+	-> The Elven city and large city battlemaps were updated to remove some trees which were spawning within walls
+	-> Elven large cities now use the city tier battlemap so that the siege equipment lines up with the walls properly
+	-> Elven strongholds now use the large city tier battlemap so that the siege equipment lines up with the walls properly
+	-> Gondorian large cities now use the city tier battlemap so that the siege equipment lines up with the walls properly
+	-> Arnorian large cities now use the city tier battlemap so that the siege equipment lines up with the walls properly
+- (Links) Fixed auto-expansion for the new Fangorn region 
+- (Links) Incorporated DaC Extended Edition's new Dwarven UI
+
+26th November 
+- (Links) Fixed the Avari Armourer lacking a proper name and description 
+- (Links) Dol Guldur's Black Spiders now correctly get free upkeep 
+- (Links) As part of their new optional horde start, Khand no longer needs to hold the Springs of Khand province to win in a short or long campaign 
+- (Links) The description of Erebor Axethrowers now correctly state they have 3 missiles 
+- (Links) Bilbo's battle general model is no longer a silver surfer 
+- (Links) The old Brown Boat province (Now known as Tusturë), has had the Rhovanion hidden resource added to it, to align with the fact it has the Rhovanion Green Book (This allows Dale to recruit their Rhovanion units here) 
+- (Links) Nazg-hai description updated to reflect their actual stats 
+- (Links) Knights of Silver Swan moved to be the lowest entry in the fiefdom headquarters so the overall unit order reflects the increasing culture requirement
+
+28th November
+- (Fynn) Implemented event messages for RK written by Galu
+
+29th November
+- (Coma) New unit cards for Dol Amroth’s non mounted units
+
+30th November
+- (Coma) Implemented new RK Gondor Militia Skins by Lerynian, Units cards TBD
+
+-----------------------------------------------------------------------------------------------------------------------^DD36
+
+7th December
+- (Coma) New Angmar Unit Cards
+
+31th December
+- (Coma) Implemented many new Dunlending unit visuals courtesy of Lerynian and BillBaraka
+- (Coma) Implemented some new unit cards and unit_info cards for the new dunland visuals
+
+
+----------- 2022 ------------
+2nd January
+- (Links) Added visual upgrades for the Warband Sentries and the Dunhird Warriors (There are two for the Dunhird warriors) and fixed the Dunlending Raiders and Pikemen armour upgrades restoring their old models 
+
+7th January 
+- (Links) Set up Dunland's custom barracks fully, including bonus extra recruitment for the Dunhird units in Enedwaith/Dunland lands, and Wulfsworn units in Rohan lands (Although exact replenishment rates are subject to balancing via testing and Rohan and Enedwaith AoR units are TBD)
+- (Links) Added enedwaith_united hidden resource to Byrig's region (To allow bonus recruitment of Dunhird units there)
+
+10th January 
+- (Links) Added a King's Purse bonus script for horde Khand based off the AA KP Bonus script (With slightly less money granted compared to the AA to account for the lower upkeep of Khand's units) 
+- (Links) Fixed the bug where horde Khand could build both Dark Sanctuaries and Refuges 
+- (Links) Expanded the avaliability of Evil/Horde Khand's Inquisitor building- these can now be built in any resource with the smith_adunaim hidden resource (And hence, act as a special reward for taking Numenorean/Elven/Dwarven capitals), and made sure this building unlocked for Horde Khand 
+- (Links) Added the smith_adunaim hidden resource to Umbar, Caras Sant and Sturlurtsa Khand (To accomodate the above change, and also because both Umbar and Caras Sant should really be valid locations for the Adunaim Advance Smith on account of their Numeanorean/Elven significance) 
+
+11th January
+- (Coma) Implemented new army strat models for Harad’s faction leader and regular generals
+- (Coma) Updated battle model for regular Harad Generals 
+- (Coma) Updated battle models for Serpent Bladesmen, Serpent Calvary, Black Snake Guard, Serpent Archers, and Upgraded Southron Defenders. Unit cards to be done.
+
+12th January 
+- (Links) Updated Dunland's bodyguard so it now correctly is recruited from Byrig 
+- (Links) Set up the recruitment of Dunland's AoR units in the EDB: 
+	-> They can recruit four Enedwaith units from regions with the Enedwaith hidden resource (Mordag Fishermen, Faolan Borderguard, Faolan Warriors, Druedain Hunters) 
+	-> They can recruit four Rohan units from regions with the Rohan hidden resource once they have constructed Wulf's Hall in Edoras (Peasant Scouts, Rohirrim, Rohirrim Scouts, Riddermark Cavarly)- these choices are a WIP and may be changed 
+	-> They can now recruit their two Wulfguard AoR units from most landmark buildings once they have unlocked them through their script (If a region has more than one landmark, they only are recruited from one of the landmarks)
+- (Links) Added the Tir Croicoill Cosantoiri (Enedwaith) and Wulfguard Champions and Orthanc Guard (Dunland) to the AoR Retraining building so Enedwaith and Dunland can retrain these units there 
+- (Links) Dunland can now train Orthanc Guard from the Orthanc landmark building if they backstab Saruman and have a high enough wildmen culture. Furthermore, if they remain loyal to Isengard and somehow Saruman loses his capital and they reclaim it without backstabbing them, they can recruit the Orthanc Guard from the region once unlocking them through their script 
+- (Fynn) - Fixed all silver surfers and missing unit cards
+- (Fynn) - Changed the way the oathbreaker timer works (has to be tested)
+- (Fynn) - Fixed crash due to too many waystation pools when defeating angmar as ND
+
+15th January 
+- (Links) Added unit descriptions for Dunland's Warband units 
+- (Coma) Implemented new models for Dunhird Beserkers, Clanfolk Spearmen, Clanfolk Axemen, and Dunhird Slayers courtesy of Lerynian and BillBaraka!
+- (Coma) New unit cards and unit_info cards for newly implemented Dunland units
+
+17th January 
+- (Links) Added unit descriptions for Dunland's Dunlending units 
+- (Coma) Implemented new visuals for the Wulfguard Pikes & Axemen by BillBaraka and new axes done by Lerynian
+- (Coma) Updated unit u.i for Wulfguard units
+- (Coma) New officer models for Serpent Bladesmen 
+- (Coma) New Dunland banner carriers by BillBaraka
+
+18th January 
+- (Links) Added unit descriptions for Dunland's Wulfguard Axmen and Pikes
+- (Links) Added unit descriptions for Dunland's Dunhird Beserkers, Warriors and Slayers 
+-(Coma) Fixed Wulfguard pike upgrade entry in battle model database
+-(Coma) Updated unit cards for Serpent X units
+
+19th January
+- (Links) Added unit descriptions for Dunland's Clan Spearmen, Axemen and Hunters
+- (Coma) Implemented Dunland bodyguard models by BillBaraka
+- (Coma) Updated unit cards for Dunland BG
+
+21st January 
+- (Links) Added unit description for Dunland's BG unit 
+
+22nd January 
+- (Links) Added Pythax's Northmen UI (A massive thanks go to him!!!) 
+
+23rd January
+- (Coma) Updated generic Gondorian general and captain army strategy models to use taro_m’s gondorian unit models
+- (Coma) Updated Dol Amroth’s generic general strategy model
+- (Coma) Updated Bree’s Generic strat general model to have the same visuals of the battle model.
+
+24th January
+- (Coma) Implemented Wulfguard Champions visual model by BillBaraka and axes by Lerynian *Note: Mount and unit cards are to be done
+- (Coma) Updated AA General and Captain army strat models to use Castellan’s Visuals
+- (Coma) Updated Khandish General army strat model
+
+27th January
+- (Coma) Updated many army strat models
+   -> Updated General, Captain and Spy models for Gundabad and Dol Guldur
+   ->Updated Gundabad Leader Strat model
+   -> Updated Ularion’s Strat model to match his battle model
+   -> Updated Army Strat model for non custom Mirkwood Generals
+   ->Updated Erebor Captain model
+   ->Updated Rhun Captain model
+   ->Updated Harad Spy model
+   ->Updated Dorwinion General and Captain model
+
+3rd February
+- (Coma) Implemented new Wulfsworn Elites model by Lerynian
+- (Coma) Implemented new Wulfsworn Recruits model by Lerynian and base assets by BillBaraka
+- (Coma) Implemented new unit cards for Dorwinion and Wulfsworn elites and Recruits
+
+5th February
+- (Coma) Implemented Slinger animations *Note: Projectile and sounds for the slings TBD*
+-(Coma) Changed Clan hunters for Dunland into slingers ui TBD
+
+7th February 
+- (Links) Removed duplicate entries for the Sea-Ward Lancers and the Amrothian Squires in Dol Amroth's Stables building 
+- (Links) Removed Berio I Ngelaidh and Aredhirith from the Waystation building as they are now trained from everywhere and no longer are an AoR unit 
+- (Links) Fixed Osgiliath Lodge displaying as south_lodge for the ND faction 
+
+8th February
+- (Coma) Added New Baruun unit models and updated their unit cards
+- (Coma) Implement Edited Wulfguard Champion models by Lerynian original model and assets by BillBaraka
+- (Coma) Updated cards for Clan Hunters and Wulfguard champions
+- (Coma) Wulfguard champion mount model implemented by Lerynian
+
+10th February 
+- (Links) Added descriptions for Dunland's two new landmark buildings- their diplomat building in Bryig, the High-Brenin's Roost and their upgrade to the Meduseld, Wulf's Hall
+
+11th February 
+- (Links) Added descriptions for Dunland's Frekkalingir Barracks line- the Clan Levy Grounds, Ancillary Training Grounds, Military Camp and Central Marshalling Fields
+- (Links) Tentatively renamed the Wulfsworn units as follows: Wulfsworn Recruits -> Frekkalingir Hill-Riders; Wulfsworn Cavalry -> Frekkalingir Harriers; Wulfsworn Elites -> Frekkalingir Stalwarts (Whether these are their final names will depend on any feedback received) 
+
+12th February 
+- (Links) Added descriptions for Dunland's Dunhird Barracks line- the Ancestral Dun, Ancestral Broch and Ancestral Motilla
+
+14th February 
+- (Links) Added special visual reskins for the Rohirrim and Rohirrim Archers that Dunland gets to train (Thanks to Lerynian) 
+- (Links) Removed the other AoR Rohan units that Dunland got- they now only get the Rohirrim and Rohirrim Archers. However, they now no longer have to complete their script and get these units from turn one (So long as they have expanded into Rohan), to compensate for them being on the weaker end 
+- (Links) Updated Enedwaith's Warband Blades and Dunlending Raiders unit cards
+
+17th February
+- (Coma) Updated general, captain and faction leader strat map models for Dunland
+
+19th February
+- (Coma) Updated all unit cards for the High Elves
+
+22th February
+- (Coma) Implemented new Frekkalingir Harriers’ model by Lerynian
+- (Coma) Implement Frekkalingir Hill-Riders’ upgrade model by Lerynian
+- (Coma) Dunlending Longspears now use shield_wall ability
+- (Coma) Fixed AA archers’ arrow model
+
+26th February
+- (Links) Added descriptions for Dunland's Frekkalingir units
+
+28th February 
+- (Links) Added description for the Wulfguard Champions (Although name may be changed)
+- (Coma) New Strat models for Dunland’s Spies and Diplomats
+
+5th March 
+- (Links) Added new stats for Dunland's roster 
+
+7th March 
+- (Links) Dunland balance tweaks (AP removed from Dunhird Slayers, nerfed damage of Wulfguard Pikes and Dunhird Berserkers, buffed Warband units armour values) 
+- (Links) Updated the descriptions of Dunland's roster to account for all new stats 
+- (Links) Renamed the Wulfguard Champions to Heralds of the Twofold King
+- (Links) Set projectile of the Clan Hunters to be a rock 
+
+8th March 
+- (Links) Fixed animation bug with the Dunland's Heralds of the Twofold King that prevented them from attacking with their throwing axes and in melee
+- (Links) Fixed minor typo in Dorwinion's "Dorwinion Avari" event 
+- (Links) Fixed a scripting typo that caused both the Khazad-Dum and Erebor armies to attack Fahamgathol, instead of the Erebor army attacking Thorin's Halls, in Ered-Luin's ring script 
+- (Links) Nerfed the Dunlending Raiders' attack (From 11 -> 9), and buffed the Dunlending Pikemen's attack (2 -> 3) (As it was strange that professional Dunlending Pikemen had the same attack as Farmhand Pikemen) 
+
+9th March
+- (Coma) New unit models for Cardolan Sentinels & Riders, unit cards TBD 
+
+12th March 
+- (Links) Nerfed unit sizes of the Frekkalingir Hill-Riders and Dunhird Slayers 
+- (Links) Removed the Stoor Hobbits from Anduin's Hunter's Guild (To fix the combo of the guild + waystation existing in the same region wrongly allowing them to be trained and also because the Waystation replaces the functionality of the guild)
+- (Links) Further nerfed the attack of the Dunhird Slayers (From 10 -> 8)
+- (Links) Removed Isengard's ability to train Dunhird Slayers 
+- (Links) Increased the cost of Dunhird Slayers to 900 from 800 
+- (Coma) Updated Unit Cards
+   -> Updated Cardolan Sentinels and Riders’ UI cards
+   -> Updated Dale unit cards
+   -> Updated Rhovanion X unit cards
+   -> Updated Privateer X unit cards
+   -> Updated Bandits unit cards
+   -> Updated Saralainn Mercenaries’ unit cards
+   ->Updated Druedain Hunters’ unit card
+
+15th March
+- (Coma) Implemented Wulfguard Upgrades by Lerynian, base mesh by Castellan of Angmar, and textures by Lerynian and White in the Black Cloud
+- (Coma) Implemented new Orthanc Wardens unit by Lerynian, base mesh by Castellan of Angmar, and textures by Lerynian and White in the Black Cloud
+- (Coma) Added crossbows to Orthanc Guard and implemented their new visuals by Lerynian, base mesh by Castellan of Angmar, and textures by Lerynian and White in the Black Cloud
+
+17th March 
+- (Links) Added Orthanc Wardens to the same buildings that allow recruitment of Orthanc Guard (They require the same conditions to be recruited in all cases) 
+
+19th March
+- (Coma) Implemented Dunland Captain and General models by Lerynian with original assets by BillBaraka
+- (Coma) Implemented Dunhird Berserker texture improvement by BillBaraka
+- (Coma) Implemented RK skin for the Orthanc Guard and by Lerynian
+-Added Texture tweaks to Isengard Orthanc Skin by Lerynian
+- (Coma) New Sellsword unit card
+
+22nd March 
+- (Links) Updated the descriptions for the Orthanc Guard and Wardens 
+- (Links) Nerfed the crossbow attack of the Warband Sentries from 8 to 6 
+- (Links) Added Council's Guard and Gatekeeper unit cards for the Arnor route of the RK script
+- (Coma) New Isengard Unit Cards
+- (Coma) New Gundabad Unit Cards
+- (Coma) New unit cards for Moria’s Snaga and Mountain Orc Hunter units
+
+27th March 
+- (Links) Added event text for the majority of Dunland's new events 
+- (Links) Fixed typos in unit descriptions
+- (Links) Tweaks to the Frekkalingir Harriers description
+
+28th March
+- (Coma) New Moria unit cards
+
+2nd April 
+- (Links) Added event text for the remainder of Dunland's new scripted events 
+- (Links) Added missing text for the castle versions of Dunland's barracks
+- (Links) Allowed the 1st level of Dunland's and Khands barracks to be built in villages 
+- (Links) For Dunland to recruit Enedwaith units, a Dunhird barracks in now needed, and a Frekkalingir Barracks is needed for Rohan units (As well as the hidden resource requirement)- the text of Dunland's barracks has been updated to list these requirements
+- (Coma) New unit cards for Enedwaith
+
+4th April 
+Changes Courtesy of Augimund: 
+	- (Links) Added Gundabad ownership to Castallens of DG to allow Gundabad to recruit them
+	- (Links) Additional range for Gil Galad's company so they outrange Dunedain BG (Up to 240 from 220 )
+	- (Links) Added Despises orcs trait for Elledan, Elrohir
+	- (Links) House of Kings buffs ( +2 faction law, +1 faction upkeep )
+	- (Links) Honey resource region expansion for Anduin ( Added honey to Wrakyaburg, Framsburg, Rhawburg, Burh Sauthis, Onodrith, Entwade, Edoras, Imladris)
+	- (Links) Expanded Mordor's recruitment to Temple units to key Numenoren regions ( Annuminas, Fornost, Tharbad, Isengard, Amon Sul,  Dol Amroth, Umbar, Minas Tirith )
+	- (Links) Added prebuilt towers to Gorgoroth 
+	- (Links) Fountain Guard recruitment added to Tower of Ecthelion in Minas Tirith (free upkeep early game and be at their loreful garrison) 
+	- (Links) DA king's purse buff (Many players struggle with DA and this should help)
+	- (Links) Updated Gil-Galad's Company Range
+	- (Links) Tawar Areiniyr move speed added to description
+	- (Links) Aredhirith & Berio Ngelaidh ammended description to require only rejected alliance.
+	- (Links) Added range, accuracy, # missiles to Orthanc Guard
+	- (Links) Removed mention of poison missiles for Mirkwood Hunters
+	- (Links) Added AP melee attack to Aredhirith description
+	- (Links) Muhad Tribesmen/Beastmasters moved AP melee attack to top of description to match consistency of other unit descriptions
+	- (Links) Fixed typos for Iron Hills Mattocks, Nimrodel Mariners, Avari Spearmen, Gabilgathol Guard, Troll-Man Hunters, and Black Uruk Archers 
+- (Links) Removed the Conqueror of Cirith Ungol trait 
+- (Links) Updated the Conqueror/Pillager of Dun Larach trait to Conqueror/Pillager of Byrig (To reflect Dunland's new capital) 
+- (Links) Removed Dunland's recruitment of the Druedain from their barracks to prevent spam- they can now recruit Druedain from the Keefei Clanseat at the same rate Enedwaith does 
+- (Links) Updated Dunland's faction leader title to be 'King' 
+- (Links) Updated campaign descriptions to account for Dunland's and the ND's new faction leader titles
+
+6th April
+- (Links) Finished setting up Dunland's script, including bonus easter eggs, debugging Isengard's AI issues, unlocking armour upgrades and various small tweaks associated with these
+- (Links) Dunland is now fully playable
+
+7th April
+- (Coma) Updated unit sprites for all Dunland units and for The Variag Nobles and Baruun units.
+- (Coma) Arulad units use old Khandish assets for non upgraded model. Upgraded model use the same old model
+
+8th April 
+- (Links) Updated Dunland's barracks so the Ancestral Dun only requires a keep, and the Broch and Motilla only require a castle 
+- (Links) Removed skirmishing from the Orthanc Guard
+- (Links) Increased the upkeep of Black Uruk Archers from 189 to 260
+- (Links) Updated Dunlending rebel unit cards/info and updated Dunland's Isengard unit cards, and Isengard's Dunhird Slayer's card
+- (Links) Added UIs for Dunland's barracks
+
+9th April 
+- (Links) Nerfed Dunlending Lonspears to 1 attack and 3 total defence 
+- (Links) Tweaked Dunland's script so Lurtz should be removed from Dunland before Isengard launches their attacks if you betray Saruman
+- (Links) Fixed an issue with an easter egg in Dunland's script 
+- (Links) Moved Grima to begin just outside Edoras (To represent him being Saruman's agent there)
+- (Links) Added a starting Ancillary Training Grounds to Byrig to represent it being the center of Frekkalingir power 
+- (Links) Added UIs for Wulf's Hall and the High Brenin's Roost 
+- (Links) Added UIs for all events for Dunland's script
+- (Links) Updated event and game text colour to be black instead of khaki so its easier on the eyes
+
+10th April
+- (Coma) Added new unit cards for Rohan
+
+16th April 
+- (Links) Added missing event text for Dunland and added a new intro message (The old one hardly made sense at times and had a far too big focus on Saruman and has thus been scrapped and rewritten)
+- (Coma) New Lorien unit cards for all units
+
+17th April
+- (Links) Added flavour text and tweaked UIs for several starting Rohan and Dunland faction leader ancillaries 
+- (Links) Added custom portrait for Donnchaidh
+- (Links) Fixed bug preventing the construction of Dunhird barracks in castles
+- (Links) Fixed missing unit cards and unit infos for Gundabad's Castellans and Dunland's Faolan Warriors
+- (Links) Fixed Gondor's merc Rohirrim being silver surfers 
+- (Links) Updated and tweaked Dunland's voice acting so all units have appropriate voice lines (Dunland is more or less complete with this update)
+- (Links) Moved Carras out of the costal merc pool so it no longer gets corsairs and moved it into the Druedain pool (And added BoH keefei hunters, bandits and sellswords to the Druedain merc pool)
+- (Links) Buffed Dunlending Longspears' attack ( 1 -> 3) and defence (3 -> 5) and removed shieldwall
+- (Links) Nerfed the charge of Dunland's clan spears and axes from 7 -> 5
+- (Links) Slightly buffed the attack of Dunland's bodyguard 
+- (Links) Increased upkeep of Orthanc Guard
+- (Links) Removed upkeep of Castellans of Dol Guldur (And slightly increased their initial recruitment cost)
+- (Links) Fixed Dunland being unable to recruit Faolan Warriors by adding aztecs ownership to them in the EDU
+
+-----------------------------------------------------------------------------------------------------------------------^DD37
+
+26th April
+- (Links) Reverted Barrow Wights to their 4.6 visuals (Due to Reaper, their author, rescinding permissions for their visuals)
+- (Links) Shortened the credits line for the Dunlending units  
+- (Links) Restored missing dropbox files (This will once again allow you to update from 4.6 -> v5 with the dropbox alone), but the dropbox file size is larger to ensure files weren't missing
+
+27th April
+- (Coma) Updated most of Dunland’s unit stats
+
+7th May
+- (Links) Updated the ND's now unique file culture to use the Gondorian menu UI (This will be tweaked to be more unique slowly but works as a placeholder) 
+- (Links) Updated the menu text to say "Victory Condition" instead of "Game Rules" for clarity
+- (Links) Replaced references to the "Shadow of Mirkwood" in several messages such as ambush messages with "Dol Guldur"
+
+11th May
+- (Coma) Updated Dunland King Strat model and Battle model by Bill, Lerynian, and assets from Castellan
+- (Coma) Updated Agent Strat models for Dale
+- (Coma) Updated Dale Agent ui and unit info cards
+-(Coma) Updated Dunland Agent unit_info cards
+
+15th May 
+- (Links) Added fully custom campaign and battle menu UI for the ND file culture (Created by Lordoflinks based off the existing Gondor UI)
+- (Links) Fixed Dunland's Wulfguard custom generals so they no longer start with the Isensegard armour upgrades (They are intended to be upgraded to use that look, if they survive, once you unlock it later in the script) 
+- (Links) Fixed the Waystation allowing recruitment of Khandish Raiders and Hunters for Rhun 
+- (Links) Updated the Warband Host so they take two turns to recruit (As per the other warband units) 
+- (Links) Updated Dunland's barracks names to use Dunhird and Frekkalingir as prefixes for clarity
+
+18th May
+- (Coma) Updated Bree’s unit cards
+
+22nd May 
+- (Links) Updated the ND's menu UIs (Hopefully this will be a roughly final version) 
+
+31st May 
+- (Links) Fixed the Tir Crocoil for EW being able to be built prior to it being unlocked in the script 
+- (Links) Replaced the Wulfguard Axmen in the ND BoH with Dunhird Champions 
+- (Links) Updated the Ered Luin script so the messages notifying the player of the AI's decision now correctly fire
+- (Links) Removed Enedwaith and Dunlending units from the Brawler's Guild they do not have access to 
+- (Links) Updated the Warband Sentries so they have armour upgrades at level 3,4 and 5 (Advance Blacksmith) so they are consistent with the other Warband units 
+- (Links) Updated various Dunlending unit UIs for other factions 
+- (Links) Buffed the Tir Crocoil (Added a law bonus and free upkeep slots, similar to the ND's House of Kings)
+- (Links) Significantly increased the quality of rebel garrisons for Dant'alad and Varfest
+
+4th June 
+- (Links) AI Enedwaith now does not unlock their elites till turn 55 (Instead of the prior turn 35) 
+- (Links) Enedwaith's elite barracks now requires an armorer 
+- (Links) The Wulfguard units replenishment rate has been increased to 0.5 instead of 0.3, they now no longer have a culture requirement (And so can be recruited instantly once you have conquered somewhere they come from and have unlocked them via your script) and are also available from Enedwaith's capital, Alfcud 
+- (Links) As Dunland, you now get a King's Purse bonus while allied to Isengard 
+- (Links) Implemented a fail-safe for Dunland's easter egg 
+- (Links) Edited Dunland's event text to mention the gold bonus, and its removal if you backstabbed Isengard, and added a sentence that suggests expansion against Enedwaith in their intro as an alternative to going directly for Rohan 
+
+6th June 
+- (Links) Increased Dunland's KP bonus while allied to Isengard to 600
+- (Links) Increased the time limit for Dunland's initial script from 60 to 80 turns
+
+14th June
+- (Coma) Added Pony models and animations to Hill-Riders -Credit to Europa Barbarorum II 
+- (Coma) Added New Overhand Spear Animations to Loke-Scion Rim - Credit to Europa Barbarorum II 
+- (Coma) All non dwarven or goblin foot skirmishes now use running up javelin animations - Credit to Europa Barbarorum II 
+- (Coma) Added Rhunnic rebel factions
+- (Coma) Added general to Varfest rebel garrison
+- (Coma) Added secondary roaming rebel general in Varfest province
+
+17th June 
+- (Links) Added a small culture requirement to troll units 
+- (Links) Implemented a fix for the traitor Dunland message firing every turn 
+- (Links) Fixed the incorrect display of the Orocani Clan Hall building chain's name 
+- (Links) Removed Dol Vorn and Balorn from Enedwaith's auto-expansion (They got a huge number of regions so its been toned back a bit) 
+- (Links) Added GENEARL's UNIT line to Brenin's Guard description
+- (Links) Clarified the requirements of the Orthanc units in their descriptions
+- (Links) Gundabad's, Isengard's Moria's and DG's third tier of barracks now can be used by everyone as per the other barracks (Thanks to Fynn for these changes) 
+- (Links) Fixed a typo that meant under certain circumstances Noldorin Veterans required a higher culture than Noldorin Archers and Defenders
+- (Links) Moved Bazra-Dum into its own merc pool so it doesn't get costal mercs 
+
+20th June 
+- (Links) Added Heorot to Dunland's auto-expansion (However, Dunland does not get it if the player is Enedwaith)
+
+29th June 
+- (Links) Added Pythax's ND UI 
+
+24th July 
+- (Links) Various typo fixes courtesy of Sir Augimund uploaded
+- (Links) Fixed Gorgash (The rebel Barrow Wight general) using Reaper's removed Barrow Wight model- he now uses their current look instead 
+
+25th July
+- (Links) Fixed the ND's Beacon of Hope mercenary recruit feature- other Faithful nations (Gondor and Dol Amroth) no longer have access to these mercs. Furthermore, the ND now correctly lose access to this feature as intended if they form the Reunited Kingdom 
+- (Links) Replaced Wulfguard Pikes in the Beacon of Hope with Dunlending Longspears 
+
+26th July 
+- (Links) Nerfed the Nazg Hai so they only have 60 range 
+- (Links) Nerfed the AI's recruitment of the Nazg Hai so they only get them every 25 turns instead of 20 turns (And they no longer can instantly recruit their first at turn 1 and have to wait till turn 25) 
+- (Links) Slightly reduced the recruitment cost of Sons of Numenor to 1390 so Fountain Guard have a higher cost and are given as a mission reward instead 
+
+28th July 
+- (Links) Added text and UI for the ND's Fiefdom Barracks 
+- (Links) Added text and UI for the RK Auxiliary Barracks 
+- (Links) Fixed Enedwaith's unique barracks appearing for other nations in their building browsers, and added a castle version so its consistent with the other barracks for v5 
+
+30th July 
+- (Links) Updated the ND's building UIs so they are now consistent. Wildmen UIs are used for village level buildings, Northmen UIs are used for town level buildings, and Gondorian UIs are used for large town/city/large city level buildings. Buildings that had fully ND unique UIs (Such as schools and barracks) retain them. 
+- (Links) The ND can now build the highest level of the market 
+- (Links) Updated various ND building text descriptions and names so they make sense with their new UIs and are more flavourful 
+- (Links) Updated the UI for Gondor's waystation to be Gondorian rather than Northman.
+- (Links) Overhauled the code for the RK Auxiliary Barracks- units are now grouped by their recruitment pool and nation 
+- (Links) Replaced the duplicated entry for Dunlending Pikemen in the RK barracks with Dunhird Berserkers (This duplicated entry was originally created when the Isenmach Axemen ceased to exist)
+- (Links) Adjusted some culture requirements (For instance Southron Pikemen required 50 Dunedain culture, far far higher than Harad's requirement which is only 25- this was lowered to 30) 
+- (Links) Edited certain pools so that more units can only be recruited from the 2nd tier of barracks (So building it in regions such as Enedwaith and the Anduin now has a tangible benefit)- generally speaking any unit with less than 50 culture required now comes from T1, any unit with 50 or greater culture required comes from T2 
+- (Links) Updated Dunlending unit cards for both Dunland and the ND (Somehow Dunland was using old unit cards for certain units and Warband Sentries were updated for the RK's barrack system)
+- (Links) Updated event text for the RK/Arnor script to explain the benefits of each path, and what you are unlock, both at the choice itself and in the final events 
+- (Links) Reforming Arnor now only requires the House of Kings to be rebuilt 
+- (Links) Increased the cost and construction time of the House of Kings
+- (Links) Adjusted the descriptions of the Dunedain Barracks to explain they also allow the recruitment of local human militia and Gondorian troops, and removed the text that claimed their construction was limited in certain regions (This is no longer the case) 
+- (Links) Revised and expanded the Aragorn RPG and Arnor/RK Script 
+- (Links) New features include a fail-safe that triggers if Aragorn dies and places the player on the Arnor path (Even if they selected the RK path), so they are not locked out of rewards, most events past the RK/Arnor choice also now have slightly different variations depending on if the player picked Arnor/RK, and the Arnor Restored event changes depending on whether Aragorn is alive or not. The Army of the Dead event also teleports Aragon to the other side of the mountains and spawns the King of the Dead there too
+- (Links) There are also new events after the player has picked Arnor or the RK, outlining Elrond's reaction to the decision and the elaborating on the requirements for the RK/Arnor- these events also explicitly direct the player to move Aragorn to Ost Sul 
+- (Links) The Ost Sul event has been transformed from a weird plot exposition about the Army of the Dead with no clear reason for why Aragorn needed to be at Ost Sul in the first place into a meeting with Gandalf where he recounts the legends of the Army of the Dead to Aragorn. This event is also now required for Gandalf to join the ND (Unless Aragorn is dead in which case it is not required) 
+- (Links) Sons of Numenor can now be recruited from Minas Tirth as well (Requiring the RK or Arnor) as per their unit description and so RK get a chance to use them without having to rebuild the House of Kings 
+
+31st July 
+- (Links) Fixed the Hobbit CSM bug for the Arnor route of the script. No longer will Hobbits turn into Boromir! As a result, Faramir has had to lose his unique CSM for the RK route (Instead he has the pre-RK ND general model, so he is still semi-unique and doesn't use the Gondorian model like most generals) 
+- (Links) Set up the RK Anciliary Baracks so it now requires the turks_extra hidden resource and now can only be built in regions where it provides units (Aka you can't build it in regions where it doesn't provide a benefit)
+- (Links) The Balchoth Tribesmen now come from the same regions as the other Rhun units from this barracks
+
+1st August 
+- (Links) Updated the UIs of the Gondorian Mason Halls to be less militaristic 
+- (Links) Added a UI for the ND's Annuminas Guildhouse Mason Hall building 
+
+2nd August 
+- (Links) Implelemented the following changes from Fynn: 
+- (Fynn) Added unit info cards for warg pack and unit+info for ent catapult (just used the ent one as I wasnt sure if its gonna be removed)
+- (Fynn) Changed gatekeeper secondary animation to halberd
+- (Fynn) Fixed silver surfers for rohirrim/rohirrim archers for a lot of factions and dunhird champions for gondor/da
+- (Fynn) Fixed rebel unit card for lorien archers
+- (Fynn) Fixed mordor not attacking in alliance script
+- (Fynn) Added 5% law bonus to dorwinion and anduin barracks to make them in line with rest
+- (Fynn) Edited the faction select map for gondor to remove a region they dont have
+- (Fynn) Made sure the castle version of the men of east culture building also get removed when khand goes good (edited)
+
+13th August: 
+- (Links) Added the Faction Information script (By clicking on the mission button an event will pop with an overview of the mechanics and general lore of your faction) and UIs for Gondor, Dol Amroth, AA, Northen Dunedain, Mordor, Dunland, Rohan, Dale, Dorwinion, Anduin, Khand, Harad, Rhun 
+- (Links) The Arnor restored event now mentions it unlocks the Sworn units
+- (Links) The bug with Lurtz's tooltip displaying incorrectly for Dunland should now be fixed
+- (Links) Moved Heorot into the Dunland BoH merc pool so it no longer gains costal mercs and there is an equal number of regions in the Enedwaith and Dunland merc pools
+- (Links) Updated Gundabad's leader picture on the campaign selection page with a higher quality version
+- (Links) Updated the unit card of rebel Variag Nobles
+- (Links) Waystation now correctly retrains Woodland Wardens for Dale instead of Woodland Scouts
+- (Links) Added text for Khand's Level 3 Horse Breeder's Guild
+
+14th August 
+- (Links) Added UIs for the Dwarven and Elven Waystations
+- (Links) Added unique UIs for the Men of the East and the Orc Waystations (All Waystations should now have unique and complete UIs) 
+
+15th August 
+- (Links) Reworded the historic events for W. & E. Osgiliath being rebuilt so they are consistent with the other messages for Annuminas and Fornost 
+- (Links) Updated the main menu faction descriptions to account for v5's changes 
+- (Links) Gandalf will now spawn at Turn 40 or later for the ND (Presuming you've reached the needed stage in Aragon's RPG or he is dead) instead of Turn 55
+- (Links) The Northern Dunedain are now called the Northern Dunedain again (The Dunedain of Arnor are dead! Long live the Northern Dunedain!) 
+- (Links) Edited the Arnor faction icons so they have a nice green background instead of an ugly black one (The Arnorian campaign banner now also uses the ND symbol and colours to indicate continuity in terms of gameplay features such as Beacon of Hope)
+
+16th August 
+- (Links) Fixed the T3 ND Barracks allowing Cardolan and Arthedain units to be recruited outside their AoR 
+- (Links) The AI now no longer loses the ability to recruit certain Arnorian units if they upgrade to T3 (And AI replenishment rates are now consistent instead of higher tiers of barracks proving lower replenishment rates for the AI's recruitment of Arnorian units)
+- (Links) Added a fail-sure to ensure Gandalf spawns for the AI ND
+- (Links) You can now recruit Bree militia in Metraith as the ND 
+- (Links) Once Arnor is formed, the ND can recruit certain Bree units as follows: Greenway units from Roads & Highways in regions where the Greenway ran (Fornost, Bree, Mengalen, Metraith, Tharbad), Gatekeepers from the Prancing Pony in Bree, and Watchmen units from their 2nd and 3rd tier barracks in select Bree regions and those nearby (Bree, Ost Sul, Undertowers, Micheal Delving, Hobbiton, Longbottom, Mengalen, Fornost, Annuminas, Tirdhuin, Celoniach, Metraith, Tharbad)- these units can all be upgraded with visual Arnorian upgrades (Due to them being done for the Bree script) 
+- (Links) Edited the campaign script so the historic event for Rhudaur joining Arnor/RK will only trigger once the RK/Arnor is formed, and edited the ND's faction info message and the 'Arnor is Restored' event so they mention the Bree units you unlock
+
+18th August 
+- (Links) Edited the Summit event for Lorien and the Woodland Realm so it now mentions there is an economic cost if you raise extra troops 
+- (Links) Removed unused entries in the historic_events file for the Twins to avoid confusion (There were indivdual entries for each twin's return with no event text, only TDB so no acutal event text was removed- in the live build they return at the same time and this event has proper text) 
+- (Links) Edited the High Elves' campaign description and intro so it talks about both Lindon and Imladris rather than only Lindon 
+
+28th August: 
+- (Links) ALL general abilities should now display their effects on the battlemap if you hover over them- the traits have been retained so you can also see their effects on the campaign map. Some descriptions of these abilities were revised to be clearer and correct false information 
+- (Links) Updated the ND's Enedwaith BoH units- they now get the Mochini Ambaxtoi, Mordag Fishermen and Liadan Spearmen instead of just the Mordag Fishermen and Keefei Hunters (Both of which they now recruit also as militia through their barracks anyway)- this is to prevent overlap between the militia recruitment and BoH and to allow the BoH units to be somewhat useful
+- (Links) Added custom portraits for Enedwaith's and Dunland's spawned generals
+
+29th August 
+- (Links) Moved the Enedwaith Mordag clan seat from Bhaille to Barad Vin; adjusted the building and the script references
+- (Links) Fixed certain Enedwaith and Dunlending generals not having the Iron Fist battle ability- they now have it, as their trait claims 
+- (Links) Enedwaith Cavalry sprites no longer look as if they stand on their horses and now use correct sprites
+
+11th September
+- (TED) Enabled the building of strongholds for Orc factions
+- (TED) Added new campaign strategy models for Orc factions:
+	- village, town, large town, city, large city, castle, stronghold
+	
+12th September
+- (TED) Updated the Wildmen stronghold CSM by adding a bottom outer wall to help distinguish it from the previous tier
+
+13th September
+- (TED) Enabled the building of large cities for Harad
+- (TED) Added a new large city campaign strategy model for Harad
+- (TED) Added a new Black Gate campaign strategy model
+
+26th September
+- (TED) Updated Dunland's map borders on the faction selection menu
+- (TED) Added a new Annuminas Ruined/Abandoned campaign strategy model
+- (TED) Added a new Isengard campaign strategy model
+- (TED) Enabled the building of large cities and strongholds for Khand
+- (TED) Added new capaign strategy models for Khand:
+	- village, town, large town, city, large city, castle, stronghold
+27th September
+- (Links) Added new traits as follows: 
+- (Links) Generals from Enedwaith and Anduin will now spawn with a trait representing their Clan or Tribal group respectively (Enedwaith generals will spawn belonging to an Enedwaith clan, generals spawning with the Liadan trait require the Liadan to be conquered)- these traits provide bonuses reflecting their cultural heritage and will be inherited by sons 
+- (Links) Dunlending generals spawn either allied to the Frekkalingir, Dunhird or are unaligned. These traits are weaker, but if generals prove themselves by winning battles, there is a chance these traits will be upgraded to more powerful versions- each trait has three stages (Winning battles where the odds are especially against you have a higher chance for these traits to be promoted).  As these are ideological rather than cultural, they are not guaranteed to be inherited by sons. 
+_ (Links) The above traits have also been added to scripted and starting generals as appropriate and Anduin's starting generals traits and ancillaries have been reshuffled so they make more sense and they now start with a Valesman general (Magor) who is no longer initially part of your family tree 
+- (Links) Druedain, Dubshithe and Wulfguard traits have also been added for custom and scripted generals
+
+29th September
+- (Links) All factions in the game now have access to all city and castle tiers- either they begin with them unlocked, or can unlock them through scripts 
+- (Links) Changed all instances of Dubhshíth to Dubhsìthe in response to feedback on their name
+- (Links) Harad now unlocks Large Cities and Strongholds by completing their Unit the Clans script- their faction intro, info and script completion messages have been updated to reflect this 
+- (Links) Khand no longer needs to side with Mordor to unlock Cities/Large Cities/Strongholds and has unrestricted settlement tiers. By picking the horde route, you got them from Turn 1 anyway, so it felt silly to lock them for the other routes. This will change when Khand is overhauled so don't get too used to it 
+- (Links) Anduin, Enedwaith and Dunland now have access to the final tier of the market, and Enedwaith and Dunland now have access to the final tiers of the town hall, castle hall and farms, so these nations are consistent with the other human nations in the game
+- (Links) Duinburg can now build a port
+
+30th September
+- (Links) Reverted the change to Javelin animations made on the 06/15/2022- all non dwarven or goblin foot skirmishes now no longer use running up javelin animations and instead use the old animations 
+Developer's Note: I investigated the effectiveness of the new animation and found that it was actually mechanically less effective than the old animation, even with buffs to the range of javelin units, and required more micro. These two factors resulted in the new animation being an effective nerf to javelin units, despite its visual appeal. As we are relatively late in v5's development, retaining the animations would have likely required Enedwaith's roster and campaign to require significant rebalancing due to their reliance on these units (As well as the potential for more systematic rebalancing being required), and so with these concerns in mind, this change has been reverted. The v5 installer will feature the option to use these new animations instead of the old ones (With an included buff to the range of the units that use them), but it will not be the default option v5 has been tested with. We will explore using it as the default option post-v5 when we can give it the time and attention it needs.
+- (Links) Added a unique UI for the Elven T3 Master Dance Guild
+- (Links) Updated Historical Battles so the game no longer displays two of them, and their description is correctly displayed 
+- (Links) Updated the cleaner to delete duplicate historical battle folders
+- (Links) Updated Bard's portrait for the Battle of the Five Armies historical battle so he now uses a portrait with his film depiction rather than the blurry monstrosity he has had since TATW
+- (Links) Updated Thorin in the the Battle of the Fiver Armies historical battle to use his film accurate higher quality portrait rather than the blurry TATW one (It already existed in the files, the code just needed to be updated)
+
+1st October 
+- (Links) Added custom portraits based off the Hobbit films for Azog, Bolg (Who uses his original prosthetic design) and Thrain (These portraits are used in Historical Battles)
+- (Links) Added new custom CSMs for Enedwaith's Druedain general, Ghân-buri-Ghân and Dubhsìthe general, Donnchaidh
+- (Links) Ghân-buri-Ghân now also has a custom battle model courtesy of Lerynian
+- (Links) Updated the sprites of Druedain Hunters, Dubhsìthe Elders and Dubhsìthe Foresters 
+- (TED) Expanded the unit deployment area into the empty grass field on the Gondorian tier 1 keep battlemap
+- (TED) Updated the Gondorian tier 1 keep battlemap again by removing a couple buildings to expand the paths to the left and bottom-right of the keep.
+- (Links) Added new unit sprites for the Enedwaith Guardsmen and Marksmen 
+
+2nd October
+- (Links) Added faction overview message for Dol Guldur 
+- (Links) Added faction overview messages for Gundabad, Moria and Angmar
+- (TED) Updated the Gondorian tier 1 keep battlemap for a third time
+	- removed some tress that were in the way of the expanded paths
+	- removed a fence from the upper-left farmstead outside the walls to improve pathing
+	- removed a shack and props in the upper-right corner for more unit deployment spacing
+	- refined my previous deployment spacing
+- (TED) Updated the existing Harad stronghold campaign strategy model by adding an extra outer wall
+- (TED) Updated the Welcome to DaC/FAQ popup message:
+	- Corrected the reference about the SCR LK button - it stands for "Scroll Lock"
+	- Added an entry to explain how some custom forts have their 3D models as part of a nearby settlement
+
+3rd October 
+- (Links) Added faction overview messages for Bree and Isengard
+
+4th October 
+- (Links) Added remaining faction overview messages for Enedwaith, Khazad-Dum, Erebor, Ered Luin, Lothlorien, the Woodland Realm and the High Elves (Every faction should now have an overview message when you click the mission button) 
+- (Links) Updated some campaign descriptions to account changes to Enedwaith and orc factions now being able to build strongholds 
+
+5th October 
+- (Links) Updated Harad's campaign description and updated the opening message so it correctly states which factions have limited settlement tiers (Harad, Dunland, Enedwaith, Anduin, Bree) 
+- (Links) The opening message now also mentions clicking the missions button will provide you with a faction overview message
+- (Links) Fixed Liadan Spearmen and Mochini Ambaxtoi being silver surfers (Credit to Fynn for pointing out the error) 
+
+7th October
+- (Links) Added Medik's new Financial Overview UIs (With some small tweaks by myself) 
+
+8th October 
+- (Links) Uploaded the following changes by Fynn:
+- (Fynn) Added the RK Barracks to Metraith, Elegar, Rhubar, Varfest, Ost-in-Ery
+- (Fynn) Removed the RK Barracks from Tharagrondost, Cirith Iaur
+- (Fynn) Revised unit pools so regions correctly provide the units for the RK barracks they are intended to and there are no regions where you can build it that don't train units
+- (Links) Bree's Journeymen have been reduced to 5 missile attack so they are now the worst human crossbow unit in the game and there is a three point difference between them and the Gatekeepers 
+- (Links) Incorporated Augimund's typo fixes to the export_buildings file 
+- (Links) Edited the faction overview messages to add clarity to some points and extra detail 
+- (Links) The faction overviews in the green books have now been removed so they can return to their true purpose and the information is contained in one location, accessible regardless of if you own the region (Credits and thanks to Augimund for writing them- they were very helpful for writing the faction overview event messages) 
+- (Links) AI Enedwaith now does not get their elites unlocked till Turn 65, and won't unlock recruitment of Liadan or Dubhsithe units till Turn 30 
+
+15th October 
+- (Links) Removed references in Rohan's opening message to Thengel being alive
+- (Links) Added new points to Bree's and the ND's faction info messages explaining their Hobbit AoR units
+
+16th October 
+- (Links) The restored Crypts of the Barrow Downs now allow the Northern Dunedain to recruit Dunedain Steelbowmen as well (So Bree and the ND now get the same bonuses- it was odd that Bree alone got them from the Restored Crypts)
+- (Links) Killing the Barrow Wight armies that spawn when a good nation holds Mengalen will now add 50 population to Mengalen each time you destroy one of those armies 
+- (Links) Noted this bonus in the Barrow Downs description and added explainations of the Barrow Downs script to both Bree's and the ND's faction info messages
+
+26th October 
+- (Links) The ND and Bree now recruit Dunedain Steelbowmen from the Restored Crypts building at the same rate as a city barracks (Their recruitment rate has been increased from 0.2 -> 0.4). 
+
+29th October 
+(Links) Made the following changes to Anduin in order to help out their AI and standardise things a bit: 
+- (Links) The T3 barracks are set to only require a town/castle- however, they also have a blacksmith as a requirement 
+- (Links) Their muster grounds are added to all starting regions for the AI only, and the AI also gets starting armories in Maelthlburg and Fenholm
+- (Links) The AI and the AI only is granted the ability to recruit the first tier of Eothed, Beorning and Woodmen units regardless of which barracks they build- however, they do get these bonus 'cheat' units at a slower rate than the units the barracks actually provides
+
+1st November 
+- (Links) Fixed Isengard being renamed to "Treegarth of" instead of "Treegarth of Orthanc"
+- (Links)The RK Auxiliary Barracks should no longer have double entries at Fennas Druinin
+- (Links) Updated the Faolan Warriors to mention they use a falx
+- (Links) The Anorien region no longer provides useless boat mercs
+- (Links) Added Minas Ithil Guardians to the Waystation for the ND, Gondor, DA 
+- (Links) Added DA Fiefdom Waystation units to the Waystation for the ND and Gondor (Amrothian Squires, Sea-Ward Lancers, Sea-Ward Spearmen, Knights of the Silver Swan)
+
+2nd November 
+- (Links) Bree's Gate Keepers now use the MTW2_Pike_Primary animation instead of the MTW2_Halberd_Secondary animation so they no longer crash the game when they enter melee (Credit to @Jojo00182 The Changer of Bytes for the fix)
+- (Links) The Advanced Armoury has been removed from the game, alongside the associated triple upgrades (Bree, Dunland, Dorwinion, Gundabad Rohan and Dale retain their unique blacksmiths/armour sources) 
+- (Links) Generally, this doesn't mean anything will change, but certain Rohan visual upgrades now require the Glittering Caves 
+- (Links) Text has been added to each Faction Info message specifying what Armour Levels they have regular access to, and what they can unlock 
+- (Links) Enedwaith now starts with the 3rd Tier Blacksmith locked- they unlock it at the end of their script. This is to reinforce their ununified and underdog nature at game start (And event text has been edited to reflect this)
+- (Links) Enedwaith's Clamoot Barracks, and Bree's, Dorwinion's and Dale's unique blacksmith text has been amended so it no longer says it acts as an Advance Armourer
+
+11th November 
+ (Links) Uploaded the following changes from Pythax:
+- (Pythax) Updated Pythax's Northmen UI with a small tweak to improve readability of the selected general/city on the campaign map 
+- (Pythax) Uploaded Pythax's brand new main menu UI 
+
+12th November 
+- (Links) Uploaded Pythax's new loading screens for the historical battles
+
+14th November 
+- (Links) Added Pythax's resized Financial Overview UIs 
+
+19th November 
+- (Links) Rejoice, Dunland's Clan Hunters projectiles are no longer quiet! (This was fixed by changing their damage type from blunt to piercing so they are consistent with the other units that use the stone projectile- this does not mean they have become AP) 
+- (Links) Dunland's Clan Huntes now also have custom aiming and firing sounds from Rome Total War
+- (Links) The unnecessary units_info folder has been removed from the dropbox build 
+- (Links) Erebor has been given unit and unit info cards for Orocarni Warriors 
+
+21st November 
+- (Links) Implemented Krekbel's ND visuals for virtually the entire ND roster BUT Arthedain Footmen, Sworn Infantry and Sworn Horsemen (This is a huge visual overhaul)- as part of this Dunedain Steelbowmen/Cavalry/Armsmen/Blademasters and the BG now have RK visuals. Furthermore, the Dunedain Cavarly/Armsmen/Blademasters old plate upgrade remains in the game as a visual exclusive to the Arnor route 
+- (Links) Implemented Krekbel's new Aragorn and Halbarad campaign and battle models
+- (Links) The ND now are locked to Armour Level 4 at the beginning of the game. Forming Arnor unlocks Level 5; forming the Reunited Kingdom unlocks Level 5 and 6 
+- (Links) Level 5 armour has been renamed to Gondorian Plate for Gondor and Dol Amroth; Arnorian Plate for the ND, and Adûnaim Plate for the AA. Level 6 armour is now called Númenórean Plate for the ND and is unlocked if they form the RK 
+- (Links) Edited the RK formation message to include a mention that it unlocks Númenórean Plate 
+- (Links) The ND Barracks no longer grant double militia recruitment in Fennas Druin
+- (Links) Dol Armoth can now recruit Osgililath Veterans as intended (They were set to be allowed to, but as they couldn't build the T2 Archery Range, they could not recruit them- to fix this, the Veterans have been added to the T1 Archery Range for Dol Amroth **only**)
+
+22nd November 
+- (Links) Added Krekbel's RK upgrades for the Grey Company and the Gondor Bodyguard 
+- (Links) Implemented White's RK visuals for the Dunedain Armsmen/Blademasters/Cavarly into the BMDB (although these are not yet used ingame)
+
+23rd November
+- (Links) Added Krebel's new battle model for Aragorn that he gets if the player choses the Arnor route
+
+24th November
+- (Links) Added Lerynian's tweaks to Beruthiel's Watch so they look slightly more rangerlike (they now have a cloak) 
+
+7th December
+- (TED) Added Fynn's Orc battlemaps for Orc city, large city, castle, and stronghold maps
+(Many thanks to Fynn for allowing us to use these battlemaps from his sub-mod)
+
+9th December 
+- (Links) Added missing traits to Enedwaith's special general who spawns when completing their script 
+- (Links) Several tweaks to the EDU; Hasharri and Liadan units now have base armour of Level 2 and receive upgrades at Level 3; Arnor's Sworn units plate visual upgrade is now linked to Level 5 armour (Arnorian Plate); while the Glittering Caves still provides Level 4 armour for Rohan, they no longer require it for visual upgrades which now require Level 3 instead, due to how restricted Level 4 armour is for them, so you can have a much greatrt chance of actually seeing these visuals. Finally, the alterative Arnor visual upgrade for the ND BG is now linked to Level 5 Arnornian Plate as intended
+
+12th December 
+- (Links) Added a section explaining Mordor's Temple units to their faction overview 
+
+V5 Hotfixes:
+- Fixes Deadman's Dike and a Rebel Barrow Wight General crashing the game
+- Fixes numerous tooltips and weird text entry bugs 
+- Fixes projectiles crashing the game for manual installs 
+- Fixes visual glitches for the campaign models of rebel generals who use the Dunedain captain CSM
+- Fixed Oathbreakers causing crashes on last battle - Keep in mind they don't disappear immediately after last battle, but when you reselect them or end turn.
+- Fixed Location of the Barad Vin general in Enedwaith script.
+- Fixed Lurtz's tooltip in Dunland.
+- Fixed wargs and spiders carrying torches.
+- Removed Finduilas from male name pool.
+- Fixed AI standing still.
+- Pressing the mission button will also reshow the last Aragorn script message.
+- Barrow wight script should add the population
+- Fixed a small typo in the EDU Eorling Archers entry 
+- Fixed a whole bunch of typos from dac_bugs_typographical and added missing text for Gundabad, Moria, and Dol Guldur Green Books and the Warg Pack unit description 
+- Added various Event UI's for the ND, Elves and Gondorian cultures and updated siege building descriptions for the ND and the AA (Courtesy of the Numenorean Templar) 
+- Added missing UIs for the Catapult building for Evil Men factions 
+- Tweaked the opening scroll so it mentions characters CANNOT die (of old age). 
+- Added legionary_name attribute to the Orthanc Wardens, so they get the Legio feature just like the Orthanc Guard
+- Fixed a typo in historic_events.txt and updated expanded.txt so the Mesoamerican file culture is correctly called Dúnedain ingame 
+- Updated the EDB so the AI's recruitment of the Arthedain/Cardolan units also requires not event_counter arnor_restored 1 and not event_counter reunited_kingdom 1 (this is so these entries do not apply to the player and only apply to the AI who, of course will never restore Arnor or form the RK) 
+- Added missing unit_info UI for Bree's Council Guard BG unit to the ND's folder 
+- Added missing terminate_monitor so Dunland's Helm's Deep event will no longer endlessly repeat if they have backstabbed Isengard 
+- Added missing event UI for the Gandalf the White event
+- Fixed a typo for all factions wherein the unique mission_success event UIs were named mission_succeess, and thus, instead of using these unique UIs, the game defaulted to the base M2TW UI
+- Changed coordinates for dunland capital message.
+- Fixed Elessar's hair.
+- Fixed the recap messages for RK script.
+- Fixed Buzra dum rebels attacking if rebel.
+- Fixed Arnor units from guild pre arnor.
+- Fixed warg with torches (again).
+- Fixed reginard strat model.
+- Fixed corsair archer audio.
+- Fixed New Gondor cards not showing for ND.
+- Fixed DA inconsistency with building merchant's quarter.
+- Fixed legio province for the fords of isen.
+- Fixed KD's hall of seven requirement.
+- Fixed Denethor not getting palantir.
+- Some overall changes to battle AI to hopefully make it less buggy
+- The ring can now be picked up in Hobbiton
+- Khazad-dum: Balin starts married (no more buggy bride messages during the journey)
+- Khazad-dum: Hall of the Seven now works as intended (the first group of reinforcements unlocks the building and the first group of units to train, 2nd and 3rd group unlock further units)
+- Ered Luin: Beleriand Honour Guard can now switch between spearwall and standard formation
+- Elven Union: 
+	- Rumil, Orophin, Enpremi (all for Lorien) and Orthordir (for WR) can spawn for the AI (same conditions as for the player)
+	- Enpremi and Orthordir spawn with ancillaries
+	- Rumil, Orophin, Enpremi and Orthordir have special abilities (Swiftness or Light of Elbereth)
+	- Custom generals will keep their custom bodyguard and CSM when accepting the union (if alive)
+- High Elves: elven culture in Mithlond changed to 85% (from 80% - prevents Mithlond Nobles from becoming unavailable on turn 2)
+- Anduin: Bear Warriors can now be recruited immediately upon completion of their barracks (no more having to wait a full replenishment cycle)
+- Anduin: Beorning Shieldbearers can get one armour upgrade (just like the Defenders, who are at the same tier)
+- Northern Dunedain: can again get the herbalist and doctor ancillaries as well as the battle surgeons trait
+- Northern Dunedain: can now recruit Orthanc Wardens from Isengard (unit cards borrowed from Dunland)
+- Gundabad: can now recruit Azog's Defilers from all town hall tiers in KD East and West
+- Gundabad: can now train their regular troops from the T3 Dol Guldur castle barracks (Shadow's Calling)
+- Ar-Adunaim: can now retrain Beruthiel's Watch from the waystation
+- Mordor: Morgul Chosen are not available in Darz-Ghurum anymore (also fixed their unit description)
+- Isengard: fixed the building description for the Woodcutting line to mention fangorn as the construction site (and moved it to fangorn camp)
+- Fixed Hillmen replenishment in Dunedain Barracks and Royal Barracks (from 2 to 15 turns)
+- Fixed a broken trigger for the Dutiful trait in the EDCT
+- Fixed the error in the Ar-Adunaim mission scroll that falsely states they can destroy the One Ring
+- Fixed the error in the campaign starting scroll about how many turns a character would need before dying of old age
+- Fixed a broken counter in the garrison script (line 37022 - hotfix v3)
+- Fixed Frekkalingir Hill-riders attack animation (from spear to 1h axe)
+- Battle AI: maybe better
+- Added Louis Lux's Celeborn battle and campaign model 
+- Dorwinion Infantry and Swordmasters have been added to Dorwinion's Waystation
+- Amended the garrison script so Wildmen Garrison units are correctly spawned for Enedwaith and Dunland (As Northmen, the Vale of the Anduin continues to use the Northmen Defenders) 
+- Fixed two bugged river crossings- one between Alcfud and Bregnas, and one in Fangorn Forest
+- Fixed minor Legion errors for Seregost and Lithlad
+- Fixed name display errors for post-Union Lothlorien and Woodland Realm generals
+- Enabled the Merchant Quarter building for Khazad-Dum, Angmar, the High Elves and Khand 
+- Fixed Breeland Militia having double entries in Dunedain barracks built in Ost Sul
+- Fixed incorrect Dunedain garrisons in Fennas Drunin 
+- Added Louis Lux's Khamul portrait, and battle and campaign map model (thanks to Elessar) 
+- Anduin: Framsguard and Greenwood Foresters can now be recruited immediately upon completion of their barracks (no more having to wait a full replenishment cycle)
+- Lorien: rejecting the union will now break the alliance
+- Harad: removed access to the T3 stables, as they provided nothing
+- Replaced holding Dun Larach with Byrig as a victory condition for Dunland/Rohan/Bree/Khazad-dum to represent it being the capital of Dunland
+- Removed the double mention of holding KD West as a victory condition for Khazad-dum
+- Dwarven feast hall now provides the correct bonus to construction costs
+- Added next heir ancillaries for Harad, Goblins, Mordor, Isengard and Gol Guldur (now every faction has one)
+- Updated the item description of all next heir ancillaries so their effects aren't hidden anymore
+- Fixed the "Military Masterclass" message for EL (now only appears if you hold both Thorin's Halls and Fahamgathol after [and only if] the Dwarves attacked)
+- ND: Lumbermen, Woodland Hunters and Merchant Infantry now use the new unit cards
+- Replaced the Uruk Bodyguard in Emyn-nu-Fuin with Mirkwood Bodyguards
+- Fixed Northman trait so it won't appear on Dunlending/Enedwaithian agents
+- ND: merchant doesn't look turkish anymore
+- Fixed the wiggling shields for Sworn Infantry and Nardubawib
+- Fixed Elessar's battle model (credits to Numenorean Templar)
+- All ranged units and artillery should now display their correct range and amount of missiles in their description
+- The Waystation now displays which units are available for retraining
+- Fixed some small inaccuracies in the campaign starting message
+- Fixed sprites of Dorwinion Swordmasters with Avari armour upgrade
+- Fixed multiple typos, building and unit descriptions
+- Added unique non-White Hand textures for non-Isengard armoured trolls
+- Woodland Wardens and Amanyar Swordmasters should now have voice lines for Dale and the ND respectively
+- Moved the Shieldmaidens of Rohan and Yavannas Chosen to a new bespoke 'Female' accent so they no longer play Arabic lines on the campaign map
+- Spiders don't carry torches in night battles anymore
+- Added event_counter requirements so the Heralds of the Twofold King and the Tír Croícoille Cosantóirí's waystation entires are not enabled till Dunland's and Enedwaith's scripts have been completed
+- Removed voice.dat and voice.idx from the hotfix build (as they were uncessary for the Shieldmaide and Yavannas Chosen fix above)
+- Fixed waystation hidden resources and removed prebuilt garrison building in KD
+- Removed unit rewards from missions
+- Fixed typos in lock_morale and slightly boosted Loke Scion Rim attack to compenstate for less effective animation
+- Fixed Reginard strat model
+- Added a scripted Turn 1 war between Rohan and Isengard for a player Enedwaith's campaign and added a reference to this war to their intro message
+- Fixed Faramir and Boromir being silent on the battlemap
+- Altered fornost gate pathfinding a bit
+- Added more delay between killing nazgul and deleting mordor faction after ring destroy
+- Moved river further away from framsburg
+- Fixed celoniach - ost sul road connection
+- Smoothed out heights just outside helms deep
+- Every general with a custom bodyguard should now have voiced selection lines - no one should be silent now
+- Harad's Hasharii general (from their Unite the Clans script) now uses Hasharii Blades instead of Hasharii Shadows to prevent him having female voice lines on the battlemap (although his army now spawns with a unit of Hasharii Shadows to make up for him not personally getting them)
+- Updated the credits to reflect v5's development
+- Minas Ithil Guardians no longer have a culture requirement for Gondor, DA and the ND so they are useable as soon as you hold the Tower of the Moon (this brings these factions into line with the eligible Northmen factions who didn't have a culture requirement)
+- Fixed bug where ranged units didnt get weapon upgrades to their melee weapons
+- Removed Fountain Guard entries from all regular barracks (so the only sources for them are landmark buildings)
+- Updated Waystation entries for Sons of Numenor, Tirith Aear Wardens and Fountain Guard to account for the fact these units come from both Gondor and Arthedain
+- Fixed Gondor's incorrect faction borders on the faction select screen
+- Fixed some bugs related to hotseat
+- Added dac launcher executable
+- Shattered Alliances has been added and updated with unique scripts and faction overview messages (for instance, Mordor gets Sauron in SA when they have 25 regions and Dunland gets a tweaked version of their normal script)
+- Fixed a script error that prevented khand's culture buildings from being destroyed if you chose the blue wizards
+- Fixed the missing string name for khand's orocarni clan halls
+- Added the script that forces a turn 1 war between rohan and isengard if the player is enedwaith (it was missing for some reason)
+- Added coast and watercourse hidden resources to Carasast to enable Azrazair and Telari recruitment
+- Added missing script for the ND to lock cities/large cities/strongholds behind Arnor or the RK
+- Fixed infinite Rumil/Orophin/Enpremi messages for a Woodland Realm player if they got them after merging with Lorien
+- Added a missing historic event for if Lothlorien gets Orthordir after merging with the Woodland Realm
+- Fixed the One Ring script (the Papal States faction lacked an assigned BG in the EDU which caused a cascade of errors leading to both Pope Sauron and the Ring Script failing)
+- Added sea textures from ebii
+- Added ago textures as optional
+- Reworked full cleaner batch a bit
+- EBII Javelin and Khazad-Dum expedition skip submods have been added to the launcher
+- (Medik) made the UI of launcher more beautiful
+- changed Oin's BG to Khazad-dum Reclaimers in all campaign instances (including the extra folder)
+- added armour piercing to the Reclaimers' description
+- updated unit descriptions stats
+- fixed 2 silver surfers for bree
+- removed temple units from waystation and added them to rebuilt fornost
+- removed Naru n'Aru units from the waystation and updated the waystation descriptions for AA and Mordor
+- Updated the KD skip submod so it utilizes the exisiting hotseat code (this fixes the Moria issue and ensures the rest of the script continues even if you skip the expedition)
+- Fixed various typos
+- Updated Iron Fist so it is correctly 150% instead of 400%
+- Boosted the King of the Dead's command to hopefully fix the issue of the player getting extra uses under certain conditions
+- Updated the spelling of Eärnur's name and moved it to the male lists (it was in the female lists for some strange reason)
+- Updated various internal submod files so they use the latest versions from the main build (notably, the EDUs in the Javelin submods lacked Papal_States ownership for the Uruk Bodyguard)
+- The KD script now occurs 15 turns earlier if you enable the skip submod (since you start at KD at Turn 1)
+- Updated the launcher for deleting bin files, removed a few duplicate bmdb entries, did some slight fixes to edu, updated dac version in the log line in the campaign scripts, fixed isengards and mordor recruitment out of other barracks
+
+
+
+
+
+
+
+
+
+
+
+
+
