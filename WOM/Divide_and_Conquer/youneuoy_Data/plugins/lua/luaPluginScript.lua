@@ -114,10 +114,35 @@ end
 
 --Event Triggers
 function onEventCounter(eventData)
+    --Non-Music Events
+    if eventData.eventCounter == "historic_event bree_wight_warning_1" then
+        --local ourNamedCharacter = stratmap.game.getFaction(0):getNamedCharacter(1)
+        --ourNamedCharacter.character:kill()
+        --ourNamedCharacter.character:moveToTile(162,380)
+    end
+
     --Music Intergation Start
-    if eventData.eventCounter == "bree_unlock_script_info" then
-        local ourNewSound=M2TWEOPSounds.createEOPSound(M2TWEOP.getModPath().."/eopData/music/DawnOfFaith.wav")
+    if eventData.eventCounter == "shire_start" then
+        --local ourNewSound=M2TWEOPSounds.createEOPSound(M2TWEOP.getModPath().."/eopData/music/DawnOfFaith.wav")
+        --local ourType=ourCharacter:getTypeName("Bilbo");
+        local ourNamedCharacter = stratmap.game.getFaction(0):getNamedCharacter(1)
+        ourNamedCharacter.character:moveToTile(166,380)
+
+
+
+        --local ourType=ourCharacter:getTypeName("Andy");
         playSound(234, ourNewSound, true)
+        --local army = stratmap.game.spawnArmy(
+        --CAMPAIGN:getFaction("normans"),
+        --"Bilbo",
+        --"Bilbo Baggins",
+        --characterType.named_character,
+        --"bilbo_test",
+        --"Bilbo",
+        --166, 385,
+        --90, false, 31,
+        --M2TWEOPDU.getEduIndexByType("Dwarven Travellers"), 3, 0, 0
+        --)
     end
 
     if eventData.eventCounter == "" then
@@ -228,10 +253,6 @@ function onEventCounter(eventData)
         local ourNewSound=M2TWEOPSounds.createEOPSound(M2TWEOP.getModPath().."/eopData/music/Weregonnabedrinking.wav")
         playSound(234, ourNewSound, true)
     end
-
-
-
-
 
 
 
