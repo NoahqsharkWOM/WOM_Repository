@@ -2694,7 +2694,7 @@ settlement
 }
 
 character	Barliman, named character, male, leader, age 50, x 166, y 380, portrait Barliman, hero_ability SHIELD, battle_model barliman, label barliman_1
-traits		Larry 1, CustomBG 1, Hero 1, MiddleManRace 1, Breelander 1, FactionLeader 1, HeroAbilityShield 1, BattleChivalryGood 1, GoodAdministrator 1, GoodAttacker 2, GoodCommander 2, GoodTrader 2, Just 2, PoliticsSkill 1, PietyStarter 1, StrategyChivalryGood 2
+traits		Larry 1, CustomBG 1, Hero 1, MiddleManRace 1, Breelander 1, FactionLeader 1, HeroAbilityShield 1, BattleChivalryGood 1, GoodAdministrator 1, GoodAttacker 2, GoodCommander 2, GoodTrader 2, Just 2, PoliticsSkill 1, PietyStarter 1, StrategyChivalryGood 2, Locked 1
 ancillaries	king_eriador, major_bree, bree_armour
 army
 unit		Gate Keepers				exp 3 armour 0 weapon_lvl 1
@@ -2702,6 +2702,12 @@ unit		Breeland Militia			exp 1 armour 1 weapon_lvl 0
 unit		Breeland Militia			exp 1 armour 1 weapon_lvl 0
 unit		Archer Militia			exp 1 armour 0 weapon_lvl 0
 unit		Archer Militia			exp 1 armour 0 weapon_lvl 0
+
+character	Bilbo, named character, male, age 90, x 166, y 381, portrait Bilbo, battle_model bandrobas_archers_upg, label bilbo_1
+traits		Bilbo 1, HobbitRace 1, Brave 3, GoodCommander 1, Just 3, Loyal 2, LoyaltyStarter 1, PietyStarter 1, Scout 2, Energetic 2, Locked 1
+ancillaries	sting, mithril_coat, map
+army
+unit		Dwarven Travellers				exp 4 armour 1 weapon_lvl 1
 
 character	Andy, named character, male, heir, age 25, x 166, y 376, portrait Andrew, label breeheir
 traits		MiddleManRace 1, Breelander 1, FactionHeir 1, Brave 2, RenownLegacy 2, GoodCommander 2, GoodTrader 1, Loyal 2, LoyaltyStarter 1, NaturalMilitarySkill 2, PietyStarter 1
@@ -2723,13 +2729,6 @@ ancillaries	eriador_border, ranger_north
 army
 unit		Dunedain Bodyguard					exp 4 armour 1 weapon_lvl 0
 unit		Woodland Hunters			exp 1 armour 0 weapon_lvl 0
-
-character	Bilbo, named character, male, age 90, x 133, y 385, portrait Bilbo, battle_model bandrobas_archers_upg, label bilbo_1
-traits		Bilbo 1, HobbitRace 1, Brave 3, GoodCommander 1, Just 3, Loyal 2, LoyaltyStarter 1, PietyStarter 1, Scout 2, Energetic 2
-ancillaries	sting, mithril_coat, map
-army
-unit		Dwarven Travellers				exp 4 armour 1 weapon_lvl 1
-unit		Dwarven Travellers			exp 2 armour 0 weapon_lvl 0
 
 character	Paladin, named character, male, age 42, x 118, y 380, portrait Paladin, battle_model bandrobas_archers_upg, hero_ability CAPTAIN, label paladin_1
 traits		Hero 1, HobbitRace 1, HeroAbilityCaptain 1, GoodAdministrator 1, GoodCommander 1, LoyaltyStarter 1, MathematicsSkill 1, PietyStarter 1

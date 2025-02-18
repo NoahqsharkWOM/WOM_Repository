@@ -4144,7 +4144,12 @@ script
         end_if			
         if not I_IsFactionAIControlled normans
             historic_event shire_start factions { normans, }
-			historic_event bree_choice_intro factions { normans, }
+			campaign_wait 1
+			historic_event bree_prologue_1 factions { normans, }
+			campaign_wait 1
+			historic_event bree_prologue_2 factions { normans, }
+			campaign_wait 1
+			historic_event bree_prologue_3 factions { normans, }
             console_command create_unit Emyn_Beraid "Bandits" 3 0 0 0
             if I_IsFactionAIControlled aztecs
                 increment_kings_purse aztecs 500
@@ -37315,7 +37320,7 @@ monitor_event FactionTurnEnd FactionType normans
 
 	;Overview
 	;Welcome to the "Wealth of Man" submod early alpha. While in a playable state, much is unfinished. 
-	;The Bree choice script has been edited to kick in at turn 5. If you'd like to play normally, you may change it back in the original Bree script.
+	;The Bree choice script has been edited to kick in at turn 5. If you'd like to play normally, you may change it back in the original Bree script. (search "Bree Choice)
 	
 	;The finale script is normally set at 24 settlements owned but has been reduced to 8 for the sake of testing. If you'd like to change it, search for this ( if I_NumberOfSettlements normans >= 8 ;24 )
 
@@ -37351,6 +37356,7 @@ monitor_event FactionTurnEnd FactionType normans
 	;inc_counter bree_morality_counter -5
 	;Good
 	;inc_counter bree_morality_counter 5
+
 			;spawn_army
 			;	faction normans
 			;	character	Lorin, named character, age 16, x 106, y 333, direction S, portrait Lorin, label lorin_company
@@ -39071,6 +39077,10 @@ monitor_event FactionTurnStart FactionType normans
 	end_if
 ;######################### Wight-Attacks! ##########################
 	if I_CompareCounter timer = 1
+			;console_command move_character Bilbo 166,381
+			campaign_wait 1
+			historic_event bree_wight_warning_1 factions { normans, }
+			campaign_wait 1
 			spawn_army
 				faction slave
 				character	random_name, named character, age 80, x 166, y 373, direction N, portrait wight, battle_model barrow_wight_king, label mengalen_bree_1
@@ -39079,7 +39089,6 @@ monitor_event FactionTurnStart FactionType normans
 				unit		Rebel Barrow Wights		exp 9 armour 0 weapon_lvl 1
 			end
 			siege_settlement mengalen_bree_1, Bree, maintain
-			historic_event bree_wight_warning_1 factions { normans, }
 	end_if
 
 	if I_CompareCounter timer = 2
@@ -39090,11 +39099,24 @@ monitor_event FactionTurnStart FactionType normans
 	and I_CompareCounter timer >= 2
 	and I_EventCounter mengalen_wights_warning = 0
 		set_event_counter mengalen_wights_warning 1
+		campaign_wait 1
+		console_command remove_trait barliman_1 Locked
+		campaign_wait 1
+		console_command remove_trait bilbo_1 Locked
+		campaign_wait 1
 		historic_event bree_wight_warning_2 factions { normans, }
+		campaign_wait 1
+		console_command character_reset barliman_1
+		campaign_wait 1
+		console_command character_reset bilbo_1
 	end_if
 ;######################### Militarization Of Bree Instructions ##########################
 	if I_CompareCounter timer = 3
+		historic_event bree_choice_intro factions { normans, }
+		campaign_wait 1
 		historic_event bree_unlock_script_info factions { normans, }
+		campaign_wait 1
+                console_command create_unit Bree "Dunedain Rangers" 1 0 0 1
 	end_if
 ;######################### Bree Expedition Finale Conquest Path Cause & Effect ##########################
 	if I_EventCounter expedition_finale_active = 1
@@ -40110,7 +40132,7 @@ monitor_event FactionTurnStart FactionType normans
 		inc_counter expedition_finale_retaliation 1
 	end_if
 ;######################### Bree Merc Finale Start & Morality Check #######################
-	if I_NumberOfSettlements normans >= 5 ;24
+	if I_NumberOfSettlements normans >= 24 ;24
 	and I_CompareCounter finale_stage = 0
 	and I_EventCounter bree_mercenary = 1
 		historic_event bree_finale_start true factions { normans, }
