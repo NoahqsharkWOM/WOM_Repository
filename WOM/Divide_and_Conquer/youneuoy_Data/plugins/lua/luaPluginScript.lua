@@ -145,8 +145,28 @@ function onEventCounter(eventData)
         --)
     end
 
-    if eventData.eventCounter == "" then
-        local ourNewSound=M2TWEOPSounds.createEOPSound(M2TWEOP.getModPath().."/eopData/music/DawnOfFaith.wav")
+    if eventData.eventCounter == "anduin_hobbit_journey_conclusion" then
+        local ourNewSound=M2TWEOPSounds.createEOPSound(M2TWEOP.getModPath().."/eopData/music/Moss.wav")
+        playSound(234, ourNewSound, true)
+    end
+
+    if eventData.eventCounter == "anduin_greenwood_explored_1" then
+        local ourNewSound=M2TWEOPSounds.createEOPSound(M2TWEOP.getModPath().."/eopData/music/SomewhereinBetween.wav")
+        playSound(234, ourNewSound, true)
+    end
+
+    if eventData.eventCounter == "bd_ho_angmar_alliance_signed" then
+        local ourNewSound=M2TWEOPSounds.createEOPSound(M2TWEOP.getModPath().."/eopData/music/LucifersWaltz.wav")
+        playSound(234, ourNewSound, true)
+    end
+
+    if eventData.eventCounter == "bd_ho_angmar_dunedain_suppression_army_strike_victory" then
+        local ourNewSound=M2TWEOPSounds.createEOPSound(M2TWEOP.getModPath().."/eopData/music/MethodsofMadness.wav")
+        playSound(234, ourNewSound, true)
+    end
+
+    if eventData.eventCounter == "bree_merc_bandits_nephew_1" then
+        local ourNewSound=M2TWEOPSounds.createEOPSound(M2TWEOP.getModPath().."/eopData/music/WrenhavenRiver.wav")
         playSound(234, ourNewSound, true)
     end
 
@@ -239,15 +259,30 @@ function onEventCounter(eventData)
         playSound(234, ourNewSound, true)
     end
 
+    if eventData.eventCounter == "bree_good_reinforcements_3" then
+        local ourNewSound=M2TWEOPSounds.createEOPSound(M2TWEOP.getModPath().."/eopData/music/BurningStars.wav")
+        playSound(234, ourNewSound, true)
+    end
+
+    if eventData.eventCounter == "bree_finale_umbar_good" then
+        local ourNewSound=M2TWEOPSounds.createEOPSound(M2TWEOP.getModPath().."/eopData/music/DawnOfFaith.wav")
+        playSound(234, ourNewSound, true)
+    end
+
+    if eventData.eventCounter == "bree_finale_umbar_neutral" then
+        local ourNewSound=M2TWEOPSounds.createEOPSound(M2TWEOP.getModPath().."/eopData/music/HeresaHealthtotheCompany.wav")
+        playSound(234, ourNewSound, true)
+    end
+
     --if eventData.eventCounter == "reginard_quest_start" then
     --    local ourNewSound=M2TWEOPSounds.createEOPSound(M2TWEOP.getModPath().."/eopData/music/CarmenHabanera.wav")
     --    playSound(234, ourNewSound, true)
     --end
 
-    if eventData.eventCounter == "lond_daer_mercenary_3" then
-        local ourNewSound=M2TWEOPSounds.createEOPSound(M2TWEOP.getModPath().."/eopData/music/StormtheCastle.wav")
-        playSound(234, ourNewSound, true)
-    end
+    --if eventData.eventCounter == "lond_daer_mercenary_3" then
+    --    local ourNewSound=M2TWEOPSounds.createEOPSound(M2TWEOP.getModPath().."/eopData/music/StormtheCastle.wav")
+    --    playSound(234, ourNewSound, true)
+    --end
 
     if eventData.eventCounter == "lond_daer_mercenary_victory" then
         local ourNewSound=M2TWEOPSounds.createEOPSound(M2TWEOP.getModPath().."/eopData/music/Weregonnabedrinking.wav")
