@@ -124,6 +124,7 @@ function onEventCounter(eventData)
     --Music Intergation Start
     if eventData.eventCounter == "shire_start" then
         --local ourNewSound=M2TWEOPSounds.createEOPSound(M2TWEOP.getModPath().."/eopData/music/DawnOfFaith.wav")
+        --playSound(234, ourNewSound, true)
         --local ourType=ourCharacter:getTypeName("Bilbo");
         local ourNamedCharacter = stratmap.game.getFaction(0):getNamedCharacter(1)
         ourNamedCharacter.character:moveToTile(166,380)
@@ -131,7 +132,6 @@ function onEventCounter(eventData)
 
 
         --local ourType=ourCharacter:getTypeName("Andy");
-        playSound(234, ourNewSound, true)
         --local army = stratmap.game.spawnArmy(
         --CAMPAIGN:getFaction("normans"),
         --"Bilbo",
