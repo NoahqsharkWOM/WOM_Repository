@@ -305,3 +305,200 @@ function onEventCounter(eventData)
         newCharacter=stratmap.game.createCharacterByString("assassin",CAMPAIGN:getFaction("normans"),18,"Dreadful","Dreadful",31,"Maggot", 168, 380);
 	end
 end
+
+--[[
+
+Makes sure unique character names are actually unique by renaming the doppelgangers.
+No more spies called "The Witch-king" or captains named "Captain Gandalf" etc.
+
+Script by Wicked with help from Medik and Fynn (thanks to both of you, you beautiful people).
+
+]]
+
+function uniqueNames(charRecord)
+    local angmarFactions = { "portugal", "slave" }
+    local angmarNames = { "The Witch-king", "Agandaûr", "Hûnvorn", "Drangû", "Aphanuzîr" }
+    local angmarCaptainNames = { "Captain The Witch-king", "Captain Agandaûr", "Captain Hûnvorn", "Captain Drangû",
+            "Captain Aphanuzîr" }
+    local angmarLabels = { "nazgula_p1", "agandaur_1", "hunvorn_1", "drangu_1", "aphanuzir_1" }
+
+    local dunedainFactions = { "turks", "sicily", "denmark", "slave" }
+    local dunedainNames = { "Aragorn", "Eldarion", "Gandalf", "Bilbo Baggins" }
+    local dunedainCaptainNames = { "Captain Aragorn", "Captain Eldarion", "Captain Gandalf", "Captain Bilbo Baggins" }
+    local dunedainLabels = { "aragorn_1", "eldarion_1", "gandalf_1", "gandalf_2", "bilbo_2" }
+
+    local elvenFactions = { "saxons", "mongols", "ireland", "byzantium", "slave" }
+    local elvenNames = { "Círdan", "Elrond", "Elladan", "Elrohir", "Gildor", "Dornornoston", "Glorfindel",
+            "Thranduil", "Legolas", "Orthordir",
+            "Celeborn", "Galadriel", "Haldir", "Rumil", "Orophin", "Enpremi", "Avl'yn", "Nurwe", "Elendil" }
+    local elvenCaptainNames = { "Captain Círdan", "Captain Elrond", "Captain Elladan", "Captain Elrohir",
+            "Captain Gildor", "Captain Dornornoston",
+            "Captain Glorfindel", "Captain Thranduil", "Captain Legolas", "Captain Orthordir", "Captain Celeborn",
+            "Captain Galadriel",
+            "Captain Haldir", "Captain Rumil", "Captain Orophin", "Captain Enpremi", "Captain Avl'yn",
+            "Captain Nurwe", "Captain Elendil" }
+    local elvenLabels = { "cirdan_1", "elrond_1", "elladan_1", "elrohir_1", "gildor_1", "dornornoston_1",
+            "glorfindel_1", "thranduil_1", "legolas_1",
+            "orthordir_1", "celeborn_1", "galadriel_1", "galadriel_2", "haldir_1", "rumil_1", "orophin_1",
+            "enpremi_1", "avlyn_1", "avlyn_2",
+            "avlyn_3", "nurwe_1", "thranduil_union", "legolas_union", "orthordir_union", "celeborn_union",
+            "haldir_union", "rumil_union,",
+            "orophin_union", "enpremi_union" }
+
+    local breeFactions = { "normans", "slave" }
+    local breeNames = { "Bilbo Baggins", "Brathor", "Gandalf", "Aldaron", "Reginard", "The Wicked One", "Ajax, Defender Of Arnor", "Leao", "The Fog Lurker", "Karl", "Medik", "Galu The Gilded", 
+    "Maverick", "Gareth", "Hazwood", "The Original Eclipse", "Fynn", "The Supreme One", "John", "Perry", "Lonesome Drifter", "Maximus", "Lerynian", 
+    "The Frozen Stag", "Jojo", "Illanor", "Laneig", "Hûnaer", "The Councilor", "Farmer Maggot", "Behewan", "Borûg", "Dreadful Death", "Frodo", "Eredrim", "Frárín", "Gothmog", "Glorfindel", "Lorin", "The Witch-king", 
+    "Overseer", "Pippin", "Merry", "Redhand", "Samwise", "Tithe-Keeper", "Aegnor", "Aragorn", "Barliman", "Bofur", "Brathor" }
+    local breeCaptainNames = { "Captain Bilbo Baggins", "Captain Brathor", "Captain Gandalf", "Captain Aldaron",
+            "Captain Reginard", "Captain The Wicked One", "Captain Ajax, Defender Of Arnor", "Captain Leao", "Captain The Fog Lurker", "Captain Karl", "Captain Medik", 
+            "Captain Galu The Gilded", "Captain Maverick", "Captain Gareth", "Captain Hazwood", "Captain The Original Eclipse", "Captain Fynn", "Captain The Supreme One", "Captain John", 
+            "Captain Perry", "Captain Lonesome Drifter", "Captain Maximus", "Captain Lerynian", "Captain The Frozen Stag", "Captain Jojo", "Captain Illanor", "Captain Laneig", 
+            "Captain Hûnaer",  "Captain The Councilor", "Captain Farmer Maggot", "Captain Behewan", "Captain Borûg", "Captain Dreadful Death", "Captain Frodo", "Captain Eredrim", "Captain Frárín", "Captain Gothmog", 
+            "Captain Glorfindel", "Captain Lorin", "Captain The Witch-king", "Captain Overseer", "Captain Pippin", "Captain Merry", "Captain Redhand", "Captain Samwise", "Captain Tithe-Keeper", "Captain Aegnor", 
+            "Captain Aragorn", "Captain Barliman", "Captain Bofur", "Captain Brathor" }
+    local breeLabels = { "bilbo_1", "gandalf_1", "gandalf_2", "brathor1", "aldaron_1", "reginard_1", "wicked_1", "ajax_1", "leao_1", "fog_1", "karl_1", "medik_1", "galu_1", "mav_1", "gareth_1", "hazwood_1", 
+    "clips_1", "fynn_1", "nuke_1", "john_1", "perry_1", "ldrl_1", "yeet_1", "lerynian_1", "frozenstag_1", "jojo_1", "illanor_company", "laneig_company", "hunaer_company", "evil_councilor", "maggot_loyal", 
+    "maggot_resistance", "behewan_mercenary", "borug_expedition", "borug_mercenary", "Dreadful", "frodo_1", "eredrim_1", "frarin_direct", "frarin_king", "frarin_normal", "gothmog_bree", "glorfindel_bree", 
+    "lorin_company", "WKBree_1", "overseer_company", "lond_daer_attacker", "lond_daer_occupier", "mp_hobbit_journey", "pippin_greenway", "pippin_ents", "merry_greenway", "merry_ents", "redhand_company", 
+    "redhand_company_trolls", "redhand_company_trolls_expedition", "redhand_company_expedition", "samwise_1", "tithe_keepers_1", "slave_attackers_Beorns_Hall_1", "aegnor_1", "aegnor_crusade", "aragorn_wulfrun", 
+    "barliman_1", "barliman_resistance", "barliman_2", "bd_bofur_alive", "bd_bofur_dead", "brathor_1", "brathor_returned", "brathor_resistance" }
+
+    local nazgulFactions = { "england", "poland", "france", "slave" }
+    local nazgulNames = { "The Witch-king", "Gan Altan", "Balak’nar", "Khamûl", "Lagoren", "Aglarâkhôr", "Shi-vuus",
+            "Zagar", "Leofric" }
+    local nazgulCaptainNames = { "Captain The Witch-king", "Captain Gan Altan", "Captain Balak’nar", "Captain Khamûl",
+            "Captain Lagoren", "Captain Aglarâkhôr",
+            "Captain Shi-vuus", "Captain Zagar", "Captain Leofric" }
+    local mordorFactions = { "england", "slave" }
+    local mordorNames = { "Mouth Of Sauron", "Ancântar", "Sauron" }
+    local mordorCaptainNames = { "Captain Mouth Of Sauron", "Captain Ancântar", "Captain Sauron" }
+    local mordorLabels = { "mouthofsauron_1", "ancantar_1", "ancantar_2", "ancantar_3", "ancantar_4", "ancantar_5",
+            "sauron_1" }
+
+    local khandFactions = { "khand", "slave" }
+    local khandNames = { "Alatar", "Pallando", "Ancântar" }
+    local khandCaptainNames = { "Captain Alatar", "Captain Pallando", "Captain Ancântar" }
+    local khandLabels = { "ancantar_1", "ancantar_2", "ancantar_3", "ancantar_4", "ancantar_5", "alatar_1",
+            "alatar_2", "alatar_3", "alatar_4", "pallando_1",
+            "pallando_2", "pallando_3", "pallando_4" }
+
+    local anduinFactions = { "timurids", "slave" }
+
+    local isengardFactions = { "france", "slave" }
+    local isengardNames = { "Saruman", "Lúrtz", "Uglúk" }
+    local isengardCaptainNames = { "Captain Saruman", "Captain Lúrtz", "Captain Uglúk" }
+    local isengardLabels = { "saruman_1", "lurtz_1", "ugluk_1" }
+
+    local dolguldurFactions = { "poland", "slave" }
+
+    local dunlandFactions = { "aztecs", "slave" }
+
+    local facName = charRecord.faction.name
+    local displayName = charRecord.localizedDisplayName
+    local charLabel = charRecord.label
+
+    --- for Angmar
+    if tableContainsElement(angmarFactions, facName) then
+            if tableContainsElement(angmarNames, displayName)
+                and not tableContainsElement(angmarLabels, charLabel) then
+                    charRecord.savedDisplayName = "Fimran"
+            end
+            if tableContainsElement(angmarCaptainNames, displayName) then
+                    charRecord.savedDisplayName = "Captain Éogan"
+            end
+    --- for ND, Gondor and Dol Amroth
+    elseif tableContainsElement(dunedainFactions, facName) then
+            if tableContainsElement(dunedainNames, displayName)
+                and not tableContainsElement(dunedainLabels, charLabel) then
+                    charRecord.savedDisplayName = "Hamen"
+            end
+            if tableContainsElement(dunedainCaptainNames, displayName) then
+                    charRecord.savedDisplayName = "Captain Hallas"
+            end
+    --- for High Elves, Woodland Realm, Lorien and Dorwinion
+    elseif tableContainsElement(elvenFactions, facName) then
+            if tableContainsElement(elvenNames, displayName)
+                and not tableContainsElement(elvenLabels, charLabel) then
+                    charRecord.savedDisplayName = "Calanon"
+            end
+            if tableContainsElement(elvenCaptainNames, displayName) then
+                    charRecord.savedDisplayName =
+                    "Captain Elenion" --- needs label for avlyn_1, avlyn_2 and avlyn_3
+            end
+    --- Nazgul for Mordor, Dol Guldur, Isengard
+    elseif tableContainsElement(nazgulFactions, facName) then
+            if tableContainsElement(nazgulNames, displayName)
+                and hasTrait(character.characterRecord, "Nazgul") == false then
+                    charRecord.savedDisplayName = "Ishgaz"
+            end
+            if tableContainsElement(nazgulCaptainNames, displayName) then
+                    charRecord.savedDisplayName = "Captain Grublik"
+            end
+    --- Mouth Of Sauron and Ancantar for Mordor
+    elseif tableContainsElement(mordorFactions, facName) then
+            if tableContainsElement(mordorNames, displayName)
+                and not tableContainsElement(mordorLabels, charLabel) then
+                    charRecord.savedDisplayName = "Nazdug"
+            end
+            if tableContainsElement(mordorCaptainNames, displayName) then
+                    charRecord.savedDisplayName = "Captain Nazrôlg"
+            end
+    --- Khand
+    elseif tableContainsElement(khandFactions, facName) then
+            if tableContainsElement(khandNames, displayName)
+                and not tableContainsElement(khandLabels, charLabel) then
+                    charRecord.savedDisplayName = "Abáan"
+            end
+            if tableContainsElement(khandCaptainNames, displayName) then
+                    charRecord.savedDisplayName = "Captain Tastán"
+            end
+    --- for Anduin Vale
+    elseif tableContainsElement(anduinFactions, facName) then
+            if displayName == "Radagast the Brown"
+                and charLabel ~= "radagast_1" then
+                    charRecord.savedDisplayName = "Barac"
+            end
+            if displayName == "Captain Radagast the Brown" then
+                    charRecord.savedDisplayName = "Captain Barac"
+            end
+    --- for Bree
+    elseif tableContainsElement(breeFactions, facName) then
+            if tableContainsElement(breeNames, displayName)
+                and not tableContainsElement(breeLabels, charLabel) then
+                    charRecord.savedDisplayName = "Edmund"
+            end
+            if tableContainsElement(breeCaptainNames, displayName) then
+                    charRecord.savedDisplayName = "Captain Largo"
+            end
+    --- for Isengard
+    elseif tableContainsElement(isengardFactions, facName) then
+            if tableContainsElement(isengardNames, displayName)
+                and not tableContainsElement(isengardLabels, charLabel) then
+                    charRecord.savedDisplayName = "Shaglúk"
+            end
+            if tableContainsElement(isengardCaptainNames, displayName) then
+                    charRecord.savedDisplayName = "Captain Múggrish"
+            end
+    --- Ulairon for Dol Guldur
+    elseif tableContainsElement(dolguldurFactions, facName) then
+            if displayName == "Úlairon"
+                and charLabel ~= "ulairon_1" then
+                    charRecord.savedDisplayName = "Ûshbaká"
+            end
+            if displayName == "Captain Úlairon" then
+                    charRecord.savedDisplayName = "Captain Yaglun"
+            end
+    --- Lurtz for Dunland
+    elseif tableContainsElement(dunlandFactions, facName) then
+            if displayName == "Lúrtz"
+                and charLabel ~= "lurtz_1" then
+                    charRecord.savedDisplayName = "Branan"
+            end
+            if displayName == "Captain Lúrtz" then
+                    charRecord.savedDisplayName = "Captain Gorsad"
+            end
+    end
+    M2TWEOP.logGame("log message");
+end
+

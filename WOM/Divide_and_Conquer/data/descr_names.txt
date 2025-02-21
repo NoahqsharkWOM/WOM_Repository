@@ -8420,6 +8420,7 @@ faction: normans
 		Ed
 		Edmund
 		Eddy
+		Eldacar
 		Eredrim
 		Erling
 		Ernie

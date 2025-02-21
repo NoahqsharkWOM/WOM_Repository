@@ -10283,7 +10283,12 @@ end_monitor
                			console_command create_unit Bree "Longbeard Crossbows" 1 0 0 0
                			console_command create_unit Bree "Kings Warriors" 1 0 0 0 
 				increment_kings_purse normans 1500
+
 				historic_event bree_warmonger factions { normans, }
+				campaign_wait 3
+				historic_event bree_isolated_1 factions { normans, }
+				campaign_wait 3
+				historic_event bree_isolated_2 factions { normans, }
 				terminate_monitor
 			end_if
 			
@@ -10341,14 +10346,21 @@ end_monitor
 		destroy_units normans Dunedain Wardens
 		destroy_units normans Dunedain Rangers
 		destroy_buildings normans dunedain_camp false
+		campaign_wait 1
 
                	console_command create_unit Bree "Legion Shieldguard" 1 0 0 0				
                	console_command create_unit Bree "Longbeard Phalanx" 1 0 0 0
                	console_command create_unit Bree "Longbeard Crossbows" 1 0 0 0
                	console_command create_unit Bree "Kings Warriors" 1 0 0 0
 		increment_kings_purse normans 1500
+		campaign_wait 1
 		
 		historic_event bree_refugees_declined factions { normans, }
+		campaign_wait 3
+		historic_event bree_isolated_1 factions { normans, }
+		campaign_wait 3
+		historic_event bree_isolated_2 factions { normans, }
+		
         terminate_monitor
     end_monitor
 	
@@ -10400,6 +10412,10 @@ end_monitor
 		increment_kings_purse normans 1500
 		
 		historic_event bree_choice_declined factions { normans, }
+		campaign_wait 3
+		historic_event bree_isolated_1 factions { normans, }
+		campaign_wait 3
+		historic_event bree_isolated_2 factions { normans, }
         terminate_monitor
     end_monitor
 	
@@ -38144,16 +38160,16 @@ monitor_event FactionTurnEnd FactionType normans
 	and I_EventCounter bree_mercenary = 1	
 		
 		if not I_EventCounter AI_luin_ring_accepted = 1				;EL Good Outcome
-			if I_CompareCounter bd_timer = 2				; 7
+			if I_CompareCounter bd_timer = 3				; 3
 				historic_event bd_el_good factions { normans, }
 			end_if
 
-			if I_CompareCounter bd_timer = 3				; 12					
+			if I_CompareCounter bd_timer = 5				; 5					
 				historic_event bd_el_good_conclusion_start factions { normans, }
 				historic_event bd_el_good_purchase_decision true factions { normans, }
 			end_if
 
-			if I_EventCounter bd_sold = 1				; - 13
+			if I_EventCounter bd_sold = 1				; - 6
 				if I_SettlementOwner South_Ered_Luin = normans					
 					historic_event bd_el_good_conclusion_betrayal factions { normans, }
             				console_command diplomatic_stance hungary normans war
@@ -38171,12 +38187,12 @@ monitor_event FactionTurnEnd FactionType normans
 		end_if
 
 		if I_EventCounter AI_luin_ring_accepted = 1				;EL Evil Outcome
-			if I_CompareCounter bd_timer = 2				; 7 - Direct or Hands-off Decision
+			if I_CompareCounter bd_timer = 3				; 3 - Direct or Hands-off Decision
 				historic_event bd_approach_decision true factions { normans, }
 			end_if
 
-			if I_EventCounter direct_approach = 1				; 12 - Direct Stage 1
-				if I_CompareCounter bd_timer = 3
+			if I_EventCounter direct_approach = 1				; 4 - Direct Stage 1
+				if I_CompareCounter bd_timer = 4
 					historic_event bd_direct_approach_gambit_warning factions { normans, }
 					spawn_army
                 				faction hungary
@@ -38200,7 +38216,7 @@ monitor_event FactionTurnEnd FactionType normans
 			end_if
 		end_if
 ;### BD Timer Regardless of Alignment, Only Holding BD ###
-		if I_CompareCounter bd_timer < 7
+		if I_CompareCounter bd_timer < 15
 			inc_counter bd_timer 1
 		end_if	
 	end_if
@@ -38210,26 +38226,28 @@ monitor_event FactionTurnEnd FactionType normans
 		inc_counter bd_kd_war_timer 1
 	end_if
 ;######################### HoW - Long War Introduction ##########################
-		if I_CompareCounter bd_kd_war_timer = 3	;5
+		if I_CompareCounter bd_kd_war_timer = 2	;2
 			historic_event bd_kd_long_war_initial factions { normans, }
 		end_if
 ;######################### Initial Success ##########################
-		if I_CompareCounter bd_kd_war_timer = 4	;13
+		if I_CompareCounter bd_kd_war_timer = 4	;4
 			historic_event bd_kd_long_war_first_blood factions { normans, }		
 		end_if
 ;######################### Goblins Strike Back ##########################
-		if I_CompareCounter bd_kd_war_timer = 5 ;17
+		if I_CompareCounter bd_kd_war_timer = 8 ;8
 			console_command add_population South_Ered_Luin, -4000
-			campaign_wait 0.1
+			console_command add_population South_Ered_Luin, -4000
+			console_command add_population South_Ered_Luin, -4000
+			campaign_wait 0.5
 			console_command add_population South_Ered_Luin, 100
 			historic_event bd_kd_long_war_casualties factions { normans, }
 		end_if
 ;######################### Behewan Intro ##########################
-		if I_CompareCounter bd_kd_war_timer = 6 ;18
+		if I_CompareCounter bd_kd_war_timer = 9 ;9
 			historic_event bd_kd_long_war_behewan_intro true factions { normans, }
 		end_if
 ;######################### Borug Only or Relationship/Rivalry Start ##########################
-		if I_CompareCounter bd_kd_war_timer = 7 ;22
+		if I_CompareCounter bd_kd_war_timer = 10 ;10
 			if I_EventCounter bd_kd_borug_only = 1
 				historic_event bd_kd_long_war_expedition_start factions { normans, }
 			end_if
@@ -38242,7 +38260,7 @@ monitor_event FactionTurnEnd FactionType normans
 	;if I_EventCounter bd_kd_quest_failed == 0 (not in use)
 ;######################### BD Events Post-First-Battle (Due to possible failure) ##########################
 ;######################### BD Borug Only ##########################
-		if I_CompareCounter bd_kd_war_timer = 8 ;?
+		if I_CompareCounter bd_kd_war_timer = 11 ;11
 			if I_EventCounter bd_kd_borug_only = 1
 				historic_event bd_kd_long_war_expedition_aid_1 true factions { normans, }
 			end_if
@@ -38252,19 +38270,19 @@ monitor_event FactionTurnEnd FactionType normans
 			end_if
 		end_if
 ;######################### BD B&B Mining Operation ##########################
-		if I_CompareCounter bd_kd_war_timer = 9 ;?
+		if I_CompareCounter bd_kd_war_timer = 12 ;12
 			if I_EventCounter bd_kd_long_war_behewan_hired_true = 1
 				historic_event bd_kd_long_war_mining_operation true factions { normans, }
 			end_if
 		end_if
 ;######################### BD B&B Foreign Mercenaries ##########################
-		if I_CompareCounter bd_kd_war_timer = 10 ;?
+		if I_CompareCounter bd_kd_war_timer = 13 ;13
 			if I_EventCounter bd_kd_long_war_behewan_hired_true = 1
 				historic_event bd_kd_long_war_mercenary_companies_1 true factions { normans, }
 			end_if
 		end_if
 ;######################### BD Borug Only ##########################
-		if I_CompareCounter bd_kd_war_timer = 11 ;?
+		if I_CompareCounter bd_kd_war_timer = 15 ;15
 			if I_EventCounter bd_kd_borug_only = 1
 				historic_event bd_kd_long_war_expedition_aid_2 true factions { normans, }
 			end_if
@@ -38276,12 +38294,13 @@ monitor_event FactionTurnEnd FactionType normans
 				end_if
 				if I_CompareCounter bd_kd_behewan_relation < 2
 					historic_event bd_kd_long_war_reinforcements_betrayal true factions { normans, }
-					set_event_counter behewan_disloyal 1
+					;set_event_counter behewan_disloyal 1 ;will update in future
+					set_event_counter behewan_loyal 1
 				end_if				
 			end_if
 		end_if
 ;######################### BD B&B Final Battle ##########################
-		if I_CompareCounter bd_kd_war_timer = 12 ;?
+		if I_CompareCounter bd_kd_war_timer = 16 ;16
 			if I_EventCounter behewan_loyal = 1
 				if I_EventCounter bd_kd_long_war_final_battle_field = 1
 					historic_event bd_kd_long_war_final_battle_friends_field factions { normans, }
@@ -38293,13 +38312,13 @@ monitor_event FactionTurnEnd FactionType normans
 			end_if
 		end_if
 ;######################### BD Borug Final Chance For Aid ##########################
-		if I_CompareCounter bd_kd_war_timer = 15 ;?
+		if I_CompareCounter bd_kd_war_timer = 19 ;19
 			if I_EventCounter bd_kd_borug_only = 1
 				historic_event bd_kd_long_war_expedition_aid_3 true factions { normans, }
 			end_if
 		end_if
 ;######################### BD Borug Finale Start ##########################
-		if I_CompareCounter bd_kd_war_timer = 16 ;?
+		if I_CompareCounter bd_kd_war_timer = 20 ;20
 			if I_EventCounter bd_kd_borug_only = 1
 				historic_event bd_kd_long_war_expedition_finale_start factions { normans, }
 				campaign_wait 3
@@ -38309,13 +38328,13 @@ monitor_event FactionTurnEnd FactionType normans
 			end_if
 		end_if
 ;######################### BD Borug Finale Fight ##########################
-		if I_CompareCounter bd_kd_war_timer = 17 ;?
+		if I_CompareCounter bd_kd_war_timer = 21 ;21
 			if I_EventCounter bd_kd_borug_only = 1
 				if I_EventCounter bd_expedition_abandoned 0
 					spawn_army
 						faction normans
 						character	Borug, named character, age 18, x 90, y 352, direction N, portrait Borug, label borug_expedition
-						traits		DwarvenRace 1, Longbeard 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1, Locked 1
+						traits		DwarvenRace 1, Longbeard 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1, KilledBalrog 1, BattleScarred 2, TacticalSkill 3, StrategicSkill 3, RiskyDefender 3, GoodRiskyAttacker 3, EngineerSkill 2, GoodInfantryGeneral 3, GoodCommander 5, Brave 4, Reckless 3, Hero 1, HeroAbilityDwarf 1, Locked 1
                     				unit		Khazad-dum Guardians		exp 9 armour 3 weapon_lvl 1
                     				unit		Khazad-dum Guardians		exp 5 armour 3 weapon_lvl 1
 						unit		Khazad-dum Reclaimers		exp 5 armour 3 weapon_lvl 1
@@ -38375,7 +38394,7 @@ monitor_event FactionTurnEnd FactionType normans
 		end_if
 
 
-		if I_CompareCounter bd_kd_war_timer = 18 ;?
+		if I_CompareCounter bd_kd_war_timer = 22 ;22
 			if I_EventCounter bd_kd_borug_only = 1
 					if I_CharacterExists borug_expedition
 						console_command remove_trait borug_expedition Locked
@@ -38405,7 +38424,7 @@ monitor_event FactionTurnEnd FactionType normans
 			end_if
 		end_if
 
-		if I_CompareCounter bd_kd_war_timer = 19 ;?
+		if I_CompareCounter bd_kd_war_timer = 23 ;23
 			if I_EventCounter bd_kd_borug_only = 1
 				if I_CharacterExists bd_final_balrog_1
 						console_command remove_trait bd_final_balrog_1 Locked
@@ -38532,7 +38551,7 @@ monitor_event FactionTurnEnd FactionType normans
 		end_if
 
 		;Fucking Behewan
-		if I_CompareCounter bd_kd_war_timer = 22 ;?
+		if I_CompareCounter bd_kd_war_timer = 24 ;24
 		and I_EventCounter bd_kd_borug_only = 1
 			if I_EventCounter bd_expedition_abandoned 0
 			and I_EventCounter bd_kd_balrog_victory 0
@@ -39753,137 +39772,137 @@ monitor_event FactionTurnStart FactionType normans
 		spawn_army
 		faction normans
                 character	Wicked, named character, age 16, x 263, y 84, direction SE
-                                traits	Hero 1, MiddleManRace 1, GoodCommander 4
+                                traits	Hero 1, MiddleManRace 1, GoodCommander 4, label wicked_1
                 unit		Rebel Barrow Wights	exp 0 armour 0 weapon_lvl 0
 		end
 		campaign_wait 0.5
 		spawn_army
 		faction normans
                 character	Ajax, named character, age 16, x 263, y 82, direction NE
-                                traits	Hero 1, MiddleManRace 1, GoodCommander 4
+                                traits	Hero 1, MiddleManRace 1, GoodCommander 4, label ajax_1
                 unit		Watch Shirriffs		exp 0 armour 0 weapon_lvl 0
 		end
 		campaign_wait 0.5
 		spawn_army
 		faction normans
                 character	Leao, named character, age 16, x 264, y 87, direction S
-                                traits	Hero 1, MiddleManRace 1, GoodCommander 4
+                                traits	Hero 1, MiddleManRace 1, GoodCommander 4, label leao_1
                 unit		Berio I Ngelaidh	exp 0 armour 0 weapon_lvl 0
 		end
 		campaign_wait 0.5
 		spawn_army
 		faction normans
                 character	Fog, named character, age 16, x 265, y 87, direction S
-                                traits	Hero 1, MiddleManRace 1, GoodCommander 4
+                                traits	Hero 1, MiddleManRace 1, GoodCommander 4, label fog_1
                 unit		Berserkers		exp 0 armour 0 weapon_lvl 0
 		end
 		campaign_wait 0.5
 		spawn_army
 		faction normans
                 character	Karl, named character, age 16, x 268, y 81, direction W
-                                traits	Hero 1, MiddleManRace 1, GoodCommander 4
+                                traits	Hero 1, MiddleManRace 1, GoodCommander 4, label karl_1
                 unit		Farrhun Mercanaries	exp 0 armour 0 weapon_lvl 0
 		end
 		campaign_wait 0.5
 		spawn_army
 		faction normans
                 character	Medik, named character, age 16, x 26, y 86, direction SW
-                                traits	Hero 1, MiddleManRace 1, GoodCommander 4
+                                traits	Hero 1, MiddleManRace 1, GoodCommander 4, label medik_1
                 unit		Bandits		exp 0 armour 0 weapon_lvl 0
 		end
 		spawn_army
 		faction normans
                 character	Galu, named character, age 16, x 265, y 84, direction S
-                                traits	Hero 1, MiddleManRace 1, GoodCommander 4
+                                traits	Hero 1, MiddleManRace 1, GoodCommander 4, label galu_1
                 unit		Knights of the Silver Swan	exp 0 armour 0 weapon_lvl 0
 		end
 		campaign_wait 0.5
 		spawn_army
 		faction normans
                 character	Mav, named character, age 16, x 267, y 84, direction SW
-                                traits	Hero 1, MiddleManRace 1, GoodCommander 4
+                                traits	Hero 1, MiddleManRace 1, GoodCommander 4, label mav_1
                 unit		Osgiliath Veterans	exp 0 armour 0 weapon_lvl 0
 		end
 		campaign_wait 0.5
 		spawn_army
 		faction normans
                 character	Gareth, named character, age 16, x 270, y 83, direction SW
-                                traits	Hero 1, MiddleManRace 1, GoodCommander 4
+                                traits	Hero 1, MiddleManRace 1, GoodCommander 4, label gareth_1
                 unit		Avari Naharim		exp 0 armour 0 weapon_lvl 0
 		end
 		spawn_army
 		faction normans
                 character	Hazwood, named character, age 16, x 269, y 84, direction S
-                                traits	Hero 1, MiddleManRace 1, GoodCommander 4
+                                traits	Hero 1, MiddleManRace 1, GoodCommander 4, label hazwood_1
                 unit		Fountain Guard		exp 0 armour 0 weapon_lvl 0
 		end
 		campaign_wait 0.5
 		spawn_army
 		faction normans
                 character	Clips, named character, age 16, x 270, y 86, direction W
-                                traits	Hero 1, MiddleManRace 1, GoodCommander 4
+                                traits	Hero 1, MiddleManRace 1, GoodCommander 4, label clips_1
                 unit		Half-Trolls		exp 0 armour 0 weapon_lvl 0
 		end
 		spawn_army
 		faction normans
                 character	Fynn, named character, age 16, x 270, y 81, direction W
-                                traits	Hero 1, MiddleManRace 1, GoodCommander 4
+                                traits	Hero 1, MiddleManRace 1, GoodCommander 4, label fynn_1
                 unit		Temple Wards		exp 0 armour 0 weapon_lvl 0
 		end
 		campaign_wait 0.5
 		spawn_army
 		faction normans
                 character	Nuke, named character, age 16, x 272, y 81, direction W
-                                traits	Hero 1, MiddleManRace 1, GoodCommander 4
+                                traits	Hero 1, MiddleManRace 1, GoodCommander 4, label nuke_1
                 unit		Watch Shirriffs		exp 0 armour 0 weapon_lvl 0
 		end
 		campaign_wait 0.5
 		spawn_army
 		faction normans
                 character	John, named character, age 16, x 271, y 87, direction W
-                                traits	Hero 1, MiddleManRace 1, GoodCommander 4
+                                traits	Hero 1, MiddleManRace 1, GoodCommander 4, label wicked_1
                 unit		Tharbad Royal Guard	exp 0 armour 0 weapon_lvl 0
 		end
 		campaign_wait 0.5
 		spawn_army
 		faction normans
                 character	Perry, named character, age 16, x 274, y 81, direction W
-                                traits	Hero 1, MiddleManRace 1, GoodCommander 4
+                                traits	Hero 1, MiddleManRace 1, GoodCommander 4, label perry_1
                 unit		Orc Avengers		exp 0 armour 0 weapon_lvl 0
 		end
 		campaign_wait 0.5
 		spawn_army
 		faction normans
                 character	LDRL, named character, age 16, x 268, y 86, direction SW
-                                traits	Hero 1, MiddleManRace 1, GoodCommander 4
+                                traits	Hero 1, MiddleManRace 1, GoodCommander 4, label ldrl_1
                 unit		Gurveleg		exp 0 armour 0 weapon_lvl 0
 		end
 		campaign_wait 0.5
 		spawn_army
 		faction normans
                 character	Yeet, named character, age 16, x 272, y 86, direction W
-                                traits	Hero 1, MiddleManRace 1, GoodCommander 4
+                                traits	Hero 1, MiddleManRace 1, GoodCommander 4, label yeet_1
                 unit		Naru n'Aru Royal Guard	exp 0 armour 0 weapon_lvl 0
 		end
 		campaign_wait 0.5
 		spawn_army
 		faction normans
                 character	Lerynian, named character, age 16, x 266, y 85, direction S
-                                traits	Hero 1, MiddleManRace 1, GoodCommander 4
+                                traits	Hero 1, MiddleManRace 1, GoodCommander 4, label lerynian_1
                 unit		Dunedain Steelbowmen	exp 0 armour 0 weapon_lvl 0
 		end
 		campaign_wait 0.5
 		spawn_army
 		faction normans
                 character	FrozenStag, named character, age 16, x 267, y 91, direction SW
-                                traits	Hero 1, MiddleManRace 1, GoodCommander 4
+                                traits	Hero 1, MiddleManRace 1, GoodCommander 4, label frozenstag_1
                 unit		Hin e-Daur		exp 0 armour 0 weapon_lvl 0
 		end
 		campaign_wait 0.5
 		spawn_army
 		faction normans
                 character	Jojo, named character, age 16, x 266, y 90, direction SW
-                                traits	Hero 1, MiddleManRace 1, GoodCommander 4
+                                traits	Hero 1, MiddleManRace 1, GoodCommander 4, label jojo_1
                 unit		Arulad Dragonguard	exp 0 armour 0 weapon_lvl 0
 		end
 		end_if
@@ -40132,7 +40151,7 @@ monitor_event FactionTurnStart FactionType normans
 		inc_counter expedition_finale_retaliation 1
 	end_if
 ;######################### Bree Merc Finale Start & Morality Check #######################
-	if I_NumberOfSettlements normans >= 24 ;24
+	if I_NumberOfSettlements normans >= 24 ;24 - test number 8
 	and I_CompareCounter finale_stage = 0
 	and I_EventCounter bree_mercenary = 1
 		historic_event bree_finale_start true factions { normans, }
@@ -40254,7 +40273,7 @@ monitor_event FactionTurnStart FactionType normans
 			if I_EventCounter expedition_finale_character_triggers_redhand_normal = 1
             		spawn_army
                 		faction normans
-				character	Redhand, named character, battle_model Rhudaur_Huscarles, age 22, x 298, y 173, direction S, portrait Redhand, hero_ability Harad, label redhand_company_expedition
+				character	Redhand, named character, battle_model Rhudaur_Huscarles, age 22, x 300, y 172, direction S, portrait Redhand, hero_ability Harad, label redhand_company_expedition
                 		traits		MiddleManRace 1, Hillman 1, BattleScarred 1, GoodCommander 1, GoodAttacker 2, GoodSiegeAttacker 2, Loyal 1, LoyaltyStarter 1, PietyStarter 1, Swears 1, Energetic 3, NaturalMilitarySkill 2, HaleAndHearty 2, Stoic 1, Gregarious 2, Berserker 1, Hero 1, HeroAbilityHarad 1
 				unit		Rhudaur Warriors		exp 7 armour 0 weapon_lvl 1
 				unit		Rhudaur Huscarles		exp 3 armour 0 weapon_lvl 0
@@ -40270,11 +40289,12 @@ monitor_event FactionTurnStart FactionType normans
             		end
 			end_if
 
+			campaign_wait 1
 			;Bloodthirsty Redhand
 			if I_EventCounter expedition_finale_character_triggers_redhand_trolls = 1
             		spawn_army
 			faction normans
-			character	Redhand, named character, battle_model Rhudaur_Huscarles, age 22, x 298, y 173, direction S, portrait Redhand,  hero_ability Harad, label redhand_company_trolls_expedition
+			character	Redhand, named character, battle_model Rhudaur_Huscarles, age 22, x 300, y 170, direction S, portrait Redhand,  hero_ability Harad, label redhand_company_trolls_expedition
                 	traits		MiddleManRace 1, Hillman 1, FearGeneral 1, BattleFear 2, GoodCommander 3, GoodAttacker 2, NightBattleCapable 1, BattleScarred 2, Swears 2, Energetic 2, NaturalMilitarySkill 2 Berserker 3, HeroAbilityHarad 1
                 		unit		Trolls				exp 9 armour 1 weapon_lvl 1
 				unit		Warg Pack			exp 6 armour 0 weapon_lvl 0
@@ -40294,9 +40314,228 @@ monitor_event FactionTurnStart FactionType normans
 			end
 			end_if
 
+			campaign_wait 1
+			if I_EventCounter expedition_finale_character_triggers_frarin_normal = 1
+			spawn_army
+			faction normans
+			character	Frarin, named character, age 45, x 298, y 169, direction S, label frarin_el, portrait Frarin, hero_ability Dwarf
+                	traits		DwarvenRace 1, Broadbeam 1, Energetic 1, GoodAdministrator 1, GoodCommander 1, GoodDefender 1, SiegeDefender 1, HaleAndHearty 2, LoyaltyStarter 1, PietyStarter 1, Hero 1, HeroAbilityDwarf 1
+                		unit		Tumunzahar Nobles		exp 5 armour 1 weapon_lvl 1
+				unit		Longbeard Phalanx		exp 3 armour 1 weapon_lvl 1
+				unit		Longbeard Phalanx		exp 3 armour 1 weapon_lvl 1
+				unit		Longbeard Phalanx		exp 3 armour 1 weapon_lvl 1
+				unit		Longbeard Crossbows		exp 3 armour 1 weapon_lvl 1
+				unit		Longbeard Crossbows		exp 3 armour 1 weapon_lvl 1
+				unit		Longbeard Crossbows		exp 3 armour 1 weapon_lvl 1
+				unit		Dwarven Travellers		exp 2 armour 2 weapon_lvl 1
+				unit		Dwarven Travellers		exp 2 armour 2 weapon_lvl 1
+				unit		Dwarven Travellers		exp 2 armour 2 weapon_lvl 1
+				unit		Dwarven Travellers		exp 2 armour 2 weapon_lvl 1
+				unit		Dwarven Travellers		exp 2 armour 2 weapon_lvl 1
+				unit		Dwarven Travellers		exp 2 armour 2 weapon_lvl 1
+			end
+			end_if
+
+			campaign_wait 1
+			if I_EventCounter expedition_finale_character_triggers_frarin_king = 1
+			spawn_army
+			faction normans
+			character	Frarin, named character, age 50, x 297, y 169, direction S, label frarin_king, portrait Frarin, hero_ability Dwarf
+                	traits		DwarvenRace 1, Broadbeam 1, Energetic 1, GoodAdministrator 1, GoodCommander 1, GoodDefender 1, SiegeDefender 1, HaleAndHearty 2, LoyaltyStarter 1, PietyStarter 1, Hero 1, HeroAbilityDwarf 1
+                		unit		Gabilgathol Guard		exp 5 armour 1 weapon_lvl 1
+				unit		Gabilgathol Guard		exp 4 armour 0 weapon_lvl 1
+				unit		Gabilgathol Guard		exp 4 armour 0 weapon_lvl 1
+				unit		Gabilgathol Guard		exp 4 armour 0 weapon_lvl 1
+				unit		Longbeard Phalanx		exp 3 armour 0 weapon_lvl 1
+				unit		Longbeard Phalanx		exp 3 armour 0 weapon_lvl 1
+				unit		Longbeard Phalanx		exp 3 armour 0 weapon_lvl 1
+				unit		Longbeard Phalanx		exp 3 armour 0 weapon_lvl 1
+				unit		Longbeard Crossbows		exp 3 armour 0 weapon_lvl 1
+				unit		Longbeard Crossbows		exp 3 armour 0 weapon_lvl 1
+				unit		Longbeard Crossbows		exp 3 armour 0 weapon_lvl 1
+				unit		Longbeard Crossbows		exp 3 armour 0 weapon_lvl 1
+				unit		Dwarven Travellers		exp 2 armour 0 weapon_lvl 0
+				unit		Dwarven Travellers		exp 2 armour 0 weapon_lvl 0
+				unit		Dwarven Travellers		exp 2 armour 0 weapon_lvl 0
+			end
+			end_if	
+
+			campaign_wait 1
+			if I_EventCounter expedition_finale_character_triggers_hunaer = 1
+			spawn_army
+			faction normans
+			character	Hunaer, named character, age 30, x 295, y 171, direction S, portrait Hunaer, hero_ability Captain, label hunaer_1
+                	traits		BadManRace 1, AruladClan 1, GoodCommander 1, LoyaltyStarter 1, MathematicsSkill 1, PietyStarter 1, Pragmatic 2, Battlescarred 1, Recruiter 2, Energetic 3, Intelligent 1, Cultured 1, Xenophilia 3, Swears 1, StrategyChivalryGood 1, BattleChivalryGood 2, Upright 1, Just 1, Brave 1, Hero 1, HeroAbilityCaptain 1
+				unit		Farrhun Mercanaries		exp 7 armour 1 weapon_lvl 1
+				unit		Farrhun Mercanaries		exp 3 armour 0 weapon_lvl 1
+				unit		Farrhun Mercanaries		exp 3 armour 0 weapon_lvl 1
+				unit		Orocarni Warriors		exp 3 armour 0 weapon_lvl 1
+				unit		Orocarni Warriors		exp 3 armour 0 weapon_lvl 1
+				unit		Orocarni Warriors		exp 3 armour 0 weapon_lvl 1
+				unit		Orocarni Warriors		exp 3 armour 0 weapon_lvl 1
+				unit		Blacklock Engineers		exp 3 armour 0 weapon_lvl 1
+				unit		Blacklock Engineers		exp 3 armour 0 weapon_lvl 1
+			end
+			end_if
+
+			campaign_wait 1
+			if I_EventCounter expedition_finale_character_triggers_laneig = 1
+			spawn_army
+			faction normans
+			character	Laneig, named character, age 45, x 304, y 171, direction SE, portrait Laneig, hero_ability Captain, label laneig_company_1
+                	traits		MiddleManRace 1, EnedwaithMordag 1, GoodAdministrator 2, GoodCommander 3, LoyaltyStarter 1, MathematicsSkill 1, PietyStarter 1, BreeGeneralMercenary 1, Recruiter 1, Swears 2, BattleScarred 3, Pragmatic 2, BannerCollector 2, DorwinionBanner 1, RhunBanner 1, StrategyChivalryGood 1, BattleChivalryGood 2, Xenophilia 3, Energetic 3, Intelligent 1, Upright 1, Gregarious 1, Just 1, Hero 1, HeroAbilityCaptain 1
+                		unit		Saralainn Mercenaries		exp 7 armour 1 weapon_lvl 1
+				unit		Saralainn Mercenaries		exp 3 armour 1 weapon_lvl 1
+				unit		Mordag Skirmishers		exp 4 armour 1 weapon_lvl 1
+				unit		Mordag Skirmishers		exp 4 armour 1 weapon_lvl 1
+			end
+			end_if
+
+			campaign_wait 1
+			if I_EventCounter expedition_finale_character_triggers_reginard = 1
+            		spawn_army
+			faction normans
+			character	Reginard, named character, age 27, x 297, y 172, direction S, portrait Reginard, battle_model court_paladins, hero_ability Rohan, label reginard_army_1
+                	traits		Reginard 1, CustomBG 1, GoodManRace 1, Dorwinrim 1, GoodCommander 1, GoodDefender 3, SiegeDefender 1, Loyal 1, 	LoyaltyStarter 1, PietyStarter 1, RenownLegacy 2, Cultured 2, PoliticsSkill 2, Counterspy 1, Gregarious 3, Upright 1, Energetic 1, Handsome 2, HaleAndHearty 1, Recruiter 2, BreeGeneralMercenary 1, Hero 1, HeroAbilityRohan 1
+                		unit		Privateer Cavalry		exp 9 armour 1 weapon_lvl 1
+				unit		Regent Bowguard			exp 3 armour 2 weapon_lvl 1
+				unit		Regent Bowguard			exp 3 armour 2 weapon_lvl 1
+				unit		Avari Spearmen			exp 3 armour 2 weapon_lvl 1
+				unit		Avari Spearmen			exp 3 armour 2 weapon_lvl 1
+				unit		Privateer Axemen		exp 3 armour 1 weapon_lvl 1
+				unit		Rhovanion Riders		exp 6 armour 3 weapon_lvl 1
+				unit		Rhovanion Hunters		exp 3 armour 0 weapon_lvl 0
+				unit		Rhovanion Hunters		exp 3 armour 0 weapon_lvl 0
+			end
+			end_if
+
+			campaign_wait 1
+			if I_EventCounter expedition_finale_character_triggers_lorin = 1
+			spawn_army
+			faction normans
+			character	Lorin, named character, age 18, x 299, y 173, direction S, portrait Lorin, hero_ability Venom, label lorin_mercenary
+			traits		MiddleManRace 1, EnedwaithDubhshith 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1, BattleSurgeons 1, Energetic 3, NaturalMilitarySkill 3, RenownLegacy 1, Intelligent 2, TutorEducation 1, Hero 1, HeroAbilityVenom 1,
+                    		unit		Dubhshith Foresters		exp 9 armour 0 weapon_lvl 0
+				unit		Dubhshith Foresters		exp 0 armour 0 weapon_lvl 0
+				unit		Dubhshith Elders		exp 0 armour 0 weapon_lvl 0
+				unit		Enedwaith Guardsmen		exp 3 armour 0 weapon_lvl 1
+				unit		Enedwaith Guardsmen		exp 3 armour 0 weapon_lvl 1
+				unit		Enedwaith Guardsmen		exp 3 armour 0 weapon_lvl 1
+				unit		Mordag Skirmishers		exp 4 armour 1 weapon_lvl 1
+				unit		Mordag Skirmishers		exp 4 armour 1 weapon_lvl 1
+				unit		Faolan Warriors			exp 4 armour 3 weapon_lvl 1
+				unit		Faolan Warriors			exp 4 armour 3 weapon_lvl 1
+				unit		Faolan Warriors			exp 4 armour 3 weapon_lvl 1
+			end
+			end_if
+
+			campaign_wait 1
+			if I_EventCounter expedition_finale_character_triggers_borug = 1
+			spawn_army
+			faction normans
+			character	Borug, named character, age 50, x 298, y 172, direction S, portrait Borug, hero_ability Dwarf, label borug_mercenary
+			traits		DwarvenRace 1, Longbeard 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1, KilledBalrog 1, BattleScarred 2, TacticalSkill 3, StrategicSkill 3, RiskyDefender 3, GoodRiskyAttacker 3, EngineerSkill 2, GoodInfantryGeneral 3, GoodCommander 5, Brave 4, Reckless 3, Hero 1, HeroAbilityDwarf 1
+                    		unit		Khazad-dum Guardians		exp 9 armour 3 weapon_lvl 1
+				unit		Khazad-dum Reclaimers		exp 3 armour 1 weapon_lvl 1
+				unit		Dragonslayers			exp 3 armour 1 weapon_lvl 1
+				unit		Legion Hammerguard		exp 3 armour 1 weapon_lvl 1
+				unit		Legion Shieldguard		exp 3 armour 1 weapon_lvl 1
+				unit		Sons of the Fallen		exp 3 armour 1 weapon_lvl 1
+			end
+			end_if
+
+			campaign_wait 1
+			if I_EventCounter expedition_finale_character_triggers_overseer = 1
+			spawn_army
+			faction normans
+			character	Overseer, named character, age 30, x 306, y 173, direction S, portrait Overseer, hero_ability Iron_Fist, label overseer_loyal
+                	traits		MiddleManRace 1, Breelander 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1, HarshRuler 3, Unjust 1, Disciplinarian 3, StrategyChivalryEvil 5, BattleChivalryEvil 3, Authoritarian 3, DisloyalGovernor 3, Austere 1, Corrupt 1, Pragmatic 3, Hero 1, HeroAbilityIronFist 1
+				unit		Merchant Guard			exp 9 armour 1 weapon_lvl 1
+				unit		Merchant Guard			exp 3 armour 0 weapon_lvl 1
+				unit		Merchant Infantry		exp 3 armour 0 weapon_lvl 1
+				unit		Merchant Infantry		exp 3 armour 0 weapon_lvl 1
+				unit		Merchant Infantry		exp 3 armour 0 weapon_lvl 1
+				unit		Merchant Militia		exp 3 armour 1 weapon_lvl 1
+				unit		Merchant Militia		exp 3 armour 1 weapon_lvl 1
+				unit		Merchant Militia		exp 3 armour 1 weapon_lvl 1
+				unit		Merchant Militia		exp 3 armour 1 weapon_lvl 1
+				unit		Merchant Cavalry		exp 3 armour 1 weapon_lvl 1
+				unit		Merchant Cavalry		exp 3 armour 1 weapon_lvl 1
+			end
+			end_if
+
+			campaign_wait 1
+			if I_EventCounter expedition_finale_character_triggers_illanor = 1
+			spawn_army
+			faction normans
+			character	Illanor, named character, age 30, x 305, y 169, direction S, portrait Illanor, label illanor_normans_1
+                	traits		GoodManRace 1, Woodman 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1, GoodAmbusher 4, Hunter 2, TacticalSkill 1, Scout 3, Energetic 2, Cautious 3
+				unit		Greenwood Foresters		exp 7 armour 1 weapon_lvl 1
+				unit		Greenwood Foresters		exp 3 armour 1 weapon_lvl 1
+				unit		Greenwood Foresters		exp 3 armour 1 weapon_lvl 1
+				unit		Greenwood Foresters		exp 3 armour 1 weapon_lvl 1
+				unit		Woodland Hunters		exp 3 armour 3 weapon_lvl 1
+				unit		Woodland Hunters		exp 3 armour 3 weapon_lvl 1
+				unit		Woodland Hunters		exp 3 armour 3 weapon_lvl 1
+				unit		Woodland Hunters		exp 3 armour 3 weapon_lvl 1
+				unit		Bandobras Archers		exp 3 armour 2 weapon_lvl 1
+				unit		Bandobras Archers		exp 3 armour 2 weapon_lvl 1
+			end
+			end_if
+
+			campaign_wait 1
+			if I_EventCounter expedition_finale_character_triggers_theodand = 1
+			spawn_army
+			faction normans
+			character	Theodand, named character, age 22, x 304, y 173, direction S, portrait Theodand, hero_ability Beorning, label theodand_normans_1
+                	traits		GoodManRace 1, BeorningRace 1, Hero 1, HeroAbilityBeorning 1, GoodCommander 1, GoodAttacker 2, GoodSiegeAttacker 2, Loyal 1, LoyaltyStarter 1, PietyStarter 1, Berserker 3, BattleScarred 1, HaleAndHearty 3, 
+                		unit		Skin-Changers			exp 7 armour 1 weapon_lvl 1
+				unit		Skin-Changers			exp 1 armour 0 weapon_lvl 1
+				unit		Beorning Warriors		exp 6 armour 2 weapon_lvl 1
+				unit		Beorning Warriors		exp 6 armour 2 weapon_lvl 1
+				unit		Beorning Warriors		exp 6 armour 2 weapon_lvl 1
+				unit		Beorning Warriors		exp 6 armour 2 weapon_lvl 1
+				unit		Beorning Warriors		exp 6 armour 2 weapon_lvl 1
+				unit		Beorning Warriors		exp 6 armour 2 weapon_lvl 1
+				unit		Beorning Warriors		exp 6 armour 2 weapon_lvl 1
+				unit		Beorning Warriors		exp 6 armour 2 weapon_lvl 1
+				unit		Lumbermen			exp 3 armour 3 weapon_lvl 1
+				unit		Lumbermen			exp 3 armour 3 weapon_lvl 1
+				unit		Lumbermen			exp 3 armour 3 weapon_lvl 1
+				unit		Lumbermen			exp 3 armour 3 weapon_lvl 1
+				unit		Lumbermen			exp 3 armour 3 weapon_lvl 1
+				unit		Lumbermen			exp 3 armour 3 weapon_lvl 1
+				unit		Lumbermen			exp 3 armour 3 weapon_lvl 1
+				unit		Lumbermen			exp 3 armour 3 weapon_lvl 1
+				unit		Lumbermen			exp 3 armour 3 weapon_lvl 1
+				unit		Lumbermen			exp 3 armour 3 weapon_lvl 1
+			end
+			end_if
+
+			campaign_wait 1
+			if I_EventCounter expedition_finale_character_triggers_bilbo = 1
+			spawn_army
+			faction normans
+ 			character	Bilbo, named character, age 90, x 304, y 173, direction S, portrait Bilbo, battle_model bandrobas_archers_upg, label bilbo_2
+                    	traits		HobbitRaceAR 1, CustomBG 1, Brave 3, GoodCommander 1, Just 3, Loyal 2, LoyaltyStarter 1, PietyStarter 1, Scout 2, Energetic 2
+                    		unit		Dwarven Travellers		exp 9 armour 1 weapon_lvl 1
+				unit		Dwarven Travellers		exp 2 armour 0 weapon_lvl 0
+				unit		Dwarven Travellers		exp 2 armour 0 weapon_lvl 0
+				unit		Dwarven Travellers		exp 2 armour 0 weapon_lvl 0
+				unit		Kings Warriors			exp 3 armour 0 weapon_lvl 1
+				unit		Kings Warriors			exp 3 armour 0 weapon_lvl 1
+				unit		Kings Warriors			exp 3 armour 0 weapon_lvl 1
+				unit		Kings Warriors			exp 3 armour 0 weapon_lvl 1
+				unit		Dragonslayers			exp 3 armour 1 weapon_lvl 1
+				unit		Dragonslayers			exp 3 armour 1 weapon_lvl 1
+				unit		Dragonslayers			exp 3 armour 1 weapon_lvl 1
+				unit		Dragonslayers			exp 3 armour 1 weapon_lvl 1
+			end
+			end_if
+
 			; Default Expedition Force
 			campaign_wait 0.5
-            		spawn_army
+           		spawn_army
                 		faction normans
                 		character	random_name, named character, age 27, x 305, y 174, family, direction S, label expedition_army
                 		traits		MiddleManRace 1, Breelander 1, GoodCommander 1, GoodDefender 3, SiegeDefender 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1
@@ -42281,7 +42520,7 @@ traits		HobbitRace 1, Brave 1, GoodCommander 3, GoodDefender 2, InspiringSpeaker
 
 			move_strat_camera 168, 380
 			point_at_strat_position 168, 380
-			spawn_character normans, Dreadful, assassin, age 21, x 168, y 380
+			;spawn_character normans, Dreadful, assassin, age 21, x 168, y 380
 			campaign_wait 3
 			ui_flash_stop
 
@@ -42478,7 +42717,7 @@ traits		HobbitRace 1, Brave 1, GoodCommander 3, GoodDefender 2, InspiringSpeaker
 			spawn_army
 				faction normans
 				character	Borug, named character, age 50, x 106, y 333, direction S, portrait Borug, label borug_mercenary
-				traits		DwarvenRace 1, Longbeard 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1
+				traits		DwarvenRace 1, Longbeard 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1, KilledBalrog 1, BattleScarred 2, TacticalSkill 3, StrategicSkill 3, RiskyDefender 3, GoodRiskyAttacker 3, EngineerSkill 2, GoodInfantryGeneral 3, GoodCommander 5, Brave 4, Reckless 3, Hero 1, HeroAbilityDwarf 1
                     		unit		Khazad-dum Guardians		exp 9 armour 3 weapon_lvl 1
 			end
 			console_command give_ancillary borug_mercenary behewan_daughter
@@ -42503,18 +42742,14 @@ traits		HobbitRace 1, Brave 1, GoodCommander 3, GoodDefender 2, InspiringSpeaker
 		end_if
 	end_if
 ;######################### BD B&B Final Battle ##########################
-		if I_CompareCounter bd_kd_war_timer = 13 ;?
+		if I_CompareCounter bd_kd_war_timer = 17 ;17
 			if I_EventCounter behewan_loyal = 1
 				if I_EventCounter bd_kd_long_war_final_battle_field = 1
-					
-				end_if
-
-				if I_EventCounter bd_kd_long_war_final_battle_tunnel = 1
-				console_command move_character Behewan 180,477
-				console_command move_character Borug 179,477			
+					console_command move_character Behewan 92,352
+					console_command move_character Borug 91,352			
 				spawn_army
 				faction slave
-				character	Balrog, named character, age 16, x 181, y 477, direction W, portrait Balrog, battle_model balrog_general, hero_ability BALROG, label bd_final_balrog_1
+				character	Balrog, named character, age 16, x 93, y 352, direction W, portrait Balrog, battle_model balrog_general, hero_ability BALROG, label bd_final_balrog_1
 				traits		Balrog 1, AIBoost 1, Hero 1, Locked 1, MaiaRace 1, FearGeneral 1, HeroAbilityBalrog 1, BattleFear 6, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1, GoodCommander 3
 				unit		Balrog			exp 9 armour 2 weapon_lvl 1
 				unit		Orc Avengers		exp 9 armour 1 weapon_lvl 1
@@ -42539,9 +42774,38 @@ traits		HobbitRace 1, Brave 1, GoodCommander 3, GoodDefender 2, InspiringSpeaker
 				unit		Trolls			exp 7 armour 0 weapon_lvl 1				
 				end
 				engage_armies bd_final_balrog_1, behewan_mercenary
-				campaign_wait 10
-				console_command move_character Behewan 93,350
-				console_command move_character Borug 91,348
+				end_if
+
+				if I_EventCounter bd_kd_long_war_final_battle_tunnel = 1
+				console_command move_character Behewan 90,352
+				console_command move_character Borug 89,352			
+				spawn_army
+				faction slave
+				character	Balrog, named character, age 16, x 91, y 352, direction W, portrait Balrog, battle_model balrog_general, hero_ability BALROG, label bd_final_balrog_1
+				traits		Balrog 1, AIBoost 1, Hero 1, Locked 1, MaiaRace 1, FearGeneral 1, HeroAbilityBalrog 1, BattleFear 6, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1, GoodCommander 3
+				unit		Balrog			exp 9 armour 2 weapon_lvl 1
+				unit		Orc Avengers		exp 9 armour 1 weapon_lvl 1
+				unit		Mountain Uruks		exp 8 armour 1 weapon_lvl 1
+				unit		Mountain Uruks		exp 8 armour 1 weapon_lvl 1
+				unit		Mountain Uruks		exp 8 armour 1 weapon_lvl 1
+
+				unit		Uruk Overseers		exp 7 armour 0 weapon_lvl 1
+				unit		Heavy Goblin Halberd	exp 4 armour 1 weapon_lvl 1
+				unit		Heavy Goblin Halberd	exp 4 armour 1 weapon_lvl 1
+				unit		Heavy Goblin Halberd	exp 4 armour 1 weapon_lvl 1
+				unit		Heavy Goblin Halberd	exp 4 armour 1 weapon_lvl 1
+				unit		Heavy Goblin Infantry	exp 4 armour 1 weapon_lvl 1
+				unit		Heavy Goblin Infantry	exp 4 armour 1 weapon_lvl 1
+				unit		Heavy Goblin Infantry	exp 4 armour 1 weapon_lvl 1	
+				unit		Heavy Goblin Infantry	exp 4 armour 1 weapon_lvl 1
+				unit		Heavy Goblin Infantry	exp 4 armour 1 weapon_lvl 1	
+				unit		Heavy Goblin Crossbows	exp 2 armour 1 weapon_lvl 1
+				unit		Heavy Goblin Crossbows	exp 2 armour 1 weapon_lvl 1
+				unit		Heavy Goblin Crossbows	exp 2 armour 1 weapon_lvl 1
+				unit		Half-Trolls		exp 4 armour 1 weapon_lvl 1	
+				unit		Trolls			exp 7 armour 0 weapon_lvl 1				
+				end
+				engage_armies bd_final_balrog_1, behewan_mercenary
 				end_if
 			end_if
 
@@ -42550,7 +42814,7 @@ traits		HobbitRace 1, Brave 1, GoodCommander 3, GoodDefender 2, InspiringSpeaker
 			end_if
 		end_if
 
-		if I_CompareCounter bd_kd_war_timer = 14 ;?
+		if I_CompareCounter bd_kd_war_timer = 18 ;18
 		and I_EventCounter bd_kd_borug_only = 0
 					if not I_CharacterExists bd_final_balrog_1
 						set_event_counter bd_kd_elites 1
@@ -43762,7 +44026,7 @@ traits		HobbitRace 1, Brave 1, GoodCommander 3, GoodDefender 2, InspiringSpeaker
 		spawn_army
 					faction normans
 					character	Borug, named character, age 28, x 414, y 477, direction S, portrait Borug, label borug_mercenary
-					traits		DwarvenRace 1, Longbeard 1, TheodenDeceived 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1
+					traits		DwarvenRace 1, Longbeard 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1, KilledBalrog 1, BattleScarred 2, TacticalSkill 3, StrategicSkill 3, RiskyDefender 3, GoodRiskyAttacker 3, EngineerSkill 2, GoodInfantryGeneral 3, GoodCommander 5, Brave 4, Reckless 3, Hero 1, HeroAbilityDwarf 1, TheodenDeceived 1
                     			unit		Khazad-dum Guardians		exp 7 armour 3 weapon_lvl 1
 					unit		Khazad-dum Guardians		exp 5 armour 3 weapon_lvl 1
 					unit		Khazad-dum Reclaimers		exp 5 armour 3 weapon_lvl 1			
@@ -44451,6 +44715,12 @@ end_monitor
 ;######################### Bree Early Game Military/Militarization Unlock Script ##########################
 ; Watchmen
 	monitor_event BuildingCompleted SettlementName Bree
+	and SettlementBuildingFinished = council_chambers
+		historic_event bree_unlock_script_watchmen_0 factions { normans, }
+		terminate_monitor
+	end_monitor
+
+	monitor_event BuildingCompleted SettlementName Bree
 	and SettlementBuildingFinished = city_hall
 		set_event_counter bree_watchmen_unlocked 1
 		historic_event bree_unlock_script_watchmen_1 factions { normans, }
@@ -44465,6 +44735,20 @@ end_monitor
 
 ; Merchants
 	monitor_event BuildingCompleted SettlementName Bree
+	and SettlementBuildingFinished = corn_exchange
+		historic_event bree_unlock_script_merchants_first factions { normans, }
+		campaign_wait 1
+		terminate_monitor
+	end_monitor
+
+	monitor_event BuildingCompleted SettlementName Bree
+	and SettlementBuildingFinished = market
+		historic_event bree_unlock_script_merchants_second factions { normans, }
+		campaign_wait 1
+		terminate_monitor
+	end_monitor
+
+	monitor_event BuildingCompleted SettlementName Bree
 	and SettlementBuildingFinished = fairground
 		set_event_counter bree_merchants_unlocked 1
 		historic_event bree_unlock_script_merchants factions { normans, }
@@ -44475,6 +44759,18 @@ end_monitor
 	end_monitor
 
 ; Journeymen
+	monitor_event BuildingCompleted SettlementName Bree
+	and SettlementBuildingFinished = lodge
+		historic_event bree_unlock_script_mason_1 factions { normans, }
+		terminate_monitor
+	end_monitor
+
+	monitor_event BuildingCompleted SettlementName Bree
+	and SettlementBuildingFinished = master_lodge
+		historic_event bree_unlock_script_mason_2 factions { normans, }
+		terminate_monitor
+	end_monitor
+
 	monitor_event BuildingCompleted SettlementName Bree
 	and SettlementBuildingFinished = grand_lodge
 		set_event_counter bree_journeymen_unlocked 1
@@ -44502,7 +44798,7 @@ end_monitor
 		historic_event bree_unlock_script_rhovanion_2 factions { normans, }
 		spawn_army
                 	faction normans
-                	character	random_name, named character, age 27, x 165, y 378, direction S, label rhovanion_refugees_1
+                	character	Eldacar, named character, age 27, x 165, y 378, direction S, portrait Eldacar, label rhovanion_refugees_1
                 	traits		GoodManRace 1, Dorwinrim 1, GoodCommander 1, GoodDefender 3, SiegeDefender 1, Loyal 1, 	LoyaltyStarter 1, PietyStarter 1
                 	unit		Rhovanion Riders	exp 7 armour 1 weapon_lvl 1
                 	unit		Rhovanion Riders	exp 5 armour 0 weapon_lvl 0
@@ -44516,13 +44812,19 @@ end_monitor
 
 ; Tithe-Keepers Merchant Infantry
 	monitor_event BuildingCompleted SettlementName Bree
+	and SettlementBuildingFinished = caravan_stop
+		historic_event bree_unlock_script_trade_post factions { normans, }
+		terminate_monitor
+	end_monitor
+
+	monitor_event BuildingCompleted SettlementName Bree
 	and SettlementBuildingFinished = trading_post
 		set_event_counter bree_merchant_infantry_unlocked 1
 		historic_event bree_unlock_script_merchant_infantry factions { normans, }
 		spawn_army
                 	faction normans
-                	character	random_name, named character, age 45, x 165, y 378, battle_model merc_swords, direction S, label tithe_keepers_1
-                	traits		MiddleManRace 1, GoodCommander 1, LoyaltyStarter 1, GoodAmbusher 1
+                	character	Tithe-Keeper, named character, age 45, x 165, y 378, battle_model merc_swords, direction S, portrait Tithe-Keeper, label tithe_keepers_1
+                	traits		MiddleManRace 1, Breelander 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1, Unjust 1, Disciplinarian 3, Authoritarian 3, Austere 1, Corrupt 1, Pragmatic 3, Hero 1, HeroAbilityIronFist 1
                 	unit		Merchant Infantry	exp 7 armour 0 weapon_lvl 1
                 	unit		Merchant Infantry	exp 6 armour 0 weapon_lvl 0
                 	unit		Merchant Infantry	exp 6 armour 0 weapon_lvl 0
@@ -44938,15 +45240,16 @@ end_monitor
 			campaign_wait 0.2
 			console_command auto_win attacker
             		siege_settlement frarin_el, South_Ered_Luin, attack
-			campaign_wait 10
+			campaign_wait 5
             		console_command diplomatic_stance normans hungary neutral
+			historic_event bd_el_good_sold_turn_warning factions { normans, }
         end_monitor 
 ;######################### BD Purchase Decision Declined ##########################
 	monitor_event EventCounter EventCounterType bd_el_good_purchase_decision_declined
 	and EventCounter = 1
 			historic_event bd_el_good_conclusion_friendship factions { normans, }
 			inc_counter bree_morality_counter 1
-			inc_counter bd_timer 3
+			inc_counter bd_timer 15
 			spawn_army
                 		faction normans
                 		character	Frarin, named character, age 45, x 92, y 349, direction S, label frarin_normal, portrait Frarin
@@ -45014,7 +45317,6 @@ end_monitor
 			enable_cursor
 			historic_event bd_approach_decision_direct factions { normans, }
 			set_event_counter direct_approach 1
-			inc_counter bree_morality_counter 1
 			console_command diplomatic_stance normans hungary war
         end_monitor
 ;######################### BD Hands-Off Approach Accepted ##########################
@@ -45763,7 +46065,6 @@ end_monitor
         	and EventCounter = 1
 			ui_flash_stop
 			historic_event bandit_lord_offer true factions { normans, }
-			inc_counter bree_morality_counter -1
 		terminate_monitor
 	end_monitor 
 ;######################### Immediately fight the Bandit Lord ##########################
