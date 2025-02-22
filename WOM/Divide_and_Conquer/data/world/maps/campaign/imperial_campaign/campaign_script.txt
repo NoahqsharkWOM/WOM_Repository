@@ -44717,6 +44717,7 @@ end_monitor
 	monitor_event BuildingCompleted SettlementName Bree
 	and SettlementBuildingFinished = council_chambers
 		historic_event bree_unlock_script_watchmen_0 factions { normans, }
+		console_command add_money 1000
 		terminate_monitor
 	end_monitor
 
@@ -44730,6 +44731,7 @@ end_monitor
 		console_command create_unit Bree "Watchmen Axeguard" 2 0 1 1
 		console_command create_unit Bree "Watchmen Swordguard" 2 0 1 1
 		campaign_wait 1
+		console_command add_money 2000
 		terminate_monitor
 	end_monitor
 
@@ -44737,6 +44739,7 @@ end_monitor
 	monitor_event BuildingCompleted SettlementName Bree
 	and SettlementBuildingFinished = corn_exchange
 		historic_event bree_unlock_script_merchants_first factions { normans, }
+		console_command add_money 1000
 		campaign_wait 1
 		terminate_monitor
 	end_monitor
@@ -44744,6 +44747,7 @@ end_monitor
 	monitor_event BuildingCompleted SettlementName Bree
 	and SettlementBuildingFinished = market
 		historic_event bree_unlock_script_merchants_second factions { normans, }
+		console_command add_money 2000
 		campaign_wait 1
 		terminate_monitor
 	end_monitor
@@ -44752,6 +44756,7 @@ end_monitor
 	and SettlementBuildingFinished = fairground
 		set_event_counter bree_merchants_unlocked 1
 		historic_event bree_unlock_script_merchants factions { normans, }
+		console_command add_money 3000
 		console_command create_unit Bree "Merchant Militia" 3 0 1 1
 		console_command create_unit Bree "Merchant Cavalry" 2 0 1 1
 		campaign_wait 1
@@ -44762,12 +44767,14 @@ end_monitor
 	monitor_event BuildingCompleted SettlementName Bree
 	and SettlementBuildingFinished = lodge
 		historic_event bree_unlock_script_mason_1 factions { normans, }
+		console_command add_money 1000
 		terminate_monitor
 	end_monitor
 
 	monitor_event BuildingCompleted SettlementName Bree
 	and SettlementBuildingFinished = master_lodge
 		historic_event bree_unlock_script_mason_2 factions { normans, }
+		console_command add_money 2000
 		terminate_monitor
 	end_monitor
 
@@ -44779,6 +44786,7 @@ end_monitor
 		historic_event bree_unlock_script_journeymen_2 factions { normans, }
 		console_command create_unit Bree "Journeymen" 4 0 2 1
 		campaign_wait 1
+		console_command add_money 3000
 		terminate_monitor
 	end_monitor
 
@@ -44789,6 +44797,7 @@ end_monitor
 		historic_event bree_unlock_script_rhovanion_1 factions { normans, }
 		console_command create_unit Bree "Rhovanion Riders" 2 5 0 0
 		campaign_wait 1
+		console_command add_money 1500
 		terminate_monitor
 	end_monitor
 
@@ -44807,6 +44816,7 @@ end_monitor
 		campaign_wait 1
 		create_unit rhovanion_refugees_1, Rhovanion Hunters, num 5, exp 3, arm 0, wep 0
 		campaign_wait 1
+		console_command add_money 2500
 		terminate_monitor
 	end_monitor
 
@@ -44814,6 +44824,7 @@ end_monitor
 	monitor_event BuildingCompleted SettlementName Bree
 	and SettlementBuildingFinished = caravan_stop
 		historic_event bree_unlock_script_trade_post factions { normans, }
+		console_command add_money 2500
 		terminate_monitor
 	end_monitor
 
@@ -44831,6 +44842,7 @@ end_monitor
                 	unit		Merchant Infantry	exp 6 armour 0 weapon_lvl 0
        		end
 		campaign_wait 1
+		console_command add_money 3500
 		terminate_monitor
 	end_monitor
 
@@ -44844,6 +44856,7 @@ end_monitor
 			send_character_off_map reginard_company
 		end_if
 		campaign_wait 0.5
+		console_command add_money 5000
 		terminate_monitor
 	end_monitor
 ;######################### Reginard Quest Accepted ##########################
